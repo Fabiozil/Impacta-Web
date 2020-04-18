@@ -10,4 +10,9 @@ class Corporation extends Model
     {
         return $this->hasMany('App\Recycler');
     }
+
+    public function users()
+    {
+        return $this->belongsToMany('App\User');
+    }
 }
