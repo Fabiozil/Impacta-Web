@@ -6,11 +6,9 @@ use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 
-class Corporation extends Authenticatable
+class User extends Authenticatable
 {
     use Notifiable;
-
-    protected $guard = 'corporation';
 
     /**
      * The attributes that are mass assignable.
@@ -39,13 +37,12 @@ class Corporation extends Authenticatable
         'email_verified_at' => 'datetime',
     ];
 
-    public function recyclers()
+    public function corporation()
     {
-        return $this->hasMany('App\Recycler');
+        return $this->belongsToMany('App\Corporation', 'corporation_id');
     }
-
-    public function users()
+    public function collection_areas()
     {
-        return $this->belongsToMany('App\User');
+        return $this->hasOne('App\CollectionArea');
     }
 }
