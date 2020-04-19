@@ -7,6 +7,18 @@
 <a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/license.svg" alt="License"></a>
 </p>
 
+## Comandos a correr al clonar un proyecto de laravel
+
+```composer install
+cp .env.example .env
+php arsisan key:generate
+php artisan migrate
+composer require laravel/ui --dev
+php artisan ui bootstrap --auth
+npm install
+npm run dev
+```
+
 ## About Laravel
 
 Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
