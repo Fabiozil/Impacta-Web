@@ -46,6 +46,17 @@ return [
             'provider' => 'users',
             'hash' => false,
         ],
+
+        'corporation' => [
+            'driver' => 'session',
+            'provider' => 'corporations',
+        ],
+
+        'corporation-api' => [
+            'driver' => 'token',
+            'provider' => 'corporations',
+            'hash' => false,
+        ],
     ],
 
     /*
@@ -69,6 +80,11 @@ return [
         'users' => [
             'driver' => 'eloquent',
             'model' => App\User::class,
+        ],
+
+        'corporations' => [
+            'driver' => 'eloquent',
+            'model' => App\Corporation::class,
         ],
 
         // 'users' => [
@@ -99,6 +115,14 @@ return [
             'expire' => 60,
             'throttle' => 60,
         ],
+
+        'corporations' => [
+            'provider' => 'corporations',
+            'table' => 'password_resets',
+            'expire' => 60,
+            'throttle' => 60,
+        ],
+
     ],
 
     /*
