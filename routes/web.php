@@ -13,10 +13,16 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
+// Route::get('/', function () {
+//     return view('welcome');
+// });
+// El login es la pagina de inicio
+Route::get('/login', function(){
+    return view('login');
 });
 Route::get('/user', 'UserController@index');
 Route::get('/corporation', 'CorporationController@index');
 Route::get('/recycler', 'RecyclerController@index');
 Route::get('/notification', 'NotificationController@index');
+
+
