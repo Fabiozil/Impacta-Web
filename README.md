@@ -9,7 +9,8 @@
 
 ## Comandos a correr al clonar un proyecto de laravel
 
-```composer install
+```
+composer install
 cp .env.example .env
 composer require laravel/ui --dev
 npm install
