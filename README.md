@@ -11,9 +11,9 @@
 
 ```composer install
 cp .env.example .env
+composer require laravel/ui --dev
 php arsisan key:generate
 php artisan migrate
-composer require laravel/ui --dev
 npm install
 npm run dev
 ```
