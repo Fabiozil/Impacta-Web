@@ -14,7 +14,6 @@ cp .env.example .env
 php arsisan key:generate
 php artisan migrate
 composer require laravel/ui --dev
-php artisan ui bootstrap --auth
 npm install
 npm run dev
 ```
