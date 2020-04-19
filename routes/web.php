@@ -16,3 +16,7 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+Route::get('/user', 'UserController@index');
+Route::get('/corporation', 'CorporationController@index');
+Route::get('/recycler', 'RecyclerController@index');
+Route::get('/notification', 'NotificationController@index');
