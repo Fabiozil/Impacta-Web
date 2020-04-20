@@ -16,7 +16,7 @@ class User extends Authenticatable
      * @var array
      */
     protected $fillable = [
-        'name', 'email', 'password',
+        'name', 'email','tipo_usuario', 'password',
     ];
 
     /**
@@ -46,6 +46,13 @@ class User extends Authenticatable
         return $this->hasOne('App\CollectionArea');
     }
 
+    public function isA()
+    {
+        if($this->tipo_usuario){
+            return $this->hasOne(Corporation::class,'id','id');
+        }
+        return $this->hasOne(Affiliate::class,'id','id');
+    }
 
 }
 

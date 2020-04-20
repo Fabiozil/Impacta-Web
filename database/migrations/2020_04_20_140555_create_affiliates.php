@@ -41,5 +41,6 @@ class CreateAffiliates extends Migration
     public function down()
     {
         Schema::dropIfExists('affiliates');
+        Schema::dropIfExists('affiliate_corporation');
     }
 }
