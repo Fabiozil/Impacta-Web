@@ -16,6 +16,24 @@
 
                             <div class="col-md-6">
                                 <input id="name" type="text" class="form-control @error('name') is-invalid @enderror" name="name" value="{{ old('name') }}" required autocomplete="name" autofocus>
+                                <select class="form-control" name="type" id="type">
+                                    <option value="1">Corporación</option>
+                                    <option value="0">Afiliado</option>
+                                </select>
+                                <input class="form-control"name="name_rep" >
+                                <input class="form-control" name="lastname" >
+                                <select class="form-control" name="type_doc" id="type">
+                                    <option value="1">CC</option>
+                                    <option value="0">PASS</option>
+                                </select>
+                                <input class="form-control"name="num_doc" >
+                                <input class="form-control"name="position" >
+                                <input class="form-control"name="email_rep" >
+                                <input class="form-control"name="name_corp" >
+                                <input class="form-control" name="phone" >
+                                <input class="form-control"name="r_s" >
+                                <input class="form-control"name="num_doc_corp" >
+
 
                                 @error('name')
                                     <span class="invalid-feedback" role="alert">
