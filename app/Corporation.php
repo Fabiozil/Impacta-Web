@@ -17,6 +17,8 @@ class Corporation extends Authenticatable
      * @var string
      */
     protected $table = 'corporations';
+
+    public $incrementing= false;
     /**
      * The attributes that are mass assignable.
      *
@@ -28,6 +30,7 @@ class Corporation extends Authenticatable
         'tipo_doc_rep',// Tipo documento representante
         'num_doc_rep', //Numero de documento rep
         'cargo_rep',// Cargo representante
+        'email_rep',// Email representante
         'nombre_corp', //Nombre Corporación
         'telefono', //Telefono Corporación
         'razon_social', //Razon social Corporación
