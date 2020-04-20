@@ -18,6 +18,19 @@ class CreateAffiliates extends Migration
             $table->timestamps();
             $table->string('direccion')->nullable();
         });
+
+          // Nueva tabla intermedia corporation_user
+        Schema::create('affiliate_corporation', function (Blueprint $table) {
+            $table->id();
+            $table->unsignedBigInteger('corporation_id');
+            $table->timestamps();
+            $table->foreign('corporation_id')
+                ->references('id')->on('corporations')
+                ->onDelete('cascade');
+            $table->foreign('id')
+                ->references('id')->on('affiliates')
+                ->onDelete('cascade');
+        });
     }
 
     /**

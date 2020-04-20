@@ -23,6 +23,7 @@ class CreateUsersTable extends Migration
             $table->timestamps();
             $table->tinyInteger('tipo_usuario')->default(0);
         });
+        
 
     }
 
