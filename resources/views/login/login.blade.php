@@ -60,7 +60,8 @@
 				<br>
 				<button class="btn btn-lg btn-primary btn-block btn-signin" id="IngresoLog" type="submit">Ingresar</button>
                 <br>
-                <div class="opcioncontra"><a href="/registroCorp">¿No tienes cuenta? Regístrate</a></div>
+                <!-- hay que preguntar si se registra como persona o corporacion -->
+                <div class="opcioncontra"><a href="">¿No tienes cuenta? Regístrate</a></div>
 		 	</form>
 		 </div>	
 		 </div>
