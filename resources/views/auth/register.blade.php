@@ -20,19 +20,18 @@
                                     <option value="1">Corporación</option>
                                     <option value="0">Afiliado</option>
                                 </select>
-                                <input class="form-control"name="name_rep" >
-                                <input class="form-control" name="lastname" >
+                                Name_rep<input class="form-control"name="name_rep" >
+                                lastname<input class="form-control" name="lastname" >
                                 <select class="form-control" name="type_doc" id="type">
                                     <option value="1">CC</option>
                                     <option value="0">PASS</option>
                                 </select>
-                                <input class="form-control"name="num_doc" >
-                                <input class="form-control"name="position" >
-                                <input class="form-control"name="email_rep" >
-                                <input class="form-control"name="name_corp" >
-                                <input class="form-control" name="phone" >
-                                <input class="form-control"name="r_s" >
-                                <input class="form-control"name="num_doc_corp" >
+                                num_doc<input class="form-control"name="num_doc" >
+                                position(cargo)<input class="form-control"name="position" >
+                                email_rep<input class="form-control"name="email_rep" >
+                                phone<input class="form-control" name="phone" >
+                                razón social<input class="form-control"name="r_s" >
+                                num_doc_corp<input class="form-control"name="num_doc_corp" >
 
 
                                 @error('name')
