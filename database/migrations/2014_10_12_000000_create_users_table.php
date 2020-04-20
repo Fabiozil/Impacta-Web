@@ -20,28 +20,11 @@ class CreateUsersTable extends Migration
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
             $table->rememberToken();
-            $table->string('direccion');
             $table->timestamps();
+            $table->tinyInteger('tipo_usuario')->default(0);
         });
+        
 
-        // Nueva tabla intermedia corporation_user
-        Schema::create('corporation_user', function (Blueprint $table) {
-            $table->id();
-            $table->unsignedBigInteger('corporation_id');
-            // Machetazo porque laravel no maneja relaciones 0 a muchos
-            $table->unsignedBigInteger('user_id')->unique(); // Usuarios solo 1 corp
-            $table->timestamps();
-
-            // Verifica que no se repita corporación y usuario
-            $table->unique(['corporation_id', 'user_id']);
-
-            $table->foreign('corporation_id')
-                ->references('id')->on('corporations')
-                ->onDelete('cascade');
-            $table->foreign('user_id')
-                ->references('id')->on('users')
-                ->onDelete('cascade');
-        });
     }
 
 
