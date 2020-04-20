@@ -11,14 +11,29 @@ class Corporation extends Authenticatable
     use Notifiable;
 
     protected $guard = 'corporation';
-
+    /**
+     * The table associated with the model.
+     *
+     * @var string
+     */
+    protected $table = 'corporations';
     /**
      * The attributes that are mass assignable.
      *
      * @var array
      */
     protected $fillable = [
-        'name', 'email', 'password',
+        'nombre_rep',  //Nombre Representante
+        'apellidos_rep', //Apellido Representante
+        'tipo_doc_rep',// Tipo documento representante
+        'num_doc_rep', //Numero de documento rep
+        'cargo_rep',// Cargo representante
+        'nombre_corp', //Nombre Corporación
+        'telefono', //Telefono Corporación
+        'razon_social', //Razon social Corporación
+        'num_doc_corp',
+         'email',
+         'password',
     ];
 
     /**
