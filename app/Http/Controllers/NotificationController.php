@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-class CorporationController extends Controller
+class NotificationController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -13,7 +13,7 @@ class CorporationController extends Controller
      */
     public function index()
     {
-        return 'Vista de Detalles de Corporación';
+        return 'Vista Historial de notificaciones';
     }
 
     /**
