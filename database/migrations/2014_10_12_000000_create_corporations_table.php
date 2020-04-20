@@ -15,6 +15,7 @@ class CreateCorporationsTable extends Migration
     {
         Schema::create('corporations', function (Blueprint $table) {
             $table->id();
+            $table->string('direccion')->nullable();
             // Representante
             $table->string('nombre_rep');
             $table->string('apellidos_rep');
@@ -25,7 +26,6 @@ class CreateCorporationsTable extends Migration
             $table->string('nombre_corp');
             $table->integer('telefono');
             $table->string('razon_social');
-            // $table->string('tipo_doc_corp');
             $table->integer('num_doc_corp')->unique();
             $table->text('ubicacion_corp');
             $table->string('logo_corp'); // Dirección de archivo local
