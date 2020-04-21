@@ -28,6 +28,8 @@ Route::get('/notification', 'NotificationController@index');
 Route::get('/registroCorp', function(){
     return view('registroCorp');
 });
-
+Route::get('/RestablecerContraseña', function(){
+    return view('CambioPssw');
+});
 
 
