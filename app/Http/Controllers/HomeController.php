@@ -24,12 +24,7 @@ class HomeController extends Controller
      */
     public function index()
     {
-        $tipo=Auth::user()->tipo_usuario;
-
-        if ($tipo==0){
             return view('home');
-        }
-        return view('home2');
-        
+
     }
 }
