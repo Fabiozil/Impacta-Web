@@ -4,7 +4,11 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
+<<<<<<< HEAD
+    "content-hash": "f0dcbdc80776ca79d6311b8f92c5a4b5",
+=======
     "content-hash": "70536637cd63ff91488e8ba6902e796c",
+>>>>>>> 286a834f854abe64aeb688886724903cf87d297a
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -905,6 +909,30 @@
             "time": "2020-04-07T15:01:31+00:00"
         },
         {
+<<<<<<< HEAD
+            "name": "laravel/ui",
+            "version": "v2.0.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/laravel/ui.git",
+                "reference": "47a0a1dac76f5e73803c86e1f38b2c7e0ae7fa83"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/laravel/ui/zipball/47a0a1dac76f5e73803c86e1f38b2c7e0ae7fa83",
+                "reference": "47a0a1dac76f5e73803c86e1f38b2c7e0ae7fa83",
+                "shasum": ""
+            },
+            "require": {
+                "illuminate/console": "^7.0",
+                "illuminate/filesystem": "^7.0",
+                "illuminate/support": "^7.0",
+                "php": "^7.2.5"
+            },
+            "require-dev": {
+                "mockery/mockery": "^1.0",
+                "phpunit/phpunit": "^8.0"
+=======
             "name": "laraveles/spanish",
             "version": "1.4.5",
             "source": {
@@ -926,18 +954,28 @@
             "require-dev": {
                 "orchestra/testbench": "^3.4|^4.0",
                 "phpunit/phpunit": "^5.6|^6.3|^7.0|^8.0"
+>>>>>>> 286a834f854abe64aeb688886724903cf87d297a
             },
             "type": "library",
             "extra": {
                 "laravel": {
                     "providers": [
+<<<<<<< HEAD
+                        "Laravel\\Ui\\UiServiceProvider"
+=======
                         "Laraveles\\Spanish\\SpanishServiceProvider"
+>>>>>>> 286a834f854abe64aeb688886724903cf87d297a
                     ]
                 }
             },
             "autoload": {
                 "psr-4": {
+<<<<<<< HEAD
+                    "Laravel\\Ui\\": "src/",
+                    "Illuminate\\Foundation\\Auth\\": "auth-backend/"
+=======
                     "Laraveles\\Spanish\\": "src"
+>>>>>>> 286a834f854abe64aeb688886724903cf87d297a
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
@@ -946,6 +984,18 @@
             ],
             "authors": [
                 {
+<<<<<<< HEAD
+                    "name": "Taylor Otwell",
+                    "email": "taylor@laravel.com"
+                }
+            ],
+            "description": "Laravel UI utilities and presets.",
+            "keywords": [
+                "laravel",
+                "ui"
+            ],
+            "time": "2020-03-03T20:16:46+00:00"
+=======
                     "name": "Israel Ortuño",
                     "email": "ai.ortuno@gmail.com"
                 },
@@ -965,6 +1015,7 @@
                 "traduccion"
             ],
             "time": "2019-11-02T08:39:28+00:00"
+>>>>>>> 286a834f854abe64aeb688886724903cf87d297a
         },
         {
             "name": "league/commonmark",

@@ -13,7 +13,6 @@
 
 <body>
     <div class="container" style="height: 100vh;">
-    @yield('conteint')
         <div class="row" style="height: 100%;">
             <div class="col-2" style="height: 100%; background-color:  #cccccc;">
                 <div class="row align-items-center" style="height: 100%;">
@@ -47,6 +46,7 @@
                 </div>
             </div>
             <div class="col-10" style="background-color: #f2f2f2; height: 100%;">
+                @yield('conteint')
             </div>
         </div>
     </div>
