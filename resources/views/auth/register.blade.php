@@ -20,25 +20,25 @@
                                     <option value="1">Corporación</option>
                                     <option value="0">Afiliado</option>
                                 </select>
-                                <input class="form-control"name="name_rep" >
-                                <input class="form-control" name="lastname" >
+                                Name_rep<input class="form-control" name="name_rep">
+                                lastname<input class="form-control" name="lastname">
                                 <select class="form-control" name="type_doc" id="type">
                                     <option value="1">CC</option>
                                     <option value="0">PASS</option>
                                 </select>
-                                <input class="form-control"name="num_doc" >
-                                <input class="form-control"name="position" >
-                                <input class="form-control"name="email_rep" >
+                                <input class="form-control" name="num_doc">
+                                <input class="form-control" name="position">
+                                <input class="form-control" name="email_rep">
 
-                                <input class="form-control" name="phone" >
-                                <input class="form-control"name="r_s" >
-                                <input class="form-control"name="num_doc_corp" >
+                                <input class="form-control" name="phone">
+                                <input class="form-control" name="r_s">
+                                <input class="form-control" name="num_doc_corp">
 
 
                                 @error('name')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
+                                <span class="invalid-feedback" role="alert">
+                                    <strong>{{ $message }}</strong>
+                                </span>
                                 @enderror
                             </div>
                         </div>
@@ -50,9 +50,9 @@
                                 <input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email">
 
                                 @error('email')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
+                                <span class="invalid-feedback" role="alert">
+                                    <strong>{{ $message }}</strong>
+                                </span>
                                 @enderror
                             </div>
                         </div>
@@ -64,9 +64,9 @@
                                 <input id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="new-password">
 
                                 @error('password')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
+                                <span class="invalid-feedback" role="alert">
+                                    <strong>{{ $message }}</strong>
+                                </span>
                                 @enderror
                             </div>
                         </div>

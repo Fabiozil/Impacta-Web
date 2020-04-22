@@ -14,7 +14,7 @@
                         </div>
                     @endif
 
-                    Hey este es el home de Afiliado!!!!
+                    Hey Corporación!!
                 </div>
             </div>
         </div>
