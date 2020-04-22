@@ -20,7 +20,24 @@
                 </select>
             </div>
             <section class="buscador">
-                <p>De <input type="date"> al <input type="date"></p>
+                <p>
+                    De <input type="date"> al <input type="date">
+                    <button class="btn green">
+                        <img src="https://img.icons8.com/cotton/2x/search--v2.png" alt="Buscar" srcset="">
+                    </button>
+                </p>
+            </section>
+            <section class="mensaje row">
+                <img src="https://www.jdevoto.cl/web/wp-content/uploads/2018/04/default-user-img.jpg" class="col-md-2 order-first" alt="Cliente" srcset="">
+                <div class="col-md-10 order-last">
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Suscipit, cumque velit? Delectus, sit deserunt accusantium, suscipit sint recusandae sapiente assumenda distinctio tempore nisi possimus fugiat nesciunt veritatis molestias neque aperiam dolorum? Temporibus modi sint eos, ad libero praesentium quia voluptates officiis iusto fuga, dolor nostrum, explicabo debitis id expedita suscipit.
+                        <br>
+                        <span>Enviado el dia 07/04/2020 a las 4:34 pm</span>
+                        <br>
+                        <span class="titulo_menor">Mensaje manual</span>
+                    </p>
+                </div>
             </section>
             <section class="mensaje row">
                 <img src="https://www.jdevoto.cl/web/wp-content/uploads/2018/04/default-user-img.jpg" class="col-md-2 order-last" alt="Cliente" srcset="">

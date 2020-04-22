@@ -65,7 +65,7 @@
                         <span>El dia 07/04/2020 a las 4:34 pm</span>
                         <br>
                         ¿Ya realizaste esta accion?
-                        <button type="button" class="btn btn-success">Si</button>
+                        <button type="button" onclick="alert('Realizaste la acción de alguien')" class="btn btn-success">Si</button>
                         <button type="button" class="btn btn-success">No</button>
                         <br>
                         <span class="ver-menos">Ver menos</span>
