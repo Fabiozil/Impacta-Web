@@ -29,7 +29,11 @@
                                 <input class="form-control"name="num_doc" >
                                 <input class="form-control"name="position" >
                                 <input class="form-control"name="email_rep" >
+<<<<<<< HEAD
                                 <input class="form-control"name="name_corp" >
+=======
+
+>>>>>>> 286a834f854abe64aeb688886724903cf87d297a
                                 <input class="form-control" name="phone" >
                                 <input class="form-control"name="r_s" >
                                 <input class="form-control"name="num_doc_corp" >
