@@ -10,4 +10,9 @@ class Recycler extends Model
     {
         return $this->belongsTo('App\Corporation');
     }
+
+    public function collection_areas()
+    {
+        return $this->hasMany('App\CollectionArea', 'recycler_id');
+    }
 }

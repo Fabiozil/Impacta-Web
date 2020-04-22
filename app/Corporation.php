@@ -2,15 +2,10 @@
 
 namespace App;
 
-use Illuminate\Contracts\Auth\MustVerifyEmail;
-use Illuminate\Foundation\Auth\User as Authenticatable;
-use Illuminate\Notifications\Notifiable;
+use Illuminate\Database\Eloquent\Model;
 
-class Corporation extends Authenticatable
+class Corporation extends Model
 {
-    use Notifiable;
-
-    protected $guard = 'corporation';
     /**
      * The table associated with the model.
      *
@@ -18,7 +13,7 @@ class Corporation extends Authenticatable
      */
     protected $table = 'corporations';
 
-    public $incrementing= false;
+    public $incrementing = false;
     /**
      * The attributes that are mass assignable.
      *
@@ -27,16 +22,16 @@ class Corporation extends Authenticatable
     protected $fillable = [
         'nombre_rep',  //Nombre Representante
         'apellidos_rep', //Apellido Representante
-        'tipo_doc_rep',// Tipo documento representante
+        'tipo_doc_rep', // Tipo documento representante
         'num_doc_rep', //Numero de documento rep
-        'cargo_rep',// Cargo representante
-        'email_rep',// Email representante
+        'cargo_rep', // Cargo representante
+        'email_rep', // Email representante
         'nombre_corp', //Nombre Corporación
         'telefono', //Telefono Corporación
         'razon_social', //Razon social Corporación
         'num_doc_corp',
-         'email',
-         'password',
+        'email',
+        'password',
     ];
 
     /**
@@ -62,8 +57,14 @@ class Corporation extends Authenticatable
         return $this->hasMany('App\Recycler');
     }
 
-    public function users()
+    public function affiliates()
     {
-        return $this->belongsToMany('App\User');
+        // ... (clase, tabla, foránea, foránea del modelo al que se le hace la relación);
+        return $this->belongsToMany('App\Affiliate', 'affiliate_corporation', 'corporation_id', 'id');
+    }
+
+    public function user()
+    {
+        return $this->belongsTo('App\User', 'id', 'id');
     }
 }
