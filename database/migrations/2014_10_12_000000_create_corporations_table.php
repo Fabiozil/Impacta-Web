@@ -21,20 +21,15 @@ class CreateCorporationsTable extends Migration
             $table->smallInteger('tipo_doc_rep');
             $table->integer('num_doc_rep')->unique();
             $table->string('cargo_rep');
+            $table->string('email_rep')->unique();
             // Corporación
-            $table->string('nombre_corp');
             $table->integer('telefono');
             $table->string('razon_social');
-            // $table->string('tipo_doc_corp');
             $table->integer('num_doc_corp')->unique();
-            $table->text('ubicacion_corp');
-            $table->string('logo_corp'); // Dirección de archivo local
+            $table->text('ubicacion_corp')->nullable();
+            $table->string('logo_corp')->nullable(); // Dirección de archivo local
 
-            // Email
-            $table->string('email')->unique();
-            $table->timestamp('email_verified_at')->nullable();
-            $table->string('password');
-            $table->rememberToken();
+           // $table->timestamp('email_verified_at')->nullable();
 
             $table->timestamps();
         });
