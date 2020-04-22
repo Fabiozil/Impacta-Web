@@ -6,8 +6,8 @@ use Illuminate\Database\Eloquent\Model;
 
 class CollectionArea extends Model
 {
-    public function user()
+    public function recycler()
     {
-        return $this->belongsTo('App\User');
+        return $this->belongsTo('App\Recycler');
     }
 }
