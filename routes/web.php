@@ -17,11 +17,27 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/user', 'UserController@index');
-Route::get('/corporation', 'CorporationController@index');
-Route::get('/recycler', 'RecyclerController@index');
-Route::get('/notification', 'NotificationController@index');
+Route::get('/crear_reciclador', function () {
+    return view('crear_reciclador');
+});
 
-Auth::routes(['verify'=>true]);
-Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/crear_reciclador_2', function () {
+    return view('crear_reciclador_2');
+});
+
+Route::get('/crear_reciclador_3', function () {
+    return view('crear_reciclador_3');
+});
+
+Route::get('/crear_reciclador_4', function () {
+    return view('crear_reciclador_4');
+});
+
+Route::get('/editar_reciclador', function () {
+    return view('editar_reciclador');
+});
+
+Route::get('/reciclador_individual', function () {
+    return view('reciclador_individual');
+});
 
