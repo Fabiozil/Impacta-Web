@@ -17,9 +17,9 @@ use Illuminate\Support\Facades\Route;
 //     return view('welcome');
 // });
 // El login es la pagina de inicio
-Route::get('/login', function(){
-    return view('login.login');
-});
+
+Auth::routes();
+
 //despues cambiamos esto de abajo por el controlador que es
 Route::get('/registroCorp', function(){
     return view('registroCorp');
@@ -78,5 +78,11 @@ Route::get('/Emisiones', function(){
 Route::get('/Mapa', function(){
     return view('mapa.mapa');
 });
+Route::get('/dank', function(){
+    return view('login.confirmar');
+});
+
+
+
 
 
