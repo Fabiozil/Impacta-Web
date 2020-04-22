@@ -21,8 +21,22 @@ class Affiliate extends Model
      * @var array
      */
     protected $fillable = [
-        'id'
+        'direccion'
     ];
+
+    /**
+     * The attributes that should be hidden for arrays.
+     *
+     * @var array
+     */
+    protected $hidden = [];
+
+    /**
+     * The attributes that should be cast to native types.
+     *
+     * @var array
+     */
+    protected $casts = [];
 
     public function corporation()
     {

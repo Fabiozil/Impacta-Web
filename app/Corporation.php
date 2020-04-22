@@ -14,6 +14,7 @@ class Corporation extends Model
     protected $table = 'corporations';
 
     public $incrementing = false;
+
     /**
      * The attributes that are mass assignable.
      *
@@ -26,12 +27,11 @@ class Corporation extends Model
         'num_doc_rep', //Numero de documento rep
         'cargo_rep', // Cargo representante
         'email_rep', // Email representante
-        'nombre_corp', //Nombre Corporación
         'telefono', //Telefono Corporación
         'razon_social', //Razon social Corporación
-        'num_doc_corp',
-        'email',
-        'password',
+        'num_doc_corp', // Numero de documeto NIC
+        'ubicacion_corp',
+        'logo_corp',
     ];
 
     /**
@@ -39,18 +39,14 @@ class Corporation extends Model
      *
      * @var array
      */
-    protected $hidden = [
-        'password', 'remember_token',
-    ];
+    protected $hidden = [];
 
     /**
      * The attributes that should be cast to native types.
      *
      * @var array
      */
-    protected $casts = [
-        'email_verified_at' => 'datetime',
-    ];
+    protected $casts = [];
 
     public function recyclers()
     {
