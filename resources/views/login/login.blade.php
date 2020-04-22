@@ -1,6 +1,6 @@
 <html lang="en">
 		<head>
-		    <title>sistema de login</title>
+		    <title>sistema de {{ __('Login') }}</title>
 		    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 			<!-- vinculo a bootstrap -->
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
@@ -46,22 +46,41 @@
                    <span class="glyphicon glyphicon-user"></span>
                  </div>
 <div class="ContentForm">
-		 	<form action="" method="post" name="FormEntrar">
-		 		<div class="input-group input-group-lg">
+		 	<form action="{{ route('login') }}" method="post" name="FormEntrar">
+		 	@csrf
+			 	<div class="input-group input-group-lg">
 				  <span class="input-group-addon" id="sizing-addon1"><i class="glyphicon glyphicon-user"></i></span>
-				  <input type="usuario" class="form-control" name="usuario" placeholder="Usuario" id="Usuario" aria-describedby="sizing-addon1" required>
+				  <input type="email" class="form-control @error('email') is-invalid @enderror" name="email" placeholder="{{ __('E-Mail Address') }}" id="Usuario" aria-describedby="sizing-addon1" value="{{ old('email') }}" required autocomplete="email" autofocus>
+				  @error('email')
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                                @enderror
 				</div>
 				<br>
 				<div class="input-group input-group-lg">
 				  <span class="input-group-addon" id="sizing-addon1"><i class="glyphicon glyphicon-lock"></i></span>
-				  <input type="password" name="contra" class="form-control" placeholder="Contraseña" aria-describedby="sizing-addon1" required>
+				  <input type="password" name="password" class="form-control @error('password') is-invalid @enderror" placeholder="{{ __('Password') }}" aria-describedby="sizing-addon1" required autocomplete="current-password">
+				  @error('password')
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                                @enderror
 				</div>
-                <div class="opcioncontra"><a href="/RestablecerContraseña">Olvidaste tu contraseña?</a></div>
+                <div class="opcioncontra">
+				@if (Route::has('password.request'))
+                                    <a class="btn btn-link" href="{{ route('password.request') }}">
+                                        {{ __('Forgot Your Password?') }}
+                                    </a>
+                @endif</div>
+
+
 				<br>
-				<button class="btn btn-lg btn-primary btn-block btn-signin" id="IngresoLog" type="submit">Ingresar</button>
+				<!-- cambiar ingresar por acceder en el dic -->
+				<button class="btn btn-lg btn-primary btn-block btn-signin" id="IngresoLog" type="submit">{{ __('Login') }}</button>
                 <br>
                 <!-- hay que preguntar si se registra como persona o corporacion -->
-                <div class="opcioncontra"><a href="">¿No tienes cuenta? Regístrate</a></div>
+                <div class="opcioncontra"><a href="{{ route('register') }}">¿No tienes cuenta? Regístrate</a></div>
 		 	</form>
 		 </div>	
 		 </div>
