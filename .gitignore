@@ -10,3 +10,9 @@ Homestead.json
 Homestead.yaml
 npm-debug.log
 yarn-error.log
+
+# Hechos a mano
+/public/js/app.js
+/public/css/app.js
+composer.lock
+package-lock.json

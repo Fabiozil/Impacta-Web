@@ -37339,8 +37339,6 @@ __webpack_require__(/*! ./bootstrap */ "./resources/js/bootstrap.js");
 
 window._ = __webpack_require__(/*! lodash */ "./node_modules/lodash/lodash.js");
 /**
-<<<<<<< HEAD
-=======
  * We'll load jQuery and the Bootstrap jQuery plugin which provides support
  * for JavaScript based Bootstrap features such as modals and tabs. This
  * code may be modified to fit the specific needs of your application.
@@ -37353,16 +37351,12 @@ try {
   __webpack_require__(/*! bootstrap */ "./node_modules/bootstrap/dist/js/bootstrap.js");
 } catch (e) {}
 /**
->>>>>>> master
  * We'll load the axios HTTP library which allows us to easily issue requests
  * to our Laravel back-end. This library automatically handles sending the
  * CSRF token as a header based on the value of the "XSRF" token cookie.
  */
 
-<<<<<<< HEAD
-=======
 
->>>>>>> master
 window.axios = __webpack_require__(/*! axios */ "./node_modules/axios/index.js");
 window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
 /**
@@ -37376,11 +37370,7 @@ window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
 //     broadcaster: 'pusher',
 //     key: process.env.MIX_PUSHER_APP_KEY,
 //     cluster: process.env.MIX_PUSHER_APP_CLUSTER,
-<<<<<<< HEAD
-//     forceTLS: true
-=======
 //     encrypted: true
->>>>>>> master
 // });
 
 /***/ }),
@@ -37403,18 +37393,8 @@ window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 __webpack_require__(/*! /home/santiagobedoya/EIA/Web/Impacta/resources/js/app.js */"./resources/js/app.js");
 module.exports = __webpack_require__(/*! /home/santiagobedoya/EIA/Web/Impacta/resources/sass/app.scss */"./resources/sass/app.scss");
-=======
-__webpack_require__(/*! C:\xampp\htdocs\Impacta-Web\resources\js\app.js */"./resources/js/app.js");
-module.exports = __webpack_require__(/*! C:\xampp\htdocs\Impacta-Web\resources\sass\app.scss */"./resources/sass/app.scss");
->>>>>>> master
-=======
-__webpack_require__(/*! C:\xampp\htdocs\impacta\Impacta-Web\resources\js\app.js */"./resources/js/app.js");
-module.exports = __webpack_require__(/*! C:\xampp\htdocs\impacta\Impacta-Web\resources\sass\app.scss */"./resources/sass/app.scss");
->>>>>>> master
 
 
 /***/ })
