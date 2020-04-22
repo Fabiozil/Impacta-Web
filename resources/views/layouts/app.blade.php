@@ -18,6 +18,41 @@
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+
+    @yield('header')
+    <style>
+
+#Contenedor{
+   width: 400px;
+   margin: 50px auto;
+   background-color: #F3EDED;
+       border: 1px solid #ECE8E8;
+   height: 400px;
+   border-radius:8px;
+   padding: 0px 9px 0px 9px;
+}
+.Icon span{
+     background: #A8A6A6;
+     padding: 20px;
+     border-radius: 120px;
+}
+.Icon{
+    margin-top: 10px;
+    margin-bottom:10px;
+    color: #FFF;
+    font-size: 50px;
+    text-align: center;
+}
+.opcioncontra{
+   text-align: center;
+   margin-top: 20px;
+   font-size: 14px;
+}
+.btn{
+   background: #009900;
+}
+
+        </style>
 </head>
 <body>
     <div id="app">
@@ -72,7 +107,7 @@
             </div>
         </nav>
 
-        <main class="py-4">
+        <main >
             @yield('content')
         </main>
     </div>
