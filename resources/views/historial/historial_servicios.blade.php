@@ -1,8 +1,6 @@
-@extends('../templateWithNav')
+@extends('nav.nav')
 
-@section('title', 'Historial')
-
-@section('content')
+@section('conteint')
     <main class="container contenedor">
         <header>
             <h1 class="title">Historial</h1>
