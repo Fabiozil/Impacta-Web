@@ -3,6 +3,7 @@
 namespace App;
 
 use Illuminate\Database\Eloquent\Model;
+use App\Recycler;
 
 class Corporation extends Model
 {
@@ -50,7 +51,7 @@ class Corporation extends Model
 
     public function recyclers()
     {
-        return $this->hasMany('App\Recycler');
+        return $this->hasMany(Recycler::class);
     }
 
     public function affiliates()
