@@ -11,8 +11,8 @@ class Recycler extends Model
      *
      * @var array
      */
+
     protected $fillable = [
-        'corporation_id',
         'apodo',
         'nombres',
         'apellidos',
@@ -31,7 +31,12 @@ class Recycler extends Model
      *
      * @var array
      */
-    protected $hidden = [];
+    protected $hidden = [
+        'id',
+        'corporation_id',
+        'created_at',
+        'updated_at',
+    ];
 
     /**
      * The attributes that should be cast to native types.
