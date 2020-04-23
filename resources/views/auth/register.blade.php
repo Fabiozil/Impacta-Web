@@ -13,34 +13,82 @@
 
                         <div class="form-group row">
                             <label for="name" class="col-md-4 col-form-label text-md-right">{{ __('Name') }}</label>
-
                             <div class="col-md-6">
                                 <input id="name" type="text" class="form-control @error('name') is-invalid @enderror" name="name" value="{{ old('name') }}" required autocomplete="name" autofocus>
+                            </div>
+                            <br>
+                            <br>
+                            <label for="name" class="col-md-4 col-form-label text-md-right">{{__('Tipo')}}</label>
+                            <div class="col-md-6">
                                 <select class="form-control" name="type" id="type">
                                     <option value="1">Corporación</option>
                                     <option value="0">Afiliado</option>
                                 </select>
-                                Name_rep<input class="form-control" name="name_rep">
-                                lastname<input class="form-control" name="lastname">
-                                <select class="form-control" name="type_doc" id="type">
+                            </div>
+                            <br>
+                            <br>
+                            <label for="name" class="col-md-4 col-form-label text-md-right">{{__('Nombre representante')}}</label>
+                            <div class="col-md-6">
+                                <input class="form-control  @error('name_rep') is-invalid @enderror" name="name_rep" value="{{ old('name_rep') }}" required autocomplete="name_rep" autofocus>
+                            </div>
+                            <br>
+                            <br>
+                            <label for="name" class="col-md-4 col-form-label text-md-right">{{__('Apellido representante')}}</label>
+                            <div class="col-md-6">
+                                <input class="form-control @error('lastname') is-invalid @enderror" name="lastname" value="{{ old('lastname') }}" required autocomplete="name" autofocus>
+                            </div>
+                            <br>
+                            <br>
+                            <label for="name" class="col-md-4 col-form-label text-md-right">{{__('Tipo de documento')}}</label>
+                            <div class="col-md-6">
+                                <select class="form-control" name="type_doc" id="type"  value="{{ old('type_doc') }}" required autocomplete="type_doc" autofocus>
                                     <option value="1">CC</option>
                                     <option value="0">PASS</option>
                                 </select>
-                                <input class="form-control" name="num_doc">
+                            </div>
+                            <br>
+                            <br>
+                            <label for="name" class="col-md-4 col-form-label text-md-right">{{__('Número de documento')}}</label>
+                            <div class="col-md-6">
+                                <input class="form-control  @error('num_doc') is-invalid @enderror" name="num_doc" value="{{ old('num_doc') }}" required autocomplete="num_doc" autofocus>
+                            </div>
+                            <br>
+                            <br>
+                            <label for="name" class="col-md-4 col-form-label text-md-right">{{__('Cargo')}}</label>
+                            <div class="col-md-6">
                                 <input class="form-control" name="position">
+                            </div>
+                            <br>
+                            <br>
+                            <label for="name" class="col-md-4 col-form-label text-md-right">{{__('Correo representante')}}</label>
+                            <div class="col-md-6">
                                 <input class="form-control" name="email_rep">
-
+                            </div>
+                            <br>
+                            <br>
+                            <label for="name" class="col-md-4 col-form-label text-md-right">{{__('Teléfono')}}</label>
+                            <div class="col-md-6">
                                 <input class="form-control" name="phone">
+                            </div> 
+                            <br>
+                            <br>
+                            <label for="name" class="col-md-4 col-form-label text-md-right">{{__('Razón social')}}</label>
+                            <div class="col-md-6">
                                 <input class="form-control" name="r_s">
+                            </div>
+                            <br>
+                            <br>
+                            <label for="name" class="col-md-4 col-form-label text-md-right">{{__('Número documento corporación')}}</label>
+                            <div class="col-md-6">
                                 <input class="form-control" name="num_doc_corp">
-
+                            </div>
 
                                 @error('name')
                                 <span class="invalid-feedback" role="alert">
                                     <strong>{{ $message }}</strong>
                                 </span>
                                 @enderror
-                            </div>
+                            
                         </div>
 
                         <div class="form-group row">
