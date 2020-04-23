@@ -20,6 +20,16 @@
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
 
     @yield('header')
+    <script type="text/javascript">
+        function myCustomValidation(token) {
+            console.log(token);
+        }
+    </script>
+    <!-- Recaptcha temporal  -->
+    {!! htmlScriptTagJsApi([
+        'action' => 'homepage',
+        'custom_validation' => 'myCustomValidation'
+    ]) !!}
     <style>
 
 #Contenedor{
