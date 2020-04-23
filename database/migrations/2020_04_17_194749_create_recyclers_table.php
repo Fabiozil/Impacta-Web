@@ -20,16 +20,17 @@ class CreateRecyclersTable extends Migration
             $table->foreign('corporation_id')
                 ->references('id')->on('corporations')
                 ->onDelete('cascade');
-
-            $table->string('apodo');
             $table->string('nombres');
             $table->string('apellidos');
-            $table->date('fecha_nacimiento');
-            $table->integer('celular');
-            $table->text('residuos');
+            $table->string('apodo');
             $table->smallInteger('edad');
-            $table->text('comunas');
+            $table->integer('celular');
+            $table->date('fecha_nacimiento');
             $table->text('historia');
+            $table->text('residuos');
+            $table->text('comunas');
+            $table->text('barrio'); //{ "barrio1": {"dias": ,"horas":}}
+
             $table->string('foto'); // Dirección del archivo local
 
             $table->timestamps();

@@ -6,7 +6,7 @@ use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 
-class User extends Authenticatable
+class User extends Authenticatable implements MustVerifyEmail
 {
     use Notifiable;
 
@@ -16,7 +16,7 @@ class User extends Authenticatable
      * @var array
      */
     protected $fillable = [
-        'name', 'email','tipo_usuario', 'password',
+        'name', 'email', 'tipo_usuario', 'password',
     ];
 
     /**
@@ -37,23 +37,11 @@ class User extends Authenticatable
         'email_verified_at' => 'datetime',
     ];
 
-    public function corporation()
-    {
-        return $this->belongsToMany('App\Corporation', 'corporation_id');
-    }
-    public function collection_areas()
-    {
-        return $this->hasOne('App\CollectionArea');
-    }
-
     public function isA()
     {
-        if($this->tipo_usuario){
-            return $this->hasOne(Corporation::class,'id','id');
+        if ($this->tipo_usuario) {
+            return $this->hasOne(Corporation::class, 'id', 'id');
         }
-        return $this->hasOne(Affiliate::class,'id','id');
+        return $this->hasOne(Affiliate::class, 'id', 'id');
     }
-
 }
-
-

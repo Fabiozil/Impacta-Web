@@ -22,7 +22,8 @@ Route::get('/corporation', 'CorporationController@index');
 Route::get('/recycler', 'RecyclerController@index');
 Route::get('/notification', 'NotificationController@index');
 
-Auth::routes();
+Auth::routes(['verify'=>true]);
+Route::resource('recicladores', 'Recycler\RecyclerController')->only(['index','show']);
 Route::get('/home', 'HomeController@index')->name('home');
 
 
