@@ -23,7 +23,7 @@ header{
 nav{
     height: 70px;
 }
-nav .btn.green{
+nav .btn.green,{
     margin: 0.3em 0.5em;
     background-color: #009900;
     color: #FFF;
@@ -99,4 +99,25 @@ nav .btn{
     border-radius: 5px;
     border: 1px solid #ced4da;
     text-align: center;
+}
+.buscador select{
+    width: 80%;
+    display: inline-block;
+}
+.buscador input[type="text"]{
+    width: 80%;
+    display: inline-block;
+}
+form.buscador{
+    width: 100%;
+    text-align: center;
+}
+.manual textarea{
+    width: 100%;
+    min-height: 250px;
+    border-radius: 10px;
+    margin-top: 10px;
+}
+.manual form{
+    display: none;
 }

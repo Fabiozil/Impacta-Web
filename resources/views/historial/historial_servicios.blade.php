@@ -1,6 +1,6 @@
-@extends('nav.nav')
+@extends('temp_with_nav')
 
-@section('conteint')
+@section('content')
     <main class="container contenedor">
         <header>
             <h1 class="title">Historial</h1>
@@ -13,13 +13,60 @@
                 <button type="button" class="btn float-right btnSelected">Servicios</button>
             </a>
         </nav>
+        <?php /*
+        @foreach ($historial as $historia)
+            <section class="mensaje row">
+                <img src="{{ $historia -> uri }}" class="col-md-2" alt="{{ $historia -> nombre }}" srcset="">
+                <div class="col-md-9">
+                    <p class="mensaje_cerrado">
+                        {{ $historia -> nombre }} envío un mensaje
+                        <br>
+                        <span>
+                            El día
+                            @php
+                                $d = new DateTime('2011-01-01T15:03:01.012345Z');
+                                echo $d -> format('d/m/Y') . " a las " . $d -> format('h:i:s') . (intval ($d -> format('H')) > 11 ? " pm" : " am");
+                            @endphp    
+                        </span>
+                        <br>
+                        <span class="ver-mas">Ver más</span>
+                    </p>
+                    <p class="mensaje_abierto">
+                        {{ $historia -> nombre }} solicitó recoleccion de "plastico"
+                        <br>
+                        Mensaje del usuario: 
+                        <br>
+                        {{ $historia -> mensaje}}
+                        <br>
+                        <span>
+                            El día
+                            @php
+                                $d = new DateTime($historia -> fecha);
+                                echo $d -> format('d/m/Y') . " a las " . $d -> format('h:i:s') . (intval ($d -> format('H')) > 11 ? " pm" : " am");
+                            @endphp    
+                        </span>
+                        <br>
+                        ¿Ya realizaste esta accion?
+                        <form action="" method="GET">
+                            @csrf
+                            <button type="submit" class="btn btn-success">Si</button>
+                        </form>
+                        <button type="button" class="btn btn-success">No</button>
+                        <br>
+                        <span class="ver-menos">Ver menos</span>
+                    </p>
+                </div>
+                <img class="col-md-1" src="https://www.nicepng.com/png/detail/61-613537_exclamation-point-png-signo-de-admiracion-rojo.png" alt="Alerta" srcset="">
+            </section>
+        @endforeach
+        */?>
         <section class="mensajes_container">
             <h3 class="titulo_menor">Mensajes por responder</h3>
             <section class="mensaje row">
                 <img src="https://www.jdevoto.cl/web/wp-content/uploads/2018/04/default-user-img.jpg" class="col-md-2" alt="Cliente" srcset="">
                 <div class="col-md-9">
                     <p class="mensaje_cerrado">
-                        Alguien envío un mensaje
+                        Alguien envío un mensaje 
                         <br>
                         <span>El dia 07/04/2020 a las 4:34 pm</span>
                         <br>

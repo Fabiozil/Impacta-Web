@@ -1,94 +1,67 @@
-@extends('nav.nav')
+@extends('temp_with_nav')
 
-@section('conteint')
+@section('content')
     <main class="container contenedor">
         <header>
-            <h1 class="title">Notificaciones</h1>
+            <h1 class="title">Mensaje manual</h1>
         </header>
-        <nav>
-            <a href="/notificaciones/automaticas"><button type="button" class="btn green btnSelected">Automáticas</button></a>
-            <a href="/notificaciones/manuales"><button type="button" class="btn green">Manuales</button></a>
-        </nav>
-        <section class="mensajes_container">
-            <div class="row">
-                <h3 class="col-md-4 offset-md-1">Buscar mensajes por: </h3>
-                <select class="form-control col-md-6">
-                    <option selected>Fecha</option>
-                    <option>Nombre</option>
+        <section class="manual">
+            <button type="button" id="n_mnsj" class="btn btn-info">Nuevo mensaje</button>
+            <form action="">
+                <textarea name="Mensaje" id="" cols="30" rows="10" placeholder=""></textarea>
+                <label for="sectores">¿Qué sectores? </label>
+                <select name="sector" id="sectores">
+                    <option value="default">Default</option>
                 </select>
-            </div>
-            <section class="buscador">
-                <p>
-                    De <input type="date"> al <input type="date">
-                    <button class="btn green">
-                        <img src="https://img.icons8.com/cotton/2x/search--v2.png" alt="Buscar" srcset="">
-                    </button>
-                </p>
-            </section>
-            <section class="mensaje row">
-                <img src="https://www.jdevoto.cl/web/wp-content/uploads/2018/04/default-user-img.jpg" class="col-md-2 order-first" alt="Cliente" srcset="">
-                <div class="col-md-10 order-last">
-                    <p>
-                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Suscipit, cumque velit? Delectus, sit deserunt accusantium, suscipit sint recusandae sapiente assumenda distinctio tempore nisi possimus fugiat nesciunt veritatis molestias neque aperiam dolorum? Temporibus modi sint eos, ad libero praesentium quia voluptates officiis iusto fuga, dolor nostrum, explicabo debitis id expedita suscipit.
-                        <br>
-                        <span>Enviado el dia 07/04/2020 a las 4:34 pm</span>
-                        <br>
-                        <span class="titulo_menor">Mensaje manual</span>
-                    </p>
-                </div>
-            </section>
-            <section class="mensaje row">
-                <img src="https://www.jdevoto.cl/web/wp-content/uploads/2018/04/default-user-img.jpg" class="col-md-2 order-last" alt="Cliente" srcset="">
-                <div class="col-md-10 order-first">
-                    <p>
-                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Suscipit, cumque velit? Delectus, sit deserunt accusantium, suscipit sint recusandae sapiente assumenda distinctio tempore nisi possimus fugiat nesciunt veritatis molestias neque aperiam dolorum? Temporibus modi sint eos, ad libero praesentium quia voluptates officiis iusto fuga, dolor nostrum, explicabo debitis id expedita suscipit.
-                        <br>
-                        <span>Enviado el dia 07/04/2020 a las 4:34 pm</span>
-                        <br>
-                        <span class="titulo_menor">Mensaje manual</span>
-                    </p>
-                </div>
-            </section>
-            <section class="mensaje row">
-                <img src="https://www.jdevoto.cl/web/wp-content/uploads/2018/04/default-user-img.jpg" class="col-md-2 order-last" alt="Cliente" srcset="">
-                <div class="col-md-10 order-first">
-                    <p>
-                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Suscipit, cumque velit? Delectus, sit deserunt accusantium, suscipit sint recusandae sapiente assumenda distinctio tempore nisi possimus fugiat nesciunt veritatis molestias neque aperiam dolorum? Temporibus modi sint eos, ad libero praesentium quia voluptates officiis iusto fuga, dolor nostrum, explicabo debitis id expedita suscipit.
-                        <br>
-                        <span>Enviado el dia 07/04/2020 a las 4:34 pm</span>
-                        <br>
-                        <span class="titulo_menor">Mensaje manual</span>
-                    </p>
-                </div>
-            </section>
-            <section class="mensaje row">
-                    <img src="https://www.jdevoto.cl/web/wp-content/uploads/2018/04/default-user-img.jpg" class="col-md-2 order-last" alt="Cliente" srcset="">
-                    <div class="col-md-10 order-first">
-                        <p>
-                            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Suscipit, cumque velit? Delectus, sit deserunt accusantium, suscipit sint recusandae sapiente assumenda distinctio tempore nisi possimus fugiat nesciunt veritatis molestias neque aperiam dolorum? Temporibus modi sint eos, ad libero praesentium quia voluptates officiis iusto fuga, dolor nostrum, explicabo debitis id expedita suscipit.
-                            <br>
-                            <span>Enviado el dia 07/04/2020 a las 4:34 pm</span>
-                            <br>
-                            <span class="titulo_menor">Mensaje manual</span>
-                        </p>
-                    </div>
-                </section>
-            <!--
-            {{--@foreach ($notifications as $notification)--}}
+                <input type="checkbox" name="reglas" id="regla1">
+                <br>
+                <label for="reciclador">¿Usuarios por reciclador? Usuarios de </label>
+                <select name="sector" id="reciclador">
+                    <option value="default">reciclador</option>
+                </select>
+                <input type="checkbox" name="reglas" id="regla1">
+                <br>
+                <label for="fecha">¿Cuándo lo deseas enviar?</label>
+                <input name="fecha" id="fecha" type="date"><input type="time" name="hora">
+                <input type="checkbox" name="reglas" id="regla1">
+            </form>
+            <h3 class="titulo_menor">Mensajes por responder</h3>
+            <section class="mensajes_container">
                 <section class="mensaje row">
-                    <img src="https://www.jdevoto.cl/web/wp-content/uploads/2018/04/default-user-img.jpg" 
-                        class="col-md-2 order-{{--$loop -> even == true ? 'last' : 'first'--}}" alt="Cliente" srcset="">
-                    <div class="col-md-10 {{--$loop -> even == true ? 'first' : 'last'--}}">
-                        <p>
-                            {{--$notification -> body--}}
-                            <br>
-                            <span>El dia 07/04/2020 a las 4:34 pm</span>
-                        </p>
-                    </div>
+                    <p class="col-md-12">
+                        aoisdjioajsd
+                        <br>
+                        <span>
+                            Enviado el día
+                        </span>
+                        <span class="titulo_menor">Mensaje manual</span>
+                    </p>
                 </section>
-            {{--@endforeach--}}
-            -->
-        </section>
+            </section>
+            <?php /*
+            @foreach ($notifications as $notification)
+                <section class="mensaje row">
+                    <p>
+                        {{$notification -> body}}
+                        <br>
+                        <span>
+                            Enviado el día
+                            @php
+                                $d = new DateTime('2011-01-01T15:03:01.012345Z');
+                                echo $d -> format('d/m/Y') . " a las " . $d -> format('h:i:s') . (intval ($d -> format('H')) > 11 ? " pm" : " am");
+                            @endphp 
+                        </span>
+                        <span class="titulo_menor">Mensaje manual</span>
+                    </p>
+                </section>
+            @endforeach
+            */?>
     </main>
-
+    <script>
+        const boton = document.getElementById("n_mnsj");
+        const form = document.getElementsByTagName("form")[0];
+        boton.addEventListener("click", function(){
+            form.style.display = "block";
+        });
+    </script>
 @endsection
