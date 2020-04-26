@@ -2,9 +2,10 @@
 $body-bg: #f8fafc;
 
 // Typography
-$font-family-sans-serif: 'Nunito', sans-serif;
+//$font-family-sans-serif: 'Nunito', sans-serif;
 $font-size-base: 0.9rem;
 $line-height-base: 1.6;
+$font-family: 'Roboto', sans-serif;
 
 // Colors
 $blue: #3490dc;
@@ -17,3 +18,36 @@ $yellow: #ffed4a;
 $green: #38c172;
 $teal: #4dc0b5;
 $cyan: #6cb2eb;
+
+#contenedor_crear_reciclador{
+    background-color: #f2f2f2;
+}
+
+#contenedor_formulario{
+    background-color: white;
+    border-radius: 10px;
+    margin: 20px;
+}
+
+#nav-img{
+    max-height: 60%;
+    max-width: 60%;
+    border: solid;
+    border-color: white;
+    text-align: center;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%
+}
+#nav-img-selected{
+    max-height: 80%;
+    max-width: 80%;
+    border: solid;
+    border-color: #009900;
+    text-align: center;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%
+}
