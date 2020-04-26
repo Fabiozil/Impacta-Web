@@ -1,6 +1,10 @@
-@extends('temp_with_nav')
+@extends('nav')
 
-@section('content')
+@section('head')
+    <link rel="stylesheet" href="/css/notifications.css">
+@endsection
+
+@section('conteint')
     <main class="container contenedor">
         <header>
             <h1 class="title">Notificaciones</h1>
