@@ -7,12 +7,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title> @yield('title')</title>
-    <!-- Fonts -->
-    <link rel="dns-prefetch" href="//fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
-
-    <!-- Styles -->
-    <link href="{{ asset('css/app.css') }}" rel="stylesheet"></head>
+    <link rel="stylesheet" href='/css/app.css'>
+</head>
 
 <body>
     <div class="container" style="height: 100vh;">
@@ -22,27 +18,27 @@
                     <ul class="nav flex-column" style="background-color: #cccccc;"  > 
                         <li class="nav-item"> 
                         <a class="nav-link active" href="#"> 
-                            <img src="img.jpg" class="rounded-circle" alt="Mis recicladores" style="max-height: 100%;max-width: 100%;"> 
+                            <img src="/icons/user.png" class="rounded-circle" id="nav-img-selected" alt="Mis recicladores"> 
                         </a>
                         </li>
                         <li class="nav-item">
                         <a class="nav-link" href="#">
-                            <img src="img.jpg" class="rounded-circle" alt="Mi comunidad" style="max-height: 90%;max-width: 90%;"> 
+                            <img src="/icons/map.png" class="rounded-circle" id="nav-img" alt="Mi comunidad"> 
                         </a>
                         </li>
                         <li class="nav-item">
                         <a class="nav-link" href="#">
-                            <img src="img.jpg" class="rounded-circle" alt="Social" style="max-height: 90%;max-width: 90%;"> 
+                            <img src="/icons/chat.png" class="rounded-circle" id="nav-img" alt="Social"> 
                         </a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="#">
-                                <img src="img.jpg" class="rounded-circle" alt="Indicadores ambientales" style="max-height: 90%;max-width: 90%;"> 
+                                <img src="/icons/stats.png" class="rounded-circle" id="nav-img" alt="Indicadores ambientales"> 
                             </a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="#">
-                                <img src="img.jpg" class="rounded-circle" alt="Opciones" style="max-height: 90%;max-width: 90%;"> 
+                                <img src="/icons/gear.png" class="rounded-circle" id="nav-img" alt="Opciones"> 
                             </a>
                         </li>
                     </ul>
@@ -53,6 +49,7 @@
             </div>
         </div>
     </div>
+    <script src='/js/app.js'></script>
 </body>
 
 </html>
