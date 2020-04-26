@@ -1,10 +1,11 @@
-@extends('nav.nav')
+@extends('nav')
 
-@section('content')
+@section('conteint')
 
   <main class="container contenedor">
         <header>
             <h1 class="title">Resultados de la búsqueda</h1>
+            
         </header>
  
         <section class="mensajes_container">
@@ -14,7 +15,7 @@
             </div>
      
             <section class="mensaje row">
-                <img src="https://www.jdevoto.cl/web/wp-content/uploads/2018/04/default-user-img.jpg" class="col-md-2 order-first" alt="Cliente" srcset="">
+                <img src="https://www.jdevoto.cl/web/wp-content/uploads/2018/04/default-user-img.jpg" class="col-md-2 order-first" alt="Usuario" srcset="">
                 <div class="col-md-10 order-last">
                     <p> 
                         <h1>Nombre de casa o unidad residencial</h1>
@@ -28,7 +29,7 @@
                 </div>
             </section>
             <section class="mensaje row">
-                <img src="https://www.jdevoto.cl/web/wp-content/uploads/2018/04/default-user-img.jpg" class="col-md-2 order-last" alt="Cliente" srcset="">
+                <img src="https://www.jdevoto.cl/web/wp-content/uploads/2018/04/default-user-img.jpg" class="col-md-2 order-first" alt="Usuario" srcset="">
                 <div class="col-md-10 order-first">
                     <p> 
                         <h1>Nombre de casa o unidad residencial</h1>
@@ -42,7 +43,7 @@
                 </div>
             </section>
             <section class="mensaje row">
-                <img src="https://www.jdevoto.cl/web/wp-content/uploads/2018/04/default-user-img.jpg" class="col-md-2 order-first" alt="Cliente" srcset="">
+                <img src="https://www.jdevoto.cl/web/wp-content/uploads/2018/04/default-user-img.jpg" class="col-md-2 order-first" alt="Usuario" srcset="">
                 <div class="col-md-10 order-last">
                     <p> 
                         <h1>Nombre de casa o unidad residencial</h1>
@@ -56,7 +57,7 @@
                 </div>
             </section>
             <section class="mensaje row">
-                <img src="https://www.jdevoto.cl/web/wp-content/uploads/2018/04/default-user-img.jpg" class="col-md-2 order-first" alt="Cliente" srcset="">
+                <img src="https://www.jdevoto.cl/web/wp-content/uploads/2018/04/default-user-img.jpg" class="col-md-2 order-first" alt="Usuario" srcset="">
                 <div class="col-md-10 order-last">
                     <p> 
                         <h1>Nombre de casa o unidad residencial</h1>
@@ -71,5 +72,6 @@
             </section>
 
             </section>
+            
     </main>
     @endsection

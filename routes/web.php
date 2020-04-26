@@ -81,7 +81,12 @@ Route::get('/Mapa', function(){
 Route::get('/dank', function(){
     return view('login.confirmar');
 });
-
+Route::get('/ResultadosCorporacion', function(){
+    return view('ResultadosBusqueda.ListaCorporaciones');
+});
+Route::get('/Resultados', function(){
+    return view('ResultadosBusqueda.ListaUsuarios');
+});
 
 
 
