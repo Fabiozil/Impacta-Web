@@ -1,14 +1,14 @@
 @extends('nav.nav')
 
 @section('conteint')
-<button style="background-color: #009900;">
-    Nueva Medición
-</button>
-<button style="background-color: #009900;">
-    Historial
-</button>
+<a href="NuevaMedicion">
+    <button class="btn">Nueva Medición</button>
+</a>
+<a href="HistorialMediciones">
+    <button class="btn">Historial</button>
+</a>
 <br />
-<h1 style="color: #009933; display: inline-block;">
+<h1>
     Materiales Aprovechados
 </h1>
 
