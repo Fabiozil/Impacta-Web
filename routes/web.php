@@ -87,7 +87,9 @@ Route::get('/ResultadosCorporacion', function(){
 Route::get('/Resultados', function(){
     return view('ResultadosBusqueda.ListaUsuarios');
 });
-
+Route::get('/DatosUsuario', function(){
+    return view('ResultadosBusqueda.DatosUsuario');
+});
 
 
 
