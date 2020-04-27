@@ -1,0 +1,102 @@
+body{
+    background-color: #f2f2f2;
+}
+header{
+    padding: 1em;
+}
+.title{
+    font-size: 30px;
+    color: #009900;
+}
+.titulo_menor{
+    font-size: 16px;
+    color: #009900;
+    padding: 15px;
+}
+.mensaje_abierto{
+    display: none;
+    transition: display 1s;
+}
+.mensaje_cerrado{
+    transition: display 1s;
+}
+nav{
+    height: 70px;
+}
+nav .btn.green{
+    margin: 0.3em 0.5em;
+    background-color: #009900;
+    color: #FFF;
+    width: 15%;
+}
+nav .btn{
+    margin: 0.3em 0.5em;
+    background-color: #999;
+    color: #FFF;
+}
+.btnSelected{
+    font-weight: bolder !important;
+    transform: scale(1.12);
+}
+.contenedor{
+    background-color: #FFF;
+    padding: 1em;
+    height: 100%;
+    overflow-y: auto;
+}
+.mensaje{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.5em 1em;
+}
+.mensajes_container{
+    background-color: #f2f2f2;
+    border-radius: 5px;
+    overflow-y: auto;
+    overflow-x: hidden; 
+    padding: 15px 0; 
+}
+.mensaje img{
+    border-radius: 50%;
+}
+.mensaje p{
+    border-radius: 20px;
+    background-color: #FFF;
+    padding: 10px;
+    margin: 0;
+}
+.mensaje p span{
+    font-style: italic;
+    font-size: smaller;
+    font-weight: 600;
+    padding-left: 6px;
+    font-size: 12px;
+}
+.ver-mas, .ver-menos{
+    font-size: 16px !important;
+    font-style: italic;
+    color: #009900;
+    cursor: pointer;
+}
+.buscador{
+    margin-top: 10px;
+}
+.buscador button{
+    width: 50px;
+    height: 50px;
+}
+.buscador img{
+    max-width: 100%;
+    max-height: 100%;
+}
+.buscador p{
+    font-size: 20px;
+    font-weight: bolder;
+    text-align: center;
+}
+.buscador input{
+    border-radius: 5px;
+    border: 1px solid #ced4da;
+    text-align: center;
+}
