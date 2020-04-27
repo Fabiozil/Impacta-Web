@@ -1,6 +1,6 @@
-@extends('nav.nav')
+@extends('nav')
 
-@section('content')
+@section('conteint')
 
   <main class="container contenedor">
         <header>
@@ -9,58 +9,46 @@
  
         <section class="mensajes_container">
             <div class="row">
-                <h3 class="col-md-4 offset-md-1"> -- corporaciones encontradas</h3>
-            
+                <h3 class="col-md-8 offset-md-1"> -- corporaciones encontradas</h3>           
             </div>
      
             <section class="mensaje row">
-                <img src="https://www.jdevoto.cl/web/wp-content/uploads/2018/04/default-user-img.jpg" class="col-md-2 order-first" alt="Cliente" srcset="">
+                <img src="https://www.jdevoto.cl/web/wp-content/uploads/2018/04/default-user-img.jpg" class="col-md-2 order-first" alt="Corp" srcset="">
                 <div class="col-md-10 order-last">
                     <p> 
-                        <h1>Nombre de la corporación</h1>
+                        <h2>Nombre de la corporación</h1>
                         <br>
                         A 0 km de ti
-                        <a href="/"><button type="button" class="btn green btnSelected">Perfil</button></a>
+                        <a href="/DatosCorp"><button type="button" class="btn green btnSelected">Perfil</button></a>
                         <a href="/"><button type="button" class="btn green btnSelected">Ver en mapa >></button></a>
                     </p>
                 </div>
             </section>
             <section class="mensaje row">
-                <img src="https://www.jdevoto.cl/web/wp-content/uploads/2018/04/default-user-img.jpg" class="col-md-2 order-last" alt="Cliente" srcset="">
+                <img src="https://www.jdevoto.cl/web/wp-content/uploads/2018/04/default-user-img.jpg" class="col-md-2 order-first" alt="Corp" srcset="">
                 <div class="col-md-10 order-first">
                 <p> 
-                        <h1>Nombre de la corporación</h1>
+                        <h2>Nombre de la corporación</h1>
                         <br>
                         A 0 km de ti
-                        <a href="/"><button type="button" class="btn green btnSelected">Perfil</button></a>
+                        <a href="/DatosCorp"><button type="button" class="btn green btnSelected">Perfil</button></a>
                         <a href="/"><button type="button" class="btn green btnSelected">Ver en mapa >></button></a>
                 </p>
                 </div>
             </section>
             <section class="mensaje row">
-                <img src="https://www.jdevoto.cl/web/wp-content/uploads/2018/04/default-user-img.jpg" class="col-md-2 order-first" alt="Cliente" srcset="">
+                <img src="https://www.jdevoto.cl/web/wp-content/uploads/2018/04/default-user-img.jpg" class="col-md-2 order-first" alt="Corp" srcset="">
                 <div class="col-md-10 order-last">
                 <p> 
-                        <h1>Nombre de la corporación</h1>
+                        <h2>Nombre de la corporación</h1>
                         <br>
                         A 0 km de ti
-                        <a href="/"><button type="button" class="btn green btnSelected">Perfil</button></a>
+                        <a href="/DatosCorp"><button type="button" class="btn green btnSelected">Perfil</button></a>
                         <a href="/"><button type="button" class="btn green btnSelected">Ver en mapa >></button></a>
                 </p>
                 </div>
             </section>
-            <section class="mensaje row">
-                <img src="https://www.jdevoto.cl/web/wp-content/uploads/2018/04/default-user-img.jpg" class="col-md-2 order-first" alt="Cliente" srcset="">
-                <div class="col-md-10 order-last">
-                <p> 
-                        <h1>Nombre de la corporación</h1>
-                        <br>
-                        A 0 km de ti
-                        <a href="/"><button type="button" class="btn green btnSelected">Perfil</button></a>
-                        <a href="/"><button type="button" class="btn green btnSelected">Ver en mapa >></button></a>
-                </p>
-                </div>
-            </section>
+            
 
             </section>
     </main>

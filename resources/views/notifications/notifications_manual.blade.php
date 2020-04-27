@@ -1,94 +1,144 @@
-@extends('nav.nav')
+@extends('nav')
+
+@section('head')
+    <link rel="stylesheet" href="/css/notifications.css">
+@endsection
 
 @section('conteint')
     <main class="container contenedor">
         <header>
-            <h1 class="title">Notificaciones</h1>
+            <h1 class="title">Notificación manual</h1>
         </header>
-        <nav>
-            <a href="/notificaciones/automaticas"><button type="button" class="btn green btnSelected">Automáticas</button></a>
-            <a href="/notificaciones/manuales"><button type="button" class="btn green">Manuales</button></a>
-        </nav>
-        <section class="mensajes_container">
-            <div class="row">
-                <h3 class="col-md-4 offset-md-1">Buscar mensajes por: </h3>
-                <select class="form-control col-md-6">
-                    <option selected>Fecha</option>
-                    <option>Nombre</option>
-                </select>
-            </div>
-            <section class="buscador">
-                <p>
-                    De <input type="date"> al <input type="date">
-                    <button class="btn green">
-                        <img src="https://img.icons8.com/cotton/2x/search--v2.png" alt="Buscar" srcset="">
-                    </button>
-                </p>
-            </section>
-            <section class="mensaje row">
-                <img src="https://www.jdevoto.cl/web/wp-content/uploads/2018/04/default-user-img.jpg" class="col-md-2 order-first" alt="Cliente" srcset="">
-                <div class="col-md-10 order-last">
-                    <p>
-                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Suscipit, cumque velit? Delectus, sit deserunt accusantium, suscipit sint recusandae sapiente assumenda distinctio tempore nisi possimus fugiat nesciunt veritatis molestias neque aperiam dolorum? Temporibus modi sint eos, ad libero praesentium quia voluptates officiis iusto fuga, dolor nostrum, explicabo debitis id expedita suscipit.
-                        <br>
-                        <span>Enviado el dia 07/04/2020 a las 4:34 pm</span>
-                        <br>
-                        <span class="titulo_menor">Mensaje manual</span>
-                    </p>
-                </div>
-            </section>
-            <section class="mensaje row">
-                <img src="https://www.jdevoto.cl/web/wp-content/uploads/2018/04/default-user-img.jpg" class="col-md-2 order-last" alt="Cliente" srcset="">
-                <div class="col-md-10 order-first">
-                    <p>
-                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Suscipit, cumque velit? Delectus, sit deserunt accusantium, suscipit sint recusandae sapiente assumenda distinctio tempore nisi possimus fugiat nesciunt veritatis molestias neque aperiam dolorum? Temporibus modi sint eos, ad libero praesentium quia voluptates officiis iusto fuga, dolor nostrum, explicabo debitis id expedita suscipit.
-                        <br>
-                        <span>Enviado el dia 07/04/2020 a las 4:34 pm</span>
-                        <br>
-                        <span class="titulo_menor">Mensaje manual</span>
-                    </p>
-                </div>
-            </section>
-            <section class="mensaje row">
-                <img src="https://www.jdevoto.cl/web/wp-content/uploads/2018/04/default-user-img.jpg" class="col-md-2 order-last" alt="Cliente" srcset="">
-                <div class="col-md-10 order-first">
-                    <p>
-                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Suscipit, cumque velit? Delectus, sit deserunt accusantium, suscipit sint recusandae sapiente assumenda distinctio tempore nisi possimus fugiat nesciunt veritatis molestias neque aperiam dolorum? Temporibus modi sint eos, ad libero praesentium quia voluptates officiis iusto fuga, dolor nostrum, explicabo debitis id expedita suscipit.
-                        <br>
-                        <span>Enviado el dia 07/04/2020 a las 4:34 pm</span>
-                        <br>
-                        <span class="titulo_menor">Mensaje manual</span>
-                    </p>
-                </div>
-            </section>
-            <section class="mensaje row">
-                    <img src="https://www.jdevoto.cl/web/wp-content/uploads/2018/04/default-user-img.jpg" class="col-md-2 order-last" alt="Cliente" srcset="">
-                    <div class="col-md-10 order-first">
-                        <p>
-                            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Suscipit, cumque velit? Delectus, sit deserunt accusantium, suscipit sint recusandae sapiente assumenda distinctio tempore nisi possimus fugiat nesciunt veritatis molestias neque aperiam dolorum? Temporibus modi sint eos, ad libero praesentium quia voluptates officiis iusto fuga, dolor nostrum, explicabo debitis id expedita suscipit.
-                            <br>
-                            <span>Enviado el dia 07/04/2020 a las 4:34 pm</span>
-                            <br>
-                            <span class="titulo_menor">Mensaje manual</span>
-                        </p>
-                    </div>
-                </section>
-            <!--
-            {{--@foreach ($notifications as $notification)--}}
+        <section class="manual">
+            <h6>Copiar nuevo mensaje:</h6>
+            <form action="">
+                <textarea name="Mensaje" id="" cols="30" rows="10" maxlength="255" placeholder="Ingresa el mensaje a enviar"></textarea>
+                <table>
+                    <thead>
+                        <tr>
+                            <th colspan="2"><h6>Condiciones de envio</h6></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>
+                                <label for="todos">¿Enviar a todos?</label> 
+                            </td>
+                            <td colspan="2">
+                                <label class="switch">
+                                    <input id="todos" type="checkbox">
+                                    <span class="slider round"></span>
+                                </label>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <label for="sectores">Por localidad</label>
+                            </td>
+                            <td id="sectores">
+                                <select class="form-control" name="sector">
+                                    <option value="default">Localidades</option>
+                                </select>
+                                <span class="span-button" id="button_sectores">Agregar localidades</span>
+                            </td>
+                            <td>
+                                <label class="switch">
+                                    <input id="todos" type="checkbox">
+                                    <span class="slider round"></span>
+                                </label>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <label for="reciclador">Usuarios por reciclador</label>
+                            </td>
+                            <td>
+                                <select class="form-control" name="sector" id="reciclador">
+                                    <option value="default">Reciclador</option>
+                                </select>
+                                <span class="span-button" id="button_reciclador">Agregar reciclador</span>
+                            </td>
+                            <td>
+                                <label class="switch">
+                                    <input id="todos" type="checkbox">
+                                    <span class="slider round"></span>
+                                </label>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <label for="fecha">Enviar mensaje en otro momento</label>
+                            </td>
+                            <td>
+                                <input class="form-control width-50" required name="fecha" id="fecha" type="date">
+                                <input class="form-control width-50" required type="time" name="hora">
+                            </td>
+                            <td>
+                                <label class="switch">
+                                    <input id="todos" type="checkbox">
+                                    <span class="slider round"></span>
+                                </label>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </form>
+            <h3 class="titulo_menor">Mensajes por responder</h3>
+            <section class="mensajes_container">
                 <section class="mensaje row">
-                    <img src="https://www.jdevoto.cl/web/wp-content/uploads/2018/04/default-user-img.jpg" 
-                        class="col-md-2 order-{{--$loop -> even == true ? 'last' : 'first'--}}" alt="Cliente" srcset="">
-                    <div class="col-md-10 {{--$loop -> even == true ? 'first' : 'last'--}}">
-                        <p>
-                            {{--$notification -> body--}}
-                            <br>
-                            <span>El dia 07/04/2020 a las 4:34 pm</span>
-                        </p>
-                    </div>
+                    <p class="col-md-12">
+                        Mensaje por enviar
+                        <br>
+                        <span>
+                            Enviado el día
+                        </span>
+                        <span class="titulo_menor">Mensaje manual</span>
+                    </p>
                 </section>
-            {{--@endforeach--}}
-            -->
-        </section>
+            </section>
+            <?php /*
+            @foreach ($notifications as $notification)
+                <section class="mensaje row">
+                    <p>
+                        {{$notification -> body}}
+                        <br>
+                        <span>
+                            Enviado el día
+                            @php
+                                $d = new DateTime('2011-01-01T15:03:01.012345Z');
+                                echo $d -> format('d/m/Y') . " a las " . $d -> format('h:i:s') . (intval ($d -> format('H')) > 11 ? " pm" : " am");
+                            @endphp 
+                        </span>
+                        <span class="titulo_menor">Mensaje manual</span>
+                    </p>
+                </section>
+            @endforeach
+            */?>
     </main>
-
+    <script>
+        const sector_button = document.getElementById("button_sectores");
+        const reciclador_button = document.getElementById("button_sectores");
+        const sectores = document.getElementById("sectores");
+        const reciclador = document.getElementById("reciclador");
+        sector_button.addEventListener("click", function(){
+            const select = document.createElement("select");
+            const opts = document.createElement("option");
+            opts.innerText = "Nuevo";
+            opts.setAttribute("value", "new");
+            select.setAttribute("class", "form-control");
+            select.appendChild(opts);
+            sectores.insertBefore(select, sector_button);
+            console.log(select, sectores);
+        });
+        reciclador_button.addEventListener("click", function(){
+            const select = document.createElement("select");
+            const opts = document.createElement("option");
+            opts.innerText = "Nuevo";
+            opts.setAttribute("value", "new");
+            select.setAttribute("class", "form-control");
+            select.appendChild(opts);
+            reciclador.insertBefore(select, sector_button);
+            console.log(select, sectores);
+        });
+    </script>
 @endsection

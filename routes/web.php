@@ -111,8 +111,15 @@ Route::get('/exito_delete', function () {
 Route::get('/editar_reciclador', function () {
     return view('Reciclador.editar_reciclador');
 });
-
-
+Route::get('/ResultadosCorporacion', function(){
+    return view('ResultadosBusqueda.ListaCorporaciones');
+});
+Route::get('/Resultados', function(){
+    return view('ResultadosBusqueda.ListaUsuarios');
+});
+Route::get('/DatosUsuario', function(){
+    return view('ResultadosBusqueda.DatosUsuario');
+});
 
 
 
