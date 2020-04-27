@@ -74,7 +74,11 @@
 				</div>
                 <div class="opcioncontra">
 				@if (Route::has('password.request'))
+<<<<<<< Updated upstream
                                     <a class="btn btn-link" href="{{ route('password.request') }}">
+=======
+                                    <a class="btn-link" href="{{ route('/RestablecerContraseña') }}">
+>>>>>>> Stashed changes
                                         {{ __('Forgot Your Password?') }}
                                     </a>
                 @endif</div>
@@ -85,7 +89,11 @@
 				<button class="btn btn-lg btn-primary btn-block btn-signin" id="IngresoLog" type="submit">{{ __('Login') }}</button>
                 <br>
                 <!-- hay que preguntar si se registra como persona o corporacion -->
+<<<<<<< Updated upstream
                 <div class="opcioncontra"><a href="{{ route('register') }}">¿No tienes cuenta? Regístrate</a></div>
+=======
+                <div class="opcioncontra"><a href="{{ route('/registroCorp') }}">¿No tienes cuenta? Regístrate</a></div>
+>>>>>>> Stashed changes
 		 	</form>
 		 </div>	
 		 </div>

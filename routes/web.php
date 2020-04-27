@@ -21,8 +21,11 @@ use Illuminate\Support\Facades\Route;
 Auth::routes();
 
 //despues cambiamos esto de abajo por el controlador que es
+Route::get('/login', function(){
+    return view('login');
+});
 Route::get('/registroCorp', function(){
-    return view('registroCorp');
+    return view('login.registroCorp');
 });
 Route::get('/RestablecerContraseña', function(){
     return view('login.CambioPssw');
@@ -60,12 +63,7 @@ Route::get('/recycler', 'RecyclerController@index');
 Route::get('/notification', 'NotificationController@index');
 
 //despues cambiamos esto de abajo por el controlador que es
-Route::get('/registroCorp', function(){
-    return view('registroCorp');
-});
-Route::get('/RestablecerContraseña', function(){
-    return view('CambioPssw');
-});
+
 Route::get('/NuevaMedicion', function(){
     return view('mediciones.nueva');
 });
