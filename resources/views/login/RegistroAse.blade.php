@@ -26,17 +26,23 @@
                 <div class="row " style="height: 85%; max-height: 85%;">
                     <div class="container" style="background-color: white; margin: 20px; max-height: 95%; overflow: auto; border-radius: 10px;">
                     <div class="ContentForm">
-                        <form action="" method="post" name="FormEntrar">
+                        <form action="" method="post" >
+                        @csrf
                             <br>
                         <div class="row">   
                             <div class="col-5">
-                                <label for="">Nombre</label>
-                                <input type="name" class="form-control" name="name" placeholder="Nombre" id="name" aria-describedby="sizing-addon1" required>
+                                <label for="name">{{ __('Name') }}</label>
+                                <input type="text" class="form-control @error('name') is-invalid @enderror" name="name_rep" placeholder="{{ __('Name') }}" id="name" aria-describedby="sizing-addon1" value="{{ old('name') }}" required autocomplete="name" autofocus>
                             </div>
                             <div class="col-5">
-                                <label for="">Apellido</label>
-                                <input type="password" name="contra" class="form-control" placeholder="Contraseña" aria-describedby="sizing-addon1" required>
+                                <label for="">{{ __('Lastname') }}</label>
+                                <input type="text" id="name" name="lastname" class="form-control @error('name') is-invalid @enderror" placeholder="{{ __('Lastname') }}" aria-describedby="sizing-addon1" value="{{ old('name') }}" required autocomplete="name" autofocus>
                             </div>
+                            @error('name')
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                                @enderror
                         </div>
                         <br>
                         <label for="">Tipo de documento</label>
@@ -51,22 +57,32 @@
                         <label for="">Cargo</label>
                         <input type="cargo" class="form-control" name="cargo" placeholder="ej: Gerente general" id="cargo" aria-describedby="sizing-addon1" required>
                 <br>
-                <label for="">Correo electronico</label>
-                        <input type="email" class="form-control" name="email" placeholder="ej: correo@empresa.com" id="email" aria-describedby="sizing-addon1" required>
-				<br>
+                <label for="">{{ __('E-Mail Address') }}</label>
+                        <input type="email" class="form-control @error('email') is-invalid @enderror" name="email" placeholder="ej: correo@empresa.com" id="email" aria-describedby="sizing-addon1" value="{{ old('email') }}" required autocomplete="email">
+                        @error('email')
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                                @enderror
+                <br>
 				<div class="row">
                     <div class="col-4">
-                        <label for="">Contraseña</label>
-                        <input type="password" name="contra" class="form-control" placeholder="Contraseña" aria-describedby="sizing-addon1" required>
+                        <label for="">{{ __('Password') }}</label>
+                        <input type="password" name="password" class="form-control  @error('password') is-invalid @enderror" placeholder="{{ __('Password') }}" aria-describedby="sizing-addon1" required autocomplete="new-password">
+                        @error('password')
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                                @enderror
                     </div>
                     <div class="col-4">
-                        <label for="">Confirmar contraseña</label>
-                        <input type="password2" name="contra2" class="form-control" placeholder="Confirmar contraseña" aria-describedby="sizing-addon1" required>
+                        <label for="password-confirm">{{ __('Confirm Password') }}</label>
+                        <input type="password" id="password-confirm" name="password_confirmation" class="form-control" placeholder="{{ __('Confirm Password') }}" aria-describedby="sizing-addon1" required autocomplete="new-password">
                     </div>
 				</div>
                 <br>
                 <div class="col-4 alignment-left">
-                    <button class="btn btn-lg btn-primary btn-block btn-signin" id="reg" type="reg" >Terminar registro</button>
+                    <button class="btn btn-lg btn-primary btn-block btn-signin" id="reg" type="submit" >{{ __('Register') }}</button>
                 </div>
                 <br>
 		 	</form>
