@@ -1,4 +1,4 @@
-@extends('nav')
+@extends('nav.nav')
 
 @section('conteint')
 
