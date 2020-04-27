@@ -7,12 +7,16 @@
 <a href="HistorialMediciones">
     <button class="btn">Historial</button>
 </a>
+<a href="Emisiones">
+    <button class="btn">Emisiones</button>
+</a>
 <br />
 <h1>
     Materiales Aprovechados
 </h1>
 
-<form action="" method="post">
+
+<form action="Emisiones">
     <label for="fechacorte">Fecha de Corte</label><br />
     <input
         type="date"

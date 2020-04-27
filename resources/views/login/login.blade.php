@@ -46,7 +46,7 @@
                    <span class="glyphicon glyphicon-user"></span>
                  </div>
 <div class="ContentForm">
-		 	<form action="{{ route('login.login') }}" method="post" name="FormEntrar">
+		 	<form action="{{ route('login') }}" method="post" name="FormEntrar">
 		 	@csrf
 			 	<div class="input-group input-group-lg">
 				  <span class="input-group-addon" id="sizing-addon1"><i class="glyphicon glyphicon-user"></i></span>
@@ -69,7 +69,7 @@
 				</div>
                 <div class="opcioncontra">
 				@if (Route::has('password.request'))
-                                    <a class="btn btn-link" href="{{ route('password.request') }}">
+                                    <a class="btn-link" href="{{ route('password.request') }}">
                                         {{ __('Forgot Your Password?') }}
                                     </a>
                 @endif</div>
