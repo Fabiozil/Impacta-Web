@@ -10849,11 +10849,11 @@ a.text-dark:focus {
     visibility: hidden !important;
 }
 
-#contenedor_crear_reciclador {
+#contenedor-crear-reciclador {
     background-color: #f2f2f2;
 }
 
-#contenedor_formulario {
+#contenedor-formulario {
     background-color: white;
     border-radius: 10px;
     margin: 20px;
@@ -10870,6 +10870,16 @@ a.text-dark:focus {
     margin-right: auto;
     width: 50%;
 }
+#center-img {
+    text-align: center;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+    max-width: 100%;
+    max-height: 100%;
+}
+
 #nav-img-selected {
     max-height: 80%;
     max-width: 80%;
@@ -10880,6 +10890,30 @@ a.text-dark:focus {
     margin-left: auto;
     margin-right: auto;
     width: 80%;
+}
+#btn-rec {
+    margin: 10px;
+}
+#input-rec {
+    margin-bottom: 10px;
+}
+h1,
+h2,
+h3,
+h4,
+h5 {
+    color: #009900;
+}
+#col-list {
+    font-size: 16px;
+}
+
+#mapa {
+    width: 800px;
+}
+
+#graph {
+    width: 800px;
 }
 
 @media print {

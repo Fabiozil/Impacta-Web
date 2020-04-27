@@ -78,9 +78,6 @@
                                     </ul>
                                     <button type="submit" class="btn btn-light" onclick="eliminar_comuna()"
                                         style="margin-right: 5px;">Eliminar comuna</button>
-                                    <a href="{{ url('/exito') }}">
-                                        <button type="submit" class="btn btn-light">Continuar</button>
-                                    </a>
                                 </div>
                             </div>
                             <h5>Agregar nueva zona de recoleccion</h5>

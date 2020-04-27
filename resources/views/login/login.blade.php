@@ -48,9 +48,9 @@
                    <span class="glyphicon glyphicon-user"> </span>
                  </div>
 <div class="ContentForm">
-		 	<form action="" method="POST" >
-			 @csrf
-		 		<div class="input-group input-group-lg">
+		 	<form action="{{ route('login') }}" method="post" name="FormEntrar">
+		 	@csrf
+			 	<div class="input-group input-group-lg">
 				  <span class="input-group-addon" id="sizing-addon1"><i class="glyphicon glyphicon-user"></i></span>
 				  <input type="email" class="form-control @error('email') is-invalid @enderror" name="email" placeholder="{{ __('E-Mail Address') }}" id="email" aria-describedby="sizing-addon1" value="{{ old('email') }}" required autocomplete="email" autofocus>
 
@@ -74,7 +74,7 @@
 				</div>
                 <div class="opcioncontra">
 				@if (Route::has('password.request'))
-                                    <a class="btn btn-link" href="{{ route('password.request') }}">
+                                    <a class="btn-link" href="{{ route('password.request') }}">
                                         {{ __('Forgot Your Password?') }}
                                     </a>
                 @endif</div>

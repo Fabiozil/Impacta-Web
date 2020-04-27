@@ -1,7 +1,8 @@
 @extends('nav.nav')
 
 @section('conteint')
-<h1>aqui va el mapa jaja xd</h1>
+<h1>Corporaciones y Usuarios</h1>
 <div id="map"></div>
+<img id= "mapa" src="{{asset("mapa.jpg")}}" alt="mapa">
 
 @endsection

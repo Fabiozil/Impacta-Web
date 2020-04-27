@@ -79,7 +79,37 @@ Route::get('/Mapa', function(){
     return view('mapa.mapa');
 });
 Route::get('/dank', function(){
-    return view('login.confirmar');
+    return view('ResultadosBusqueda.ListaCorporaciones');
+});
+
+Route::get('/dank2', function(){
+    return view('login.login');
+});
+
+Route::get('/home', function(){
+    return view('home');
+});
+
+Route::get('/recicladores', function () {
+    return view('Reciclador.recicladores');
+});
+Route::get('/exito_crear', function () {
+    return view('Reciclador.exito_crear');
+});
+Route::get('/exito_edit', function () {
+    return view('Reciclador.exito_edit');
+});
+Route::get('/confirmar_eliminar', function () {
+    return view('Reciclador.confirmar_eliminar');
+});
+Route::get('/confirmar_edicion', function () {
+    return view('Reciclador.confirmar_edicion');
+});
+Route::get('/exito_delete', function () {
+    return view('Reciclador.exito_delete');
+});
+Route::get('/editar_reciclador', function () {
+    return view('Reciclador.editar_reciclador');
 });
 Route::get('/ResultadosCorporacion', function(){
     return view('ResultadosBusqueda.ListaCorporaciones');
