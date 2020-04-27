@@ -17,7 +17,7 @@
                         <div class="py-5 text-center" style="height: 20%">
                            
                         </div>
-                        <div style="height:25vh">
+                        <div class="col-12" style="height:25vh">
                             <img src="/icons/user.png" alt="Imagen perfil" style="height: 100%;;max-width: 100%;">
                         </div>   
                                   
@@ -36,7 +36,7 @@
                         </div>
                         <section class="mensaje row">
                 
-                <div class="py-2 col-md-8 order-first">
+                <div class="py-2 col-12  order-first">
                     <p> 
                         <h2>Nombre de la corporación</h1>
                         <br>

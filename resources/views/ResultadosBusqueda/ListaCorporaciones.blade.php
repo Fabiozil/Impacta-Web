@@ -13,7 +13,7 @@
             </div>
      
             <section class="mensaje row">
-                <img src="https://www.jdevoto.cl/web/wp-content/uploads/2018/04/default-user-img.jpg" class="col-md-2 order-first" alt="Corp" srcset="">
+                <img src="/icons/user.png" class="col-md-2 order-first" alt="Corp" srcset="">
                 <div class="col-md-10 order-last">
                     <p> 
                         <h2>Nombre de la corporación</h1>
@@ -25,7 +25,7 @@
                 </div>
             </section>
             <section class="mensaje row">
-                <img src="https://www.jdevoto.cl/web/wp-content/uploads/2018/04/default-user-img.jpg" class="col-md-2 order-first" alt="Corp" srcset="">
+                <img src="/icons/user.png" class="col-md-2 order-first" alt="Corp" srcset="">
                 <div class="col-md-10 order-first">
                 <p> 
                         <h2>Nombre de la corporación</h1>
@@ -37,7 +37,7 @@
                 </div>
             </section>
             <section class="mensaje row">
-                <img src="https://www.jdevoto.cl/web/wp-content/uploads/2018/04/default-user-img.jpg" class="col-md-2 order-first" alt="Corp" srcset="">
+                <img src="/icons/user.png" class="col-md-2 order-first" alt="Corp" srcset="">
                 <div class="col-md-10 order-last">
                 <p> 
                         <h2>Nombre de la corporación</h1>
