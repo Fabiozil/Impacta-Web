@@ -34,15 +34,14 @@
                 
                 <div class="py-2 col-12  order-first">
                     <p> 
-                        <h2>Nombre del usuario</h1>
+                        <h2>Nombre de la corporación</h1>
                         <br>
                         A 0 km de ti
                         <br>
                         Direccion:
                         <br>
                         Municipio de Medellín
-                        <br>
-                        Reciclador asignado
+                        
                     </p>
                 </div>
             </section>

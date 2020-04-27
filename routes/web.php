@@ -121,5 +121,7 @@ Route::get('/DatosUsuario', function(){
     return view('ResultadosBusqueda.DatosUsuario');
 });
 
-
+Route::get('/DatosCorp', function(){
+    return view('ResultadosBusqueda.DatosC');
+});
 
