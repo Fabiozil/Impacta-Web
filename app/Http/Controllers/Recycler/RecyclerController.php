@@ -57,7 +57,7 @@ class RecyclerController extends Controller
      */
     public function index()
     {
-        $corp= Corporation::find(Auth::user()->id);
+        $corp= Corporation::findOrFail(Auth::user()->id);
         $recycler= $corp->recyclers()
         ->select('nombres','apellidos','apodo','celular')
         ->get()
