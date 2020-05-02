@@ -26,7 +26,8 @@ class CreateCorporationsTable extends Migration
             $table->integer('telefono');
             $table->string('razon_social');
             $table->integer('num_doc_corp')->unique();
-            $table->text('ubicacion_corp')->nullable();
+            $table->text('ubicacion_corp')->nullable(); //string
+            //Lat decimal 10,8  long decimal 11,8
             $table->string('logo_corp')->nullable(); // Dirección de archivo local
 
            // $table->timestamp('email_verified_at')->nullable();
