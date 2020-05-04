@@ -25,4 +25,38 @@ Auth::routes(['verify'=>true]);
 Route::resource('recyclers', 'Recycler\RecyclerController')->except(['destroy','edit']);
 Route::get('/home', 'HomeController@index')->name('home');
 
+//////////////////////////////////////////////
+
+Route::get('/', function () {
+    return view('welcome');
+});
+
+Route::get('/crear_reciclador', function () {
+    return view('Reciclador.crear_reciclador');
+});
+
+Route::get('/nav', function () {
+    return view('nav');
+});
+Route::get('/exito_crear', function () {
+    return view('Reciclador.exito_crear');
+});
+Route::get('/exito_edit', function () {
+    return view('Reciclador.exito_edit');
+});
+Route::get('/confirmar_eliminar', function () {
+    return view('Reciclador.confirmar_eliminar');
+});
+Route::get('/confirmar_edicion', function () {
+    return view('Reciclador.confirmar_edicion');
+});
+Route::get('/exito_delete', function () {
+    return view('Reciclador.exito_delete');
+});
+Route::get('/editar_reciclador', function () {
+    return view('Reciclador.editar_reciclador');
+});
+Route::get('/recicladores', function () {
+    return view('Reciclador.index');
+});
 

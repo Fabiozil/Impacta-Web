@@ -1,5 +1,5 @@
 // Body
-$body-bg: #f8fafc;
+$body-bg: #f5f6fa;
 
 // Typography
 $font-family-sans-serif: 'Nunito', sans-serif;
@@ -7,13 +7,83 @@ $font-size-base: 0.9rem;
 $line-height-base: 1.6;
 
 // Colors
-$blue: #3490dc;
+$blue: #0097e6;
 $indigo: #6574cd;
-$purple: #9561e2;
+$purple: #8c7ae6;
 $pink: #f66d9b;
-$red: #e3342f;
+$red: #c23616;
 $orange: #f6993f;
-$yellow: #ffed4a;
-$green: #38c172;
+$yellow: #fbc531;
+$green: #44bd32;
 $teal: #4dc0b5;
 $cyan: #6cb2eb;
+$white: #f5f6fa;
+$gray: #7f8fa6;
+$dark-blue: #273c75;
+$black: #353b48;
+
+#contenedor-crear-reciclador{
+    background-color: $white;
+}
+
+#contenedor-formulario{
+    background-color: $white;
+    border-radius: 10px;
+    margin: 20px;
+}
+
+#nav-img{
+    max-height: 60%;
+    max-width: 60%;
+    border: solid;
+    border-color: $white;
+    text-align: center;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%
+}
+#center-img{
+    text-align: center;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+    max-width: 100%;
+    max-height: 100%;
+}
+
+#nav-img-selected{
+    max-height: 80%;
+    max-width: 80%;
+    border: solid;
+    border-color: #009900;
+    text-align: center;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%
+}
+
+#btn-rec{
+    margin: 10px;
+}
+
+#input-rec{
+    margin-bottom: 10px;
+}
+
+h1,h2,h3,h4,h5{
+    color: #009900;
+}
+
+#col-list{
+    font-size: 16px;
+}
+
+#user-icon{
+    height: 85% !important;
+    width: 100% !important;
+}
+
+
