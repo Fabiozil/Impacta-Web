@@ -2,11 +2,11 @@
 @section('content')
 
     <div class="row" style="height: 80vh">
-        <div class="container" id="contenedor-formulario" style="max-height: 90%">
+        <div class="container" id="contenedor-formulario" style="max-height: 100%; max-width: 300%;">
             <div class="row" style="margin-top: 20px">
                 <div class="col-3">
                     <a href="{{ url('/crear_reciclador') }}">
-                        <img src="/icons/mas.png" id="center-img" alt="Nuevo reciclador">
+                        <i class="fas fa-user-plus" style="width: 50%; height: 50%;"></i>
                     </a>
                 </div>
                 <div class="col-9">
@@ -22,7 +22,7 @@
                 </div>
             </div>
             <div class="row" style="overflow: auto; max-height: 80%">
-                <div class="col-6">
+                <div class="col-xl-4 col-lg-6 col-md-12">
                     <ul class="list-group list-group-flush" id="lista_recicladores">
                         <li class="list-group-item">
                             <div class="container" id="contenedor-crear-reciclador" style="border-radius: 10px">
@@ -99,7 +99,84 @@
                     </ul>
                 </div>
 
-                <div class="col-6">
+                <div class="col-xl-4 col-lg-6 col-md-12">
+                    <ul class="list-group list-group-flush" id="lista_recicladores">
+                        <li class="list-group-item">
+                            <div class="container" id="contenedor-crear-reciclador" style="border-radius: 10px">
+                                <div class="row">
+                                    <div class="col-4">
+                                        <img src="/icons/user.png" alt="Foto de perfil" style="max-height: 100%;max-width: 100%">
+                                    </div>
+                                    <div class="col-8">
+                                        <div class="row">
+                                            <p class="lead" style="margin-bottom: 4px;">Apodo</p>
+                                        </div>
+                                        <div class="row">Nombre:</div>
+                                        <div class="row">Celular:</div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <a href="{{ url('/editar_reciclador') }}">
+                                        <button type="submit" class="btn btn-light" style="margin-left: 10px; margin-bottom: 10px">Editar</button>
+                                    </a>
+                                    <a href="{{ url('/confirmar_eliminar') }}">
+                                        <button type="submit" class="btn btn-light" style="margin-left: 10px; margin-bottom: 10px">Eliminar</button>
+                                    </a>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="list-group-item">
+                            <div class="container" id="contenedor-crear-reciclador" style="border-radius: 10px">
+                                <div class="row">
+                                    <div class="col-4">
+                                        <img src="/icons/user.png" alt="Foto de perfil" style="max-height: 100%;max-width: 100%">
+                                    </div>
+                                    <div class="col-8">
+                                        <div class="row">
+                                            <p class="lead" style="margin-bottom: 4px;">Apodo</p>
+                                        </div>
+                                        <div class="row">Nombre:</div>
+                                        <div class="row">Celular:</div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <a href="{{ url('/editar_reciclador') }}">
+                                        <button type="submit" class="btn btn-light" style="margin-left: 10px; margin-bottom: 10px">Editar</button>
+                                    </a>
+                                    <a href="{{ url('/confirmar_eliminar') }}">
+                                        <button type="submit" class="btn btn-light" style="margin-left: 10px; margin-bottom: 10px">Eliminar</button>
+                                    </a>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="list-group-item">
+                            <div class="container" id="contenedor-crear-reciclador" style="border-radius: 10px">
+                                <div class="row">
+                                    <div class="col-4">
+                                        <img src="/icons/user.png" alt="Foto de perfil" style="max-height: 100%;max-width: 100%">
+                                    </div>
+                                    <div class="col-8">
+                                        <div class="row">
+                                            <p class="lead" style="margin-bottom: 4px;">Apodo</p>
+                                        </div>
+                                        <div class="row">Nombre:</div>
+                                        <div class="row">Celular:</div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <a href="{{ url('/editar_reciclador') }}">
+                                        <button type="submit" class="btn btn-light" style="margin-left: 10px; margin-bottom: 10px">Editar</button>
+                                    </a>
+                                    <a href="{{ url('/confirmar_eliminar') }}">
+                                        <button type="submit" class="btn btn-light" style="margin-left: 10px; margin-bottom: 10px">Eliminar</button>
+                                    </a>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="col-xl-4 col-lg-6 col-md-12">
                     <ul class="list-group list-group-flush" id="lista_recicladores">
                         <li class="list-group-item">
                             <div class="container" id="contenedor-crear-reciclador" style="border-radius: 10px">

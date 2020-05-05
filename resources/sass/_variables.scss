@@ -28,7 +28,6 @@ $black: #353b48;
 
 #contenedor-formulario{
     background-color: $white;
-    border-radius: 10px;
     margin: 20px;
 }
 
@@ -85,5 +84,7 @@ h1,h2,h3,h4,h5{
     height: 85% !important;
     width: 100% !important;
 }
-
+#formulario{
+    color: gray;
+}
 
