@@ -1,34 +1,53 @@
 // Body
-$body-bg: #f5f6fa;
+$body-bg: white;
 
 // Typography
-$font-family-sans-serif: 'Nunito', sans-serif;
+$font-family-sans-serif: 'Roboto', sans-serif;
 $font-size-base: 0.9rem;
 $line-height-base: 1.6;
 
+
 // Colors
-$blue: #0097e6;
-$indigo: #6574cd;
+$blue: #2780E3;
+$indigo: #6610f2;
 $purple: #8c7ae6;
-$pink: #f66d9b;
-$red: #c23616;
-$orange: #f6993f;
+$pink: #e83e8c;
+$red: #e84118;
+$orange: #f0ad4e;
 $yellow: #fbc531;
-$green: #44bd32;
-$teal: #4dc0b5;
-$cyan: #6cb2eb;
+$green: #4cd137;
+$teal: #20c997;
+$cyan: #9c88ff;
 $white: #f5f6fa;
 $gray: #7f8fa6;
-$dark-blue: #273c75;
-$black: #353b48;
+$gray-dark: #2f3640;
+$primary: #2780E3;
+$secondary: #2f3640;
+$success: #4cd137;
+$info: #9c88ff;
+$warning: #fbc531;
+$danger: #e84118;
+$light: #f8f9fa;
+$dark: #2f3640;
+$light-gray: #dcdde1;
 
 #contenedor-crear-reciclador{
     background-color: $white;
+    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
 }
 
 #contenedor-formulario{
     background-color: $white;
     margin: 20px;
+    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+#contenedor-recicladores{
+    background-color: $white;
+    margin: 2%;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
 }
 
 #nav-img{
@@ -72,8 +91,8 @@ $black: #353b48;
     margin-bottom: 10px;
 }
 
-h1,h2,h3,h4,h5{
-    color: #009900;
+h1{
+    color: $green;
 }
 
 #col-list{
@@ -87,4 +106,32 @@ h1,h2,h3,h4,h5{
 #formulario{
     color: gray;
 }
+#item-lista-recicladores{
+    padding-bottom: 0px;
+    background-color: $white;
+}
+#titulo{ 
+    padding-top: 1.5% !important; 
+    padding-bottom: 1.6% !important;
+}
+
+#sub-titulo{ 
+/*     padding-top: 3% !important; 
+    padding-bottom: 3% !important; */
+    padding: 3% !important;
+}
+#col-crear-rec{
+    border-right-color: $light-gray;
+    border-right-style: solid;
+}
+
+#lista_residuos, #lista_barrios, #lista_horas, #lista_dias{
+    margin-top: 10px;
+}
+
+.no-padding{
+    padding: 0px !important;
+    max-width: 100%;
+}
+
 
