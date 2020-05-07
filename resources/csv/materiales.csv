@@ -1,0 +1,12 @@
+Material,SubMaterial,Factor,Descripción
+Metal,Aluminio,10.98,"Clases de aluminio a tener en cuenta: aluminio grueso, aluminio Karla, aluminio perfil y aluminio persiana. P.ej. latas de cerveza y perfiles de ventanas."
+Metal,Cobre,2.97,"Clases de cobre a tener en cuenta: cobre amarillo, cobre rojo y cobre rojo brillante. P. ej. tubería de cobre y cables de cobre."
+Metal,Chatarra,3.16,"Materiales que contengan diferentes componentes de hierro, cobre y zinc. P. ej. Radiadores y barillas de acero."
+Papel,Papel,0.9,"Materiales reciclables hechos en papel. P.ej. papel de archivo, papel bond y papel periódico plano."
+Cartón,Cartón,0.9,Materiales que se compongan de cartón corrugado y plegadiza. P. ej. Cajas de cartón y empaques de alimentos en cartón.
+Cartón,Tetrapack,0.9,Materiales hechos con materiales de tetrapak. P. ej. cajas de leche y cajas de jugo.
+Plástico,Pasta,1.5,"Materiales de plástico definidos como ""pasta"" por el sector. P. ej. Cajas de gaseosas y recipientes de detergentes."
+Plástico,PET,1.7,Materiales de plástico hechos de polietileno tereftalato (PET). P. ej. Envases de bebidas.
+Plástico,Plástico Flexible,1.5,"Materiales de plástico definidos ""flexibles"" por el sector. P. ej. Empaque del papel higiénico y bolsas plásticas de supermercado."
+Vidrio,Vidrio para reciclar,0.32,"Materiales de vidrio que serán reciclados para generar nueva materia prima, también conocido como vidrio quebrado. P. ej. Vidrio casco transparente, vidrio casco verde y vidrio casco ambar."
+Vidrio,Vidrio para reutilizar,0.91,"Materiales de vidrio que serán reutilizados dentro de una cadena de producción, también llamado frasco bocón P. ej. Vidrio casco transparente, vidrio casco verde y vidrio casco ambar. En el caso de no contar con esta clasificación, por favor ingresar el material de vidrio en la subcategoría de ""vidrios a reciclar""."
