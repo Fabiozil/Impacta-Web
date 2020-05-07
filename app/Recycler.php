@@ -3,7 +3,7 @@
 namespace App;
 
 use Illuminate\Database\Eloquent\Model;
-
+use App\ZonaRecoleccion;
 class Recycler extends Model
 {
     /**
@@ -11,8 +11,8 @@ class Recycler extends Model
      *
      * @var array
      */
+
     protected $fillable = [
-        'corporation_id',
         'apodo',
         'nombres',
         'apellidos',
@@ -20,10 +20,8 @@ class Recycler extends Model
         'celular',
         'residuos',
         'edad',
-        'comunas',
         'historia',
         'foto',
-        'barrio'
     ];
 
     /**
@@ -31,7 +29,12 @@ class Recycler extends Model
      *
      * @var array
      */
-    protected $hidden = [];
+    protected $hidden = [
+        'id',
+        'corporation_id',
+        'created_at',
+        'updated_at',
+    ];
 
     /**
      * The attributes that should be cast to native types.
@@ -45,8 +48,8 @@ class Recycler extends Model
         return $this->belongsTo('App\Corporation');
     }
 
-    public function collection_areas()
+    public function zonaRecoleccion()
     {
-        return $this->hasMany('App\CollectionArea', 'recycler_id');
+        return $this->hasMany(ZonaRecoleccion::class, 'recycler_id')->with('sector');
     }
 }

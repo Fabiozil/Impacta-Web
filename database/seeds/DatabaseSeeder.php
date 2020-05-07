@@ -3,6 +3,7 @@
 use App\User;
 use App\Recycler;
 use App\Corporation;
+use App\ZonaRecoleccion;
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\DB;
 class DatabaseSeeder extends Seeder
@@ -19,11 +20,15 @@ class DatabaseSeeder extends Seeder
         User::truncate();
         Corporation::truncate();
         Recycler::truncate();
+        ZonaRecoleccion::truncate();
         $cantidadUsuarios=5;
         $cantidadCorporation=5;
-        $cantidadRecycler=100;
+        $cantidadRecycler=30;
         factory(User::class,$cantidadUsuarios)->create();
         factory(Corporation::class,$cantidadCorporation)->create();
-        factory(Recycler::class,$cantidadRecycler)->create();
+        factory(Recycler::class,$cantidadRecycler)->create()
+        ->each(function($recycler){
+            $recycler->zonaRecoleccion()->createMany(factory(ZonaRecoleccion::class,3)->make()->toArray());
+        });
     }
 }

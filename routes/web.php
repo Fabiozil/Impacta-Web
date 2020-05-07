@@ -19,11 +19,12 @@ Route::get('/', function () {
 
 Route::get('/user', 'UserController@index');
 Route::get('/corporation', 'CorporationController@index');
-Route::get('/recycler', 'RecyclerController@index');
 Route::get('/notification', 'NotificationController@index');
 
 Auth::routes(['verify'=>true]);
-Route::resource('recicladores', 'Recycler\RecyclerController')->only(['index','show']);
+Route::resource('recyclers', 'Recycler\RecyclerController')->except(['destroy','edit']);
+Route::get('comunas/{municipio_id}','Recycler\RecyclerController@getComunas')->name('comunas');
+Route::get('sectores/{municipio_id}/{comuna_id}','Recycler\RecyclerController@getSectores')->name('sectores');
 Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/map', 'mapController@index')->name('map');
 
