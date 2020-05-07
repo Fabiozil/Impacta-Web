@@ -37,20 +37,20 @@
         </li>
         <li>
             <a href="#">
-                <i class="fas fa-chart-line"></i>
-                Indicadores Ambientales
+                <i class="fas fa-comment"></i>
+                Notificaciones
             </a>
         </li>
         <li>
             <a href="#">
-                <i class="fas fa-question"></i>
-                FAQ
+                <i class="fas fa-cogs"></i>
+                Configuracion
             </a>
         </li>
         <li>
             <a href="#">
-                <i class="fas fa-paper-plane"></i>
-                Contact
+                <i class="fas fa-phone"></i>
+                Contacto
             </a>
         </li>
     </ul>
