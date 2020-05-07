@@ -28,6 +28,8 @@ class CreateRecyclersTable extends Migration
             $table->date('fecha_nacimiento');
             $table->text('historia');
             $table->text('residuos');
+            $table->text('comunas');
+            $table->text('barrio'); //{ "barrio1": {"dias": ,"horas":}}
 
             $table->string('foto'); // Dirección del archivo local
 

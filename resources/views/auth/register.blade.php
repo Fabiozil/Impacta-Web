@@ -1,11 +1,5 @@
 @extends('layouts.app')
-@section('header')
- <!-- Recaptcha temporal  -->
- {!! htmlScriptTagJsApi([
-    'action' => 'homepage',
-    'custom_validation' => 'myCustomValidation'
-]) !!}
-@endsection
+
 @section('content')
 <div class="container">
     <div class="row justify-content-center">
@@ -26,7 +20,7 @@
                                     <option value="0">Afiliado</option>
                                 </select>
                             </div>
-                            <br>
+                            <br>                  
                             <br>
                             <label for="name" class="col-md-4 col-form-label text-md-right">{{__('Nombre representante')}}</label>
                             <div class="col-md-6">
@@ -100,7 +94,7 @@
                                         <strong>{{ $message }}</strong>
                                     </span>
                                 @enderror
-                            </div>
+                            </div> 
                             <br>
                             <br>
                             <p class="col-md-12 text-md-center"><strong>Corporación</strong></p>
@@ -138,8 +132,8 @@
                                 @enderror
                             </div>
 
-
-
+            
+                            
                         </div>
 
                         <div class="form-group row">

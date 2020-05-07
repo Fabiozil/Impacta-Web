@@ -1,10 +1,8 @@
 @extends('layouts.app')
 @section('header')
- <!-- Recaptcha temporal  -->
- {!! htmlScriptTagJsApi([
-    'action' => 'homepage',
-    'custom_validation' => 'myCustomValidation'
-]) !!}
+
+
+
 @endsection
 @section('content')
 <div id="Contenedor">
