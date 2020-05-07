@@ -1,5 +1,11 @@
 @extends('layouts.app')
-
+@section('header')
+ <!-- Recaptcha temporal  -->
+ {!! htmlScriptTagJsApi([
+    'action' => 'homepage',
+    'custom_validation' => 'myCustomValidation'
+]) !!}
+@endsection
 @section('content')
 <div class="container">
     <div class="row justify-content-center">
@@ -10,38 +16,15 @@
                 <div class="card-body">
                     <form method="POST" action="{{ route('register') }}">
                         @csrf
-
                         <div class="form-group row">
-                            <label for="name" class="col-md-4 col-form-label text-md-right">{{ __('Name') }}</label>
+                            <p class="col-md-12 text-md-center"><strong>Representante legal</strong></p>
 
+                            <label for="name" class="col-md-4 col-form-label text-md-right">{{__('Tipo')}}</label>
                             <div class="col-md-6">
-                                <input id="name" type="text" class="form-control @error('name') is-invalid @enderror" name="name" value="{{ old('name') }}" required autocomplete="name" autofocus>
                                 <select class="form-control" name="type" id="type">
                                     <option value="1">Corporación</option>
                                     <option value="0">Afiliado</option>
                                 </select>
-<<<<<<< Updated upstream
-                                <input class="form-control"name="name_rep" >
-                                <input class="form-control" name="lastname" >
-                                <select class="form-control" name="type_doc" id="type">
-                                    <option value="1">CC</option>
-                                    <option value="0">PASS</option>
-                                </select>
-                                <input class="form-control"name="num_doc" >
-                                <input class="form-control"name="position" >
-                                <input class="form-control"name="email_rep" >
-<<<<<<< HEAD
-                                <input class="form-control"name="name_corp" >
-=======
-
->>>>>>> 286a834f854abe64aeb688886724903cf87d297a
-                                <input class="form-control" name="phone" >
-                                <input class="form-control"name="r_s" >
-                                <input class="form-control"name="num_doc_corp" >
-
-
-                                @error('name')
-=======
                             </div>
                             <br>
                             <div style="height:25vh">
@@ -153,14 +136,11 @@
                             <div class="col-md-6">
                                 <input class="form-control @error('num_doc_corp') is-invalid @enderror " name="num_doc_corp" value="{{ old('num_doc_corp') }}" required autocomplete="num_doc_corp" autofocus placeholder="Ejm: 10258555">
                                 @error('numd_doc')
->>>>>>> Stashed changes
                                     <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>
                                     </span>
                                 @enderror
                             </div>
-<<<<<<< Updated upstream
-=======
                             <br>
                             <br>
                             <label for="sector" class="col-md-4 col-form-label text-md-right">{{__('Sector')}}</label>
@@ -174,19 +154,18 @@
                             </div>
 
 
->>>>>>> Stashed changes
                         </div>
 
                         <div class="form-group row">
                             <label for="email" class="col-md-4 col-form-label text-md-right">{{ __('E-Mail Address') }}</label>
 
                             <div class="col-md-6">
-                                <input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email">
+                                <input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email" placeholder="Ejm: recilandoando45@reciclandoando.es">
 
                                 @error('email')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
+                                <span class="invalid-feedback" role="alert">
+                                    <strong>{{ $message }}</strong>
+                                </span>
                                 @enderror
                             </div>
                         </div>
@@ -198,9 +177,9 @@
                                 <input id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="new-password">
 
                                 @error('password')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
+                                <span class="invalid-feedback" role="alert">
+                                    <strong>{{ $message }}</strong>
+                                </span>
                                 @enderror
                             </div>
                         </div>
