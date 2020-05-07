@@ -56,7 +56,6 @@ Route::get('/Detalle_usuario', function(){
 });
 Route::get('/user', 'UserController@index');
 Route::get('/corporation', 'CorporationController@index');
-Route::get('/recycler', 'RecyclerController@index');
 Route::get('/notification', 'NotificationController@index');
 
 //despues cambiamos esto de abajo por el controlador que es
@@ -84,10 +83,6 @@ Route::get('/dank', function(){
 
 Route::get('/dank2', function(){
     return view('login.login');
-});
-
-Route::get('/home', function(){
-    return view('home');
 });
 
 Route::get('/recicladores', function () {
@@ -123,5 +118,43 @@ Route::get('/DatosUsuario', function(){
 
 Route::get('/DatosCorp', function(){
     return view('ResultadosBusqueda.DatosC');
+});
+Auth::routes(['verify'=>true]);
+Route::resource('recyclers', 'Recycler\RecyclerController')->except(['destroy','edit']);
+Route::get('/home', 'HomeController@index')->name('home');
+
+//////////////////////////////////////////////
+
+Route::get('/', function () {
+    return view('welcome');
+});
+
+Route::get('/crear_reciclador', function () {
+    return view('Reciclador.crear_reciclador');
+});
+
+Route::get('/nav', function () {
+    return view('nav');
+});
+Route::get('/exito_crear', function () {
+    return view('Reciclador.exito_crear');
+});
+Route::get('/exito_edit', function () {
+    return view('Reciclador.exito_edit');
+});
+Route::get('/confirmar_eliminar', function () {
+    return view('Reciclador.confirmar_eliminar');
+});
+Route::get('/confirmar_edicion', function () {
+    return view('Reciclador.confirmar_edicion');
+});
+Route::get('/exito_delete', function () {
+    return view('Reciclador.exito_delete');
+});
+Route::get('/editar_reciclador', function () {
+    return view('Reciclador.editar_reciclador');
+});
+Route::get('/recicladores', function () {
+    return view('Reciclador.index');
 });
 

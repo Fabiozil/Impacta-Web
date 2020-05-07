@@ -1,7 +1,7 @@
-@extends('Reciclador.layout_reciclador')
+@extends('layouts.app')
 
 
-@section('form-1')
+@section('content')
 <div class="py-5 text-center" style="height: 20%">
     <h1>Editar reciclador</h1>
     <p class="lead">Realice los cambios necesarios y para confirmarlos presione editar</p>

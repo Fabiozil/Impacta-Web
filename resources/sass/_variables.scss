@@ -1,46 +1,77 @@
 // Body
-$body-bg: #f8fafc;
+$body-bg: white;
 
 // Typography
-//$font-family-sans-serif: 'Nunito', sans-serif;
+$font-family-sans-serif: "Roboto", sans-serif;
 $font-size-base: 0.9rem;
 $line-height-base: 1.6;
-$font-family: 'Roboto', sans-serif;
+$font-family: "Roboto", sans-serif;
 
 // Colors
-$blue: #3490dc;
-$indigo: #6574cd;
-$purple: #9561e2;
-$pink: #f66d9b;
-$red: #e3342f;
-$orange: #f6993f;
-$yellow: #ffed4a;
-$green: #38c172;
-$teal: #4dc0b5;
-$cyan: #6cb2eb;
+$blue: #2780e3;
+$indigo: #6610f2;
+$purple: #8c7ae6;
+$pink: #e83e8c;
+$red: #e84118;
+$orange: #f0ad4e;
+$yellow: #fbc531;
+$green: #4cd137;
+$teal: #20c997;
+$cyan: #9c88ff;
+$white: #f5f6fa;
+$gray: #7f8fa6;
+$gray-dark: #2f3640;
+$primary: #2780e3;
+$secondary: #2f3640;
+$success: #4cd137;
+$info: #9c88ff;
+$warning: #fbc531;
+$danger: #e84118;
+$light: #f8f9fa;
+$dark: #2f3640;
+$light-gray: #dcdde1;
 
-#contenedor_crear_reciclador{
-    background-color: #f2f2f2;
+#contenedor-crear-reciclador {
+    background-color: $white;
+    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
 }
 
-#contenedor_formulario{
-    background-color: white;
-    border-radius: 10px;
+#contenedor-formulario {
+    background-color: $white;
     margin: 20px;
+    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
 }
 
-#nav-img{
+#contenedor-recicladores {
+    background-color: $white;
+    margin: 2%;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+#nav-img {
     max-height: 60%;
     max-width: 60%;
     border: solid;
-    border-color: white;
+    border-color: $white;
     text-align: center;
     display: block;
     margin-left: auto;
     margin-right: auto;
-    width: 50%
+    width: 50%;
 }
-#nav-img-selected{
+#center-img {
+    text-align: center;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+    max-width: 100%;
+    max-height: 100%;
+}
+
+#nav-img-selected {
     max-height: 80%;
     max-width: 80%;
     border: solid;
@@ -49,5 +80,59 @@ $cyan: #6cb2eb;
     display: block;
     margin-left: auto;
     margin-right: auto;
-    width: 80%
+    width: 80%;
+}
+
+#btn-rec {
+    margin: 10px;
+}
+
+#input-rec {
+    margin-bottom: 10px;
+}
+
+h1 {
+    color: $green;
+}
+
+#col-list {
+    font-size: 16px;
+}
+
+#user-icon {
+    height: 85% !important;
+    width: 100% !important;
+}
+#formulario {
+    color: gray;
+}
+#item-lista-recicladores {
+    padding-bottom: 0px;
+    background-color: $white;
+}
+#titulo {
+    padding-top: 1.5% !important;
+    padding-bottom: 1.6% !important;
+}
+
+#sub-titulo {
+    /*     padding-top: 3% !important; 
+    padding-bottom: 3% !important; */
+    padding: 3% !important;
+}
+#col-crear-rec {
+    border-right-color: $light-gray;
+    border-right-style: solid;
+}
+
+#lista_residuos,
+#lista_barrios,
+#lista_horas,
+#lista_dias {
+    margin-top: 10px;
+}
+
+.no-padding {
+    padding: 0px !important;
+    max-width: 100%;
 }

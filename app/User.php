@@ -16,7 +16,7 @@ class User extends Authenticatable implements MustVerifyEmail
      * @var array
      */
     protected $fillable = [
-        'name', 'email','tipo_usuario', 'password',
+        'name', 'email', 'tipo_usuario', 'password',
     ];
 
     /**
@@ -37,23 +37,11 @@ class User extends Authenticatable implements MustVerifyEmail
         'email_verified_at' => 'datetime',
     ];
 
-    public function corporation()
-    {
-        return $this->belongsToMany('App\Corporation', 'corporation_id');
-    }
-    public function collection_areas()
-    {
-        return $this->hasOne('App\CollectionArea');
-    }
-
     public function isA()
     {
-        if($this->tipo_usuario){
-            return $this->hasOne(Corporation::class,'id','id');
+        if ($this->tipo_usuario) {
+            return $this->hasOne(Corporation::class, 'id', 'id');
         }
-        return $this->hasOne(Affiliate::class,'id','id');
+        return $this->hasOne(Affiliate::class, 'id', 'id');
     }
-
 }
-
-
