@@ -3,7 +3,7 @@
 namespace App;
 
 use Illuminate\Database\Eloquent\Model;
-
+use App\ZonaRecoleccion;
 class Recycler extends Model
 {
     /**
@@ -48,8 +48,8 @@ class Recycler extends Model
         return $this->belongsTo('App\Corporation');
     }
 
-    public function collection_areas()
+    public function zonaRecoleccion()
     {
-        return $this->hasMany('App\CollectionArea', 'recycler_id');
+        return $this->hasMany(ZonaRecoleccion::class, 'recycler_id')->with('sector');
     }
 }
