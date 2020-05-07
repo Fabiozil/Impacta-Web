@@ -1,0 +1,12 @@
+Material,SubMaterial,Factor
+Metal,Aluminio,10.98
+Metal,Cobre,2.97
+Metal,Chatarra,3.16
+Papel,Papel,0.9
+Cartón,Cartón,0.9
+Cartón,Tetrapack,0.9
+Plástico,Pasta,1.5
+Plástico,PET,1.7
+Plástico,Plástico Flexible,1.5
+Vidrio,Vidrio para reciclar,0.32
+Vidrio,Vidrio para reutilizar,0.91
