@@ -79,8 +79,7 @@ class CreateMaterials extends Command
 
     public function handle()
     {
-        $this->info('Hola bb');
-        echo "Hola pp\n";
+        $this->info('Guardando los materiales en la Base de Datos...');
 
         $MaterialsArray = $this->readData();
 
