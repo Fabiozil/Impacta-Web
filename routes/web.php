@@ -25,5 +25,6 @@ Route::get('/notification', 'NotificationController@index');
 Auth::routes(['verify'=>true]);
 Route::resource('recicladores', 'Recycler\RecyclerController')->only(['index','show']);
 Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/map', 'mapController@index')->name('map');
 
 
