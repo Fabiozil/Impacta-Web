@@ -21,6 +21,9 @@
 
     <div id="map"></div>
 
+    <br>
+    <input type="text" id="coordenadas">
+
     <script>
         const data = @json($data);
     </script>

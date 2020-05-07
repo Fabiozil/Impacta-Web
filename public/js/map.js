@@ -5,31 +5,36 @@ var map = L.mapbox.map('map')
     .setView([6.160152, -75.582397], 14)
     .addLayer(L.mapbox.styleLayer('mapbox://styles/nephilim074/ck990xvtk0fib1ipluq2yf9gw'));
 
-// var marker1 = L.marker([6.1611536195850505, -75.58291198412968])
-//     .addTo(map).bindPopup("<strong>Afiliado #1</strong><p>Aquí van mis detalles hehe buscame ;)</p> <a href=#> ver más... </a>'");
 const myData = JSON.parse(data);
 const users = myData.Users;
 // console.log(users);
-
-for (let i = 0, len = users.length; i < len; i++) {
-    const marker = L.marker(users[i].coords).addTo(map)
-        .bindPopup(`<strong>${users[i].name}</strong><p>${users[i].description}</p> <a href=#> ver más... </a>`);
-    console.log(users[i].coords);
-}
-
-
-
+window.onload = ciclo(data);
+window.onload = map.on('click', onMapClick);
 
 function mostrar() {
     const myData = JSON.parse(data);
     console.log(myData);
 }
 
-function ciclo() {
+function ciclo(data) {
     const myData = JSON.parse(data);
     const users = myData.Users;
     // console.log(users);
     for (let i = 0, len = users.length; i < len; i++) {
-        var marker = L.marker(users[i].coords).addTo(map);
+        const marker = L.marker(users[i].coords).addTo(map)
+            .bindPopup(`<strong>${users[i].name}</strong><p>${users[i].description}</p> <a href=#> ver más... </a>`);
+        console.log(users[i].coords);
     }
+}
+
+function onMapClick(e) {
+    const popup = L.popup();
+    popup
+        .setLatLng(e.latlng)
+        .setContent(`<h1>¿Está seguro que es su ubicación? Si es así, presione en continuar</h1>`)
+        .openOn(map);
+    const coordenadas = [e.latlng.lat, e.latlng.lng];
+    console.log(coordenadas);
+    const s = document.getElementById("coordenadas");
+    s.value = coordenadas;
 }
