@@ -20,10 +20,8 @@ class Recycler extends Model
         'celular',
         'residuos',
         'edad',
-        'comunas',
         'historia',
         'foto',
-        'barrio'
     ];
 
     /**
