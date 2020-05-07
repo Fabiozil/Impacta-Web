@@ -2,7 +2,7 @@
 
 namespace App\Console\Commands;
 
-// use App\Material;
+use App\Material;
 
 use Illuminate\Console\Command;
 
@@ -43,6 +43,7 @@ class CreateMaterials extends Command
         $Material  = array();
         $SubMaterial = array();
         $Factor = array();
+        $Descripcion = array();
 
         $fila = 1;
         $path = resource_path('csv/materiales.csv');
@@ -58,6 +59,7 @@ class CreateMaterials extends Command
                 array_push($Material, $datos[0]);
                 array_push($SubMaterial, $datos[1]);
                 array_push($Factor, (float) $datos[2]);
+                array_push($Descripcion, $datos[3]);
             }
             fclose($gestor);
         }
@@ -72,7 +74,8 @@ class CreateMaterials extends Command
         $Result = array(
             "Material" => $Material,
             "SubMaterial" => $SubMaterial,
-            "Factor" => $Factor
+            "Factor" => $Factor,
+            "Descripcion" => $Descripcion
         );
         return $Result;
     }
@@ -84,5 +87,16 @@ class CreateMaterials extends Command
         $MaterialsArray = $this->readData();
 
         // Store in Database
+        for ($i = 1; $i < sizeof($MaterialsArray["Material"]); $i++) {
+            $material = new Material;
+            $material->nombre = $MaterialsArray["Material"][$i];
+            $material->nombresub = $MaterialsArray["SubMaterial"][$i];
+            $material->factor = $MaterialsArray["Factor"][$i];
+            $material->mensaje = $MaterialsArray["Descripcion"][$i];
+
+            $material->save();
+        }
+
+        $this->info('Materiales Guardados Correctamente.');
     }
 }

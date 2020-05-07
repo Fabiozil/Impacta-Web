@@ -18,10 +18,9 @@ class CreateMaterialsTable extends Migration
             $table->timestamps();
             $table->string('nombre');
             $table->string('nombresub');
-            $table->string('nombresub');
+            // $table->string('nombresub');
             $table->float('factor', 8, 2);
             $table->text('mensaje');
-
         });
     }
 
