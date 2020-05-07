@@ -125,23 +125,40 @@
                                 <h5 style="width: 100%; margin-top: 10px">Zonas de recoleccion</h5>
                                 <div class="row">
                                     <div class="col-12" style="margin-bottom: 5%">
-                                        <p>Comuna en la que recolecto:</p>
-                                        <div class="input-group">
-                                            <select class="custom-select" id="comuna"
-                                                aria-label="Example select with button addon">
-                                                <option selected>Comuna / Barrio</option>
-                                                <option value="Comuna 1">Comuna 1</option>
-                                                <option value="Comuna 2">Comuna 2</option>
-                                                <option value="Comuna 3">Comuna 3</option>
-                                            </select>
-                                            <div class="input-group-append">
-                                                <button type="submit" class="btn btn-outline-primary"
-                                                    onclick="agregar_comuna()">Agregar
-                                                </button>
-                                                <button type="submit" class="btn btn-outline-danger"
-                                                    onclick="eliminar_comuna()">Eliminar</button>
+                                        <div class="row">
+                                            <div class="col-4">
+                                                <div class="input-group">
+                                                    <select class="custom-select" id="comuna"
+                                                        aria-label="Example select with button addon">
+                                                        <option selected>Municipio</option>
+                                                        <option value="Comuna 1">Comuna 1</option>
+                                                        <option value="Comuna 2">Comuna 2</option>
+                                                        <option value="Comuna 3">Comuna 3</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <div class="col-8">
+                                                <div class="input-group">
+                                                    <select class="custom-select" id="comuna"
+                                                        aria-label="Example select with button addon">
+                                                        <option selected>Comuna</option>
+                                                        <option value="Comuna 1">Comuna 1</option>
+                                                        <option value="Comuna 2">Comuna 2</option>
+                                                        <option value="Comuna 3">Comuna 3</option>
+                                                    </select>
+                                                    <div class="input-group-append">
+                                                        <button type="submit" class="btn btn-outline-primary"
+                                                            onclick="agregar_comuna()">Agregar
+                                                        </button>
+                                                        <button type="submit" class="btn btn-outline-danger"
+                                                            onclick="eliminar_comuna()">Eliminar</button>
+                                                    </div>
+                                                </div>
                                             </div>
                                         </div>
+                                        <p>Comuna o barrio en el que recolecto:</p>
+
+
                                     </div>
                                 </div>
 
