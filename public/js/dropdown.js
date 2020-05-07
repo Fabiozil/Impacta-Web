@@ -1,6 +1,7 @@
 $("#municipio").ready(function(){
     let municipio=$('#municipio').val();
     loadComunas(municipio);
+
 });
 
 function loadComunas(municipio){
@@ -14,7 +15,12 @@ function loadComunas(municipio){
    }).done(function(){
     let comuna=$('#comuna').val();
     loadSectores(municipio,comuna);
-   });
+   }).fail(function() {
+    alert( "error" );
+  })
+  .always(function() {
+    alert( "finished" );
+  });
 }
 
 function loadSectores(municipio,comuna){
