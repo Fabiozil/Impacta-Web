@@ -1,6 +1,7 @@
 $("#municipio").ready(function(){
     let municipio=$('#municipio').val();
     loadComunas(municipio);
+
 });
 
 function loadComunas(municipio){
@@ -9,10 +10,17 @@ function loadComunas(municipio){
         res.forEach(element => {
             $("#comuna").append(`<option value=${element.id}>${element.nombre_com}</option>`);
         });
+        if(res.length===1)  $("#comuna").prop('disabled',true);
+        else $("#comuna").prop('disabled',false);
    }).done(function(){
     let comuna=$('#comuna').val();
     loadSectores(municipio,comuna);
-   });
+   }).fail(function() {
+    alert( "error" );
+  })
+  .always(function() {
+    alert( "finished" );
+  });
 }
 
 function loadSectores(municipio,comuna){

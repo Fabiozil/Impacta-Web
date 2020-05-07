@@ -26,10 +26,10 @@ class HomeController extends Controller
     {
         $tipo=Auth::user()->tipo_usuario;
 
-        if ($tipo==0){
+        if ($tipo==1){
             return view('home');
         }
         return view('home2');
-        
+
     }
 }

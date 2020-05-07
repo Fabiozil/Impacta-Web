@@ -5,6 +5,7 @@ namespace App;
 use Illuminate\Database\Eloquent\Model;
 use App\Comuna;
 use App\Municipio;
+use App\ZonaRecoleccion;
 class Sector extends Model
 {
      /**
@@ -34,5 +35,10 @@ class Sector extends Model
 
     public function comuna(){
         return $this->belongsTo(Comuna::class);
+    }
+
+    public function zonaRecoleccion()
+    {
+        return $this->hasMany(ZonaRecoleccion::class, 'sector_id');
     }
 }
