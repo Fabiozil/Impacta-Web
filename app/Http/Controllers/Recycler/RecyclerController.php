@@ -127,8 +127,10 @@ class RecyclerController extends Controller
     public function show(Recycler $recycler)
     {
 
-        if($recycler->corporation_id==Auth::user()->id)
+        if($recycler->corporation_id==Auth::user()->id){
+            return view('pruebas')->with(['zonas'=>$recycler->zonaRecoleccion]);
             return $recycler;
+        }
         else
             return abort(404);
     }
