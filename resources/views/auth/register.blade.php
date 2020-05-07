@@ -27,10 +27,10 @@
                                 </select>
                             </div>
                             <br>
-                            <div style="height:25vh">
+                            <!-- <div style="height:25vh">
                                     <img src="/icons/user.png" alt="Imagen representante"
                                         style="height: 100%;;max-width: 100%;">
-                                </div>
+                                </div> -->
                             <br>
                             <label for="name" class="col-md-4 col-form-label text-md-right">{{__('Nombre representante')}}</label>
                             <div class="col-md-6">
@@ -144,8 +144,8 @@
                             <br>
                             <br>
                             <label for="sector" class="col-md-4 col-form-label text-md-right">{{__('Sector')}}</label>
-                            <div class="col-md-6">
-                                <input class="form-control @error('r_s') is-invalid @enderror"  name="sector" value="{{ old('sector') }}" required autocomplete="sector" autofocus placeholder="ESTO DEBE DE SER UN MAPA ">
+                            <div class="col-md-6" style="border:5px solid">
+                                <input type="hidden" class="form-control " id="coordenadas" name="sector" value=""  required >
                                 <!-- @error('sector')
                                     <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>
