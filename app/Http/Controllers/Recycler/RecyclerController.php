@@ -2,9 +2,12 @@
 
 namespace App\Http\Controllers\Recycler;
 
+use App\Comuna;
 use App\Recycler;
 use App\Corporation;
 use App\Http\Controllers\Controller;
+use App\Municipio;
+use App\Sector;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Validator;
@@ -57,6 +60,16 @@ class RecyclerController extends Controller
      */
     public function index()
     {
+      // $municipio = Municipio::findOrFail(9);
+      // $barrio= Sector::findOrFail(650);
+        //return $municipio->comunas->unique()->values();
+       //return $barrio->comunas;
+     //  return Comuna::findOrFail(1)->sectores->where('municipio_id','=',2);
+       //return $barrio->load('municipio','comuna');
+
+       $municipios= Municipio::all();
+
+       return view('home2',compact('municipios'));
         $corp= Corporation::findOrFail(Auth::user()->id);
         $recycler= $corp->recyclers()
         ->select('nombres','apellidos','apodo','celular')
@@ -65,6 +78,21 @@ class RecyclerController extends Controller
          //Obtener data de la funcion
         ;
         return $recycler;
+    }
+
+    public function getComunas(Request $request,Municipio $municipio_id){
+        if($request->ajax()){
+            return response()->json($municipio_id->comunas
+            ->unique()->values()
+        );
+        }
+    }
+    public function getSectores(Request $request,Municipio $municipio_id,Comuna $comuna_id){
+        if($request->ajax()){
+            return response()->json($comuna_id->sectores->where('municipio_id','=',$municipio_id->id)
+            ->values()
+        );
+        }
     }
 
     /**
