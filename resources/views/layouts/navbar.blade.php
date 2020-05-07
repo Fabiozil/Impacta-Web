@@ -1,8 +1,10 @@
 <!-- Sidebar  -->
-<nav id="sidebar">
+<nav id="sidebar" class="">
     <div class="sidebar-header">
+        <a href="{{ url('/') }}">
         <h3>{{ config('app.name', 'Reciclar') }}</h3>
         <strong>R</strong>
+        </a>
     </div>
 
     <ul class="list-unstyled components">
