@@ -59,9 +59,20 @@ Route::get('/editar_reciclador', function () {
 Route::get('/recicladores', function () {
     return view('Reciclador.index');
 });
+<<<<<<< HEAD
 Route::get('/busquedau', function () {
     return view('Busqueda.resultsUser');
 });
 Route::get('/busquedac', function () {
     return view('Busqueda.resultsCorp');
+=======
+Route::get('/NuevaMedicion', function(){
+    return view('mediciones.nueva');
+});
+Route::get('/HistorialMediciones', function(){
+    return view('mediciones.historial');
+});
+Route::get('/Emisiones', function(){
+    return view('mediciones.emisiones');
+>>>>>>> parent of fcafcdf... Carpeta de emisiones frontend terminado
 });
