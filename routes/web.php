@@ -68,3 +68,9 @@ Route::get('/HistorialMediciones', function(){
 Route::get('/Emisiones', function(){
     return view('mediciones.emisiones');
 });
+Route::get('/busquedau', function(){
+    return view('Busqueda.resultsUser');
+});
+Route::get('/busquedac', function(){
+    return view('Busqueda.resultsCorp');
+});
