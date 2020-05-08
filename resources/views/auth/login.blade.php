@@ -10,10 +10,10 @@
 <div class=" d-flex justify-content-center align-content-center">
 <div id="Contenedor" class=" col-4 container-fluid " style="height: 100vh">
 
-    <div class="Icon">
+    <div class="Icon d-flex justify-content-center align-content-center col-2">
                <!--Icono de usuario-->
-              <span class="glyphicon glyphicon-user"></span>
-            </div>
+               <i class="fal fa-user-alt" ></i>
+               </div>
 <div class="ContentForm">
         <form action="{{ route('login') }}" method="post" name="FormEntrar">
         @csrf
