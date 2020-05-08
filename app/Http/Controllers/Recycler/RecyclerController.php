@@ -61,11 +61,11 @@ class RecyclerController extends Controller
     public function index()
     {
         $corp= Corporation::findOrFail(Auth::user()->id);
-        $recyclers= $corp->recyclers()
-        ->select('id','nombres','apellidos','apodo','celular')
-        ->paginate(6)  //Paginar de a 6 por pagina
+        $recycler= $corp->recyclers()
+        ->select('nombres','apellidos','apodo','celular')
+        ->paginate(9)  //Paginar de a 9 por pagina
         ;
-        return view('recycler.index',compact('recyclers'));
+        return compact('recycler');
     }
 
     public function getComunas(Request $request,Municipio $municipio_id){

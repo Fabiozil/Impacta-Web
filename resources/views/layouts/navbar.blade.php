@@ -8,8 +8,8 @@
     </div>
 
     <ul class="list-unstyled components">
-        <li class="{{ Request::is('recyclers', '*') ? 'active' : ''}}">
-        <a href="{{route('recyclers.index')}}">
+        <li class="active">
+            <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false">
                 <i class="fas fa-users"></i>
                 Mis recicladores
             </a>
