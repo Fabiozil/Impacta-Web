@@ -59,4 +59,9 @@ Route::get('/editar_reciclador', function () {
 Route::get('/recicladores', function () {
     return view('Reciclador.index');
 });
-
+Route::get('/busquedau', function () {
+    return view('Busqueda.resultsUser');
+});
+Route::get('/busquedac', function () {
+    return view('Busqueda.resultsCorp');
+});
