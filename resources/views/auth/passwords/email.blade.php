@@ -1,7 +1,8 @@
 @extends('layouts.app')
 
 @section('content')
-<div id="Contenedor">
+<div class=" d-flex justify-content-center align-content-center">
+<div id="Contenedor" class="col-4 container-fluid ">
     <div class="Icon">
               <span class="glyphicon glyphicon-exclamation-sign"></span>
             </div>
@@ -21,11 +22,12 @@
            </div>
 
            <br>
-           <!-- <button class="btn btn-lg btn-primary btn-block btn-signin" id="IngresoLog" type="submit" >Volver</button> -->
-           <button class="btn btn-lg btn-primary btn-block btn-signin" id="IngresoLog" type="submit" >
+           <div class=" d-flex justify-content-center align-content-center">
+           <button class="btn btn-lg btn-primary btn-block btn-signin col-8" id="IngresoLog" type="submit" >
            {{ __('Send Password Reset Link') }}
 
            </button>
+           </div>
 
        </form>
        @if (session('status'))
@@ -33,6 +35,7 @@
                        {{ session('status') }}
                    </div>
                @endif
+    </div>
     </div>
     </div>
 @endsection
