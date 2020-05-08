@@ -1,21 +1,22 @@
-@extends('Reciclador.layout_reciclador')
-@section("form-1")
-    <div class="row" style="height: 60%">
-        <div class="container" id="contenedor-formulario" style="margin: 5%">    
-            <div class="col-12">
+@extends('layouts.app')
+@section("content")
+    <div class="row h-75">
+        <div class="container main-cr cont-rec m-2">    
+            <div class="col-sm-12">
                 <div class="row">
-                    <div class="col">
-                        <div class="py-5 text-center" style="height: 20%; margin-bottom: 10px">
-                            <h1>Se realizaran cambios</h1>
+                    <div class="col-sm-12">
+                        <div class="py-5 text-center h-25 mb-1">
                             @yield("operacion")
                         </div>
                     </div>
                 </div>
-                <div class="row align-items-center" style="max-height: 20%">
-                        <img src="/icons/information.png" id="center-img" alt="check" style="max-width: 20%;max-height: 20%">
+                <div class="row align-items-center justify-content-center">
+                    <div class="col-sm-6">
+                        <i class="fas fa-question-circle rounded mx-auto d-block center-img h-25 w-25"></i>
+                    </div>
                 </div>
                 <div class="row">
-                    <div class="col">
+                    <div class="col-sm-12">
                         @yield("redirigir")
                     </div>
                 </div>

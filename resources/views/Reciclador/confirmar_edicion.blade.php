@@ -1,16 +1,17 @@
 @extends('Reciclador.layout_confirmar')
 @section('operacion')
-    <p class="lead">Desea realizar los cambios anteriores en el perfil?</p>
+    <h1>Se editará el perfil</h1>
+    <p class="lead">¿Deseas guardar los cambios anteriores al perfil de tu reciclador? Para aceptar por favor presiona el botón de confirmar más abajo.l</p>
 @endsection
 @section('redirigir')
 <a href="{{ url('/editar_reciclador') }}">
-    <div class="py-5 text-center" style="height: 20%; margin-bottom: 10px">
-        <button type="submit" class="btn btn-light">Atras</button>
+    <div class="row justify-content-center mb-3 mt-5">
+        <button type="submit" class="btn btn-danger">Volver</button>
     </div>
 </a>
 <a href="{{ url('/exito_edit') }}">
-    <div class="py-5 text-center" style="height: 20%; margin-bottom: 10px">
-        <button type="submit" class="btn btn-light">Confirmar</button>
+    <div class="row justify-content-center mb-3 mt-5">
+        <button type="submit" class="btn btn-primary">Confirmar</button>
     </div>
 </a>
 @endsection
