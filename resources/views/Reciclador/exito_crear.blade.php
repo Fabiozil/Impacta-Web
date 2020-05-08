@@ -4,7 +4,7 @@
 @endsection
 @section('boton-redirigir')
 <a href="{{ url('/recicladores') }}">
-    <div class="py-5 text-center" style="height: 20%; margin-bottom: 10px">
+    <div class="row justify-content-center mb-3 mt-5">
         <button type="submit" class="btn btn-primary">Continuar</button>
     </div>
 </a>

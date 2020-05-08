@@ -1,11 +1,11 @@
 @extends('Reciclador.layout_exito')
 @section('texto-confirm')
-    <p class="lead">Se ha eliminado el reciclador del sistema satisfactoriamente!</p>
+    <p class="lead">¡Se ha eliminado el perfil de este reciclador de manera satisfactoria!</p>
 @endsection
 @section('boton-redirigir')
     <a href="{{ url('/recicladores') }}">
-        <div class="py-5 text-center" style="height: 20%; margin-bottom: 10px">
-            <button type="submit" class="btn btn-light">Continuar</button>
+        <div class="row justify-content-center mb-3 mt-5">
+            <button type="submit" class="btn btn-primary">Continuar</button>
         </div>
     </a>
 @endsection

@@ -2,8 +2,8 @@
 
 @section('content')
 <div class="container">
-    <div class="py-5 text-center" id="titulo">
-        <h1>Ingresar nuevo reciclador</h1>
+    <div class="py-5 text-center titulo">
+        <h1 class="text-primary">Ingresar nuevo reciclador</h1>
         <p class="lead">Utiliza los campos a continuación para ingresar la información necesaria para crear nuevo
             reciclador
             en el sistema. Para confirmar tus cambios por favor presiona el botón de aceptar al final de la página.</p>
@@ -11,24 +11,22 @@
 </div>
 
 <div class="container">
-    <div class="row" style='height:100%;'>
-        <div class="col-12" style="height: 80%">
-            <div class="row" style="height: 100%">
-                <div class="col-xl-4 col-lg-3 col-md-12" id="col-crear-rec" style="min-height: 100%;">
-                    <div class="row" style="height: 100%">
-                        <div class="container" id='contenedor-formulario' style="height: 95%">
-                            <div class="row " style="height: 100%">
-                                <div class="col-12" style="height: 100%">
-                                    <div class="container" id="container-formulario">
-                                        <div class="py-5 text-center" id="sub-titulo">
-                                            <h2>Perfil</h2>
+    <div class="row">
+        <div class="col-xl-12">
+            <div class="row">
+                <div class="col-xl-4 col-lg-4 col-md-12 borde-derecha h-100">
+                    <div class="row h-100">
+                        <div class="container h-80 cont-rec">
+                            <div class="row">
+                                <div class="col-xl-12 h-100">
+                                    <div class="container">
+                                        <div class="py-5 text-center subtitle">
+                                            <h2>Mi perfil</h2>
                                         </div>
-                                        <div style="height:25vh">
-                                            {{-- <img src="/icons/user.png" alt="Imagen perfil" style="height: 100%;;max-width: 100%;"> --}}
-                                            <i class="fas fa-user" id="user-icon"></i>
-                                        </div>
-                                        <p>Selecciona una imagen</p>
-                                        <div class="input-group mb-3">
+                                        {{-- <img src="/icons/user.png" alt="Imagen perfil" style="height: 100%;;max-width: 100%;"> --}}
+                                        <i class="fas fa-user user-icon center-img"></i>
+                                        <p class="mt-5">Carga una foto de perfil para tu reciclador.</p>
+                                        <div class="input-group ">
                                             <div class="input-group-prepend">
                                             </div>
                                             <div class="custom-file">
@@ -39,40 +37,78 @@
                                         </div>
                                         <p>Capacidad maxima: 2mb</p>
                                     </div>
-
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="col-xl-8 col-lg-9 col-md-12" id="col-crear-rec" style="min-height: 100%">
-                    <div class="row" style="height: 100%">
-                        <div class="container" id='contenedor-formulario' style="height: 95%;">
-                            <div class="row" style="height: 100%">
-                                <div class="col-12">
-                                    <div class="py-5" id="sub-titulo">
+                <div class="col-xl-8 col-lg-8 col-md-12 borde-derecha h-100">
+                    <div class="row h-100">
+                        <div class="container cont-rec h-95">
+                            <div class="row h-100">
+                                <div class="col-xl-12">
+                                    <div class="py-5 subtitle">
                                         <h2>Mis datos personales</h2>
                                         <p class="lead"> Utiliza los campos a continuación para ingresar la información
                                             referente a
                                             los datos personales del nuevo reciclador.</p>
                                     </div>
-                                    <div class="container" id="container-formulario">
+                                    <div class="container cont-rec-nf m-0">
                                         <form>
-                                            <div class="form-group" style="width: 100%">
-                                                <label for="">Nombre</label>
-                                                <input type="name" class="form-control" id="nombre">
-                                                <label for="">Apellido</label>
-                                                <input type="name" class="form-control" id="apellido">
-                                                <label for="">Apodo</label>
-                                                <input type="name" class="form-control" id="apodo">
-                                                <label for="">Edad</label>
-                                                <input type="age" class="form-control" id="edad">
-                                                <label for="">Celular</label>
-                                                <input type="phone" class="form-control" id="celular">
+                                            <div class="form-group w-100">
+                                                <div class="form-group row">
+                                                    <label for="inputPassword"
+                                                        class="col-sm-2 col-form-label">Nombre</label>
+                                                    <div class="col-sm-10">
+                                                        <input type="password" class="form-control" id="inputPassword"
+                                                            placeholder="James David">
+                                                        <small id="emailHelp" class="form-text text-muted">Registra el
+                                                            primer y segundo nombre (si aplica) de tu reciclador como en
+                                                            el ejemplo.
+                                                        </small>
+                                                    </div>
+                                                </div>
+                                                <div class="form-group row">
+                                                    <label for="inputPassword"
+                                                        class="col-sm-2 col-form-label">Apellido</label>
+                                                    <div class="col-sm-10">
+                                                        <input type="password" class="form-control" id="inputPassword"
+                                                            placeholder="Rodriguez Rubio">
+                                                        <small id="emailHelp" class="form-text text-muted">Registra el
+                                                            apellido teniendo en cuenta el uso de mayúsculas y buena
+                                                            ortografía.</small>
+                                                    </div>
+                                                </div>
+                                                <div class="form-group row">
+                                                    <label for="inputPassword"
+                                                        class="col-sm-2 col-form-label">Apodo</label>
+                                                    <div class="col-sm-10">
+                                                        <input type="password" class="form-control" id="inputPassword"
+                                                            placeholder="James">
+                                                        <small id="emailHelp" class="form-text text-muted">Si tu reciclador prefiere ser llamado por su apodo por favor ingresa el apodo correspondiente.</small>
+                                                    </div>
+                                                </div>
+                                                <div class="form-group row">
+                                                    <label for="inputPassword"
+                                                        class="col-sm-2 col-form-label">Edad</label>
+                                                    <div class="col-sm-10">
+                                                        <input type="password" class="form-control" id="inputPassword"
+                                                            placeholder="28">
+                                                    </div>
+                                                </div>
+                                                <div class="form-group row">
+                                                    <label for="inputPassword"
+                                                        class="col-sm-2 col-form-label">Celular</label>
+                                                    <div class="col-sm-10">
+                                                        <input type="password" class="form-control" id="inputPassword"
+                                                            placeholder="1234567899">
+                                                        <small id="emailHelp" class="form-text text-muted">Registra los diez dígitos del número celular de tu reciclador sin espacios intermedios. P. ej. 3041112233</small>
+
+                                                    </div>
+                                                </div>
                                             </div>
                                         </form>
                                     </div>
-
                                 </div>
                             </div>
                         </div>
@@ -81,24 +117,23 @@
             </div>
         </div>
     </div>
-    <div class="row" style="max-height: 10%">
-        <div class="col-xl-7 col-lg-12 col-md-12" id="col-crear-rec">
-            <div class="row" style="height: 100%;">
-                <div class="container" id="contenedor-formulario" style="max-height: 100%; overflow: auto;">
-                    <div class="col-12">
-                        <div class="py-5" id="sub-titulo">
+    <div class="row">
+        <div class="col-xl-7 col-lg-12 col-md-12 borde-derecha">
+            <div class="row h-100">
+                <div class="container cont-rec m-100">
+                    <div class="col-xl-12">
+                        <div class="py-5 subtitle">
                             <h2>Mi labor</h2>
                             <p class="lead">Utiliza los campos a continuación para ingresar la información referente a
-                                los
-                                materiales que recolecta el reciclador y a las zonas y horarios en que trabaja.</p>
+                                los materiales que recolecta el reciclador y a las zonas y horarios en que trabaja.</p>
                         </div>
                     </div>
                     <div class="row">
-                        <div class="container" style="margin: 20px;">
-                            <div class="col-12" style="height: 100%;">
+                        <div class="container cont-rec-nf">
+                            <div class="col-xl-12 h-100">
                                 <div class="row align-items-center">
-                                    <div class="col-12">
-                                        <h5 style="width: 100%;">Materiales que recolecto</h5>
+                                    <div class="col-xl-12">
+                                        <h5>Materiales que recolecto</h5>
                                         <div class="input-group">
                                             <select class="custom-select" id="residuo"
                                                 aria-label="Example select with button addon">
@@ -114,20 +149,20 @@
                                                     id="boton_agregar_residuo" onclick="agregar_residuo()">Agregar
                                                 </button>
                                                 <button class="btn btn-outline-danger" type="button"
-                                                    id="boton_agregar_residuo" onclick="eliminar_residuo()">Eliminar
+                                                    id="boton_eliminar_residuo" onclick="eliminar_residuo()">Eliminar
                                                 </button>
                                             </div>
                                         </div>
-                                        <ul class="list-group list-group-flush" id="lista_residuos">
+                                        <ul class="list-group list-group-flush mt-2" id="lista_residuos">
                                         </ul>
                                     </div>
                                 </div>
-                                <h5 style="width: 100%; margin-top: 10px">Zonas de recoleccion</h5>
+                                <h5>Zonas de recoleccion</h5>
                                 <div class="row">
-                                    <div class="col-12" style="margin-bottom: 5%">
-                                        <div class="row">
-                                            <div class="col-4">
-                                                <div class="input-group">
+                                    <div class="col-xl-12 m-1">
+                                        <div class="row w=100">
+                                            <div class="col-xl-6 col-lg-6 col-md-12">
+                                                <div class="input-group mt-1">
                                                     <select class="custom-select" id="comuna"
                                                         aria-label="Example select with button addon">
                                                         <option selected>Municipio</option>
@@ -137,8 +172,8 @@
                                                     </select>
                                                 </div>
                                             </div>
-                                            <div class="col-8">
-                                                <div class="input-group">
+                                            <div class="col-xl-6 col-lg-6 col-md-12">
+                                                <div class="input-group mt-1">
                                                     <select class="custom-select" id="comuna"
                                                         aria-label="Example select with button addon">
                                                         <option selected>Comuna</option>
@@ -146,25 +181,21 @@
                                                         <option value="Comuna 2">Comuna 2</option>
                                                         <option value="Comuna 3">Comuna 3</option>
                                                     </select>
-                                                    <div class="input-group-append">
+                                                    {{--                                                     <div class="input-group-append">
                                                         <button type="submit" class="btn btn-outline-primary"
                                                             onclick="agregar_comuna()">Agregar
                                                         </button>
                                                         <button type="submit" class="btn btn-outline-danger"
                                                             onclick="eliminar_comuna()">Eliminar</button>
-                                                    </div>
+                                                    </div> --}}
                                                 </div>
                                             </div>
                                         </div>
-                                        <p>Comuna o barrio en el que recolecto:</p>
-
-
                                     </div>
                                 </div>
-
                                 <div class="row">
-                                    <div class="col-5">
-                                        <p>Barrios en los que recolecto:</p>
+                                    <div class="col-xl-3 col-lg-12 col-md-12">
+                                        <p>Barrios:</p>
                                         <div class="input-group">
                                             <select class="custom-select" id="barrio"
                                                 aria-label="Example select with button addon">
@@ -173,18 +204,11 @@
                                                 <option value="Barrio 2">Barrio 2</option>
                                                 <option value="Barrio 3">Barrio 3</option>
                                             </select>
-                                            <div class="input-group-append">
-                                                <button class="btn btn-outline-primary" type="button"
-                                                    id="boton_agregar_barrio"
-                                                    onclick="agregar_barrio()">Agregar</button>
-                                            </div>
                                         </div>
-                                        <ul class="list-group list-group-flush" id="lista_barrios">
-                                        </ul>
                                     </div>
-                                    <div class="col-7">
+                                    <div class="col-xl-9 col-lg-12 col-md-12">
                                         <div class="row">
-                                            <div class="col-5">
+                                            <div class="col-xl-4 col-lg-5 col-md-12">
                                                 <p>Día:</p>
                                                 <div class="input-group">
                                                     <select class="custom-select" id="dia"
@@ -198,12 +222,10 @@
                                                         <option value="Domingo">Domingo</option>
                                                     </select>
                                                 </div>
-                                                <ul class="list-group list-group-flush" id="lista_dias">
-                                                </ul>
                                             </div>
-                                            <div class="col-7" style="padding-right: 0px; padding-left: 5%">
-                                                <div class="row" style="max-height: 300px; overflow-x: hidden; overflow-y: auto">
-                                                    <div class="col-6" style="padding: 0%">
+                                            <div class="col-xl-7 col-md-12">
+                                                <div class="row">
+                                                    <div class="col-xl-6 col-lg-6 col-md-12 pr-1">
                                                         <p>Inicio:</p>
                                                         <div class="input-group">
                                                             <select class="custom-select" id="hora-inicio"
@@ -224,7 +246,7 @@
                                                             </select>
                                                         </div>
                                                     </div>
-                                                    <div class="col-6" style="padding-right:0px; padding-left:1px">
+                                                    <div class="col-xl-6 col-lg-6 col-md-12 pr-0">
                                                         <p>Fin:</p>
                                                         <div class="input-group">
                                                             <select class="custom-select" id="hora-fin"
@@ -246,36 +268,53 @@
                                                                 <option value="20:00">20:00</option>
                                                             </select>
                                                         </div>
-
                                                     </div>
                                                 </div>
-                                                <div class="row">
-                                                    <div class="col-12">
-                                                        <ul class="list-group list-group-flush" id="lista_horas" style="margin-bottom: 10px">
-                                                        </ul>
-                                                        <button type="submit" class="btn btn-danger" onclick="eliminar_barrio()"
-                                                        style="margin-bottom: 5px; margin-top: 10px   position: relative;
-                                                        float: right;">Eliminar barrio</button>
-                                                    </div>
-                                                </div>
-
                                             </div>
                                         </div>
                                     </div>
                                 </div>
-                                <div class="row" style="max-height: 300px; overflow-x: hidden; overflow-y: auto">
-                                    <div class="col-12">
-                                        <div class="row" style="max-height: 300px; overflow-x: hidden; overflow-y: auto">
-                                            <div class="col-4">
+                                <div class="row m-1">
+                                    <div class="col-sm-3 p-0">
+                                        <p class="text-center">Barrios:</p>
+                                        <ul class="list-group list-group-flush mb-2" id="lista_barrios">
+                                        </ul>
+                                    </div>
+                                    <div class="col-sm-4 p-0">
+                                        <p class="text-center">Dias:</p>
+                                        <ul class="list-group list-group-flush mb-2" id="lista_dias">
+                                        </ul>
+                                    </div>
+                                    <div class="col-sm-5 p-0">
+                                        <p class="text-center">Horas:</p>
+                                        <ul class="list-group list-group-flush mb-2" id="lista_horas">
+                                        </ul>
+                                    </div>
+                                    <div class="col-sm-12">
+                                        <div class="row justify-content-end">
+                                            <button class="btn btn-primary m-1" type="button" id="boton_agregar_barrio"
+                                                onclick="agregar_barrio()">Agregar</button>
+                                            <button type="submit" class="btn btn-danger m-1"
+                                                onclick="eliminar_barrio()">Eliminar barrio</button>
+                                        </div>
+                                    </div>
+
+                                </div>
+
+                                {{--                                 <div class="row" style="max-height: 300px; overflow-x: hidden; overflow-y: auto">
+                                    <div class="col-xl-12">
+                                        <div class="row"
+                                            style="max-height: 300px; overflow-x: hidden; overflow-y: auto">
+                                            <div class="col-xl-4">
                                                 <p id="col-list">Comuna:</p>
                                             </div>
-                                            <div class="col-4">
+                                            <div class="col-xl-4">
                                                 <p id="col-list">Barrio:</p>
                                             </div>
-                                            <div class="col-2">
+                                            <div class="col-xl-2">
                                                 <p id="col-list">Dia:</p>
                                             </div>
-                                            <div class="col-2">
+                                            <div class="col-xl-2">
                                                 <p id="col-list">Hora:</p>
                                             </div>
                                         </div>
@@ -285,7 +324,7 @@
                                             </ul>
                                         </div>
                                     </div>
-                                </div>
+                                </div> --}}
                             </div>
                         </div>
                     </div>
@@ -294,31 +333,42 @@
         </div>
 
         <div class="col-xl-5 col-lg-12 col-md-12">
-            <div class="row" style="height: 100%;">
-                <div class="col-12">
-                    <div class="row" style="border-right-style: solid; border-right-color: lightgray">
-                        <div class="container" id="contenedor-formulario" style="height: 100%">
-                            <div class="py-5" id="sub-titulo">
+            <div class="row h-100">
+                <div class="col-xl-12">
+                    <div class="row borde-derecha">
+                        <div class="container cont-rec h-100">
+                            <div class="py-5 subtitle">
                                 <h2>Mi historia</h2>
                                 <p class="lead">Utiliza el campo de texto a continuación para ingresar la historia de tu
                                     nuevo reciclador.</p>
+                                    
                             </div>
-                            <div class="container" style="max-height: 100%">
-                                <form style="margin-bottom: 15px">
-                                    <div class="input-group" style="height: 100%">
-                                        <textarea class="form-control" rows="15"></textarea>
+                            <div class="container h-100">
+                                <form>
+                                    <div class="input-group h-100">
+                                        <textarea class="form-control" rows="15" placeholder="Historia"></textarea>
+                                        <small id="emailHelp" class="form-text text-muted">Aquí te damos cinco consejos para que crees la historia de tu reciclador:
+                                            1. Describe características demográficas como su lugar de procedencia. 
+                                            2. Menciona el tiempo que lleva dedicado a su profesión. 
+                                            3. Menciona una razón de trasfondo diferente a obtener un ingreso económico por la cual tu reciclador realiza su labor.
+                                            4. Comunicar ¿cómo la comunidad puede aportar a facilitar su trabajo?
+                                            5.Transmitir el impacto que tiene la ayuda de la comunidad en la vida del reciclador.
+                                        </small>
                                     </div>
                                 </form>
                             </div>
-
-{{--                             <a href="{{ url('/recicladores') }}">
-                                <button type="submit" class="btn btn-danger" style="margin-bottom: 10px ; position: relative;
+                            {{--                             <a href="{{ url('/recicladores') }}">
+                            <button type="submit" class="btn btn-danger" style="margin-bottom: 10px ; position: relative;
                                 float: right;">Cancelar</button>
-                            </a>  --}}                           
-                            <a href="{{ url('/exito_crear') }}">
-                                <button type="submit" class="btn btn-success" style="margin-bottom: 10px; margin-right: 10px; position: relative;
-                                float: right;">Registrar</button>
-                            </a>
+                            </a> --}}
+                            <div class="row align-items-center justify-content-end">
+                                <div class="row-xl-12">
+                                    <a href="{{ url('/exito_crear') }}">
+                                        <button type="submit" class="btn btn-success m-2">Registrar</button>
+                                    </a>
+                                </div>
+                            </div>
+
                         </div>
                     </div>
                 </div>
@@ -379,12 +429,12 @@
         nodo_lista.className = "list-group-item"
         nueva_fila.className = "row";
         nueva_fila_barrios.className = "row";
-        nueva_col_barrios.className = "col-12 no-padding";
-        nueva_col_comunas.className = "col-4 no-padding";
-        nueva_col_barrios.className = "col-8 no-padding";
-        nueva_col_barrios_barrios.className = "col-5 no-padding"
-        nueva_col_dias.className = "col-3 no-padding";
-        nueva_col_horas.className = "col-4 no-padding";
+        nueva_col_barrios.className = "col-12 p-0";
+        nueva_col_comunas.className = "col-4 p-0";
+        nueva_col_barrios.className = "col-8 p-0";
+        nueva_col_barrios_barrios.className = "col-5 p-0"
+        nueva_col_dias.className = "col-3 p-0";
+        nueva_col_horas.className = "col-4 p-0";
 
 
         nueva_col_barrios_barrios.appendChild(nueva_lista_barrios);
@@ -482,9 +532,9 @@
         var barrio_lista = document.createTextNode(barrio);
         var hora_lista = document.createTextNode(hora);
         var dia_lista = document.createTextNode(dia);
-        nodo_lista_barrio.className = "list-group-item";
-        nodo_lista_hora.className = "list-group-item";
-        nodo_lista_dia.className = "list-group-item";
+        nodo_lista_barrio.className = "list-group-item text-center";
+        nodo_lista_hora.className = "list-group-item text-center";
+        nodo_lista_dia.className = "list-group-item text-center";
         nodo_lista_barrio.appendChild(barrio_lista);
         nodo_lista_hora.appendChild(hora_lista);
         nodo_lista_dia.appendChild(dia_lista);
