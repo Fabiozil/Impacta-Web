@@ -61,4 +61,12 @@ Route::get('/editar_reciclador', function () {
 Route::get('/recicladores', function () {
     return view('Reciclador.index');
 });
-
+Route::get('/NuevaMedicion', function(){
+    return view('mediciones.nueva');
+});
+Route::get('/HistorialMediciones', function(){
+    return view('mediciones.historial');
+});
+Route::get('/Emisiones', function(){
+    return view('mediciones.emisiones');
+});
