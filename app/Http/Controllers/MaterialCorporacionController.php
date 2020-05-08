@@ -23,7 +23,13 @@ class MaterialCorporacionController extends Controller
      */
     public function index()
     {
-        //
+        if (Auth::user()->tipo_usuario == 1) {
+
+            $corporacion = Corporation::findOrFail(Auth::user()->id);
+            $mediciones  = $corporacion->mediciones;
+
+            return response()->json($mediciones);
+        }
     }
 
     /**
@@ -55,15 +61,6 @@ class MaterialCorporacionController extends Controller
      */
     public function show($id)
     {
-
-        if (Auth::user()->tipo_usuario == 1) {
-
-            // $corporacion = Auth::user()->isA();
-            $corporacion = Corporation::findOrFail(Auth::user()->id);
-            $mediciones  = $corporacion->mediciones();
-
-            return response()->json($mediciones);
-        }
     }
 
     /**

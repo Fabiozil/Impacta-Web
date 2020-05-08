@@ -8,6 +8,13 @@ use Illuminate\Database\Eloquent\Model;
 class Material_Corporacion extends Model
 {
     /**
+     * The table associated with the model.
+     *
+     * @var string
+     */
+    protected $table = 'material__corporacions';
+
+    /**
      * The attributes that are mass assignable.
      *
      * @var array
