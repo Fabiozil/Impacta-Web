@@ -204,17 +204,6 @@ a[data-toggle="collapse"] {
     }
 }
 
-#contenedor-crear-reciclador{
-    background-color: #f8f9fa;
-    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
-}
-
-#contenedor-formulario{
-    background-color: #f8f9fa;
-    margin: 20px;
-    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
-}
-
 .cont-rec{
     background-color: #f8f9fa;
     margin: 20px;
@@ -237,18 +226,9 @@ a[data-toggle="collapse"] {
     max-height: 100% !important;
 }
 
-#btn-rec{
-    margin: 10px;
-}
-
 .user-icon{
     height: 50% !important;
     width: 50% !important;
-}
-
-#item-lista-recicladores{
-    padding-bottom: 0px;
-    background-color: #f8f9fa;
 }
 
 .titulo{ 
