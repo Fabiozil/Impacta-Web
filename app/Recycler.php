@@ -13,6 +13,7 @@ class Recycler extends Model
      */
 
     protected $fillable = [
+        'id',
         'apodo',
         'nombres',
         'apellidos',
@@ -30,7 +31,6 @@ class Recycler extends Model
      * @var array
      */
     protected $hidden = [
-        'id',
         'corporation_id',
         'created_at',
         'updated_at',
