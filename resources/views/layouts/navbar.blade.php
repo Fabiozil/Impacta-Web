@@ -15,7 +15,7 @@
             </a>
         </li>
         <li>
-            <a href="#">
+            <a href="/mapa">
                 <i class="fas fa-street-view"></i>
                 Comunidad
             </a>
@@ -25,13 +25,13 @@
             </a>
             <ul class="collapse list-unstyled" id="pageSubmenu">
                 <li>
-                    <a href="#">Page 1</a>
+                    <a href="/indicadores">Emisiones</a>
                 </li>
                 <li>
-                    <a href="#">Page 2</a>
+                    <a href="/indicadores/nuevo">Nueva Medición</a>
                 </li>
                 <li>
-                    <a href="#">Page 3</a>
+                    <a href="/indicadores/historial">Historial</a>
                 </li>
             </ul>
         </li>

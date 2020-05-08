@@ -2,14 +2,14 @@
 
 @section('content') 
 
-<a href="NuevaMedicion">
-    <button class="btn btn-secondary">Nueva Medición</button>
+<a href="/indicadores/nuevo">
+  <button class="btn btn-secondary">Nueva Medición</button>
 </a>
-<a href="HistorialMediciones">
-    <button class="btn btn-secondary">Historial</button>
+<a href="/indicadores/historial">
+  <button class="btn btn-secondary">Historial</button>
 </a>
-<a href="Emisiones">
-    <button class="btn btn-secondary">Emisiones</button>
+<a href="/indicadores">
+  <button class="btn btn-secondary">Emisiones</button>
 </a>
 <br />
 <h1>
