@@ -11,7 +11,7 @@ a:focus {
     background: #fff;
     border: none;
     border-radius: 0;
-    margin-bottom: 1.5%;
+    margin-bottom: 40px;
     width: 100%;
     box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
 }
@@ -121,7 +121,8 @@ a:focus {
     margin-right: 10px;
 }
 
-#sidebar ul li.active>a[aria-expanded="true"] {
+#sidebar ul li.active>a[aria-expanded="true"],
+#sidebar ul li.active {
     color: #fff;
     background: #4cd137;
 }
@@ -203,7 +204,7 @@ a[data-toggle="collapse"] {
         display: none;
     }
 }
-
+/*Fabio*/
 .cont-rec{
     background-color: #f8f9fa;
     margin: 20px;
@@ -231,12 +232,12 @@ a[data-toggle="collapse"] {
     width: 50% !important;
 }
 
-.titulo{ 
-    padding-top: 1.5% !important; 
+.titulo{
+    padding-top: 1.5% !important;
     padding-bottom: 1.6% !important;
 }
 
-.subtitle{ 
+.subtitle{
     padding: 3% !important;
 }
 
@@ -251,4 +252,7 @@ a[data-toggle="collapse"] {
 .main-cr{
     max-width: 200%;
 }
-
+textarea {
+    resize: none;
+}
+/*Fin Fabio*/
