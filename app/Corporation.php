@@ -64,4 +64,10 @@ class Corporation extends Model
     {
         return $this->belongsTo('App\User', 'id', 'id');
     }
+
+    // Materiales
+    public function mediciones()
+    {
+        return $this->hasMany('App\Material_Corporacion');
+    }
 }

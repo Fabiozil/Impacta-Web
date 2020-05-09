@@ -27,4 +27,7 @@ Route::get('comunas/{municipio_id}', 'Recycler\RecyclerController@getComunas')->
 Route::get('sectores/{municipio_id}/{comuna_id}', 'Recycler\RecyclerController@getSectores')->name('sectores');
 Route::get('/home', 'HomeController@index')->name('home');
 
+Route::get('/materiales', 'MaterialController@getMaterials')->name('materiales');
 
+// Route::resource('mediciones', 'MaterialCorporacionController')->except(['destroy', 'edit', 'update']);
+Route::get('/mediciones', 'MaterialCorporacionController@index')->name('mediciones');

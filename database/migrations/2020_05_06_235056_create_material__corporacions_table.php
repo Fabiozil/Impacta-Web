@@ -15,17 +15,20 @@ class CreateMaterialCorporacionsTable extends Migration
     {
         Schema::create('material__corporacions', function (Blueprint $table) {
             $table->id();
-            $table->timestamps();
             $table->integer('kg');
             $table->dateTime('fecha', 0);
+
+            $table->timestamps();
+
             $table->unsignedBigInteger('corporation_id');
             $table->foreign('corporation_id')
-            ->references('id')->on('corporations')
-            ->onDelete('cascade');
+                ->references('id')->on('corporations')
+                ->onDelete('cascade');
+
             $table->unsignedBigInteger('material_id');
             $table->foreign('material_id')
-            ->references('id')->on('materials')
-            ->onDelete('cascade');
+                ->references('id')->on('materials')
+                ->onDelete('cascade');
         });
     }
 
