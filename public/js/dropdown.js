@@ -1,11 +1,11 @@
 $("#municipio").ready(function(){
     let municipio=$('#municipio').val();
     loadComunas(municipio);
-
+    console.log(path);
 });
 
 function loadComunas(municipio){
-    $.get(`comunas/${municipio}`, function(res,sta){
+    $.get(`${path}comunas/${municipio}`, function(res,sta){
         $("#comuna").empty();
         res.forEach(element => {
             $("#comuna").append(`<option value=${element.id}>${element.nombre_com}</option>`);
@@ -15,23 +15,25 @@ function loadComunas(municipio){
    }).done(function(){
     let comuna=$('#comuna').val();
     loadSectores(municipio,comuna);
+    console.info( "Info: se cargó correctamente las comunas" );
    }).fail(function() {
-    alert( "error" );
-  })
-  .always(function() {
-    alert( "finished" );
+    console.error( "Error al intentar cargar las comunas" );
   });
 }
 
 function loadSectores(municipio,comuna){
-    $.get(`sectores/${municipio}/${comuna}`, function(res,sta){
+    $.get(`${path}sectores/${municipio}/${comuna}`, function(res,sta){
         $("#sector").empty();
         //console.log(res);
         res.forEach(element => {
             let tipo= element.tipo===1? "Barrio":"Vereda";
             $("#sector").append(`<option value=${element.id}> ${tipo}: ${element.nombre_sect} </option>`);
         });
-   });
+   }).done(function(){
+    console.info( "Info: se cargó correctamente los municipios" );
+   }).fail(function() {
+    console.error( "Error al intentar cargar los municipios" );
+  });
 }
 
 $("#municipio").change(function(event){
