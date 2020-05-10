@@ -7,11 +7,13 @@
 ]) !!}
 @endsection
 @section('content')
-<div id="Contenedor">
-    <div class="Icon">
+<div class=" d-flex justify-content-center align-content-center">
+<div id="Contenedor" class=" col-4 container-fluid " style="height: 100vh">
+
+    <div class="Icon d-flex justify-content-center align-content-center col-2">
                <!--Icono de usuario-->
-              <span class="glyphicon glyphicon-user"></span>
-            </div>
+               <i class="fal fa-user-alt" ></i>
+               </div>
 <div class="ContentForm">
         <form action="{{ route('login') }}" method="post" name="FormEntrar">
         @csrf
@@ -44,11 +46,14 @@
 
            <br>
            <!-- cambiar ingresar por acceder en el dic -->
-           <button class="btn btn-lg btn-primary btn-block btn-signin" id="IngresoLog" type="submit">{{ __('Login') }}</button>
+           <div class=" d-flex justify-content-center align-content-center">
+           <button class="btn btn-lg btn-primary btn-block btn-signin col-4" id="IngresoLog" type="submit">{{ __('Login') }}</button>
+           </div>
            <br>
            <!-- hay que preguntar si se registra como persona o corporacion -->
-           <div class="opcioncontra"><a href="{{ route('register') }}">¿No tienes cuenta? Regístrate</a></div>
+           <div class="opcioncontra"><a href="{{ route('register') }}">{{ __('Register') }}</a></div>
         </form>
+    </div>
     </div>
     </div>
 @endsection

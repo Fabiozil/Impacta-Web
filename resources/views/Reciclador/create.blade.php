@@ -103,7 +103,6 @@
                                                         <input type="password" class="form-control" id="inputPassword"
                                                             placeholder="1234567899">
                                                         <small id="emailHelp" class="form-text text-muted">Registra los diez dígitos del número celular de tu reciclador sin espacios intermedios. P. ej. 3041112233</small>
-
                                                     </div>
                                                 </div>
                                             </div>
@@ -159,7 +158,7 @@
                                 </div>
                                 <h5>Zonas de recoleccion</h5>
                                 <div class="row">
-                                    <div class="col-xl-12 m-1">
+                                    <div class="col-xl-12 mb-1">
                                         <div class="row w=100">
                                             <div class="col-xl-6 col-lg-6 col-md-12">
                                                 <div class="input-group mt-1">
@@ -194,8 +193,8 @@
                                     </div>
                                 </div>
                                 <div class="row">
-                                    <div class="col-xl-3 col-lg-12 col-md-12">
-                                        <p>Barrios:</p>
+                                    <div class="col-xl-6 col-lg-12 col-md-12">
+                                        <p>Sectores:</p>
                                         <div class="input-group">
                                             <select class="custom-select" id="barrio"
                                                 aria-label="Example select with button addon">
@@ -206,74 +205,90 @@
                                             </select>
                                         </div>
                                     </div>
-                                    <div class="col-xl-9 col-lg-12 col-md-12">
+                                    <div class="col-xl-6 col-lg-12 col-md-12">
+                                        <p>Día:</p>
                                         <div class="row">
-                                            <div class="col-xl-4 col-lg-5 col-md-12">
-                                                <p>Día:</p>
-                                                <div class="input-group">
-                                                    <select class="custom-select" id="dia"
-                                                        aria-label="Example select with button addon">
-                                                        <option selected>Lunes</option>
-                                                        <option value="Martes">Martes</option>
-                                                        <option value="Miercoles">Miercoles</option>
-                                                        <option value="Jueves">Jueves</option>
-                                                        <option value="Viernes">Viernes</option>
-                                                        <option value="Sabado">Sabado</option>
-                                                        <option value="Domingo">Domingo</option>
-                                                    </select>
+                                            <div class="col-sm-6">
+                                                <div class="custom-control custom-checkbox">
+                                                    <input type="checkbox" class="custom-control-input" id="lunes" value="L">
+                                                    <label class="custom-control-label" for="lunes">Lunes</label>
+                                                </div>
+                                                <div class="custom-control custom-checkbox">
+                                                    <input type="checkbox" class="custom-control-input" id="martes" value="M">
+                                                    <label class="custom-control-label" for="martes">Martes</label>
+                                                </div>
+                                                <div class="custom-control custom-checkbox">
+                                                    <input type="checkbox" class="custom-control-input" id="miercoles" value="X">
+                                                    <label class="custom-control-label" for="miercoles">Miercoles</label>
+                                                </div>
+                                                <div class="custom-control custom-checkbox">
+                                                    <input type="checkbox" class="custom-control-input" id="jueves" value="J">
+                                                    <label class="custom-control-label" for="jueves">Jueves</label>
                                                 </div>
                                             </div>
-                                            <div class="col-xl-7 col-md-12">
-                                                <div class="row">
-                                                    <div class="col-xl-6 col-lg-6 col-md-12 pr-1">
-                                                        <p>Inicio:</p>
-                                                        <div class="input-group">
-                                                            <select class="custom-select" id="hora-inicio"
-                                                                aria-label="Example select with button addon">
-                                                                <option selected>Inicio</option>
-                                                                <option value="5:00">5:00</option>
-                                                                <option value="6:00">6:00</option>
-                                                                <option value="7:00">7:00</option>
-                                                                <option value="8:00">8:00</option>
-                                                                <option value="9:00">9:00</option>
-                                                                <option value="10:00">10:00</option>
-                                                                <option value="11:00">11:00</option>
-                                                                <option value="12:00">12:00</option>
-                                                                <option value="13:00">13:00</option>
-                                                                <option value="14:00">14:00</option>
-                                                                <option value="15:00">15:00</option>
-                                                                <option value="16:00">16:00</option>
-                                                            </select>
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-xl-6 col-lg-6 col-md-12 pr-0">
-                                                        <p>Fin:</p>
-                                                        <div class="input-group">
-                                                            <select class="custom-select" id="hora-fin"
-                                                                aria-label="Example select with button addon">
-                                                                <option selected>Fin</option>
-                                                                <option value="7:00">7:00</option>
-                                                                <option value="8:00">8:00</option>
-                                                                <option value="9:00">9:00</option>
-                                                                <option value="10:00">10:00</option>
-                                                                <option value="11:00">11:00</option>
-                                                                <option value="12:00">12:00</option>
-                                                                <option value="13:00">13:00</option>
-                                                                <option value="14:00">14:00</option>
-                                                                <option value="15:00">15:00</option>
-                                                                <option value="16:00">16:00</option>
-                                                                <option value="17:00">17:00</option>
-                                                                <option value="18:00">18:00</option>
-                                                                <option value="19:00">19:00</option>
-                                                                <option value="20:00">20:00</option>
-                                                            </select>
-                                                        </div>
-                                                    </div>
+                                            <div class="col-sm-6">
+                                                <div class="custom-control custom-checkbox">
+                                                    <input type="checkbox" class="custom-control-input" id="viernes" value="V">
+                                                    <label class="custom-control-label" for="viernes">Viernes</label>
+                                                </div>
+                                                <div class="custom-control custom-checkbox">
+                                                    <input type="checkbox" class="custom-control-input" id="sabado" value="S">
+                                                    <label class="custom-control-label" for="sabado">Sabado</label>
+                                                </div>
+                                                <div class="custom-control custom-checkbox">
+                                                    <input type="checkbox" class="custom-control-input" id="domingo" value="D">
+                                                    <label class="custom-control-label" for="domingo">Domingo</label>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
+                                <div class="row">
+                                    <div class="col-xl-6 col-lg-6 col-md-12">
+                                        <p>Inicio:</p>
+                                        <div class="input-group">
+                                            <select class="custom-select" id="hora-inicio"
+                                                aria-label="Example select with button addon">
+                                                <option selected>Inicio</option>
+                                                <option value="5:00">5:00</option>
+                                                <option value="6:00">6:00</option>
+                                                <option value="7:00">7:00</option>
+                                                <option value="8:00">8:00</option>
+                                                <option value="9:00">9:00</option>
+                                                <option value="10:00">10:00</option>
+                                                <option value="11:00">11:00</option>
+                                                <option value="12:00">12:00</option>
+                                                <option value="13:00">13:00</option>
+                                                <option value="14:00">14:00</option>
+                                                <option value="15:00">15:00</option>
+                                                <option value="16:00">16:00</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="col-xl-6 col-lg-6 col-md-12">
+                                        <p>Fin:</p>
+                                        <div class="input-group">
+                                            <select class="custom-select" id="hora-fin"
+                                                aria-label="Example select with button addon">
+                                                <option selected>Fin</option>
+                                                <option value="7:00">7:00</option>
+                                                <option value="8:00">8:00</option>
+                                                <option value="9:00">9:00</option>
+                                                <option value="10:00">10:00</option>
+                                                <option value="11:00">11:00</option>
+                                                <option value="12:00">12:00</option>
+                                                <option value="13:00">13:00</option>
+                                                <option value="14:00">14:00</option>
+                                                <option value="15:00">15:00</option>
+                                                <option value="16:00">16:00</option>
+                                                <option value="17:00">17:00</option>
+                                                <option value="18:00">18:00</option>
+                                                <option value="19:00">19:00</option>
+                                                <option value="20:00">20:00</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>  
                                 <div class="row m-1">
                                     <div class="col-sm-3 p-0">
                                         <p class="text-center">Barrios:</p>
@@ -407,7 +422,7 @@
         console.log("Lista limpiada");
     }
 
-    function agregar_comuna() {
+/*     function agregar_comuna() {
         var lista_comunas_barrios = document.getElementById("lista_comunas_barrios");
         var nueva_fila = document.createElement("DIV");
         var nueva_fila_barrios = document.createElement("DIV")
@@ -486,7 +501,7 @@
             lista_dias.removeChild(lista_dias.childNodes[lista_dias.childNodes.length - 1]);
             lista_horas.removeChild(lista_horas.childNodes[lista_horas.childNodes.length - 1]);
         }
-    }
+    } */
 
     function eliminar_comuna() {
         var lista = document.getElementById("lista_comunas_barrios");
@@ -515,32 +530,73 @@
         lista_barrios.removeChild(lista_barrios.childNodes[lista_barrios.childNodes.length - 1]);
         lista_horas.removeChild(lista_horas.childNodes[lista_horas.childNodes.length - 1]);
         lista_dias.removeChild(lista_dias.childNodes[lista_dias.childNodes.length - 1]);
+        lista_dias.removeChild(lista_dias.childNodes[lista_dias.childNodes.length - 1]);
+        var lista_barrios = document.getElementById("lista_barrios");
+        var lista_horas = document.getElementById("lista_horas");
+        var lista_dias = document.getElementById("lista_dias");
+        i-=1;
     }
-
+    var i = 1;
     function agregar_barrio() {
         var barrio = document.getElementById("barrio").value;
         var hora_inicio = document.getElementById("hora-inicio").value;
         var hora_fin = document.getElementById("hora-fin").value;
         var hora = hora_inicio + "-" + hora_fin;
-        var dia = document.getElementById("dia").value;
+        var dia1 = document.getElementById("lunes");
+        var dia2 = document.getElementById("martes");
+        var dia3 = document.getElementById("miercoles");
+        var dia4 = document.getElementById("jueves");
+        var dia5 = document.getElementById("viernes");
+        var dia6 = document.getElementById("sabado");
+        var dia7 = document.getElementById("domingo");
         var lista_barrios = document.getElementById("lista_barrios");
         var lista_horas = document.getElementById("lista_horas");
         var lista_dias = document.getElementById("lista_dias");
         var nodo_lista_barrio = document.createElement("LI");
         var nodo_lista_hora = document.createElement("LI");
-        var nodo_lista_dia = document.createElement("LI");
+        var nodo_lista_dias = document.createElement("LI");
+        var entrada_datos = document.createElement("INPUT");
+        var texto_datos = "";
+        entrada_datos.setAttribute("name", "days[]"); 
+        entrada_datos.setAttribute("type", "hidden"); 
+        entrada_datos.setAttribute("id", "days"+i); 
         var barrio_lista = document.createTextNode(barrio);
         var hora_lista = document.createTextNode(hora);
-        var dia_lista = document.createTextNode(dia);
         nodo_lista_barrio.className = "list-group-item text-center";
         nodo_lista_hora.className = "list-group-item text-center";
-        nodo_lista_dia.className = "list-group-item text-center";
+        nodo_lista_dias.className = "list-group-item text-center";
         nodo_lista_barrio.appendChild(barrio_lista);
         nodo_lista_hora.appendChild(hora_lista);
-        nodo_lista_dia.appendChild(dia_lista);
         lista_barrios.appendChild(nodo_lista_barrio);
         lista_horas.appendChild(nodo_lista_hora);
-        lista_dias.appendChild(nodo_lista_dia);
+        if (dia1.checked) {
+            texto_datos+=dia1.value;
+        }
+        if (dia2.checked) {
+            texto_datos+=" "+dia2.value;
+        }
+        if (dia3.checked) {
+            texto_datos+=" "+dia3.value;
+        }
+        if (dia4.checked) {
+            texto_datos+=" "+dia4.value;
+        }
+        if (dia5.checked) {
+            texto_datos+=" "+dia5.value;
+        }
+        if (dia6.checked) {
+            texto_datos+=" "+dia6.value;
+        }
+        if (dia7.checked) {
+            texto_datos+=" "+dia7.value;
+        }
+        var texto_dias = document.createTextNode(texto_datos);
+        var datos = document.createTextNode(texto_datos);
+        nodo_lista_dias.appendChild(texto_dias);
+        entrada_datos.appendChild(datos);
+        lista_dias.appendChild(entrada_datos);
+        lista_dias.appendChild(nodo_lista_dias);
+        i+=1;
     }
 
 </script>

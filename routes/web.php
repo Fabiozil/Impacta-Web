@@ -73,3 +73,9 @@ Route::get('/indicadores', function(){
 Route::get('/mapa', function(){
     return view('mapa.mapa');
 });
+Route::get('/busquedau', function(){
+    return view('Busqueda.resultsUser');
+});
+Route::get('/busquedac', function(){
+    return view('Busqueda.resultsCorp');
+});
