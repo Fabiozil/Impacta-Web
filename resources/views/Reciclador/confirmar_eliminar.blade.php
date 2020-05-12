@@ -1,16 +1,17 @@
 @extends('Reciclador.layout_confirmar')
 @section('operacion')
-<p class="lead">Desea eliminar este perfil?. Una vez eliminado el perfil no se podra recuperar</p>
+<h1>Se eliminará el perfil</h1>
+<p class="lead">¿Deseas Eliminar el perfil de este reciclador? Para aceptar por favor presiona el botón de confirmar más abajo.  Recuerda que una vez eliminado el perfil no se podrá recuperar.</p>
 @endsection
 @section('redirigir')
 <a href="{{ url('/recicladores') }}">
-    <div class="py-5 text-center" style="height: 20%; margin-bottom: 10px">
-        <button type="submit" class="btn btn-light">Atras</button>
+    <div class="row justify-content-center mb-3 mt-5">
+        <button type="submit" class="btn btn-danger">Cancelar</button>
     </div>
 </a>
 <a href="{{ url('/exito_delete') }}">
-    <div class="py-5 text-center" style="height: 20%; margin-bottom: 10px">
-        <button type="submit" class="btn btn-light">Confirmar</button>
+    <div class="row justify-content-center mb-3">
+        <button type="submit" class="btn btn-primary">Confirmar</button>
     </div>
 </a>
 @endsection

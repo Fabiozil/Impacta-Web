@@ -1,10 +1,10 @@
-@extends('nav')
+@extends('layouts.app')
 
-@section('head')
+@section('header')
     <link rel="stylesheet" href="/css/notifications.css">
 @endsection
 
-@section('conteint')
+@section('content')
     <main class="container contenedor">
         <header>
             <h1 class="title">Notificación manual</h1>
@@ -22,7 +22,7 @@
                     <tbody>
                         <tr>
                             <td>
-                                <label for="todos">¿Enviar a todos?</label> 
+                                <label for="todos">Todos mis usuarios</label> 
                             </td>
                             <td colspan="2">
                                 <label class="switch">
@@ -52,8 +52,8 @@
                             <td>
                                 <label for="reciclador">Usuarios por reciclador</label>
                             </td>
-                            <td>
-                                <select class="form-control" name="sector" id="reciclador">
+                            <td id="reciclador">
+                                <select class="form-control" name="sector">
                                     <option value="default">Reciclador</option>
                                 </select>
                                 <span class="span-button" id="button_reciclador">Agregar reciclador</span>
@@ -83,19 +83,21 @@
                     </tbody>
                 </table>
             </form>
-            <h3 class="titulo_menor">Mensajes por responder</h3>
+            <h3 class="titulo_menor">Mensajes en espera: </h3>
             <section class="mensajes_container">
-                <section class="mensaje row">
+                <section class="mensaje">
+                    <i class="fas fa-window-close close"></i>
                     <p class="col-md-12">
-                        Mensaje por enviar
+                        Durante los dias de semana santa se prestaran servicio de recoleccion de material reciclable los dias lunes y martes.
                         <br>
-                        <span>
-                            Enviado el día
-                        </span>
-                        <span class="titulo_menor">Mensaje manual</span>
+                        <span>Localidad: </span>
+                        Medellín/Comuna Villa Hermosa/Trece de Noviembre
+                        <br>
+                        <span class="titulo_menor">Mensaje se envía el 30/04/2020 a las 8:00 am</span>
                     </p>
                 </section>
             </section>
+        
             <?php /*
             @foreach ($notifications as $notification)
                 <section class="mensaje row">
@@ -114,31 +116,31 @@
                 </section>
             @endforeach
             */?>
+        </section>    
     </main>
     <script>
         const sector_button = document.getElementById("button_sectores");
-        const reciclador_button = document.getElementById("button_sectores");
+        const reciclador_button = document.getElementById("button_reciclador");
         const sectores = document.getElementById("sectores");
         const reciclador = document.getElementById("reciclador");
         sector_button.addEventListener("click", function(){
             const select = document.createElement("select");
             const opts = document.createElement("option");
-            opts.innerText = "Nuevo";
+            opts.innerText = "Localidades";
             opts.setAttribute("value", "new");
             select.setAttribute("class", "form-control");
             select.appendChild(opts);
             sectores.insertBefore(select, sector_button);
-            console.log(select, sectores);
         });
         reciclador_button.addEventListener("click", function(){
             const select = document.createElement("select");
             const opts = document.createElement("option");
-            opts.innerText = "Nuevo";
+            opts.innerText = "Reciclador";
             opts.setAttribute("value", "new");
             select.setAttribute("class", "form-control");
             select.appendChild(opts);
-            reciclador.insertBefore(select, sector_button);
-            console.log(select, sectores);
+            console.log(reciclador, reciclador_button);
+            reciclador.insertBefore(select, reciclador_button);
         });
     </script>
 @endsection

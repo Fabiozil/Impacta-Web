@@ -121,6 +121,8 @@ Route::get('/DatosCorp', function(){
 });
 Auth::routes(['verify'=>true]);
 Route::resource('recyclers', 'Recycler\RecyclerController')->except(['destroy','edit']);
+Route::get('comunas/{municipio_id}','Recycler\RecyclerController@getComunas')->name('comunas');
+Route::get('sectores/{municipio_id}/{comuna_id}','Recycler\RecyclerController@getSectores')->name('sectores');
 Route::get('/home', 'HomeController@index')->name('home');
 
 //////////////////////////////////////////////
@@ -156,5 +158,26 @@ Route::get('/editar_reciclador', function () {
 });
 Route::get('/recicladores', function () {
     return view('Reciclador.index');
+});
+Route::get('/indicadores/nuevo', function(){
+    return view('mediciones.nueva');
+});
+Route::get('/indicadores/historial', function(){
+    return view('mediciones.historial');
+});
+Route::get('/indicadores', function(){
+    return view('mediciones.emisiones');
+});
+Route::get('/mapa', function(){
+    return view('mapa.mapa');
+});
+Route::get('/busquedau', function(){
+    return view('Busqueda.resultsUser');
+});
+Route::get('/busquedac', function(){
+    return view('Busqueda.resultsCorp');
+});
+Route::get('/popup', function(){
+    return view('mapa.popup');
 });
 

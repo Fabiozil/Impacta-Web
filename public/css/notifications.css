@@ -3,7 +3,7 @@
         transform: scale(1)
     }
     50% {
-        transform: scale(1.5)
+        transform: scale(1.1)
     }
     100%{
         transform: scale(1)
@@ -14,14 +14,18 @@ body{
 }
 header{
     padding: 1em;
+    padding-left: 0;
+
 }
 .title{
     font-size: 30px;
     color: #009900;
+    margin-left: 0;
 }
 .titulo_menor{
     font-size: 16px;
     color: #009900;
+    font-weight: bold;
     padding: 15px;
 }
 .mensaje_abierto{
@@ -31,6 +35,11 @@ header{
 .mensaje_cerrado{
     transition: display 1s;
 }
+.nav-notifications{
+    min-height: 70px;
+    margin-bottom: 10px;
+}
+.nav-notifications .btn.green{
 nav{
     height: 70px;
 }
@@ -39,8 +48,9 @@ nav .btn.green{
     background-color: #009900;
     color: #FFF;
     width: 15%;
+    border-radius: 5px;
 }
-nav .btn{
+.nav-notifications .btn{
     margin: 0.3em 0.5em;
     background-color: #999;
     color: #FFF;
@@ -60,6 +70,7 @@ nav .btn{
     align-items: center;
     justify-content: space-between;
     padding: 0.5em 1em;
+    position: relative;
 }
 .mensajes_container{
     background-color: #f2f2f2;
@@ -76,6 +87,8 @@ nav .btn{
     background-color: #FFF;
     padding: 10px;
     margin: 0;
+    font-size: 0.8rem;
+    font-weight: 500;
 }
 .mensaje p span{
     font-style: italic;
@@ -133,7 +146,7 @@ form.buscador{
 }
 .alerta{
     animation-name: pulsar;
-    animation-duration: 2s;
+    animation-duration: 1.2s;
     animation-iteration-count: infinite;
     animation-timing-function: linear;
 }
@@ -216,4 +229,35 @@ form.buscador{
   .form-control.width-50{
       width: 49%;
       display: inline;
+  }
+  #asignar{
+      font-size: 0.7rem;
+      margin-left: 5px;
+      border-radius: 20px;
+  }
+  .bg-gray{
+      background-color: #f2f2f2;
+      padding: 10px;
+      border-radius: 5px;
+  }
+  .margintop-0{
+      margin-top: 0;
+  }
+  .marginleft-15{
+      margin-left: 15px;
+  }
+  .close{
+      position: absolute;
+      top: 13%;
+      right: 3%;
+      z-index: 999;
+      color: red;
+      cursor: pointer;
+  }
+  .close:hover{
+      color: darkred;
+  }
+
+  .round{
+      border-radius: 15px;
   }
