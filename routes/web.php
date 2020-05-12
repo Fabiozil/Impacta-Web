@@ -79,3 +79,7 @@ Route::get('/busquedau', function(){
 Route::get('/busquedac', function(){
     return view('Busqueda.resultsCorp');
 });
+Route::get('/popup', function(){
+    return view('mapa.popup');
+});
+

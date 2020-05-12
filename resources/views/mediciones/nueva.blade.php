@@ -17,25 +17,43 @@
 
 
 <form action="/indicadores">
+@csrf
     <label for="fechacorte">Fecha de Corte</label><br />
-            <input 
-                class="form-control"
-                type="date"
-                id="fechacorte"
-                name="fechacorte"
-                value="1 Enero 2020"
-            />
+    <div class="input-group input-group-lg">        
+        <input 
+            type="date"
+            class="form-control @error('date') is-invalid @enderror"
+            placeholder="{{ __('date') }}"
+            id="fechacorte"
+            name="date"
+            value="1 Enero 2020"
+            required autofocus
+        />
+        @error('date')
+            <span class="invalid-feedback" role="alert">
+                <strong>help</strong>
+                </span>
+        @enderror
+    </div>
     <br>
     <div class="form-row">
         <div class="col">
             <label for="organico">KG Orgánicos</label><br />
+            <div class="input-group input-group-lg">    
             <input
-                class="form-control"
                 type="number"
+                class="form-control @error('number') is-invalid @enderror"
                 id="organico"
-                name="organico"
+                name="number"
                 value="0"
+                required
             />
+            @error('number')
+                <span class="invalid-feedback" role="alert">
+                    <strong>{{ $message}}</strong>
+                    </span>
+            @enderror
+            </div>
         </div>
         <div class="col">
             <label for="vidrio">KG Vidrio</label><br />
@@ -96,5 +114,6 @@
       </div>
     <br>
     <input type="submit" class="btn btn-primary btn-block"value="Continuar" />
+
 </form>
 @endsection
