@@ -114,6 +114,5 @@
       </div>
     <br>
     <input type="submit" class="btn btn-primary btn-block"value="Continuar" />
-
 </form>
 @endsection

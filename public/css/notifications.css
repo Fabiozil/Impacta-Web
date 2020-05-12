@@ -15,6 +15,7 @@ body{
 header{
     padding: 1em;
     padding-left: 0;
+
 }
 .title{
     font-size: 30px;
@@ -25,6 +26,7 @@ header{
     font-size: 16px;
     color: #009900;
     font-weight: bold;
+    padding: 15px;
 }
 .mensaje_abierto{
     display: none;
@@ -38,6 +40,10 @@ header{
     margin-bottom: 10px;
 }
 .nav-notifications .btn.green{
+nav{
+    height: 70px;
+}
+nav .btn.green{
     margin: 0.3em 0.5em;
     background-color: #009900;
     color: #FFF;
@@ -88,6 +94,7 @@ header{
     font-style: italic;
     font-size: smaller;
     font-weight: 600;
+    padding-left: 6px;
     font-size: 12px;
 }
 .ver-mas, .ver-menos{

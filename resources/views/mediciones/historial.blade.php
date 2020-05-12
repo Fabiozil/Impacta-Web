@@ -102,7 +102,4 @@ var myBarChart = new Chart(ctx, {
 });
 
 </script>
-
-
-
 @endsection

@@ -171,6 +171,7 @@
         const forms = contenedor.getElementsByTagName("form");
         for(let i=0; i<forms.length; i++){
             if(forms[i].attributes.id.value != select.value) forms[i].style.display = "none";
+
         }
         select.addEventListener("change", function(e){
             for(let i=0; i<forms.length; i++){
