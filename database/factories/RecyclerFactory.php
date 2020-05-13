@@ -17,6 +17,8 @@ $factory->define(Recycler::class, function (Faker $faker) {
         'fecha_nacimiento'=>$faker->date($format = 'Y-m-d', $max = '2000-01-01'),
         'historia'=>$faker->text(500),
         'residuos'=>$faker->text(50),
+        'comunas'=>$faker->text(50),
+        'barrio'=>$faker->text(50),
         'foto'=>$faker->randomElement(['1.jpg','2.jpg','3.jpg']),
     ];
 });

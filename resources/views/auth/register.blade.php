@@ -1,11 +1,5 @@
 @extends('layouts.app')
-@section('header')
- <!-- Recaptcha temporal  -->
- {!! htmlScriptTagJsApi([
-    'action' => 'homepage',
-    'custom_validation' => 'myCustomValidation'
-]) !!}
-@endsection
+
 @section('content')
 <div class="container">
     <div class="row justify-content-center">
