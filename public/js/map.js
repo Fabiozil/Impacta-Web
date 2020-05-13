@@ -27,6 +27,14 @@ function ciclo(data) {
     }
 }
 
+const { users } = myData;
+dest(myData);
+function dest({ users }) {
+    for (key in obj) {
+
+    }
+}
+//iterable puede ser numerable pero no al revés
 function onMapClick(e) {
     const popup = L.popup();
     popup
