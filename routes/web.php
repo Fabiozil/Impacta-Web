@@ -70,9 +70,8 @@ Route::get('/indicadores/historial', function(){
 Route::get('/indicadores', function(){
     return view('mediciones.emisiones');
 });
-Route::get('/mapa', function(){
-    return view('mapa.mapa');
-});
+Route::get('/mapa', 'mapController@index')->name('map');
+
 Route::get('/busquedau', function(){
     return view('Busqueda.resultsUser');
 });
