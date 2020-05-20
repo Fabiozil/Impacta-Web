@@ -1,0 +1,259 @@
+@keyframes pulsar {
+    0% {
+        transform: scale(1)
+    }
+    50% {
+        transform: scale(1.1)
+    }
+    100%{
+        transform: scale(1)
+    }
+}
+body{
+    background-color: #f2f2f2;
+}
+header{
+    padding: 1em;
+    padding-left: 0;
+}
+.title{
+    font-size: 30px;
+    color: #009900;
+    margin-left: 0;
+}
+.titulo_menor{
+    font-size: 16px;
+    color: #009900;
+    font-weight: bold;
+}
+.mensaje_abierto{
+    display: none;
+    transition: display 1s;
+}
+.mensaje_cerrado{
+    transition: display 1s;
+}
+.nav-notifications{
+    min-height: 70px;
+    margin-bottom: 10px;
+}
+.nav-notifications .btn.green{
+    margin: 0.3em 0.5em;
+    background-color: #009900;
+    color: #FFF;
+    width: 15%;
+    border-radius: 5px;
+}
+.nav-notifications .btn{
+    margin: 0.3em 0.5em;
+    background-color: #999;
+    color: #FFF;
+}
+.btnSelected{
+    font-weight: bolder !important;
+    transform: scale(1.12);
+}
+.contenedor{
+    background-color: #FFF;
+    padding: 1em;
+    height: 100%;
+    overflow-y: auto;
+}
+.mensaje{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.5em 1em;
+    position: relative;
+}
+.mensajes_container{
+    background-color: #f2f2f2;
+    border-radius: 5px;
+    overflow-y: auto;
+    overflow-x: hidden; 
+    padding: 15px 0; 
+}
+.mensaje img{
+    border-radius: 50%;
+}
+.mensaje p{
+    border-radius: 20px;
+    background-color: #FFF;
+    padding: 10px;
+    margin: 0;
+    font-size: 0.8rem;
+    font-weight: 500;
+}
+.mensaje p span{
+    font-style: italic;
+    font-size: smaller;
+    font-weight: 600;
+    font-size: 12px;
+}
+.ver-mas, .ver-menos{
+    font-size: 16px !important;
+    font-style: italic;
+    color: #009900;
+    cursor: pointer;
+}
+.buscador{
+    margin-top: 10px;
+}
+.buscador button{
+    width: 50px;
+    height: 50px;
+}
+.buscador img{
+    max-width: 100%;
+    max-height: 100%;
+}
+.buscador p{
+    font-size: 20px;
+    font-weight: bolder;
+    text-align: center;
+}
+.buscador input{
+    border-radius: 5px;
+    border: 1px solid #ced4da;
+    text-align: center;
+}
+.buscador select{
+    width: 80%;
+    display: inline-block;
+}
+.buscador input[type="text"]{
+    width: 80%;
+    display: inline-block;
+}
+form.buscador{
+    width: 100%;
+    text-align: center;
+}
+.manual textarea{
+    width: 100%;
+    min-height: 250px;
+    border-radius: 10px;
+    margin-top: 10px;
+    outline: none;
+    padding: 5px;
+}
+.alerta{
+    animation-name: pulsar;
+    animation-duration: 1.2s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+/* The switch - the box around the slider */
+.switch {
+    position: relative;
+    width: 60px;
+    height: 34px;
+  }
+  
+  /* Hide default HTML checkbox */
+  .switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+  
+  /* The slider */
+  .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+  
+  .slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+  
+  input:checked + .slider {
+    background-color: #2196F3;
+  }
+  
+  input:focus + .slider {
+    box-shadow: 0 0 1px #2196F3;
+  }
+  
+  input:checked + .slider:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+  }
+  
+  /* Rounded sliders */
+  .slider.round {
+    border-radius: 34px;
+  }
+  
+  .slider.round:before {
+    border-radius: 50%;
+  }
+
+  table{
+      width: 100%;
+  }
+  table tr td:last-child{
+      text-align: end;
+  }
+  table td{
+      vertical-align: middle;
+  }
+  .span-button{
+    cursor: pointer;
+    color: #009900;
+    padding: 15px;
+  }
+  .form-control.width-50{
+      width: 49%;
+      display: inline;
+  }
+  #asignar{
+      font-size: 0.7rem;
+      margin-left: 5px;
+      border-radius: 20px;
+  }
+  .bg-gray{
+      background-color: #f2f2f2;
+      padding: 10px;
+      border-radius: 5px;
+  }
+  .margintop-0{
+      margin-top: 0;
+  }
+  .marginleft-15{
+      margin-left: 15px;
+  }
+  .margintop-15{
+      margin-top: 15px;
+  }
+  .close{
+      position: absolute;
+      top: 13%;
+      right: 3%;
+      z-index: 999;
+      color: red;
+      cursor: pointer;
+  }
+  .close:hover{
+      color: darkred;
+  }
+
+  .round{
+      border-radius: 15px;
+  }
