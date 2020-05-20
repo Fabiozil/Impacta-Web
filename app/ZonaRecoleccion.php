@@ -16,8 +16,11 @@ class ZonaRecoleccion extends Model
      */
 
     protected $fillable = [
-        'dias_horas',
         'id',
+        'dias',
+        'horas',
+        'sector_id',
+        'recycler_id',
     ];
 
     /**
@@ -26,8 +29,6 @@ class ZonaRecoleccion extends Model
      * @var array
      */
     protected $hidden = [
-        'sector_id',
-        'recycler_id',
         'created_at',
         'updated_at',
     ];

@@ -22,7 +22,8 @@ Route::get('/corporation', 'CorporationController@index');
 Route::get('/notification', 'NotificationController@index');
 
 Auth::routes(['verify' => true]);
-Route::resource('recyclers', 'Recycler\RecyclerController')->except(['destroy']);
+Route::resource('recyclers', 'Recycler\RecyclerController')->except(['edit']);
+Route::resource('recyclers.zona','Recycler\ZonaController')->only(['store','update','destroy']);
 Route::get('comunas/{municipio_id}', 'Recycler\RecyclerController@getComunas')->name('comunas');
 Route::get('sectores/{municipio_id}/{comuna_id}', 'Recycler\RecyclerController@getSectores')->name('sectores');
 Route::get('/home', 'HomeController@index')->name('home');

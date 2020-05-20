@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateZonaRecoleccionsTable extends Migration
+class CreateMaterialRecyclersTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,18 +13,16 @@ class CreateZonaRecoleccionsTable extends Migration
      */
     public function up()
     {
-        Schema::create('zona_recoleccion', function (Blueprint $table) {
+        Schema::create('material__recyclers', function (Blueprint $table) {
             $table->id();
             $table->unsignedBigInteger('recycler_id');
-            $table->unsignedBigInteger('sector_id');
-            $table->string('dias',50);
-            $table->string('horas',100);
+            $table->unsignedBigInteger('material_id');
             $table->timestamps();
             $table->foreign('recycler_id')
             ->references('id')->on('recyclers')
             ->onDelete('cascade');
-            $table->foreign('sector_id')
-            ->references('id')->on('sectores')
+            $table->foreign('material_id')
+            ->references('id')->on('materials')
             ->onDelete('cascade');
         });
     }
@@ -36,6 +34,6 @@ class CreateZonaRecoleccionsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('zona_recoleccion');
+        Schema::dropIfExists('material__recyclers');
     }
 }

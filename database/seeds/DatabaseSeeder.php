@@ -4,6 +4,7 @@ use App\User;
 use App\Recycler;
 use App\Corporation;
 use App\ZonaRecoleccion;
+use App\Sector;
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\DB;
 class DatabaseSeeder extends Seeder
@@ -29,6 +30,7 @@ class DatabaseSeeder extends Seeder
         factory(Recycler::class,$cantidadRecycler)->create()
         ->each(function($recycler){
             $recycler->zonaRecoleccion()->createMany(factory(ZonaRecoleccion::class,3)->make()->toArray());
+            $recycler->materials()->attach([rand(1,11),rand(1,11),rand(1,11),rand(1,11)]);
         });
     }
 }

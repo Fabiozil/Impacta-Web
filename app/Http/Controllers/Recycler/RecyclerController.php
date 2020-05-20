@@ -2,16 +2,21 @@
 
 namespace App\Http\Controllers\Recycler;
 
+
+use App\Sector;
 use App\Comuna;
+use App\Material;
 use App\Recycler;
+use App\Municipio;
 use App\Corporation;
 use App\Http\Controllers\Controller;
-use App\Municipio;
-use App\Sector;
+use App\Providers\RouteServiceProvider;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Storage;
+use Image;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Validator;
-use App\Providers\RouteServiceProvider;
+use phpDocumentor\Reflection\Types\Null_;
 
 class RecyclerController extends Controller
 {
@@ -41,15 +46,18 @@ class RecyclerController extends Controller
     private function validator(Request $request)
     {
         $rules= [
-            'apodo'=>'required|string|max:100',
-            'nombres'=>'required|string|max:255',
-            'apellidos'=>'required|string|max:255',
+            'apodo'=>'string|max:100',
+            'nombres'=>'required|string|regex:/^[\pL\s]+$/u|max:255',
+            'apellidos'=>'required|string|regex:/^[\pL\s]+$/u|max:255',
             'fecha_nacimiento'=>'required','date','before:2002-01-01|max:100',
-            'celular'=>'required|integer|digits:11',
-            'residuos'=>'required|string|max:255',
-            'edad'=>'required|integer|digits:3',
-            'historia'=>'required|string|max:100',
-            'foto'=>'required|image|mimes:jpeg,png|size:2048',
+            'celular'=>'required|integer|digits:10',
+            'residuos'=>'required|array|between:1,8',
+            'edad'=>'required|integer|digits_between:1,3',
+            'historia'=>'required|string|max:500',
+            'foto'=>'required|image|mimes:jpeg,png|max:2048',
+            'sectors'=>'required|array|between:1,8',
+            'days'=>'required|array|between:1,8|gte:sectors',
+            'times'=>'required|array|between:1,8|gte:sectors'
         ];
         return $request->validate($rules);
     }
@@ -62,7 +70,7 @@ class RecyclerController extends Controller
     {
         $corp= Corporation::findOrFail(Auth::user()->id);
         $recyclers= $corp->recyclers()
-        ->select('id','nombres','apellidos','apodo','celular')
+        ->select('id','nombres','apellidos','apodo','celular','foto')
         ->paginate(6)  //Paginar de a 6 por pagina
         ;
         return view('recycler.index',compact('recyclers'));
@@ -91,8 +99,9 @@ class RecyclerController extends Controller
     public function create()
     {
         $municipios= Municipio::all();
-
-        return view('recycler.create',compact('municipios'));
+        $materiales= Material::select('id','nombre','nombresub')->get();
+       // return view('home2',compact('municipios','materiales'));
+        return view('recycler.create',compact('municipios','materiales'));
     }
 
     /**
@@ -103,9 +112,40 @@ class RecyclerController extends Controller
      */
     public function store(Request $request)
     {
-        $data= $this->validator($request);
+        $this->validator($request);
         $data['corporation_id']=Auth::user()->id;
-        return Recycler::create($data);
+        $data['nombres']=$request->nombres;
+        $data['apellidos']=$request->apellidos;
+        $data['apodo']=$request->apodo;
+        $data['edad']=$request->edad;
+        $data['celular']=$request->celular;
+        $data['fecha_nacimiento']=$request->fecha_nacimiento;
+        $data['historia']=$request->historia;
+       // dd($request->all());
+        if($request->hasFile('foto')){
+            $image = $request->file('foto');
+            $path= $image->hashName('public/recyclers');
+            $data['foto']=$path;
+            $img = Image::make($image)->fit(300, 300, function ($constraint) {
+                $constraint->aspectRatio();
+            });
+            Storage::put($path, (string) $img->encode());
+        }
+        $recycler = Recycler::create($data);
+            $sectores=$request->sectors;
+            $dias=$request->days;
+            $horas=$request->times;
+            for ($i=0; $i < sizeof($sectores); $i++) {
+                $zona['sector_id']=$sectores[$i];
+                $zona['dias']=$dias[$i];
+                $zona['horas']=$horas[$i];
+                $recycler->zonaRecoleccion()->create($zona);
+            }
+            foreach ($request->residuos as $value) {
+                $recycler->materials()->attach($value);
+            }
+            $message='El reciclador '.$recycler->nombres.' fue creado con éxito';
+        return redirect()->route('recyclers.index')->with('success',$message) ;
     }
 
     /**
@@ -117,8 +157,10 @@ class RecyclerController extends Controller
     public function show(Recycler $recycler)
     {
         if($recycler->corporation_id==Auth::user()->id){
-           $recycler->zonaRecoleccion;
-            return compact('recycler');
+           $zona=$recycler->zonaRecoleccion;
+           $material=$recycler->materials;
+         //  return compact('recycler');
+            return view('recycler.show',compact('recycler','zona','material'));
         }
         else
             return abort(419);
@@ -144,9 +186,27 @@ class RecyclerController extends Controller
      */
     public function update(Request $request, Recycler $recycler)
     {
-       /* $validateData = $this->validator($request);
-
-        $recycler->update($validateData);*/
+       if($request->has('historia')){
+           $data= $request->validate(['historia'=>'string|max:500',]);
+           $recycler->update($data);
+           $message='La historia del reciclador '.$recycler->nombres.' fue actualizada con éxito';
+           return redirect()->back()->with('success', $message);
+       }
+      // dd($request->all());
+       if($request->has('nombres')&&$request->has('apellidos')&&$request->has('apodo')&&$request->has('edad')&&$request->has('fecha_nacimiento')&&$request->has('celular')){
+           $data= $request->validate([
+            'apodo'=>'nullable|string|max:100',
+           'nombres'=>'required|string|regex:/^[\pL\s]+$/u|max:255',
+           'apellidos'=>'required|string|regex:/^[\pL\s]+$/u|max:255',
+           'edad'=>'required|integer|digits_between:1,3',
+           'fecha_nacimiento'=>'required','date','before:2002-01-01|max:100',
+           'celular'=>'required|integer|digits:10',
+           ]);
+           $recycler->update($data);
+           $message='La Información personal del reciclador '.$recycler->nombres.' fue actualizada con éxito';
+           return redirect()->back()->with('success', $message);
+       }
+       return redirect()->back()->with('danger', 'No se pudo completar la operación');
     }
 
     /**

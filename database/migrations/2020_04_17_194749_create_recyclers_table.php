@@ -22,13 +22,11 @@ class CreateRecyclersTable extends Migration
                 ->onDelete('cascade');
             $table->string('nombres');
             $table->string('apellidos');
-            $table->string('apodo');
+            $table->string('apodo')->nullable()->default('No Aplica');
             $table->smallInteger('edad');
-            $table->integer('celular');
+            $table->string('celular');
             $table->date('fecha_nacimiento');
             $table->text('historia');
-            $table->text('residuos');
-
             $table->string('foto'); // Dirección del archivo local
 
             $table->timestamps();

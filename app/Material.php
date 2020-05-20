@@ -11,7 +11,10 @@ class Material extends Model
      *
      * @var array
      */
-    protected $fillable = [];
+    protected $fillable = [
+        'id','nombre','nombresub',
+        'created_at', 'updated_at'
+    ];
 
     /**
      * The attributes that should be hidden for arrays.
@@ -19,11 +22,16 @@ class Material extends Model
      * @var array
      */
     protected $hidden = [
-        'created_at', 'updated_at', 'id'
+        'pivot'
     ];
 
     public function mediciones()
     {
         return $this->hasMany('App\Material_Corporacion');
+    }
+    public function recyclers()
+    {
+        return $this->belongsToMany(Recycler::class,'material__recyclers')
+        ->withPivot('material_id','recycler_id');
     }
 }

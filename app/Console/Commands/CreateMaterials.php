@@ -13,14 +13,14 @@ class CreateMaterials extends Command
      *
      * @var string
      */
-    protected $signature = 'crearmateriales';
+    protected $signature = 'load:materiales';
 
     /**
      * The console command description.
      *
      * @var string
      */
-    protected $description = 'Añade materiales a la BD';
+    protected $description = 'Cargar base de datos de materiales';
 
     /**
      * Create a new command instance.
@@ -82,7 +82,7 @@ class CreateMaterials extends Command
 
     public function handle()
     {
-        $this->info('Guardando los materiales en la Base de Datos...');
+        $this->info('Cargando los materiales en la Base de Datos...');
 
         $MaterialsArray = $this->readData();
 
@@ -97,6 +97,6 @@ class CreateMaterials extends Command
             $material->save();
         }
 
-        $this->info('Materiales Guardados Correctamente.');
+        $this->info('Materiales cargados correctamente.');
     }
 }

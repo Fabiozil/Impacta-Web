@@ -1,7 +1,7 @@
 $("#municipio").ready(function(){
     let municipio=$('#municipio').val();
     loadComunas(municipio);
-    console.log(path);
+  //  console.log(path);
 });
 
 function loadComunas(municipio){
