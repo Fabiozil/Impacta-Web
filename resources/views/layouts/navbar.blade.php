@@ -8,7 +8,7 @@
     </div>
 
     <ul class="list-unstyled components">
-        <li class="{{ Request::is('recyclers', '*') ? 'active' : ''}}">
+        <li class="{{ Request::is('recyclers') ? 'active' : ''}}">
         <a href="{{route('recyclers.index')}}">
                 <i class="fas fa-users"></i>
                 Mis recicladores

@@ -9,9 +9,6 @@
 
     <title>{{ config('app.name', 'Laravel') }}</title>
 
-    <!-- Scripts -->
-    <script src="{{ asset('js/bootstrap.min.js') }}" defer></script>
-
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
@@ -94,20 +91,89 @@
             </nav>
             <main >
                 @yield('content')
+                @if (session('success'))
+                <div class="modal fade " id="success-modal">
+                    <div class="modal-dialog  modal-dialog-centered">
+                    <div class="alert alert-success">
+                        <!-- Modal Header -->
+                        <div class="modal-header text-center">
+                        <h1 class="font-weight-bold text-success">Operaci&oacute;n &eacute;xitosa</h1>
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        </div>
+                        <!-- Modal body -->
+                        <div class="modal-body">
+                            <div class="container-fluid">
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <i class="fas fa-check-circle fa-10x"></i>
+                                    </div>
+                                    <div class="col-md-6 align-self-center">
+                                        {{ session('success') }}
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+                @endif
+                @if (session('danger'))
+                <div class="modal fade " id="danger-modal">
+                    <div class="modal-dialog  modal-dialog-centered">
+                    <div class="alert alert-danger">
+                        <!-- Modal Header -->
+                        <div class="modal-header text-center">
+                        <h1 class="font-weight-bold text-danger">Operaci&oacute;n err&oacute;nea</h1>
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        </div>
+                        <!-- Modal body -->
+                        <div class="modal-body">
+                            <div class="container-fluid">
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <i class="fas fa-times-circle fa-10x"></i>
+                                    </div>
+                                    <div class="col-md-6 align-self-center">
+                                        {{ session('danger') }}
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+                @endif
             </main>
         </div>
     </div>
  <!-- jQuery CDN  -->
  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"  crossorigin="anonymous"></script>
  <!-- Popper.JS -->
- <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
- <!-- Bootstrap JS -->
- <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
-    <script type="text/javascript">
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <!-- Bootstrap JS -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    @if (session('success'))
+    <script>
+        $( document ).ready(function() {
+            $('#success-modal').modal('show');
+        });
+    </script>
+    @endif
+    @if (session('danger'))
+    <script>
+        $( document ).ready(function() {
+            $('#danger-modal').modal('show');
+        });
+    </script>
+    @endif
+  <script type="text/javascript">
         $(document).ready(function () {
             $('#sidebarCollapse').on('click', function () {
                 $('#sidebar').toggleClass('active');
             });
+            $(function () {
+  $('[data-toggle="tooltip"]').tooltip()
+})
         });
     </script>
     @yield('script')

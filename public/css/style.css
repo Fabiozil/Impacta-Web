@@ -204,6 +204,25 @@ a[data-toggle="collapse"] {
         display: none;
     }
 }
+.imgRecycler{
+    max-width: 250px;
+    max-height: 250px;
+    min-width: 250px;
+    min-height: 250px;
+}
+.imgRecycler2{
+    min-width: 150px !important;
+    min-height: 150px !important;
+}
+.imgRecycler3{
+    max-width: 90px !important;
+    max-height: 90px !important;
+    min-width: 90px !important;
+    min-height: 90px !important;
+}
+.d-nonei{
+    display: none;
+}
 /*Fabio*/
 .cont-rec{
     background-color: #f8f9fa;

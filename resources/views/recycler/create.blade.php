@@ -3,13 +3,14 @@
 @section('content')
 <div class="container">
     <div class="py-5 text-center titulo">
-        <h1 class="text-primary">Ingresar nuevo reciclador</h1>
+        <h1 class="text-success">Ingresar nuevo reciclador</h1>
         <p class="lead">Utiliza los campos a continuación para ingresar la información necesaria para crear nuevo
             reciclador
             en el sistema. Para confirmar tus cambios por favor presiona el botón de aceptar al final de la página.</p>
     </div>
 </div>
-
+<form action="{{route('recyclers.store')}}" method="post" enctype="multipart/form-data">
+    @csrf
 <div class="container">
     <div class="row">
         <div class="col-xl-12">
@@ -18,34 +19,43 @@
                     <div class="row h-100">
                         <div class="container h-80 cont-rec">
                             <div class="row">
-                                <div class="col-xl-12 h-100">
+                                <div class="col-xl-12 mb-3">
                                     <div class="container">
                                         <div class="py-5 text-center subtitle">
                                             <h2>Mi perfil</h2>
                                         </div>
-                                        {{-- <img src="/icons/user.png" alt="Imagen perfil" style="height: 100%;;max-width: 100%;"> --}}
-                                        <i class="fas fa-user user-icon center-img"></i>
-                                        <p class="mt-5">Carga una foto de perfil para tu reciclador.</p>
+                                       <div class="text-center ">
+                                        <img id="imgSalida" class="imgRecycler bg-white border border-success rounded-circle w-100" src="{{ asset('user-alt-solid.svg') }}" />
+                                        <label class="mt-2">Carga una foto de perfil para tu reciclador.</label>
+                                       </div>
                                         <div class="input-group ">
                                             <div class="input-group-prepend">
                                             </div>
                                             <div class="custom-file">
-                                                <input type="file" class="custom-file-input" id="inputGroupFile01"
+                                                <input type="file" name="foto" class="custom-file-input @error('foto') is-invalid @enderror" id="file-input"
                                                     aria-describedby="inputGroupFileAddon01">
+                                                @error('foto')
+                                                    <div class="invalid-tooltip">{{ $message }}</div>
+                                                @enderror
                                                 <label class="custom-file-label" for="inputGroupFile01">Archivo</label>
                                             </div>
                                         </div>
-                                        <p>Capacidad maxima: 2mb</p>
+                                        <label>Capacidad maxima: 2048Kb</label><br>
+                                        <small>
+                                            <ul>
+                                                <li>La foto debe ser .JPG o .PNG</li>
+                                                <li>La foto debe ser en lo posible cuadrada</li>
+                                            </ul>
+                                        </small>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="col-xl-8 col-lg-8 col-md-12 borde-derecha h-100">
-                    <div class="row h-100">
-                        <div class="container cont-rec h-95">
-                            <div class="row h-100">
+                <div class="col-xl-8 col-lg-8 col-md-12 borde-derecha">
+                    <div class="container">
+                    <div class="row bg-light mt-3">
                                 <div class="col-xl-12">
                                     <div class="py-5 subtitle">
                                         <h2>Mis datos personales</h2>
@@ -53,65 +63,117 @@
                                             referente a
                                             los datos personales del nuevo reciclador.</p>
                                     </div>
-                                    <div class="container cont-rec-nf m-0">
-                                        <form>
-                                            <div class="form-group w-100">
-                                                <div class="form-group row">
-                                                    <label for="inputPassword"
-                                                        class="col-sm-2 col-form-label">Nombre</label>
-                                                    <div class="col-sm-10">
-                                                        <input type="password" class="form-control" id="inputPassword"
-                                                            placeholder="James David">
-                                                        <small id="emailHelp" class="form-text text-muted">Registra el
-                                                            primer y segundo nombre (si aplica) de tu reciclador como en
-                                                            el ejemplo.
-                                                        </small>
-                                                    </div>
-                                                </div>
-                                                <div class="form-group row">
-                                                    <label for="inputPassword"
-                                                        class="col-sm-2 col-form-label">Apellido</label>
-                                                    <div class="col-sm-10">
-                                                        <input type="password" class="form-control" id="inputPassword"
-                                                            placeholder="Rodriguez Rubio">
-                                                        <small id="emailHelp" class="form-text text-muted">Registra el
-                                                            apellido teniendo en cuenta el uso de mayúsculas y buena
-                                                            ortografía.</small>
-                                                    </div>
-                                                </div>
-                                                <div class="form-group row">
-                                                    <label for="inputPassword"
-                                                        class="col-sm-2 col-form-label">Apodo</label>
-                                                    <div class="col-sm-10">
-                                                        <input type="password" class="form-control" id="inputPassword"
-                                                            placeholder="James">
-                                                        <small id="emailHelp" class="form-text text-muted">Si tu reciclador prefiere ser llamado por su apodo por favor ingresa el apodo correspondiente.</small>
-                                                    </div>
-                                                </div>
-                                                <div class="form-group row">
-                                                    <label for="inputPassword"
-                                                        class="col-sm-2 col-form-label">Edad</label>
-                                                    <div class="col-sm-10">
-                                                        <input type="password" class="form-control" id="inputPassword"
-                                                            placeholder="28">
-                                                    </div>
-                                                </div>
-                                                <div class="form-group row">
-                                                    <label for="inputPassword"
-                                                        class="col-sm-2 col-form-label">Celular</label>
-                                                    <div class="col-sm-10">
-                                                        <input type="password" class="form-control" id="inputPassword"
-                                                            placeholder="1234567899">
-                                                        <small id="emailHelp" class="form-text text-muted">Registra los diez dígitos del número celular de tu reciclador sin espacios intermedios. P. ej. 3041112233</small>
+                                </div>
 
-                                                    </div>
+                        </div>
+                        <div class="row bg-light ">
+                             <div class="col-xl-12 my-3">
+                                <div class="form-group w-100">
+                                    <div class="form-group row">
+                                        <label for="nombres"
+                                            class="col-sm-2 col-form-label">Nombre</label>
+                                        <div class="col-sm-10">
+                                            <div class="input-group mb-2">
+                                            <input type="text" name="nombres" class="form-control @error('nombres') is-invalid @enderror" id="nombres"
+                                                placeholder="James David" value="{{ old('nombres') }}">
+                                                <div class="input-group-append">
+                                                    <span class="btn btn-info"
+                                                    data-toggle="tooltip" data-placement="top" title="Registra el
+                                                    primer y segundo nombre (si aplica) de tu reciclador como en
+                                                    el ejemplo.">
+                                                    <i class="fas fa-info-circle"></i></span>
                                                 </div>
+                                                @error('nombres')
+                                                <div class="invalid-tooltip">{{ $message }}</div>
+                                            @enderror
+                                        </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-group row">
+                                        <label for="apellidos"
+                                            class="col-sm-2 col-form-label">Apellido</label>
+                                        <div class="col-sm-10">
+                                            <div class="input-group mb-2">
+                                            <input type="text" name="apellidos" class="form-control @error('apellidos') is-invalid @enderror" id="apellidos"
+                                                placeholder="Rodriguez Rubio" value="{{ old('apellidos') }}">
+                                                <div class="input-group-append">
+                                                    <span class="btn btn-info"
+                                                    data-toggle="tooltip" data-placement="top" title="Registra el
+                                                    apellido teniendo en cuenta el uso de mayúsculas y buena
+                                                    ortografía.">
+                                                    <i class="fas fa-info-circle"></i></span>
+                                                </div>
+                                                @error('apellidos')
+                                                <div class="invalid-tooltip">{{ $message }}</div>
+                                            @enderror
                                             </div>
-                                        </form>
+                                        </div>
+                                    </div>
+                                    <div class="form-group row">
+                                        <label for="apodo"
+                                            class="col-sm-2 col-form-label">Apodo</label>
+                                        <div class="col-sm-10">
+                                            <div class="input-group mb-2">
+                                            <input type="text" name="apodo" class="form-control @error('apodo') is-invalid @enderror" id="apodo"
+                                                placeholder="James" value="{{ old('apodo') }}">
+                                                <div class="input-group-append">
+                                                    <span class="btn btn-info"
+                                                    data-toggle="tooltip" data-placement="top" title="Si tu reciclador prefiere ser llamado por su apodo por favor ingresa el apodo correspondiente.">
+                                                    <i class="fas fa-info-circle"></i></span>
+                                                </div>
+                                                @error('apodo')
+                                                <div class="invalid-tooltip">{{ $message }}</div>
+                                            @enderror
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-group row">
+                                        <label for="fecha_nacimiento"
+                                            class="col-sm-2 col-form-label">Fecha de Nacimiento</label>
+                                        <div class="col-sm-10">
+
+                                            <input type="date" name="fecha_nacimiento" class="form-control @error('fecha_nacimiento') is-invalid @enderror" id="fecha_nacimiento"
+                                                placeholder="28"  value="1985-07-22"
+                                                min="1900-01-01" max="2000-01-01" value="{{ old('fecha_nacimiento') }}">
+                                                @error('fecha_nacimiento')
+                                                <div class="invalid-tooltip">{{ $message }}</div>
+                                            @enderror
+                                        </div>
+                                    </div>
+                                    <div class="form-group row">
+                                        <label for="edad"
+                                            class="col-sm-2 col-form-label">Edad</label>
+                                        <div class="col-sm-10">
+
+                                            <input type="number" name="edad" class="form-control @error('edad') is-invalid @enderror" id="edad"
+                                                placeholder="28" min="20" max="100" value="{{ old('edad') }}">
+                                                @error('edad')
+                                                <div class="invalid-tooltip">{{ $message }}</div>
+                                            @enderror
+                                        </div>
+                                    </div>
+                                    <div class="form-group row">
+                                        <label for="celular"
+                                            class="col-sm-2 col-form-label">Celular</label>
+                                        <div class="col-sm-10">
+                                            <div class="input-group mb-2">
+                                            <input type="text" name="celular" class="form-control  @error('celular') is-invalid @enderror" id="celular"
+                                                placeholder="3102020540" value="{{ old('celular') }}">
+                                                <div class="input-group-append">
+                                                    <span class="btn btn-info"
+                                                    data-toggle="tooltip" data-placement="top" title="Registra los diez dígitos del número celular de tu reciclador sin espacios intermedios. P. ej. 3041112233">
+                                                    <i class="fas fa-info-circle"></i></span>
+                                                </div>
+                                                @error('celular')
+                                                <div class="invalid-tooltip">{{ $message }}</div>
+                                            @enderror
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
                         </div>
+                        </div>
+                    </div>
                     </div>
                 </div>
             </div>
@@ -133,191 +195,163 @@
                             <div class="col-xl-12 h-100">
                                 <div class="row align-items-center">
                                     <div class="col-xl-12">
-                                        <h5>Materiales que recolecto</h5>
+                                        <h5>Materiales que recolecto
+                                            <button class="btn btn-info" type="button"  data-toggle="tooltip" data-placement="right" title="Para agregar un material a la lista de materiales que el reciclador recicla, selecciona un material de la lista a continuación y presiona el botón agregar.
+                                            ">
+                                            <i class="fas fa-info-circle"></i>
+                                        </button>
+                                        </h5>
+
                                         <div class="input-group">
-                                            <select class="custom-select" id="residuo"
+                                            <select class="custom-select  @error('residuos') is-invalid @enderror" id="residuo"
                                                 aria-label="Example select with button addon">
-                                                <option selected>Plástico</option>
-                                                <option value="Metales">Metales</option>
-                                                <option value="Papel">Papel</option>
-                                                <option value="Cartón">Cartón</option>
-                                                <option value="Vidrio">Vidrio</option>
-                                                <option value="Tetrapak">Tetrapak</option>
+                                             @foreach ($materiales as $material)
+                                                <option value="{{$material->id}}">{{$material->nombre.': '.$material->nombresub}}</option>
+                                             @endforeach
                                             </select>
                                             <div class="input-group-append">
                                                 <button class="btn btn-outline-primary" type="button"
-                                                    id="boton_agregar_residuo" onclick="agregar_residuo()">Agregar
-                                                </button>
-                                                <button class="btn btn-outline-danger" type="button"
-                                                    id="boton_eliminar_residuo" onclick="eliminar_residuo()">Eliminar
+                                                    id="boton_agregar_residuo">Agregar
                                                 </button>
                                             </div>
+                                            @error('residuos')
+                                                <div class="invalid-tooltip">{{ $message }}</div>
+                                            @enderror
                                         </div>
-                                        <ul class="list-group list-group-flush mt-2" id="lista_residuos">
-                                        </ul>
+                                        <table class="table table-borderless table-hover table-light mt-2 " id="Tlista_residuos">
+                                            <thead>
+                                                <tr>
+                                                    <th class="col-md-9" scope="col">Residuos</th>
+                                                    <th class="col-md-3" scope="col"></th>
+                                                  </tr>
+                                            </thead>
+                                            <tbody  id="Blista_residuos">
+                                               <tr>
+                                                   <th colspan="2">No hay residuos seleccionados</th>
+                                               </tr>
+                                            </tbody>
+                                        </table>
                                     </div>
                                 </div>
-                                <h5>Zonas de recoleccion</h5>
+                                <h5>Zonas de recoleccion
+                                    <button class="btn btn-info" type="button"  data-toggle="tooltip" data-placement="right" title="Utiliza los campos a continuación para ingresar la información referente a las zonas (municipio, comuna, barrio) y horarios en los que trabaja el reciclador, luego presiona el botón añadir.
+                                    ">
+                                        <i class="fas fa-info-circle"></i>
+                                    </button>
+                                </h5>
                                 <div class="row">
-                                    <div class="col-xl-12 m-1">
-                                        <div class="row w=100">
+                                    <div class="col-xl-12 mb-1">
+                                        <div class="row">
                                             <div class="col-xl-6 col-lg-6 col-md-12">
-                                                <div class="input-group mt-1">
-                                                    <select class="custom-select" id="municipio"
+                                                <div class="form-group mt-1">
+                                                    <label for="municipio">Municipios</label>
+                                                    <select class="custom-select  @error('sectors') is-invalid @enderror" id="municipio"
                                                         aria-label="Example select with button addon">
                                                         @foreach ($municipios as $mun)
                                                         <option value="{{$mun->id}}">{{$mun->nombre_mun}}</option>
                                                         @endforeach
                                                     </select>
+                                                    @error('sectors')
+                                            <div class="invalid-tooltip">{{ $message }}</div>
+                                            @enderror
                                                 </div>
                                             </div>
                                             <div class="col-xl-6 col-lg-6 col-md-12">
-                                                <div class="input-group mt-1">
-                                                    <select class="custom-select" id="comuna"
+                                                <div class="form-group mt-1">
+                                                    <label for="comuna">Comunas</label>
+                                                    <select class="custom-select  @error('sectors') is-invalid @enderror" id="comuna"
                                                         aria-label="Example select with button addon">
-
                                                     </select>
-                                                    {{--                                                     <div class="input-group-append">
-                                                        <button type="submit" class="btn btn-outline-primary"
-                                                            onclick="agregar_comuna()">Agregar
-                                                        </button>
-                                                        <button type="submit" class="btn btn-outline-danger"
-                                                            onclick="eliminar_comuna()">Eliminar</button>
-                                                    </div> --}}
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="row">
-                                    <div class="col-xl-3 col-lg-12 col-md-12">
-                                        <p>Barrios:</p>
-                                        <div class="input-group">
-                                            <select class="custom-select" id="sector"
+                                    <div class="col-xl-6 col-lg-12 col-md-12">
+                                        <div class="form-group">
+                                            <label for="sector">Sectores</label>
+                                            <select class="custom-select @error('sectors') is-invalid @enderror " id="sector"
                                                 aria-label="Example select with button addon">
 
                                             </select>
                                         </div>
                                     </div>
-                                    <div class="col-xl-9 col-lg-12 col-md-12">
+                                    <div class="col-xl-6 col-lg-12 col-md-12">
+                                        <p>Día:</p>
                                         <div class="row">
-                                            <div class="col-xl-4 col-lg-5 col-md-12">
-                                                <p>Día:</p>
-                                                <div class="input-group">
-                                                    <select class="custom-select" id="dia"
-                                                        aria-label="Example select with button addon">
-                                                        <option selected>Lunes</option>
-                                                        <option value="Martes">Martes</option>
-                                                        <option value="Miercoles">Miercoles</option>
-                                                        <option value="Jueves">Jueves</option>
-                                                        <option value="Viernes">Viernes</option>
-                                                        <option value="Sabado">Sabado</option>
-                                                        <option value="Domingo">Domingo</option>
-                                                    </select>
+                                            <div class="col-sm-6">
+                                                <div class="custom-control custom-checkbox">
+                                                    <input type="checkbox" class="custom-control-input" id="lunes" value="L">
+                                                    <label class="custom-control-label" for="lunes">Lunes</label>
+                                                </div>
+                                                <div class="custom-control custom-checkbox">
+                                                    <input type="checkbox" class="custom-control-input" id="martes" value="M">
+                                                    <label class="custom-control-label" for="martes">Martes</label>
+                                                </div>
+                                                <div class="custom-control custom-checkbox">
+                                                    <input type="checkbox" class="custom-control-input" id="miercoles" value="X">
+                                                    <label class="custom-control-label" for="miercoles">Miercoles</label>
+                                                </div>
+                                                <div class="custom-control custom-checkbox">
+                                                    <input type="checkbox" class="custom-control-input" id="jueves" value="J">
+                                                    <label class="custom-control-label" for="jueves">Jueves</label>
                                                 </div>
                                             </div>
-                                            <div class="col-xl-7 col-md-12">
-                                                <div class="row">
-                                                    <div class="col-xl-6 col-lg-6 col-md-12 pr-1">
-                                                        <p>Inicio:</p>
-                                                        <div class="input-group">
-                                                            <select class="custom-select" id="hora-inicio"
-                                                                aria-label="Example select with button addon">
-                                                                <option selected>Inicio</option>
-                                                                <option value="5:00">5:00</option>
-                                                                <option value="6:00">6:00</option>
-                                                                <option value="7:00">7:00</option>
-                                                                <option value="8:00">8:00</option>
-                                                                <option value="9:00">9:00</option>
-                                                                <option value="10:00">10:00</option>
-                                                                <option value="11:00">11:00</option>
-                                                                <option value="12:00">12:00</option>
-                                                                <option value="13:00">13:00</option>
-                                                                <option value="14:00">14:00</option>
-                                                                <option value="15:00">15:00</option>
-                                                                <option value="16:00">16:00</option>
-                                                            </select>
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-xl-6 col-lg-6 col-md-12 pr-0">
-                                                        <p>Fin:</p>
-                                                        <div class="input-group">
-                                                            <select class="custom-select" id="hora-fin"
-                                                                aria-label="Example select with button addon">
-                                                                <option selected>Fin</option>
-                                                                <option value="7:00">7:00</option>
-                                                                <option value="8:00">8:00</option>
-                                                                <option value="9:00">9:00</option>
-                                                                <option value="10:00">10:00</option>
-                                                                <option value="11:00">11:00</option>
-                                                                <option value="12:00">12:00</option>
-                                                                <option value="13:00">13:00</option>
-                                                                <option value="14:00">14:00</option>
-                                                                <option value="15:00">15:00</option>
-                                                                <option value="16:00">16:00</option>
-                                                                <option value="17:00">17:00</option>
-                                                                <option value="18:00">18:00</option>
-                                                                <option value="19:00">19:00</option>
-                                                                <option value="20:00">20:00</option>
-                                                            </select>
-                                                        </div>
-                                                    </div>
+                                            <div class="col-sm-6">
+                                                <div class="custom-control custom-checkbox">
+                                                    <input type="checkbox" class="custom-control-input" id="viernes" value="V">
+                                                    <label class="custom-control-label" for="viernes">Viernes</label>
+                                                </div>
+                                                <div class="custom-control custom-checkbox">
+                                                    <input type="checkbox" class="custom-control-input" id="sabado" value="S">
+                                                    <label class="custom-control-label" for="sabado">Sabado</label>
+                                                </div>
+                                                <div class="custom-control custom-checkbox">
+                                                    <input type="checkbox" class="custom-control-input" id="domingo" value="D">
+                                                    <label class="custom-control-label" for="domingo">Domingo</label>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
-                                <div class="row m-1">
-                                    <div class="col-sm-3 p-0">
-                                        <p class="text-center">Barrios:</p>
-                                        <ul class="list-group list-group-flush mb-2" id="lista_barrios">
-                                        </ul>
+                                <div class="row">
+                                    <div class="col-xl-6 col-lg-6 col-md-12">
+                                        <div class="form-group">
+                                            <label for="Hinit">Hora Inicio</label>
+                                            <input type="time" class="form-control" id="Hinit"  value="07:00" min="07:00" max="20:00">
+                                          </div>
                                     </div>
-                                    <div class="col-sm-4 p-0">
-                                        <p class="text-center">Dias:</p>
-                                        <ul class="list-group list-group-flush mb-2" id="lista_dias">
-                                        </ul>
+                                    <div class="col-xl-6 col-lg-6 col-md-12">
+                                        <div class="form-group ">
+                                            <label for="Hfinal">Hora fin</label>
+                                            <input type="time" class="form-control" id="Hfinal"  value="20:00" min="07:00" max="20:00">
+                                          </div>
                                     </div>
-                                    <div class="col-sm-5 p-0">
-                                        <p class="text-center">Horas:</p>
-                                        <ul class="list-group list-group-flush mb-2" id="lista_horas">
-                                        </ul>
-                                    </div>
-                                    <div class="col-sm-12">
-                                        <div class="row justify-content-end">
-                                            <button class="btn btn-primary m-1" type="button" id="boton_agregar_barrio"
-                                                onclick="agregar_barrio()">Agregar</button>
-                                            <button type="submit" class="btn btn-danger m-1"
-                                                onclick="eliminar_barrio()">Eliminar barrio</button>
-                                        </div>
-                                    </div>
-
                                 </div>
-
-                                {{--                                 <div class="row" style="max-height: 300px; overflow-x: hidden; overflow-y: auto">
-                                    <div class="col-xl-12">
-                                        <div class="row"
-                                            style="max-height: 300px; overflow-x: hidden; overflow-y: auto">
-                                            <div class="col-xl-4">
-                                                <p id="col-list">Comuna:</p>
-                                            </div>
-                                            <div class="col-xl-4">
-                                                <p id="col-list">Barrio:</p>
-                                            </div>
-                                            <div class="col-xl-2">
-                                                <p id="col-list">Dia:</p>
-                                            </div>
-                                            <div class="col-xl-2">
-                                                <p id="col-list">Hora:</p>
-                                            </div>
-                                        </div>
-                                        <div class="row">
-                                            <ul class="list-group list-group-flush" id="lista_comunas_barrios"
-                                                style="width: 100%; margin-bottom: 5px;">
-                                            </ul>
-                                        </div>
+                                <div class="row table-responsive m-1">
+                                    <button id="addGeo" class="btn btn-primary btn-block" type="button">Añadir</button>
+                                    <div id="alerta_sector" class="alert alert-warning  d-nonei my-2">
+                                        <strong>Atenci&oacute;n!</strong>
+                                        Valide que est&eacute; ingresando al menos un d&iacute;a de la semana<br>
+                                        y que los campos de Hora inicio y Hora fin esten llenos
                                     </div>
-                                </div> --}}
+                                    <table class="table table-borderless table-hover table-light mt-2 " id="datosZona">
+                                        <thead>
+                                            <tr>
+                                                <th class="col-md-5" scope="col">Sector</th>
+                                                <th class="col-md-2" scope="col">Dias</th>
+                                                <th class="col-md-3" scope="col">Horario</th>
+                                                <th class="col-md-3" scope="col"></th>
+                                              </tr>
+                                        </thead>
+                                        <tbody  id="lista">
+                                           <tr>
+                                               <th colspan="4">No hay zonas asignadas</th>
+                                           </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -334,199 +368,164 @@
                                 <h2>Mi historia</h2>
                                 <p class="lead">Utiliza el campo de texto a continuación para ingresar la historia de tu
                                     nuevo reciclador.</p>
-
                             </div>
                             <div class="container h-100">
-                                <form>
                                     <div class="input-group h-100">
-                                        <textarea class="form-control" rows="15" placeholder="Historia"></textarea>
-                                        <small id="emailHelp" class="form-text text-muted">Aquí te damos cinco consejos para que crees la historia de tu reciclador:
-                                            1. Describe características demográficas como su lugar de procedencia.
-                                            2. Menciona el tiempo que lleva dedicado a su profesión.
-                                            3. Menciona una razón de trasfondo diferente a obtener un ingreso económico por la cual tu reciclador realiza su labor.
-                                            4. Comunicar ¿cómo la comunidad puede aportar a facilitar su trabajo?
-                                            5.Transmitir el impacto que tiene la ayuda de la comunidad en la vida del reciclador.
-                                        </small>
-                                    </div>
-                                </form>
-                            </div>
-                            {{--                             <a href="{{ url('/recicladores') }}">
-                            <button type="submit" class="btn btn-danger" style="margin-bottom: 10px ; position: relative;
-                                float: right;">Cancelar</button>
-                            </a> --}}
-                            <div class="row align-items-center justify-content-end">
-                                <div class="row-xl-12">
-                                    <a href="{{ url('/exito_crear') }}">
-                                        <button type="submit" class="btn btn-success m-2">Registrar</button>
-                                    </a>
-                                </div>
-                            </div>
+                                        <textarea name="historia" class="form-control  @error('historia') is-invalid @enderror" rows="15" placeholder="Historia"
+                                        >{{ old('historia') }}</textarea>
+                                        @error('historia')
+                                        <div class="invalid-tooltip">{{ $message }}</div>
+                                         @enderror
 
+                                    </div>
+                                    <small id="emailHelp" class="form-text text-muted">Aquí te damos cinco consejos para que crees la historia de tu reciclador:
+                                        1. Describe características demográficas como su lugar de procedencia.
+                                        2. Menciona el tiempo que lleva dedicado a su profesión.
+                                        3. Menciona una razón de trasfondo diferente a obtener un ingreso económico por la cual tu reciclador realiza su labor.
+                                        4. Comunicar ¿cómo la comunidad puede aportar a facilitar su trabajo?
+                                        5.Transmitir el impacto que tiene la ayuda de la comunidad en la vida del reciclador.
+                                    </small>
+                            </div>
+                            <div class="row align-items-center justify-content-end">
+                                        <button type="submit" class="btn btn-success m-2">Registrar</button>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
+</div>
 
 </div>
-</div>
-<script>
-    var path="{!!config('app.url') !!}/";
-</script>
-<script>
-    window.addEventListener("load", function (event) {
-        var lista_barrios = document.getElementById("lista_barrios");
-        var lista_dias = document.getElementById("lista_dias");
-        var lista_horas = document.getElementById("lista_horas");
-        while (lista_barrios.childNodes.length != 0) {
-            lista_barrios.removeChild(lista_barrios.childNodes[lista_barrios.childNodes.length - 1]);
-            lista_dias.removeChild(lista_dias.childNodes[lista_dias.childNodes.length - 1]);
-            lista_horas.removeChild(lista_horas.childNodes[lista_horas.childNodes.length - 1]);
-        }
-        console.log("Lista limpiada");
-    });
-</script>
+</form>
 
-<script>
-    function limpiar_lista() {
-        var lista_barrios = document.getElementById("lista_barrios");
-        var lista_dias = document.getElementById("lista_dias");
-        var lista_horas = document.getElementById("lista_horas");
-        while (lista_barrios.childNodes.length != 0) {
-            lista_barrios.removeChild(lista_barrios.childNodes[lista_barrios.childNodes.length - 1]);
-            lista_dias.removeChild(lista_dias.childNodes[lista_dias.childNodes.length - 1]);
-            lista_horas.removeChild(lista_horas.childNodes[lista_horas.childNodes.length - 1]);
-        }
-        console.log("Lista limpiada");
-    }
-    function agregar_comuna() {
-        var lista_comunas_barrios = document.getElementById("lista_comunas_barrios");
-        var nueva_fila = document.createElement("DIV");
-        var nueva_fila_barrios = document.createElement("DIV")
-        var nueva_col_comunas = document.createElement("DIV");
-        var nueva_col_barrios = document.createElement("DIV");
-        var nueva_col_barrios_barrios = document.createElement("DIV");
-        var nueva_col_dias = document.createElement("DIV");
-        var nueva_col_horas = document.createElement("DIV");
-        var nueva_lista_comunas = document.createElement("UL");
-        var nueva_lista_barrios = document.createElement("UL");
-        var nueva_lista_dias = document.createElement("UL");
-        var nueva_lista_horas = document.createElement("UL");
-        var nodo_lista = document.createElement("LI");
-        nueva_lista_comunas.className = "list-group list-group-flush";
-        nueva_lista_barrios.className = "list-group list-group-flush";
-        nueva_lista_dias.className = "list-group list-group-flush";
-        nueva_lista_horas.className = "list-group list-group-flush";
-        nodo_lista.className = "list-group-item"
-        nueva_fila.className = "row";
-        nueva_fila_barrios.className = "row";
-        nueva_col_barrios.className = "col-12 p-0";
-        nueva_col_comunas.className = "col-4 p-0";
-        nueva_col_barrios.className = "col-8 p-0";
-        nueva_col_barrios_barrios.className = "col-5 p-0"
-        nueva_col_dias.className = "col-3 p-0";
-        nueva_col_horas.className = "col-4 p-0";
-        nueva_col_barrios_barrios.appendChild(nueva_lista_barrios);
-        nueva_col_dias.appendChild(nueva_lista_dias);
-        nueva_col_horas.appendChild(nueva_lista_horas)
-        nueva_fila_barrios.appendChild(nueva_col_barrios_barrios);
-        nueva_fila_barrios.appendChild(nueva_col_dias);
-        nueva_fila_barrios.appendChild(nueva_col_horas);
-        nueva_col_barrios.appendChild(nueva_fila_barrios);
-        nueva_col_comunas.appendChild(nueva_lista_comunas);
-        nueva_fila.appendChild(nueva_col_comunas);
-        nueva_fila.appendChild(nueva_col_barrios);
-        nodo_lista.appendChild(nueva_fila);
-        lista_comunas_barrios.appendChild(nodo_lista);
-        var comuna = document.getElementById("comuna").value;
-        comuna.value = "";
-        var texto_nodo_comuna = document.createTextNode(comuna);
-        var nodo_comuna = document.createElement("LI");
-        nodo_comuna.className = "list-group-item";
-        nodo_comuna.appendChild(texto_nodo_comuna);
-        nueva_lista_comunas.appendChild(nodo_comuna);
-        var lista_barrios = document.getElementById("lista_barrios");
-        var lista_dias = document.getElementById("lista_dias");
-        var lista_horas = document.getElementById("lista_horas");
-        var texto_nodo_barrio;
-        var texto_nodo_dias;
-        var texto_nodo_horas;
-        for (var i = 0; i < lista_barrios.childNodes.length; i++) {
-            var nodo_barrio = document.createElement("LI");
-            var nodo_dia = document.createElement("LI");;
-            var nodo_hora = document.createElement("LI");;
-            nodo_barrio.className = "list-group-item";
-            nodo_dia.className = "list-group-item";
-            nodo_hora.className = "list-group-item";
-            texto_nodo_barrio = lista_barrios.childNodes[i].childNodes[0];
-            texto_nodo_dias = lista_dias.childNodes[i].childNodes[0];
-            texto_nodo_horas = lista_horas.childNodes[i].childNodes[0];
-            nodo_barrio.appendChild(texto_nodo_barrio);
-            nodo_dia.appendChild(texto_nodo_dias);
-            nodo_hora.appendChild(texto_nodo_horas);
-            nueva_lista_barrios.appendChild(nodo_barrio);
-            nueva_lista_dias.appendChild(nodo_dia);
-            nueva_lista_horas.appendChild(nodo_hora);
-        }
-        while (lista_barrios.childNodes.length != 0) {
-            lista_barrios.removeChild(lista_barrios.childNodes[lista_barrios.childNodes.length - 1]);
-            lista_dias.removeChild(lista_dias.childNodes[lista_dias.childNodes.length - 1]);
-            lista_horas.removeChild(lista_horas.childNodes[lista_horas.childNodes.length - 1]);
-        }
-    }
-    function eliminar_comuna() {
-        var lista = document.getElementById("lista_comunas_barrios");
-        lista.removeChild(lista.childNodes[lista.childNodes.length - 1]);
-    }
-    function agregar_residuo() {
-        var residuo = document.getElementById("residuo").value;
-        var lista = document.getElementById("lista_residuos");
-        var nodo_lista = document.createElement("LI");
-        var residuo_lista = document.createTextNode(residuo);
-        nodo_lista.appendChild(residuo_lista);
-        nodo_lista.className = "list-group-item";
-        lista.appendChild(nodo_lista);
-    }
-    function eliminar_residuo() {
-        var lista = document.getElementById("lista_residuos");
-        lista.removeChild(lista.childNodes[lista.childNodes.length - 1]);
-    }
-    function eliminar_barrio() {
-        var lista_barrios = document.getElementById("lista_barrios");
-        var lista_horas = document.getElementById("lista_horas");
-        var lista_dias = document.getElementById("lista_dias");
-        lista_barrios.removeChild(lista_barrios.childNodes[lista_barrios.childNodes.length - 1]);
-        lista_horas.removeChild(lista_horas.childNodes[lista_horas.childNodes.length - 1]);
-        lista_dias.removeChild(lista_dias.childNodes[lista_dias.childNodes.length - 1]);
-    }
-    function agregar_barrio() {
-        var barrio = document.getElementById("barrio").value;
-        var hora_inicio = document.getElementById("hora-inicio").value;
-        var hora_fin = document.getElementById("hora-fin").value;
-        var hora = hora_inicio + "-" + hora_fin;
-        var dia = document.getElementById("dia").value;
-        var lista_barrios = document.getElementById("lista_barrios");
-        var lista_horas = document.getElementById("lista_horas");
-        var lista_dias = document.getElementById("lista_dias");
-        var nodo_lista_barrio = document.createElement("LI");
-        var nodo_lista_hora = document.createElement("LI");
-        var nodo_lista_dia = document.createElement("LI");
-        var barrio_lista = document.createTextNode(barrio);
-        var hora_lista = document.createTextNode(hora);
-        var dia_lista = document.createTextNode(dia);
-        nodo_lista_barrio.className = "list-group-item text-center";
-        nodo_lista_hora.className = "list-group-item text-center";
-        nodo_lista_dia.className = "list-group-item text-center";
-        nodo_lista_barrio.appendChild(barrio_lista);
-        nodo_lista_hora.appendChild(hora_lista);
-        nodo_lista_dia.appendChild(dia_lista);
-        lista_barrios.appendChild(nodo_lista_barrio);
-        lista_horas.appendChild(nodo_lista_hora);
-        lista_dias.appendChild(nodo_lista_dia);
-    }
-</script>
 @endsection
 @section('script')
     <script src="{{ asset('js/dropdown.js') }}"></script>
+    <script>
+function readURL(input) {
+  if (input.files && input.files[0]) {
+    var reader = new FileReader();
+
+    reader.onload = function(e) {
+      $('#imgSalida').attr('src', e.target.result);
+    }
+
+    reader.readAsDataURL(input.files[0]); // convert to base64 string
+  }
+}
+
+$("#file-input").change(function() {
+  readURL(this);
+});
+    </script>
+    <script>
+        var path="{!!config('app.url') !!}/";
+        var countR=0;
+        $('#boton_agregar_residuo').click(function(){
+            if(countR==0) $('#Blista_residuos').children().remove();
+            countR++;
+            if(countR==8) $(this).prop('disabled',true);
+            $('#Blista_residuos').append(
+                    $('<tr>')
+                        .append(
+                            $('<td>').text($('#residuo option:selected').text().trim())
+                                .append(
+                                    $('<input>').attr('type','text').attr('name','residuos[]').prop('hidden',true).val($('#residuo').val())
+                                )
+                        )
+                        .append(
+                            $('<td>')
+                                .append(
+                                        $('<button>').attr('type','button').attr('id','deleteRow').addClass('btn btn-danger').append(
+                                            $('<i>').addClass('fas fa-trash-alt')
+                                        )
+                                )
+                        )
+            )
+        });
+        $( "#Tlista_residuos tbody" ).on("click","#deleteRow", function() {
+            $(this).parents("tr").hide("slow",function() {
+                $( this ).remove();
+                countR--;
+                if(countR===0)
+                $('#Blista_residuos').append($('<tr>').append($('<th>').attr('colspan','2').text("No hay residuos seleccionados")))
+                if(countR==7)
+                $('#boton_agregar_residuo').prop('disabled',false);
+            });
+        });
+        var count=0;
+        $('#addGeo').click(function(){
+            if(count==0) $('#lista').children().remove();
+            count++;
+            if(validarCheckBoxes()&&validarHora())
+            $('#lista').append(
+                    $('<tr>')
+                        .append(
+                            $('<td>').text($('#sector option:selected').text().trim())
+                                .append(
+                                    $('<input>').attr('type','text').attr('name','sectors[]').prop('hidden',true).val($('#sector').val())
+                                )
+                        )
+                        .append(
+                            $('<td>').text(getCheckBoxes())
+                                .append(
+                                        $('<input>').attr('type','text').attr('name','days[]').prop('hidden',true).val(getCheckBoxes())
+                                )
+                        )
+                        .append(
+                            $('<td>').text(getDeltaTime())
+                                .append(
+                                        $('<input>').attr('type','text').attr('name','times[]').prop('hidden',true).val(getDeltaTime())
+                                )
+                        )
+                        .append(
+                            $('<td>')
+                                .append(
+                                        $('<button>').attr('type','button').attr('id','deleteRow').addClass('btn btn-danger').append(
+                                            $('<i>').addClass('fas fa-trash-alt')
+                                        )
+                                )
+                        )
+        )
+        else
+                 $('#alerta_sector').show("slow",function() {
+                     $(this).delay(8000).hide(2000);
+                 });
+        });
+
+        function getCheckBoxes(){
+            let dias="";
+            $("input:checkbox:checked").each(function() {
+                dias+= $(this).val()+" ";
+            });
+            return dias;
+        }
+        function validarHora(){
+            let status=$('#Hinit').val()!==""&&$('#Hfinal').val()!==""?true:false;
+            return status;
+        }
+        function validarCheckBoxes(){
+            let status=false;
+            $("input:checkbox").each(function() {
+                if($(this).is(':checked')){
+                    status=true;
+                }
+            });
+            return status;
+        }
+        function getDeltaTime(){
+            return $('#Hinit').val()+'-'+$('#Hfinal').val();
+        }
+        $( "#datosZona tbody" ).on("click","#deleteRow", function() {
+            $(this).parents("tr").hide("slow",function() {
+                $( this ).remove();
+                count--;
+                if(count===0)
+                $('#lista').append($('<tr>').append($('<th>').attr('colspan','4').text("No hay zonas asignadas")))
+            });
+        });
+
+    </script>
 @endsection

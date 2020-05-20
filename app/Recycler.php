@@ -2,8 +2,10 @@
 
 namespace App;
 
-use Illuminate\Database\Eloquent\Model;
+use App\Material;
 use App\ZonaRecoleccion;
+use Illuminate\Database\Eloquent\Model;
+use Illuminate\Support\Facades\Storage;
 class Recycler extends Model
 {
     /**
@@ -19,10 +21,11 @@ class Recycler extends Model
         'apellidos',
         'fecha_nacimiento',
         'celular',
-        'residuos',
         'edad',
         'historia',
         'foto',
+        'updated_at',
+        'corporation_id',
     ];
 
     /**
@@ -31,9 +34,7 @@ class Recycler extends Model
      * @var array
      */
     protected $hidden = [
-        'corporation_id',
         'created_at',
-        'updated_at',
     ];
 
     /**
@@ -50,6 +51,15 @@ class Recycler extends Model
 
     public function zonaRecoleccion()
     {
-        return $this->hasMany(ZonaRecoleccion::class, 'recycler_id')->with('sector');
+        return $this->hasMany(ZonaRecoleccion::class, 'recycler_id')->with('sector.comuna','sector.municipio');
+    }
+
+    public function materials()
+    {
+        return $this->belongsToMany(Material::class,'material__recyclers')
+        ->withPivot('material_id','recycler_id')->select('material__recyclers.id','nombre','nombresub','mensaje');
+    }
+    public function getUrlPathAttribute(){
+        return Storage::url($this->foto);
     }
 }

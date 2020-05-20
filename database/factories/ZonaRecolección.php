@@ -11,6 +11,7 @@ $factory->define(ZonaRecoleccion::class, function (Faker $faker) {
     return [
         'recycler_id'=>factory(Recycler::class),
         'sector_id'=> Sector::all()->random()->id,
-        'dias_horas'=>$faker->word,
+        'dias'=>$faker->randomElement(['L M X','J V','S D']),
+        'horas'=>$faker->randomElement(['8:00-20:00','13:00-18:00','9:00-15:00']),
     ];
 });
