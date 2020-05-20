@@ -239,6 +239,9 @@ form.buscador{
   .marginleft-15{
       margin-left: 15px;
   }
+  .margintop-15{
+      margin-top: 15px;
+  }
   .close{
       position: absolute;
       top: 13%;

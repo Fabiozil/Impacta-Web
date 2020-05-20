@@ -9,23 +9,27 @@
         <header>
             <h1 class="title">Notificación automática</h1>
         </header>
-        <section>
-            <label for="encendido" class="d-inline">Condiciones de mensajes automáticos</label>
-            <label class="switch float-right">
-                <input id="encendido" type="checkbox">
-                <span class="slider round"></span>
-            </label>
-            <h6>Mensajes establecidos:</h6>
-            <table>
-                <tr>
-                    <td><b>Servicio</b></td>
-                    <td><b>Condiciones de envío</b></td>
-                </tr>
-                <tr>
-                    <td  style="width:40%;padding: 15px;">
+        <section class="row">
+            <label for="encendido" class="col-md-6">Condiciones de mensajes automáticos</label>
+            <div class="col-md-6">
+                <label class="switch float-right">
+                    <input id="encendido" type="checkbox">
+                    <span class="slider round"></span>
+                </label>
+            </div>
+            <h6 class="col-md-6">Mensajes establecidos:</h6>
+            <section class="container">
+                <div class="row">
+                    <div class="col-md-6">
+                        <b>Servicio</b>
+                    </div>
+                    <div class="col-md-6">
+                        <b>Condiciones de envío</b>
+                    </div>
+                    <div class="col-md-5">
                         <p class="bg-gray">Hola nombre de usuario!<br>No olvides sacar tu material reciclable y entregarlos a Nombre Reciclador los días laborales del reciclador</p>
-                    </td>
-                    <td style="width:30%;">
+                    </div>
+                    <div class="col-md-4">
                         <label for="frecuencia">
                             Frecuencia
                         </label>
@@ -38,8 +42,8 @@
                         <select class="form-control" name="" id="momento">
                             <option value="domingo">Domingo</option>
                         </select>
-                    </td>
-                    <td style="width:20%;">
+                    </div>
+                    <div class="col-md-3">
                         <label class="switch float-right">
                             <input id="encendido" type="checkbox">
                             <span class="slider round"></span>
@@ -47,17 +51,17 @@
                         <br>
                         <br>
                         <button class="btn btn-danger round float-right">Eliminar</button>
-                    </td>
-                </tr>
-                <tr>
-                    <td><b>Indicador ambiental</b></td>
-                    <td><b>Condiciones de envío</b></td>
-                </tr>
-                <tr>
-                    <td  style="width:40%;padding: 15px;">
-                        <p class="bg-gray">Gracias a ti hemos evitado la emision cantidad de co2 en la ultima frecuencia, lo equivalente a indicador equivalente</p>
-                    </td>
-                    <td style="width:30%;">
+                    </div>
+                    <div class="col-md-6">
+                        <b>Indicador ambiental</b>
+                    </div>
+                    <div class="col-md-6">
+                        <b>Condiciones de envío</b>
+                    </div>
+                    <div class="col-md-5">
+                        <p class="bg-gray">Hola nombre de usuario!<br>No olvides sacar tu material reciclable y entregarlos a Nombre Reciclador los días laborales del reciclador</p>
+                    </div>
+                    <div class="col-md-4">
                         <label for="frecuencia">
                             Frecuencia
                         </label>
@@ -70,22 +74,25 @@
                         <select class="form-control" name="" id="momento">
                             <option value="domingo">Domingo</option>
                         </select>
-                    </td>
-                    <td style="width:20%;">
+                    </div>
+                    <div class="col-md-3">
                         <label class="switch float-right">
-                            <input id="encendido" type="checkbox">
+                            <input id="encendido" name="" type="checkbox">
                             <span class="slider round"></span>
                         </label>
                         <br>
                         <br>
                         <button class="btn btn-danger round float-right">Eliminar</button>
-                    </td>
-                </tr>
-            </table>
-            <p class="titulo_menor">Adicionar nueva regla</p>
-            <br>
-            <button class="btn btn-success round">Regresar</button>
-            <button class="btn btn-success round">Establecer</button>
+                    </div>
+                </div>
+            </section>
+            <p class="titulo_menor col-md-8 margintop-15">Adicionar nueva regla</p>
+            <div class="col-md-2 margintop-15">
+                <button onclick="history.back()" class="btn btn-success round">Regresar</button>
+            </div>
+            <div class="col-md-2 margintop-15">
+                <button class="btn btn-success round">Establecer</button>
+            </div>
         </section>
     </main>
     

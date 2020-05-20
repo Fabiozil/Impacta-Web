@@ -10,10 +10,10 @@
             <h1 class="title">Mi comunidad</h1>
         </header>
         <nav class="nav-notifications">
-            <a href="/comunidad/solicitudes">
+            <a href="{{ route( 'solicitudes.index' ) }}">
                 <button type="button" class="btn float-right btnSelected">Solicitudes</button>
             </a>
-            <a href="/comunidad/mapa">
+            <a href="{{ route( 'mapa.index' ) }}">
                 <button type="button" class="btn float-right">Mapa</button>
             </a>
         </nav>
@@ -65,37 +65,37 @@
         @endforeach
         */?>
         <section class="mensajes_container">
-                <div class="row">
-                    <h3 class="col-md-4 offset-md-1">Buscar mensajes por: </h3>
-                    <select class="form-control col-md-6">
-                        <option value="rango" selected>Rango</option>
-                        <option value="tiempo">Tiempo</option>
-                    </select>
-                </div>
-                <form id="rango" method="POST" action="" class="buscador">
-                    @csrf
-                    <p>
-                        De <input required min="2020-04-23" name="dateStart" type="date"> al <input max=<?php
-                            $d = new DateTime();
-                            echo $d -> format('Y-m-d');
-                            ?> name="dateEnd" required type="date">
-                        <button class="btn green" type="submit">
-                            <img src="https://img.icons8.com/cotton/2x/search--v2.png" alt="Buscar" srcset="">
-                        </button>
-                    </p>
-                </form>
-                <form id="tiempo" method="POST" action="" class="buscador">
-                    @csrf
-                    <select type="text" name="tipo" class="form-control">
-                        <option value="semana">Hace una semana</option>
-                        <option value="mes">Último mes</option>
-                    </select>
+            <div class="row">
+                <h3 class="col-md-4 offset-md-1">Buscar mensajes por: </h3>
+                <select class="form-control col-md-6">
+                    <option value="rango" selected>Rango</option>
+                    <option value="tiempo">Tiempo</option>
+                </select>
+            </div>
+            <form id="rango" method="POST" action="" class="buscador">
+                @csrf
+                <p>
+                    De <input required min="2020-04-23" name="dateStart" type="date"> al <input max=<?php
+                        $d = new DateTime();
+                        echo $d -> format('Y-m-d');
+                        ?> name="dateEnd" required type="date">
                     <button class="btn green" type="submit">
                         <img src="https://img.icons8.com/cotton/2x/search--v2.png" alt="Buscar" srcset="">
                     </button>
-                </form>
-            <h3 class="titulo_menor">Notificaciones sin responder</h3>
-            <section class="mensaje row">
+                </p>
+            </form>
+            <form id="tiempo" method="POST" action="" class="buscador">
+                @csrf
+                <select type="text" name="tipo" class="form-control">
+                    <option value="semana">Hace una semana</option>
+                    <option value="mes">Último mes</option>
+                </select>
+                <button class="btn green" type="submit">
+                    <img src="https://img.icons8.com/cotton/2x/search--v2.png" alt="Buscar" srcset="">
+                </button>
+            </form>
+            <h3 class="titulo_menor marginleft-15">Notificaciones sin responder</h3>
+            <form class="mensaje row">
                 <img src="https://www.jdevoto.cl/web/wp-content/uploads/2018/04/default-user-img.jpg" class="col-md-2" alt="Cliente" srcset="">
                 <div class="col-md-9">
                     <p class="mensaje_cerrado">
@@ -106,7 +106,7 @@
                         <span>
                             ¿Deseas asignarle un reciclador?
                         </span>
-                        <button type="button" class="btn btn-success" id="asignar">Asignar</button>
+                        <button type="submit" class="btn btn-success" id="asignar">Asignar</button>
                         <br>
                         <span class="ver-mas">Ver más</span>
                     </p>
@@ -124,14 +124,14 @@
                         <span>
                             ¿Deseas asignarle un reciclador?
                         </span>
-                        <button type="button" class="btn btn-success" id="asignar">Asignar</button>
+                        <button type="submit" class="btn btn-success" id="asignar">Asignar</button>
                         <br>
                         <span class="ver-menos">Ver menos</span>
                     </p>
                 </div>
                 <img class="col-md-1 alerta" src="https://www.nicepng.com/png/detail/61-613537_exclamation-point-png-signo-de-admiracion-rojo.png" alt="Alerta" srcset="">
-            </section>
-            <section class="mensaje row">
+            </form>
+            <form class="mensaje row">
                 <img src="https://www.jdevoto.cl/web/wp-content/uploads/2018/04/default-user-img.jpg" class="col-md-2 order-last" alt="Cliente" srcset="">
                 <div class="col-md-9">
                     <p class="mensaje_cerrado">
@@ -142,7 +142,7 @@
                         <span>
                             ¿Deseas asignarle un reciclador?
                         </span>
-                        <button type="button" class="btn btn-success" id="asignar">Asignar</button>
+                        <button type="submit" class="btn btn-success" id="asignar">Asignar</button>
                         <br>
                         <span class="ver-mas">Ver más</span>
                     </p>
@@ -160,18 +160,18 @@
                         <span>
                             ¿Deseas asignarle un reciclador?
                         </span>
-                        <button type="button" class="btn btn-success" id="asignar">Asignar</button>
+                        <button type="submit" class="btn btn-success" id="asignar">Asignar</button>
                         <br>
                         <span class="ver-menos">Ver menos</span>
                     </p>
                 </div>
                 <img class="col-md-1 alerta order-first" src="https://www.nicepng.com/png/detail/61-613537_exclamation-point-png-signo-de-admiracion-rojo.png" alt="Alerta" srcset="">
-            </section>
+            </form>
             <!-- Notificaciones respondidas -->
-            <h3 class="titulo_menor">Notificaciones respondidas</h3>
+            <h3 class="titulo_menor marginleft-15">Notificaciones respondidas</h3>
             <section class="mensaje row">
                 <img src="https://www.jdevoto.cl/web/wp-content/uploads/2018/04/default-user-img.jpg" class="col-md-2" alt="Cliente" srcset="">
-                <div class="col-md-9">
+                <div class="col-md-10">
                     <p class="mensaje_cerrado">
                         <span>
                             Astrid27 le fue asignado un reciclador el dia 23/04/2020 a las 8:36 am
@@ -200,11 +200,10 @@
                         <span class="ver-menos">Ver menos</span>
                     </p>
                 </div>
-                <img class="col-md-1 alerta" src="https://www.nicepng.com/png/detail/61-613537_exclamation-point-png-signo-de-admiracion-rojo.png" alt="Alerta" srcset="">
             </section>
             <section class="mensaje row">
                 <img src="https://www.jdevoto.cl/web/wp-content/uploads/2018/04/default-user-img.jpg" class="col-md-2 order-last" alt="Cliente" srcset="">
-                <div class="col-md-9">
+                <div class="col-md-10">
                     <p class="mensaje_cerrado">
                         <span>
                             Astrid27 le fue asignado un reciclador el dia 23/04/2020 a las 8:36 am
@@ -233,9 +232,7 @@
                         <span class="ver-menos">Ver menos</span>
                     </p>
                 </div>
-                <img class="col-md-1 alerta order-first" src="https://www.nicepng.com/png/detail/61-613537_exclamation-point-png-signo-de-admiracion-rojo.png" alt="Alerta" srcset="">
             </section>
-            
         </section>
     </main>
     <script>
