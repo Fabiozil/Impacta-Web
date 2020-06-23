@@ -34,7 +34,6 @@
                                 Ingresa el nombre de la corporacion.
                             </small>
                         </div>
-
                         <div class="form-group mx-auto w-75">
                             <label for="email">{{ __('E-Mail Address') }}</label>
                             <input id="email" type="email" class="form-control @error('email') is-invalid @enderror"

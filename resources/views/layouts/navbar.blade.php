@@ -1,9 +1,9 @@
 <!-- Sidebar  -->
 <nav id="sidebar" class="">
     <div class="sidebar-header">
-        <a href="{{ url('/') }}">
-        <h3>{{ config('app.name', 'Reciclar') }}</h3>
-        <strong>R</strong>
+        <a href="{{ url('/home') }}">
+        <h3>Impacta</h3>
+        <strong>I</strong>
         </a>
     </div>
 
@@ -15,7 +15,7 @@
             </a>
         </li>
         <li>
-            <a href="/mapa">
+            <a href="/comunidad">
                 <i class="fas fa-street-view"></i>
                 Comunidad
             </a>
@@ -25,30 +25,30 @@
             </a>
             <ul class="collapse list-unstyled" id="pageSubmenu">
                 <li>
-                    <a href="/indicadores">Emisiones</a>
+                    <a href="{{ url('/mediciones/emisiones') }}">Emisiones</a>
                 </li>
                 <li>
-                    <a href="/indicadores/nuevo">Nueva Medición</a>
+                    <a href="{{ url('/mediciones/nueva') }}">Nueva Medición</a>
                 </li>
                 <li>
-                    <a href="/indicadores/historial">Historial</a>
+                    <a href="{{ url('/mediciones/historial') }}">Historial</a>
                 </li>
             </ul>
         </li>
         <li>
-            <a href="#">
+            <a href="{{ url('/notificaciones') }}">
                 <i class="fas fa-comment"></i>
                 Notificaciones
             </a>
         </li>
         <li>
-            <a href="#">
+            <a href="{{ url('/configuracion') }}">
                 <i class="fas fa-cogs"></i>
                 Configuracion
             </a>
         </li>
         <li>
-            <a href="#">
+            <a href="{{ url('/contacto') }}">
                 <i class="fas fa-phone"></i>
                 Contacto
             </a>

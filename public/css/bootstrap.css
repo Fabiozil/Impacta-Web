@@ -60,7 +60,14 @@ html {
 article, aside, figcaption, figure, footer, header, hgroup, main, nav, section {
   display: block;
 }
-
+.logo-corp{
+  max-width: 50%;
+  max-height: 50%;
+}
+.fila-corporacion{
+  width: 300px;
+  max-height: 100%;
+}
 body {
   margin: 0;
   font-family: "Roboto", "Segoe UI", "Source Sans Pro", Calibri, Candara, Arial, sans-serif;

@@ -11,10 +11,10 @@
         </header>
         <nav class="nav-notifications">
             <p class="bg-gray">Selecciona el tipo de notificaciones a enviar a tus usuarios: </p>
-            <a href="{{ route( 'notifications.automatic.create' ) }}">
+            <a href="{{ url( '/crearAutomatica' ) }}">
                 <button type="button" class="btn green">Automáticas</button>
             </a>
-            <a href="{{ route( 'notifications.manual.create' ) }}">
+            <a href="{{ url( '/crearManual' ) }}">
                 <button type="button" class="btn green">Manuales</button>
             </a>
         </nav>

@@ -2,22 +2,8 @@
 
 @section('content') 
 
-<a href="/indicadores/nuevo">
-  <button class="btn btn-secondary">Nueva Medición</button>
-</a>
-<a href="/indicadores/historial">
-  <button class="btn btn-secondary">Historial</button>
-</a>
-<a href="/indicadores">
-  <button class="btn btn-secondary">Emisiones</button>
-</a>
-<br />
-<h1>
-    Materiales Aprovechados
-</h1>
-
-<h1>Historial de mediciones</h1>
-<canvas id="myChart" width="400" height="400"></canvas>
+<h1 class="py-3 text-center text-success">Historial de mediciones</h1>
+<canvas id="myChart" class="border h-25 w-100"></canvas>
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.1/Chart.min.js">
     var ctx = document.getElementById("myChart");
 var myBarChart = new Chart(ctx, {

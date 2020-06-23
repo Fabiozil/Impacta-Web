@@ -21,18 +21,18 @@
                         @csrf 
                         <h5 class="col-md-12 text-md-center mb-3"><strong>Representante legal</strong></h5>
                         <div class="form-group mx-auto w-75">
-                            <!-- <label for="name" class="col-md-4 col-form-label text-md-right">{{__('Tipo')}}</label>
+                            <label for="name" class="col-md-4 col-form-label text-md-right">{{__('Tipo')}}</label>
                             <div class="col-md-6">
                                 <select class="form-control" name="type" id="type">
                                     <option value="1">Corporación</option>
                                     <option value="0">Afiliado</option>
                                 </select>
                             </div>
-                            <br> -->
-                            <!-- <div style="height:25vh">
+                            <br>
+                            <div style="height:25vh">
                                     <img src="/icons/user.png" alt="Imagen representante"
                                         style="height: 100%;;max-width: 100%;">
-                                </div> -->
+                                </div>
                             <label for="name">{{__('Nombre representante')}}</label>
                             <input class="form-control  @error('name_rep') is-invalid @enderror" name="name_rep" value="{{ old('name_rep') }}" required autocomplete="name_rep" autofocus placeholder="Ejm: Juanito ">
                             @error('string')
