@@ -1,191 +1,120 @@
 @extends('layouts.app')
 @section('content')
-<div class="py-5 text-center titulo">
-    <h1 class="text-success">Resultados de la búsqueda</h1>
-    <p class="lead">Corporaciones encontradas</p>
-</div>
-<div class="row main-r w-100 h-100">
-    <div class="container cont-rec h-100 main-cr mr-0">
-        <div class="row h-75 overflow-auto">
-            <div class="col-xl-4 col-lg-6 col-md-12">
-                <ul class="list-group list-group-flush" id="lista_corporaciones">
-                    <li class="list-group-item" id="item-lista-corporaciones">
-                        <div class="container">
-                            <div class="row">
-                                <div class="col-sm-4">
-                                    <i class="fas fa-user user-icon"></i>
-                                </div>
-                                <div class="col-sm-8">
+<div class="card shadow">
+    <div class="card-header">
+        <div class="py-3 text-center titulo">
+            <h1 class="text-success">Resultados de la búsqueda</h1>
+            <p class="lead">Corporaciones encontrados</p>
+        </div>
+    </div>
+    <div class="card-body">
+        <div class="row main-r w-100 h-100">
+            <div class="container h-100 main-cr mr-0">
+                <div class="row h-75 overflow-auto">
+                    <div class="col-xl-4 col-lg-6 col-md-12">
+                        <ul class="list-group list-group-flush" id="lista_usuarios">
+                            <li class="list-group-item" id="item-lista-usuarios">
+                                <div class="container">
                                     <div class="row">
-                                        <p class="lead mb-1"">Nombre de corporacion</p>
+                                        <div class="col-sm-4">
+                                            <img src="{{url("/corp_logo2.png")}}" class="logo-corpr" alt="">
                                         </div>
-                                        <div class=" row">A 100km de ti
-                                    </div>
-                                    <br>
-                                    <div class="row justify-content-end">
-                                        <button type="submit" class="btn btn-success" data-toggle="modal"
-                                            data-target="#detallesModal"
-                                            style="margin-bottom: 10px; margin-left: -15px">Ver perfil</button>
-                                        <a href="{{ url('/') }}">
-                                            <button type="submit" class="btn btn-success"
-                                                style="margin-left: 10px; margin-bottom: 10px">Ver en mapa >></button>
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </li>
-                    <li class="list-group-item" id="item-lista-corporaciones">
-                        <div class="container">
-                            <div class="row">
-                                <div class="col-sm-4">
-                                    <i class="fas fa-user user-icon"></i>
-                                </div>
-                                <div class="col-sm-8">
-                                    <div class="row">
-                                        <p class="lead mb-1"">Nombre de corporacion</p>
+                                        <div class="col-sm-8">
+                                            <div class="row">
+                                                <p class="lead mb-1"">RecItagui</p>
+                                                </div>
+                                                <div class=" row">A 2.9km de la corporación
+                                            </div>
+                                            <div class="row mb-2">Corporación de reciclaje</div>
+                                            <div class="row justify-content-end">
+                                                <button type="submit" class="btn btn-success" data-toggle="modal"
+                                                    data-target="#detallesModal"
+                                                    style="margin-bottom: 10px; margin-left: -15px">Ver perfil</button>
+                                                <a href="{{ url('/comunidad') }}">
+                                                    <button type="submit" class="btn btn-success"
+                                                        style="margin-left: 10px; margin-bottom: 10px">Ubicacion</button>
+                                                </a>
+                                            </div>
                                         </div>
-                                        <div class=" row">A 100km de ti
-                                    </div>
-                                    <br>
-                                    <div class="row justify-content-end">
-                                        <button type="submit" class="btn btn-success" data-toggle="modal"
-                                            data-target="#detallesModal"
-                                            style="margin-bottom: 10px; margin-left: -15px">Ver perfil</button>
-                                        <a href="{{ url('/') }}">
-                                            <button type="submit" class="btn btn-success"
-                                                style="margin-left: 10px; margin-bottom: 10px">Ver en mapa >></button>
-                                        </a>
                                     </div>
                                 </div>
-                            </div>
-                        </div>
-                    </li>
+                            </li>
+                        </ul>
+                    </div>
 
-                </ul>
-            </div>
+                    <div class="col-xl-4 col-lg-6 col-md-12">
+                        <ul class="list-group list-group-flush" id="lista_usuarios">
+                            <li class="list-group-item" id="item-lista-usuarios">
+                                <div class="container">
+                                    <div class="row">
+                                        <div class="col-sm-4">
+                                            <img src="{{url("/corp_logo3.png")}}" class="logo-corpr" alt="">
+                                        </div>
+                                        <div class="col-sm-8">
+                                            <div class="row">
+                                                <p class="lead mb-1"">EIA Recicla</p>
+                                                </div>
+                                                <div class=" row">A 3km de la corporación
+                                            </div>
+                                            <div class="row mb-2">Corporación de reciclaje</div>
+                                            <div class="row justify-content-end">
+                                                <button type="submit" class="btn btn-success" data-toggle="modal"
+                                                    data-target="#detallesModal"
+                                                    style="margin-bottom: 10px; margin-left: -15px">Ver perfil</button>
+                                                <a href="{{ url('/comunidad') }}">
+                                                    <button type="submit" class="btn btn-success"
+                                                        style="margin-left: 10px; margin-bottom: 10px">Ubicacion</button>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
 
-            <div class="col-xl-4 col-lg-6 col-md-12">
-                <ul class="list-group list-group-flush" id="lista_corporaciones">
-                    <li class="list-group-item" id="item-lista-corporaciones">
-                        <div class="container">
-                            <div class="row">
-                                <div class="col-sm-4">
-                                    <i class="fas fa-user user-icon"></i>
-                                </div>
-                                <div class="col-sm-8">
-                                    <div class="row">
-                                        <p class="lead mb-1"">Nombre de corporacion</p>
-                                        </div>
-                                        <div class=" row">A 100km de ti
-                                    </div>
-                                    <br>
-                                    <div class="row justify-content-end">
-                                        <button type="submit" class="btn btn-success" data-toggle="modal"
-                                            data-target="#detallesModal"
-                                            style="margin-bottom: 10px; margin-left: -15px">Ver perfil</button>
-                                        <a href="{{ url('/') }}">
-                                            <button type="submit" class="btn btn-success"
-                                                style="margin-left: 10px; margin-bottom: 10px">Ver en mapa >></button>
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </li>
-                    <li class="list-group-item" id="item-lista-corporaciones">
-                        <div class="container">
-                            <div class="row">
-                                <div class="col-sm-4">
-                                    <i class="fas fa-user user-icon"></i>
-                                </div>
-                                <div class="col-sm-8">
-                                    <div class="row">
-                                        <p class="lead mb-1"">Nombre de corporacion</p>
-                                        </div>
-                                        <div class=" row">A 100km de ti
-                                    </div>
-                                    <br>
-                                    <div class="row justify-content-end">
-                                        <button type="submit" class="btn btn-success" data-toggle="modal"
-                                            data-target="#detallesModal"
-                                            style="margin-bottom: 10px; margin-left: -15px">Ver perfil</button>
-                                        <a href="{{ url('/') }}">
-                                            <button type="submit" class="btn btn-success"
-                                                style="margin-left: 10px; margin-bottom: 10px">Ver en mapa >></button>
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </li>
-                </ul>
-            </div>
-            <div class="col-xl-4 col-lg-6 col-md-12">
-                <ul class="list-group list-group-flush" id="corporaciones">
-                    <li class="list-group-item" id="item-lista-corporaciones">
-                        <div class="container">
-                            <div class="row">
-                                <div class="col-sm-4">
-                                    <i class="fas fa-user user-icon"></i>
-                                </div>
-                                <div class="col-sm-8">
-                                    <div class="row">
-                                        <p class="lead mb-1"">Nombre de corporacion</p>
-                                        </div>
-                                        <div class=" row">A 14km de ti
-                                    </div>
-                                    <br>
-                                    <div class="row justify-content-end">
-                                        <a href="{{ url('/perfilu') }}">
-                                            <button type="submit" class="btn btn-success"
-                                                style="margin-bottom: 10px; margin-left: -15px">Ver perfil</button>
-                                        </a>
-                                        <a href="{{ url('/perfilc') }}">
-                                            <button type="submit" class="btn btn-success"
-                                                style="margin-left: 10px; margin-bottom: 10px">Ver en mapa >></button>
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </li>
-                    <li class="list-group-item" id="item-lista-corporaciones">
-                        <div class="container">
-                            <div class="row">
-                                <div class="col-sm-4">
-                                    <i class="fas fa-user user-icon"></i>
-                                </div>
-                                <div class="col-sm-8">
-                                    <div class="row">
-                                        <p class="lead mb-1"">Nombre de corporacion</p>
-                                        </div>
-                                        <div class=" row">A 0km de ti
-                                    </div>
-                                    <br>
-                                    <div class="row justify-content-end">
-                                        <a href="{{ url('/perfilu') }}">
-                                            <button type="submit" class="btn btn-success"
-                                                style="margin-bottom: 10px; margin-left: -15px">Ver perfil</button>
-                                        </a>
-                                        <a href="{{ url('/perfilc') }}">
-                                            <button type="submit" class="btn btn-success"
-                                                style="margin-left: 10px; margin-bottom: 10px">Ver en mapa >></button>
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </li>
+                        </ul>
+                    </div>
 
-                </ul>
+                    <div class="col-xl-4 col-lg-6 col-md-12">
+                        <ul class="list-group list-group-flush" id="usuarios">
+                            <li class="list-group-item" id="item-lista-usuarios">
+                                <div class="container">
+                                    <div class="row">
+                                        <div class="col-sm-4">
+                                            <img src="{{url("/corp_logo1.png")}}" class="logo-corpr" alt="">
+                                        </div>
+                                        <div class="col-sm-8">
+                                            <div class="row">
+                                                <p class="lead mb-1"">Recicladores las Lomas</p>
+                                                </div>
+                                                <div class=" row">A 4.3km de la corporación
+                                            </div>
+                                            <div class="row mb-2">Corporación de recilaje</div>
+                                            <div class="row justify-content-end">
+                                                <button type="submit" class="btn btn-success" data-toggle="modal"
+                                                    data-target="#detallesModal"
+                                                    style="margin-bottom: 10px; margin-left: -15px">Ver perfil</button>
+                                                <a href="{{ url('/comunidad') }}">
+                                                    <button type="submit" class="btn btn-success"
+                                                        style="margin-left: 10px; margin-bottom: 10px">Ubicacion</button>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
             </div>
         </div>
+    </div>
+    <div class="card-footer">
         <a href="{{ url('/comunidad') }}">
-            <button type="submit" class="btn btn-success" style="margin-left: 10px; margin-bottom: 10px">Atras</button>
+            <button type="submit" class="btn btn-success">Regresar</button>
         </a>
     </div>
 </div>
+
 <div class="modal fade" id="detallesModal" tabindex="-1" role="dialog" aria-labelledby="favoritesModalLabel">
     <div class="modal-dialog modal-lg" role="document">
         <div class="modal-content">
@@ -202,17 +131,20 @@
                             <div class="row">
                                 <div class="col-xl-4 col-lg-4 col-md-12 borde-derecha h-100">
                                     <div class="row h-100">
-                                        <div class="container h-80 cont-rec">
+                                        <div class="container h-80 border-right">
                                             <div class="row">
                                                 <div class="col-xl-12 h-100">
                                                     <div class="container">
                                                         <div class="py-5">
                                                         </div>
-                                                        <i class="fas fa-user user-icon center-img"></i>
+                                                        <img src="{{url("/corp_logo2.png")}}" class="logo-corpr" alt="">
+
+
                                                         <div class="py-4 text-center">
-                                                            <h3>Recimed</h3>
-                                                            <p>Se unió hace 2 meses</p>
+                                                            <h3>RecItagui</h3>
+                                                            <p>Se unió hace 3 años</p>
                                                         </div>
+
                                                     </div>
                                                 </div>
                                             </div>
@@ -221,7 +153,7 @@
                                 </div>
                                 <div class="col-xl-8 col-lg-8 col-md-12 borde-derecha h-100">
                                     <div class="row h-100">
-                                        <div class="container cont-rec h-95">
+                                        <div class="container h-95">
                                             <div class="row h-100">
                                                 <div class="col-xl-10">
                                                     <div class="py-5 subtitle">
@@ -233,31 +165,27 @@
                                                         <form>
                                                             <div class="form-group w-100">
                                                                 <div class="form-group row">
+                                                                    <h3>Dirección: </h3>
                                                                     <div class="col-sm-10">
-                                                                        <p class="lead">Dirección: Carrera 24 No. 33 -
-                                                                            45</p>
+                                                                        <h3>Calle 67 carrera 57</h3>
                                                                     </div>
-
+                                                                </div>
+                                                                <div class="form-group row">
+                                                                    <h3>Recicladores afiliados: </h3>
                                                                     <div class="col-sm-10">
-                                                                        <p class="lead">Teléfono: 444-44-44</p>
+                                                                        <h3>12</h3>
                                                                     </div>
-
+                                                                </div>
+                                                                <div class="form-group row">
+                                                                    <h3>Usuarios afiliados: </h3>
                                                                     <div class="col-sm-10">
-                                                                        <p class="lead">Municipio de Medellín</p>
+                                                                        <h3>45</h3>
                                                                     </div>
-
+                                                                </div>
+                                                                <div class="form-group row">
+                                                                    <h3>Emisiones evitadas: </h3>
                                                                     <div class="col-sm-10">
-                                                                        <p class="lead">Recicladores agremiados: 11</p>
-
-                                                                    </div>
-
-                                                                    <div class="col-sm-10">
-                                                                        <p class="lead">Usuarios afiliados: 36</p>
-                                                                    </div>
-
-                                                                    <div class="col-sm-10">
-                                                                        <p class="lead">Emisiones evitadas: 200 ton CO2e
-                                                                        </p>
+                                                                        <h3>544 ton CO2e</h3>
                                                                     </div>
                                                                 </div>
                                                             </div>
@@ -280,5 +208,6 @@
         </div>
     </div>
 </div>
+
 
 @endsection
