@@ -2,6 +2,7 @@
 /public/hot
 /public/storage
 /storage/*.key
+/vendor
 .env
 .env.backup
 .phpunit.result.cache
@@ -9,9 +10,3 @@ Homestead.json
 Homestead.yaml
 npm-debug.log
 yarn-error.log
-/vendor
-/public/js/app.js
-/public/css/app.css
-composer.lock
-package-lock.json
-composer.json
