@@ -23,7 +23,7 @@
                                     <option value="{{$mun->id}}">{{$mun->nombre_mun}}</option>
                                     @endforeach
                                 </select>
-                            </div>
+                            </div>/
                             <div class="col-md-6">
                                 <label for="comuna">Comunas</label>
                                 <select class="custom-select" id="comuna" placeholder="seleccione un municipio">
