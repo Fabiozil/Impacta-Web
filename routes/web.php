@@ -86,7 +86,7 @@ Route::get('/editCorp', function () {
     return view('config.editar');
 });
 //Ruta contacto
-Route::get('/editCorp', function () {
+Route::get('/contacto', function () {
     return view('contacto.index');
 });
 //Ruta comunidad
@@ -127,5 +127,9 @@ Route::get('/notificaciones', function () {
 });
 Route::get('/editar', function () {
     return view('recycler.show');
+});
+//recicladores
+Route::get('/recicladores', function () {
+    return view('recycler.index');
 });
 

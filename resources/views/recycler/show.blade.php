@@ -24,8 +24,8 @@
     <div class="row ">
         <div class="col-md-12">
             <div class="py-5 text-center titulo">
-                <h1 class="text-success">{{$recycler->nombres.' '.$recycler->apellidos}}</h1>
-                <p class="lead">{{__('Apodo').': '.$recycler->apodo}}</p>
+                <h1 class="text-success">Avimilé Ribas</h1>
+                <p class="lead">Avi</p>
             </div>
         </div>
     </div>
@@ -34,20 +34,20 @@
             <div class="card ">
                 <div class="row no-gutters">
                   <div class="col-md-2 p-3 p-sm-4 p-lg-1">
-                    <img class="imgRecycler2 border border-success rounded-circle w-100 mx-1 mx-md-1 mx-lg-2 my-3 " src="{{ $recycler->url_path }}" class="card-img" alt="{{'Foto de '.$recycler->nombres}}">
+                    <img class="imgRecycler2 border border-success rounded-circle w-100 mx-1 mx-md-1 mx-lg-2 my-3 " src="{{ url('/Avimile.jpg') }}" class="card-img" alt="Foto de Avimilé">
                   </div>
                   <div class="col-md-10 align-self-center">
                     <div class="card-body ml-2" id="info_personal">
                         <h5 class="card-title text-success">{{__('Información Personal')}}</h5>
                         <div class="row">
                             <div class="col-md-4">
-                                <strong>{{__('Nombres').': '}}</strong><span>{{$recycler->nombres}}</span><br>
-                                <strong>{{__('Apellidos').': '}}</strong><span>{{$recycler->apellidos}}</span><br>
-                                <strong>{{__('Apodo').': '}}</strong><span>{{$recycler->apodo}}</span>
+                                <strong>{{__('Nombres').': '}}</strong><span>Avimilé</span><br>
+                                <strong>{{__('Apellidos').': '}}</strong><span>Ribas</span><br>
+                                <strong>{{__('Apodo').': '}}</strong><span>Avi</span>
                             </div>
                         <div class="col-md-4">
-                            <strong>{{__('Celular').': '}}</strong><span>{{$recycler->celular}}</span><br>
-                            <strong>{{__('Fecha de Nacimiento').': '}}</strong><span>{{$recycler->fecha_nacimiento}}</span>
+                            <strong>{{__('Celular').': '}}</strong><span>333 31 42</span><br>
+                            <strong>{{__('Fecha de Nacimiento').': '}}</strong><span>23/10/1984</span>
                         </div>
                         <div class="col-md-4">
                             <button type="button" class="btn btn-primary btn-block" data-toggle="modal" data-target="#editarInfoPerson" data-backdrop="static">
@@ -71,8 +71,8 @@
                                 <i class="fas fa-edit fa-lg"></i>
                             </button>
                         </h5>
-                        <p class="card-text">{{$recycler->historia}}</p>
-                        <p class="card-text"><small class="text-muted">Last updated {{$recycler->updated_at}}</small></p>
+                        <p class="card-text">Soy una persona alegra a la cual le gusta reciclar</p>
+                        <p class="card-text"><small class="text-muted">6/22/2020</small></p>
                 </div>
             </div>
         </div>
@@ -95,20 +95,13 @@
                                   </tr>
                             </thead>
                             <tbody  id="lista">
-                                 @forelse ($zona as $item)
                                     <tr>
-                                        <td>{{$item->sector->municipio->nombre_mun}}</td>
-                                        <td>{{$item->sector->comuna->nombre_com}}</td>
-                                        <td>{{$item->sector->nombre_sect}}</td>
-                                        <td>{{$item->dias}}</td>
-                                        <td>{{$item->horas}}</td>
+                                        <td>Envigado</td>
+                                        <td>La Magnolia</td>
+                                        <td>La Magnolia</td>
+                                        <td>L-X-V</td>
+                                        <td>8:00AM - 10:00AM</td>
                                     </tr>
-                                    @empty
-                                    <tr>
-                                        <th  colspan="5">No hay zonas registradas</th>
-                                    </tr>
-                                @endforelse
-
                             </tbody>
                         </table>
                     </div>
@@ -129,22 +122,18 @@
                               </tr>
                         </thead>
                         <tbody  id="lista">
-                             @forelse ($material as $item)
-                                <tr>
-                                    <td>{{$item->nombre}}</td>
-                                    <td>{{$item->nombresub}}</td>
-                                    <td>
-                                        <button class="btn btn-info" data-toggle="tooltip" data-placement="left" title="{{$item->mensaje}}">
-                                            <i class="fas fa-info-circle"></i>
-                                        </button>
-                                       </td>
-                                </tr>
-                                @empty
-                                <tr>
-                                    <th  colspan="5">No hay materiales registrados</th>
-                                </tr>
-                            @endforelse
-
+                            <tr>
+                                <td>Plastico</td>
+                                <td>Pet</td>
+                                <td>
+                                    <button class="btn btn-info" data-toggle="tooltip" data-placement="left" title="Botellas pet">
+                                        <i class="fas fa-info-circle"></i>
+                                    </button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th  colspan="5">No hay materiales registrados</th>
+                            </tr>
                         </tbody>
                     </table>
                 </div>
@@ -156,9 +145,7 @@
 <div class="modal fade" id="editarHistoria" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog  modal-lg modal-dialog-centered" role="document">
       <div class="modal-content ">
-      <form action="{{route('recyclers.update',['recycler'=>$recycler->id])}}" method="post">
-        @csrf
-        @method('PUT')
+      <form action="" method="post">
         <div class="modal-header ">
           <h5 class="modal-title text-success" id="tituloHistoria">
             <i class="fas fa-user-edit"></i> Editar Mi Historia</h5>
@@ -172,7 +159,7 @@
                     <div class="col-md-10">
                         <div class="form-group">
                             <label for="historia">Historia actual</label>
-                            <textarea class="form-control"  name="historia" id="historia" cols="20" rows="8" maxlength="500">{{$recycler->historia}}</textarea>
+                            <textarea class="form-control"  name="historia" id="historia" cols="20" rows="8" maxlength="500">Soy una persona alegra a la cual le gusta reciclar</textarea>
                             <strong id="infoCounter" class="float-right text-success">N&uacute;mero de caracteres restantes <span  id="contador">500</span></strong>
                         </div>
                         <small id="historiaHelp" class="form-text text-muted">
@@ -201,9 +188,7 @@
 <div class="modal fade" id="editarInfoPerson" tabindex="-1" role="dialog" aria-labelledby="info_personal" aria-hidden="true">
     <div class="modal-dialog  modal-lg modal-dialog-centered" role="document">
       <div class="modal-content ">
-      <form action="{{route('recyclers.update',['recycler'=>$recycler->id])}}" method="post">
-        @csrf
-        @method('PUT')
+      <form action="" method="post">
         <div class="modal-header ">
           <h5 class="modal-title text-success" id="tituloHistoria">
             <i class="fas fa-user-edit"></i> Editar Información Personal</h5>
@@ -220,7 +205,7 @@
                                 class="col-form-label">Nombre</label>
                                 <div class="input-group mb-2">
                                 <input type="text" name="nombres" class="form-control @error('nombres') is-invalid @enderror" id="nombres"
-                                    placeholder="James David" value="{{$recycler->nombres}}">
+                                    placeholder="James David" value="">
                                     <div class="input-group-append">
                                         <span class="btn btn-info"
                                         data-toggle="tooltip" data-placement="top" title="Registra el
@@ -237,7 +222,7 @@
                                 class="col-form-label">Apellido</label>
                                 <div class="input-group mb-2">
                                 <input type="text" name="apellidos" class="form-control @error('apellidos') is-invalid @enderror" id="apellidos"
-                                    placeholder="Rodriguez Rubio" value="{{$recycler->apellidos}}">
+                                    placeholder="Rodriguez Rubio" value="">
                                     <div class="input-group-append">
                                         <span class="btn btn-info"
                                         data-toggle="tooltip" data-placement="top" title="Registra el
@@ -255,7 +240,7 @@
                                 class="col-form-label">Apodo</label>
                                 <div class="input-group mb-2">
                                 <input type="text" name="apodo" class="form-control @error('apodo') is-invalid @enderror" id="apodo"
-                                    placeholder="James" value="{{$recycler->apodo}}">
+                                    placeholder="James" value="">
                                     <div class="input-group-append">
                                         <span class="btn btn-info"
                                         data-toggle="tooltip" data-placement="top" title="Si tu reciclador prefiere ser llamado por su apodo por favor ingresa el apodo correspondiente.">
@@ -273,7 +258,7 @@
                                 class=" col-form-label">Fecha de Nacimiento</label>
                                 <input type="date" name="fecha_nacimiento" class="form-control @error('fecha_nacimiento') is-invalid @enderror" id="fecha_nacimiento"
                                     placeholder="28"
-                                    min="1900-01-01" max="2000-01-01" value="{{$recycler->fecha_nacimiento}}">
+                                    min="1900-01-01" max="2000-01-01" value="">
                                     @error('fecha_nacimiento')
                                     <div class="invalid-tooltip">{{ $message }}</div>
                                 @enderror
@@ -282,7 +267,7 @@
                             <label for="edad"
                                 class="col-form-label">Edad</label>
                                 <input type="number" name="edad" class="form-control @error('edad') is-invalid @enderror" id="edad"
-                                    placeholder="28" min="20" max="100" value="{{$recycler->edad}}">
+                                    placeholder="28" min="20" max="100" value="">
                                     @error('edad')
                                     <div class="invalid-tooltip">{{ $message }}</div>
                                 @enderror
@@ -292,7 +277,7 @@
                                 class="col-form-label">Celular</label>
                                 <div class="input-group mb-2">
                                 <input type="text" name="celular" class="form-control  @error('celular') is-invalid @enderror" id="celular"
-                                    placeholder="3102020540" value="{{$recycler->celular}}">
+                                    placeholder="3102020540" value="">
                                     <div class="input-group-append">
                                         <span class="btn btn-info"
                                         data-toggle="tooltip" data-placement="top" title="Registra los diez dígitos del número celular de tu reciclador sin espacios intermedios. P. ej. 3041112233">
@@ -345,16 +330,13 @@
                                   </tr>
                             </thead>
                             <tbody  id="lista">
-                                 @forelse ($zona as $item)
-                                 <form action="{{route('recyclers.zona.update',['recycler'=>$recycler->id,'zona'=>$item->sector->id])}}" method="post">
-                                    @csrf
-                                    @method('DELETE')
+                                 <form action="" method="post">
                                     <tr>
-                                        <td>{{$item->sector->municipio->nombre_mun}}</td>
-                                        <td>{{$item->sector->comuna->nombre_com}}</td>
-                                        <td>{{$item->sector->nombre_sect}}</td>
-                                        <td>{{$item->dias}}</td>
-                                        <td>{{$item->horas}}</td>
+                                        <td>Envigado</td>
+                                        <td>La Magnolia</td>
+                                        <td>La magnolia</td>
+                                        <td>L-X-V</td>
+                                        <td>8:00AM - 10:00AM</td>
                                         <td>
                                             <button type="submit" class="btn btn-primary">
                                                 <i class="fas fa-save"></i>
@@ -367,12 +349,6 @@
                                         </td>
                                     </tr>
                                  </form>
-                                    @empty
-                                    <tr>
-                                        <th  colspan="5">No hay zonas registradas</th>
-                                    </tr>
-                                @endforelse
-
                             </tbody>
                         </table>
                     </div>
@@ -388,36 +364,4 @@
     </div>
   </div>
   <!--End Modal editar Zona de recolección-->
-@endsection
-@section('script')
-@if ($errors->has('nombres')||$errors->has('apellidos')||$errors->has('apodo')||$errors->has('edad')||$errors->has('fecha_nacimiento')||$errors->has('celular'))
-<script>
-    $( document ).ready(function() {
-        $('#editarInfoPerson').modal({show:true,backdrop: "static"});
-    });
-</script>
-@endif
-@if ($errors->has('historia'))
-<script>
-    $( document ).ready(function() {
-        $('#editarHistoria').modal({show:true,backdrop: "static"});
-    });
-</script>
-@endif
-<script type="text/javascript">
-    $(document).ready(function(){
-        var max_chars = 500;
-        $('#contador').html(max_chars-$('#historia').val().length);
-        $('#historia').keyup(function() {
-            var chars = $(this).val().length;
-            var diff = max_chars - chars;
-            $('#contador').html(diff);
-            if(diff===0){
-                $('#infoCounter').removeClass('text-success').addClass('text-danger');
-            }else{
-                $('#infoCounter').removeClass('text-danger').addClass('text-success');
-            }
-        });
-    });
-    </script>
 @endsection

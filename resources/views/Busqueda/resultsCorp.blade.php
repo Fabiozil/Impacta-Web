@@ -4,7 +4,7 @@
     <div class="card-header">
         <div class="py-3 text-center titulo">
             <h1 class="text-success">Resultados de la búsqueda</h1>
-            <p class="lead">Corporaciones encontrados</p>
+            <p class="lead">3 Corporaciones encontradas segun sector</p>
         </div>
     </div>
     <div class="card-body">
@@ -21,7 +21,7 @@
                                         </div>
                                         <div class="col-sm-8">
                                             <div class="row">
-                                                <p class="lead mb-1"">RecItagui</p>
+                                                <p class="lead mb-1 border-bottom">RecItagui</p>
                                                 </div>
                                                 <div class=" row">A 2.9km de la corporación
                                             </div>
@@ -52,7 +52,7 @@
                                         </div>
                                         <div class="col-sm-8">
                                             <div class="row">
-                                                <p class="lead mb-1"">EIA Recicla</p>
+                                                <p class="lead mb-1 border-bottom">EIA Recicla</p>
                                                 </div>
                                                 <div class=" row">A 3km de la corporación
                                             </div>
@@ -84,7 +84,7 @@
                                         </div>
                                         <div class="col-sm-8">
                                             <div class="row">
-                                                <p class="lead mb-1"">Recicladores las Lomas</p>
+                                                <p class="lead mb-1 border-bottom">Recicladores las Lomas</p>
                                                 </div>
                                                 <div class=" row">A 4.3km de la corporación
                                             </div>
@@ -109,8 +109,10 @@
         </div>
     </div>
     <div class="card-footer">
-        <a href="{{ url('/comunidad') }}">
-            <button type="submit" class="btn btn-success">Regresar</button>
+        <a href="{{ url('/comunidad/corporaciones') }}">
+            <div class="d-flex flex-row-reverse bd-highlight">
+                <button type="submit" class="btn btn-danger">Regresar</button>
+            </div>
         </a>
     </div>
 </div>

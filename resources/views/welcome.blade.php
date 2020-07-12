@@ -6,7 +6,7 @@
         <div class="col-7">
             <div class="container">
                 <div class="py-5">
-                    <h1 class="text-success">Impacta</h1>
+                    <h1 class="text-success"><img src="{{ url('/Reciclapp_V2.png') }}" style="max-width: 100%"></h1>
                     <p class="lead">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Alias, optio? Dolor
                         repellendus aliquid
                         sit, accusamus modi ratione autem ut eveniet odio, explicabo officia placeat. Obcaecati nesciunt

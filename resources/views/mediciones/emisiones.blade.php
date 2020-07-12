@@ -2,8 +2,35 @@
 
 @section('content')
 <div class="card shadow">
-    <div class="card-body">
+    <div class="card-header">
         <h1 class="py-3 text-center text-success">Registro de emisiones</h1>
+    </div>
+    <div class="card-body">
+        <div class="d-flex flex-row-reverse">
+            <span class="btn btn-info mb-2 ml-0" data-toggle="tooltip" data-placement="top"
+            title="Utiliza esta pestaña para ver el histograma de los materiales reciclados por tu corporacion.">
+            <i class="fas fa-info-circle"></i></span>
+            <a href="{{ url('/historial') }}">
+                <button type="submit" class="btn btn-success mb-2 mr-0 ml-2">Ver historico de emisiones
+                </button>
+            </a>
+
+            <span class="btn btn-info mb-2 ml-0" data-toggle="tooltip" data-placement="top"
+            title="Utiliza esta pestaña para ingresar una nueva medición.">
+            <i class="fas fa-info-circle"></i></span>
+            <a href="{{ url('/nuevamedicion') }}">
+                <button type="submit" class="btn btn-success mb-2 mr-0 ml-2">Ingresar nueva medición
+                </button>
+            </a>
+
+            <span class="btn btn-info mb-2 ml-0" data-toggle="tooltip" data-placement="top"
+            title="Utiliza esta pestaña para ver los indicadores ambientales de tu corporación.">
+            <i class="fas fa-info-circle"></i></span>
+            <a href="#">
+                <button type="submit" class="btn btn-outline-success mb-2 mr-0">Ver resumen de emisiones
+                </button>
+            </a>
+        </div>
         <div class="row mb-3">
             <div class="col-4">   
                 <h3>Histórico de emisiones evitadas por la corporación</h3>   
@@ -28,6 +55,9 @@
                 </p> 
             </div>
         </div>
+    </div>
+    <div class="card-footer">
+
     </div>
 </div>
 

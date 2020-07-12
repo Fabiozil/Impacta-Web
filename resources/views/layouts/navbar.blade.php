@@ -2,8 +2,8 @@
 <nav id="sidebar" class="">
     <div class="sidebar-header">
         <a href="{{ url('/home') }}">
-        <h3>Impacta</h3>
-        <strong>I</strong>
+        <h3><img src="{{ url('/Reciclapp_V1.png') }}" style="max-width: 100%"></h3>
+        <strong><img src="{{ url('/Reciclapp_V1.png') }}" style="max-width: 100%"></strong>
         </a>
     </div>
 
@@ -17,23 +17,12 @@
         <li>
             <a href="/comunidad">
                 <i class="fas fa-street-view"></i>
-                Comunidad
+                Mi comunidad
             </a>
-            <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+            <a href="/emisiones">
                 <i class="fas fa-chart-line"></i>
                 Indicadores Ambientales
             </a>
-            <ul class="collapse list-unstyled" id="pageSubmenu">
-                <li>
-                    <a href="{{ url('/mediciones/emisiones') }}">Emisiones</a>
-                </li>
-                <li>
-                    <a href="{{ url('/mediciones/nueva') }}">Nueva Medición</a>
-                </li>
-                <li>
-                    <a href="{{ url('/mediciones/historial') }}">Historial</a>
-                </li>
-            </ul>
         </li>
         <li>
             <a href="{{ url('/notificaciones') }}">

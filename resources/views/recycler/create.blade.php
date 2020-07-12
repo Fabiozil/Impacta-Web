@@ -3,7 +3,7 @@
 @section('content')
 <div class="container">
     <div class="py-5 text-center titulo">
-        <h1 class="text-success">Ingresar nuevo reciclador</h1>
+        <h1 class="text-success">Ingresar nuevo(a) reciclador(a)</h1>
         <p class="lead">Utiliza los campos a continuación para ingresar la información necesaria para crear nuevo
             reciclador
             en el sistema. Para confirmar tus cambios por favor presiona el botón de aceptar al final de la página.</p>
@@ -28,7 +28,7 @@
                                                 <img id="imgSalida"
                                                     class="imgRecycler bg-white border border-success rounded-circle w-100"
                                                     src="{{ asset('user-alt-solid.svg') }}" />
-                                                <label class="mt-2">Carga una foto de perfil para tu reciclador.</label>
+                                                <label class="mt-2">Carga una foto de perfil para tu reciclador(a).</label>
                                             </div>
                                             <div class="input-group ">
                                                 <div class="input-group-prepend">
@@ -65,7 +65,7 @@
                                         <h2>Mis datos personales</h2>
                                         <p class="lead"> Utiliza los campos a continuación para ingresar la información
                                             referente a
-                                            los datos personales del nuevo reciclador.</p>
+                                            los datos personales del(a) nuevo(a) reciclador(a).</p>
                                     </div>
                                 </div>
 
@@ -198,7 +198,7 @@
                         <div class="py-5 subtitle">
                             <h2>Mi labor</h2>
                             <p class="lead">Utiliza los campos a continuación para ingresar la información referente a
-                                los materiales que recolecta el reciclador y a las zonas y horarios en que trabaja.</p>
+                                los materiales que recolecta el(la) reciclador(a) y a las zonas y horarios en que trabaja.</p>
                         </div>
                     </div>
                     <div class="row">
@@ -223,7 +223,7 @@
                                                 @endforeach
                                             </select>
                                             <div class="input-group-append">
-                                                <button class="btn btn-outline-primary" type="button"
+                                                <button class="btn btn-outline-success" type="button"
                                                     id="boton_agregar_residuo">Agregar
                                                 </button>
                                             </div>
@@ -357,7 +357,7 @@
                                     </div>
                                 </div>
                                 <div class="row table-responsive m-1">
-                                    <button id="addGeo" class="btn btn-primary btn-block" type="button">Añadir</button>
+                                    <button id="addGeo" class="btn btn-success btn-block" type="button">Añadir</button>
                                     <div id="alerta_sector" class="alert alert-warning  d-nonei my-2">
                                         <strong>Atenci&oacute;n!</strong>
                                         Valide que est&eacute; ingresando al menos un d&iacute;a de la semana<br>
@@ -407,18 +407,23 @@
 
                                 </div>
                                 <small id="emailHelp" class="form-text text-muted">Aquí te damos cinco consejos para que
-                                    crees la historia de tu reciclador:
+                                    crees la historia de tu reciclador(a):
                                     1. Describe características demográficas como su lugar de procedencia.
                                     2. Menciona el tiempo que lleva dedicado a su profesión.
                                     3. Menciona una razón de trasfondo diferente a obtener un ingreso económico por la
-                                    cual tu reciclador realiza su labor.
+                                    cual tu reciclador(a) realiza su labor.
                                     4. Comunicar ¿cómo la comunidad puede aportar a facilitar su trabajo?
-                                    5.Transmitir el impacto que tiene la ayuda de la comunidad en la vida del
-                                    reciclador.
+                                    5.Transmitir el impacto que tiene la ayuda de la comunidad en la vida del(a)
+                                    reciclador(a).
                                 </small>
                             </div>
                             <div class="row align-items-center justify-content-end">
-                                <button type="submit" class="btn btn-success m-2">Registrar</button>
+                                <a href="{{ url('/recicladores') }}">
+                                    <button  class="btn btn-danger mr-1 mb-2">Volver</button>
+                                </a>
+                                <a href="{{ url('/recicladores') }}">
+                                <button class="btn btn-success mr-2 mb-2">Registrar</button>
+                                </a>
                             </div>
                         </div>
                     </div>
