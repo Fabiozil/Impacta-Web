@@ -21,7 +21,7 @@ Route::get('/user', 'UserController@index');
 Route::get('/corporation', 'CorporationController@index');
 Route::get('/notification', 'NotificationController@index');
 
-Auth::routes(['verify' => true]);
+Auth::routes(['verify' => false]);
 Route::resource('recyclers', 'Recycler\RecyclerController')->except(['edit']);
 Route::resource('recyclers.zona','Recycler\ZonaController')->only(['store','update','destroy']);
 Route::get('comunas/{municipio_id}', 'Recycler\RecyclerController@getComunas')->name('comunas');
@@ -132,4 +132,9 @@ Route::get('/editar', function () {
 Route::get('/recicladores', function () {
     return view('recycler.index');
 });
-
+Route::get('/recicladores/crear', function () {
+    return view('recycler.create');
+});
+Route::get('/home', function () {
+    return view('home');
+});

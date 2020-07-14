@@ -1,7 +1,7 @@
 @extends('layouts.app')
 @section('navbar-left')
 <li class="nav-item mx-lg-2 my-2 my-lg-0">
-    <a class="btn btn-success btn-block" href="{{route('recyclers.create')}}"  data-toggle="tooltip" data-placement="bottom" title="Añadir un nuevo reciclador">
+    <a class="btn btn-success btn-block" href="{{url('/recicladores/crear')}}"  data-toggle="tooltip" data-placement="bottom" title="Añadir un nuevo reciclador">
         <i class="fas fa-user-plus"> </i> {{__('Añadir')}}
     </a>
 </li>
@@ -52,7 +52,7 @@
                             <a href="{{ url('/editar') }}">
                                 <button type="submit" class="btn btn-success w-100 ml-2">Editar</button>
                             </a>
-                            <a href="{{ url('/comunidad') }}">
+                            <a data-toggle="modal" data-target="#detallesModal">
                                 <button type="submit" class="btn btn-danger w-100 ">Eliminar</button>
                             </a>
                         </div>
@@ -75,7 +75,7 @@
                             <a href="{{ url('/editar') }}">
                                 <button type="submit" class="btn btn-success w-100 ml-2">Editar</button>
                             </a>
-                            <a href="{{ url('/comunidad') }}">
+                            <a data-toggle="modal" data-target="#detallesModal">
                                 <button type="submit" class="btn btn-danger w-100 ">Eliminar</button>
                             </a>
                         </div>
@@ -101,7 +101,7 @@
                             <a href="{{ url('/editar') }}">
                                 <button type="submit" class="btn btn-success w-100 ml-2">Editar</button>
                             </a>
-                            <a href="{{ url('/comunidad') }}">
+                            <a data-toggle="modal" data-target="#detallesModal">
                                 <button type="submit" class="btn btn-danger w-100 ">Eliminar</button>
                             </a>
                         </div>
@@ -124,7 +124,7 @@
                             <a href="{{ url('/editar') }}">
                                 <button type="submit" class="btn btn-success w-100 ml-2">Editar</button>
                             </a>
-                            <a href="{{ url('/comunidad') }}">
+                            <a data-toggle="modal" data-target="#detallesModal">
                                 <button type="submit" class="btn btn-danger w-100 ">Eliminar</button>
                             </a>
                         </div>
@@ -151,7 +151,7 @@
                             <a href="{{ url('/editar') }}">
                                 <button type="submit" class="btn btn-success w-100 ml-2">Editar</button>
                             </a>
-                            <a href="{{ url('/comunidad') }}">
+                            <a data-toggle="modal" data-target="#detallesModal">
                                 <button type="submit" class="btn btn-danger w-100 ">Eliminar</button>
                             </a>
                         </div>
@@ -164,9 +164,64 @@
 
     </div>
 </div>
-<div class="container-fluid">
-    
-    
+<div class="modal fade" id="detallesModal" tabindex="-1" role="dialog" aria-labelledby="favoritesModalLabel">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title text-success" id="favoritesModalLabel">Confirmación</h4>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                        aria-hidden="true">&times;</span></button>
+            </div>
+            <div class="modal-body">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-xl-12">
+                            <h1 class="py-2 text-center">Desea eliminar el reciclador?</h1>
+                            <h5 class="lead text-center">Una vez eliminado todos los usuarios asignados pasaran a pendientes de asignar.</h5>
+                            <div class="d-flex justify-content-center">
+                                <i class="fas fa-question" style="width: 10% !important; height: 10% !important;"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <span class="pull-right"><button type="button" class="btn btn-danger"
+                        data-dismiss="modal">Atras</button></span>
+                <a data-dismiss="modal" data-toggle="modal" data-target="#detallesModal1">
+                    <button type="button" class="btn btn-success">Confirmar</button></span>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal fade" id="detallesModal1" tabindex="-1" role="dialog" aria-labelledby="favoritesModalLabel">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title text-success" id="favoritesModalLabel">Exito</h4>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                        aria-hidden="true">&times;</span></button>
+            </div>
+            <div class="modal-body">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-xl-12">
+                            <h1 class="py-2 text-center">Exito!</h1>
+                            <h5 class="lead text-center">Cambios realizados correctamente.</h5>
+                            <div class="d-flex justify-content-center">
+                                <i class="fas fa-check-circle" style="width: 10% !important; height: 10% !important;"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <span class="pull-right"><button type="button" class="btn btn-success"
+                        data-dismiss="modal">Continuar</button></span>
+            </div>
+        </div>
+    </div>
 </div>
 
 @endsection

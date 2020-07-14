@@ -1,7 +1,7 @@
 @extends('layouts.app')
 @section('navbar-left')
 <li class="nav-item mx-lg-2 my-2 my-lg-0">
-    <a class="btn btn-success btn-block" href="{{route('recyclers.create')}}"  data-toggle="tooltip" data-placement="bottom" title="Añadir un nuevo reciclador">
+    <a class="btn btn-success btn-block" href="{{url('recicladores/crear')}}"  data-toggle="tooltip" data-placement="bottom" title="Añadir un nuevo reciclador">
         <i class="fas fa-user-plus"> </i> {{__('Añadir')}}
     </a>
 
@@ -145,7 +145,7 @@
 <div class="modal fade" id="editarHistoria" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog  modal-lg modal-dialog-centered" role="document">
       <div class="modal-content ">
-      <form action="" method="post">
+      <form>
         <div class="modal-header ">
           <h5 class="modal-title text-success" id="tituloHistoria">
             <i class="fas fa-user-edit"></i> Editar Mi Historia</h5>
@@ -188,7 +188,7 @@
 <div class="modal fade" id="editarInfoPerson" tabindex="-1" role="dialog" aria-labelledby="info_personal" aria-hidden="true">
     <div class="modal-dialog  modal-lg modal-dialog-centered" role="document">
       <div class="modal-content ">
-      <form action="" method="post">
+      <form>
         <div class="modal-header ">
           <h5 class="modal-title text-success" id="tituloHistoria">
             <i class="fas fa-user-edit"></i> Editar Información Personal</h5>
@@ -330,7 +330,7 @@
                                   </tr>
                             </thead>
                             <tbody  id="lista">
-                                 <form action="" method="post">
+                                 <form>
                                     <tr>
                                         <td>Envigado</td>
                                         <td>La Magnolia</td>
@@ -356,8 +356,10 @@
             </div>
         </div>
         <div class="modal-footer">
-          <button type="submit" class="btn btn-success">
-            <i class="fas fa-save fa-lg"></i> Guardar Cambios</button>
+            <a href="{{url("/recicladores")}}">
+                <button  class="btn btn-success">
+                <i class="fas fa-save fa-lg"></i> Guardar Cambios</button>
+            </a>
           <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
         </div>
       </div>

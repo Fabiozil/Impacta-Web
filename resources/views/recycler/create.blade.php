@@ -10,7 +10,6 @@
     </div>
 </div>
 <form action="{{route('recyclers.store')}}" method="post" enctype="multipart/form-data">
-    @csrf
     <div class="container">
         <div class="row">
             <div class="col-xl-12">
@@ -217,10 +216,6 @@
                                         <div class="input-group">
                                             <select class="custom-select  @error('residuos') is-invalid @enderror"
                                                 id="residuo" aria-label="Example select with button addon">
-                                                @foreach ($materiales as $material)
-                                                <option value="{{$material->id}}">
-                                                    {{$material->nombre.': '.$material->nombresub}}</option>
-                                                @endforeach
                                             </select>
                                             <div class="input-group-append">
                                                 <button class="btn btn-outline-success" type="button"
@@ -263,9 +258,6 @@
                                                     <select
                                                         class="custom-select  @error('sectors') is-invalid @enderror"
                                                         id="municipio" aria-label="Example select with button addon">
-                                                        @foreach ($municipios as $mun)
-                                                        <option value="{{$mun->id}}">{{$mun->nombre_mun}}</option>
-                                                        @endforeach
                                                     </select>
                                                     @error('sectors')
                                                     <div class="invalid-tooltip">{{ $message }}</div>
@@ -422,7 +414,7 @@
                                     <button  class="btn btn-danger mr-1 mb-2">Volver</button>
                                 </a>
                                 <a href="{{ url('/recicladores') }}">
-                                <button class="btn btn-success mr-2 mb-2">Registrar</button>
+                                    <button class="btn btn-success mr-2 mb-2">Registrar</button>
                                 </a>
                             </div>
                         </div>

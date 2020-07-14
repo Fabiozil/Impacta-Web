@@ -8,8 +8,8 @@
     </div>
 
     <ul class="list-unstyled components">
-        <li class="{{ Request::is('recyclers') ? 'active' : ''}}">
-        <a href="{{route('recyclers.index')}}">
+        <li>
+        <a href="{{url('/recicladores')}}">
                 <i class="fas fa-users"></i>
                 Mis recicladores
             </a>
@@ -19,7 +19,7 @@
                 <i class="fas fa-street-view"></i>
                 Mi comunidad
             </a>
-            <a href="/emisiones">
+            <a href="/historial">
                 <i class="fas fa-chart-line"></i>
                 Indicadores Ambientales
             </a>

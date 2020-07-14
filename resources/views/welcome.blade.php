@@ -17,19 +17,20 @@
         <div class="col-5">
             <div class="card border mb-3">
                 <div class="card-body text">
-                    <form action="">
+                    <form>
                         <div class="form-group">
-                            <label for="exampleFormControlInput1">Nombre de la corporacion</label>
-                            <input type="text" class="form-control" id="exampleFormControlInput1"
+                            <label>Nombre de la corporacion</label>
+                            <input type="text" class="form-control" 
                                 placeholder="James David Rodriguez Rubio">
                         </div>
                         <div class="form-group">
-                            <label for="exampleFormControlInput1">Contraseña</label>
-                            <input type="password" class="form-control" id="exampleFormControlInput1"
-                                placeholder="name@example.com">
+                            <label>Contraseña</label>
+                            <input type="password" class="form-control" 
+                                placeholder="Contraseña">
                         </div>
-                        <button type="submit" class="btn btn-success w-100 h-25"
-                        onclick="eliminar_comuna()">Entrar</button>
+                        <a href="{{url("/register2")}}">
+                                <button type="submit" class="btn btn-success w-100 h-25">Entrar</button>
+                        </a>
                     </form>
                 </div>
                 <div class="card-footer bg-transparent border">
@@ -38,7 +39,7 @@
                         <a href="#" class="text-decoration-none text-primary">terminos de servicio</a> y
                         <a href="#" class="text-decoration-none text-primary">privacidad.</a>
                         Te enviaremos correos con informacion sobre tu cuenta ocasionalmente. Si no tienes una cuenta haz click
-                        <a href="{{ route('register') }}" class="text-decoration-none text-primary">aquí</a> para registrarte
+                        <a href="{{ url('/register') }}" class="text-decoration-none text-primary">aquí</a> para registrarte
                     </small>
                 </div>
             </div>
