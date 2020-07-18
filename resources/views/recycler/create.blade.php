@@ -3,10 +3,9 @@
 @section('content')
 <div class="container">
     <div class="py-5 text-center titulo">
-        <h1 class="text-success">Ingresar nuevo(a) reciclador(a)</h1>
-        <p class="lead">Utiliza los campos a continuación para ingresar la información necesaria para crear nuevo
-            reciclador
-            en el sistema. Para confirmar tus cambios por favor presiona el botón de aceptar al final de la página.</p>
+        <h1 class="text-success">Ingresar nuevo reciclador(a)</h1>
+        <p class="lead">Utiliza los campos a continuación para ingresar la información necesaria de un nuevo reciclador
+            o recicladora en el sistema.</p>
     </div>
 </div>
 <form action="{{route('recyclers.store')}}" method="post" enctype="multipart/form-data">
@@ -23,11 +22,13 @@
                                             <div class="py-5 text-center subtitle">
                                                 <h2>Mi perfil</h2>
                                             </div>
-                                            <div class="text-center ">
-                                                <img id="imgSalida"
-                                                    class="imgRecycler bg-white border border-success rounded-circle w-100"
-                                                    src="{{ asset('user-alt-solid.svg') }}" />
-                                                <label class="mt-2">Carga una foto de perfil para tu reciclador(a).</label>
+                                            <div class="text-center">
+                                                <div class="border rounded-circle overflow-hidden border-success"
+                                                    style="height: 250px; width: 250px; margin-left: auto; margin-right: auto">
+                                                    <i class="fas fa-user-tie"
+                                                        style="width: 100% !important; height: 100% !important;"></i>
+                                                </div>
+                                                <label class="mt-2">Carga una foto de perfil.</label>
                                             </div>
                                             <div class="input-group ">
                                                 <div class="input-group-prepend">
@@ -43,10 +44,10 @@
                                                         for="inputGroupFile01">Archivo</label>
                                                 </div>
                                             </div>
-                                            <label>Capacidad maxima: 2048Kb</label><br>
+                                            <label>Capacidad máxima 20 Mb</label><br>
                                             <small>
                                                 <ul>
-                                                    <li>La foto debe ser .JPG o .PNG</li>
+                                                    <li>El formato de la foto debe ser .jpg o .png</li>
                                                     <li>La foto debe ser en lo posible cuadrada</li>
                                                 </ul>
                                             </small>
@@ -60,20 +61,22 @@
                         <div class="container">
                             <div class="row bg-light mt-3">
                                 <div class="col-xl-12">
-                                    <div class="py-5 subtitle">
+                                    <div class="py-5 subtitle pb-1">
                                         <h2>Mis datos personales</h2>
-                                        <p class="lead"> Utiliza los campos a continuación para ingresar la información
-                                            referente a
-                                            los datos personales del(a) nuevo(a) reciclador(a).</p>
+                                        <p class="lead">Ingresa la información referente a los datos personales del
+                                            nuevo reciclador(a).</p>
+                                        <small>Los campos señalados con <strong class="text-danger">*</strong> son
+                                            obligatorios.</small>
                                     </div>
                                 </div>
 
                             </div>
-                            <div class="row bg-light ">
+                            <div class="row bg-light p-4">
                                 <div class="col-xl-12 my-3">
                                     <div class="form-group w-100">
                                         <div class="form-group row">
-                                            <label for="nombres" class="col-sm-2 col-form-label">Nombre</label>
+                                            <label for="nombres" class="col-sm-2 col-form-label">Nombre <strong
+                                                    class="text-danger">*</strong></label>
                                             <div class="col-sm-10">
                                                 <div class="input-group mb-2">
                                                     <input type="text" name="nombres"
@@ -82,9 +85,8 @@
                                                         value="{{ old('nombres') }}">
                                                     <div class="input-group-append">
                                                         <span class="btn btn-info" data-toggle="tooltip"
-                                                            data-placement="top" title="Registra el
-                                                    primer y segundo nombre (si aplica) de tu reciclador como en
-                                                    el ejemplo.">
+                                                            data-placement="top"
+                                                            title="Digita el primer y segundo nombre (si aplica) manteniendo la configuración de primera letra en mayúscula para cada uno de los nombres. Ten en cuenta una buena ortografía.">
                                                             <i class="fas fa-info-circle"></i></span>
                                                     </div>
                                                     @error('nombres')
@@ -94,7 +96,8 @@
                                             </div>
                                         </div>
                                         <div class="form-group row">
-                                            <label for="apellidos" class="col-sm-2 col-form-label">Apellido</label>
+                                            <label for="apellidos" class="col-sm-2 col-form-label">Apellido <strong
+                                                    class="text-danger">*</strong></label>
                                             <div class="col-sm-10">
                                                 <div class="input-group mb-2">
                                                     <input type="text" name="apellidos"
@@ -103,9 +106,8 @@
                                                         value="{{ old('apellidos') }}">
                                                     <div class="input-group-append">
                                                         <span class="btn btn-info" data-toggle="tooltip"
-                                                            data-placement="top" title="Registra el
-                                                    apellido teniendo en cuenta el uso de mayúsculas y buena
-                                                    ortografía.">
+                                                            data-placement="top"
+                                                            title="Digita el apellido manteniendo la configuración de primera letra en mayúscula. Ten en cuenta una buena ortografía.">
                                                             <i class="fas fa-info-circle"></i></span>
                                                     </div>
                                                     @error('apellidos')
@@ -124,7 +126,7 @@
                                                     <div class="input-group-append">
                                                         <span class="btn btn-info" data-toggle="tooltip"
                                                             data-placement="top"
-                                                            title="Si tu reciclador prefiere ser llamado por su apodo por favor ingresa el apodo correspondiente.">
+                                                            title="Digita este campo si tu reciclador o recicladora prefiere ser llamado por su apodo. Ten en cuenta una buena ortografía.">
                                                             <i class="fas fa-info-circle"></i></span>
                                                     </div>
                                                     @error('apodo')
@@ -149,7 +151,8 @@
                                             </div>
                                         </div>
                                         <div class="form-group row">
-                                            <label for="edad" class="col-sm-2 col-form-label">Edad</label>
+                                            <label for="edad" class="col-sm-2 col-form-label">Edad <strong
+                                                    class="text-danger">*</strong></label>
                                             <div class="col-sm-10">
 
                                                 <input type="number" name="edad"
@@ -171,7 +174,7 @@
                                                     <div class="input-group-append">
                                                         <span class="btn btn-info" data-toggle="tooltip"
                                                             data-placement="top"
-                                                            title="Registra los diez dígitos del número celular de tu reciclador sin espacios intermedios. P. ej. 3041112233">
+                                                            title="Digita este campo si tu reciclador o recicladora desea ser contactado por la corporación o por uno de los usuarios asignados. ">
                                                             <i class="fas fa-info-circle"></i></span>
                                                     </div>
                                                     @error('celular')
@@ -196,8 +199,8 @@
                     <div class="col-xl-12">
                         <div class="py-5 subtitle">
                             <h2>Mi labor</h2>
-                            <p class="lead">Utiliza los campos a continuación para ingresar la información referente a
-                                los materiales que recolecta el(la) reciclador(a) y a las zonas y horarios en que trabaja.</p>
+                            <p class="lead">Ingresa la información referente a las condiciones laborales del nuevo
+                                reciclador(a).</p>
                         </div>
                     </div>
                     <div class="row">
@@ -205,9 +208,9 @@
                             <div class="col-xl-12 h-100">
                                 <div class="row align-items-center">
                                     <div class="col-xl-12">
-                                        <h5>Materiales que recolecto
+                                        <h5>Materiales de recolección
                                             <button class="btn btn-info" type="button" data-toggle="tooltip"
-                                                data-placement="right" title="Para agregar un material a la lista de materiales que el reciclador recicla, selecciona un material de la lista a continuación y presiona el botón agregar.
+                                                data-placement="right" title="Adiciona cada una de las categorías de material reciclable que es recolectado por el nuevo reciclador(a). Ten en cuenta que este material debe ser aprovechado por la corporación.
                                             ">
                                                 <i class="fas fa-info-circle"></i>
                                             </button>
@@ -216,10 +219,16 @@
                                         <div class="input-group">
                                             <select class="custom-select  @error('residuos') is-invalid @enderror"
                                                 id="residuo" aria-label="Example select with button addon">
+                                                <option value="Cartón">Cartón</option>
+                                                <option value="">Metales</option>
+                                                <option value="">Papel</option>
+                                                <option value="">Plástico</option>
+                                                <option value="">Tetra pak</option>
+                                                <option value="">Vidrio</option>
                                             </select>
                                             <div class="input-group-append">
-                                                <button class="btn btn-outline-success" type="button"
-                                                    id="boton_agregar_residuo">Agregar
+                                                <button class="btn btn-outline-primary" type="button"
+                                                    id="boton_agregar_residuo">Adicionar
                                                 </button>
                                             </div>
                                             @error('residuos')
@@ -230,21 +239,21 @@
                                             id="Tlista_residuos">
                                             <thead>
                                                 <tr>
-                                                    <th class="col-md-9" scope="col">Residuos</th>
+                                                    <th class="col-md-9" scope="col">Materiales</th>
                                                     <th class="col-md-3" scope="col"></th>
                                                 </tr>
                                             </thead>
                                             <tbody id="Blista_residuos">
                                                 <tr>
-                                                    <th colspan="2">No hay residuos seleccionados</th>
+                                                    <th colspan="2">No hay materiales seleccionados</th>
                                                 </tr>
                                             </tbody>
                                         </table>
                                     </div>
                                 </div>
-                                <h5>Zonas de recoleccion
+                                <h5>Zonas de recolección
                                     <button class="btn btn-info" type="button" data-toggle="tooltip"
-                                        data-placement="right" title="Utiliza los campos a continuación para ingresar la información referente a las zonas (municipio, comuna, barrio) y horarios en los que trabaja el reciclador, luego presiona el botón añadir.
+                                        data-placement="right" title="Adiciona cada una de las localidades por donde labora el nuevo reciclador(a). Ingresa el municipio, comuna (si aplica) y el barrio, con el respectivo horario de trabajo.
                                     ">
                                         <i class="fas fa-info-circle"></i>
                                     </button>
@@ -279,7 +288,7 @@
                                 <div class="row">
                                     <div class="col-xl-6 col-lg-12 col-md-12">
                                         <div class="form-group">
-                                            <label for="sector">Sectores</label>
+                                            <label for="sector">Barrrio</label>
                                             <select class="custom-select @error('sectors') is-invalid @enderror "
                                                 id="sector" aria-label="Example select with button addon">
 
@@ -287,7 +296,7 @@
                                         </div>
                                     </div>
                                     <div class="col-xl-6 col-lg-12 col-md-12">
-                                        <p>Día:</p>
+                                        <p>Día (s):</p>
                                         <div class="row">
                                             <div class="col-sm-6">
                                                 <div class="custom-control custom-checkbox">
@@ -333,23 +342,27 @@
                                     </div>
                                 </div>
                                 <div class="row">
+                                    <div class="col-12">
+                                        <h5>Horario de trabajo</h5>
+                                    </div>
+                                    
                                     <div class="col-xl-6 col-lg-6 col-md-12">
                                         <div class="form-group">
-                                            <label for="Hinit">Hora Inicio</label>
+                                            <label for="Hinit">Desde</label>
                                             <input type="time" class="form-control" id="Hinit" value="07:00" min="07:00"
                                                 max="20:00">
                                         </div>
                                     </div>
                                     <div class="col-xl-6 col-lg-6 col-md-12">
                                         <div class="form-group ">
-                                            <label for="Hfinal">Hora fin</label>
+                                            <label for="Hfinal">Hasta</label>
                                             <input type="time" class="form-control" id="Hfinal" value="20:00"
                                                 min="07:00" max="20:00">
                                         </div>
                                     </div>
                                 </div>
                                 <div class="row table-responsive m-1">
-                                    <button id="addGeo" class="btn btn-success btn-block" type="button">Añadir</button>
+                                    <button id="addGeo" class="btn btn-outline-primary btn-block" type="button">Adicionar</button>
                                     <div id="alerta_sector" class="alert alert-warning  d-nonei my-2">
                                         <strong>Atenci&oacute;n!</strong>
                                         Valide que est&eacute; ingresando al menos un d&iacute;a de la semana<br>
@@ -385,8 +398,7 @@
                         <div class="container cont-rec h-100">
                             <div class="py-5 subtitle">
                                 <h2>Mi historia</h2>
-                                <p class="lead">Utiliza el campo de texto a continuación para ingresar la historia de tu
-                                    nuevo reciclador.</p>
+                                <p class="lead">Ingresa una historia del nuevo reciclador(a) a presentar a los usuarios.</p>
                             </div>
                             <div class="container h-100">
                                 <div class="input-group h-100">
@@ -398,24 +410,35 @@
                                     @enderror
 
                                 </div>
-                                <small id="emailHelp" class="form-text text-muted">Aquí te damos cinco consejos para que
-                                    crees la historia de tu reciclador(a):
-                                    1. Describe características demográficas como su lugar de procedencia.
-                                    2. Menciona el tiempo que lleva dedicado a su profesión.
-                                    3. Menciona una razón de trasfondo diferente a obtener un ingreso económico por la
-                                    cual tu reciclador(a) realiza su labor.
-                                    4. Comunicar ¿cómo la comunidad puede aportar a facilitar su trabajo?
-                                    5.Transmitir el impacto que tiene la ayuda de la comunidad en la vida del(a)
-                                    reciclador(a).
+                                <small>Capacidad máxima: 500 caracteres</small>
+                                <small id="emailHelp" class="form-text text-muted">Aquí te damos cuatro consejos para que crees la historia del nuevo reciclador(a):
+                                    <ol>
+                                        <li>
+                                            Describe características demográficas como su lugar de procedencia. 
+                                        </li>
+                                        <li>
+                                            Menciona el tiempo que lleva dedicado a su profesión.
+                                        </li>
+                                        <li>
+                                            Menciona una razón de trasfondo diferente a obtener un ingreso económico por la cual el reciclador(a) realiza su labor.
+                                        </li>
+                                        <li>
+                                            Transmitir el impacto que tiene la ayuda de la comunidad en la vida del reciclador(a).
+                                        </li>
+                                    </ol>
                                 </small>
                             </div>
-                            <div class="row align-items-center justify-content-end">
-                                <a href="{{ url('/recicladores') }}">
-                                    <button  class="btn btn-danger mr-1 mb-2">Volver</button>
-                                </a>
-                                <a href="{{ url('/recicladores') }}">
-                                    <button class="btn btn-success mr-2 mb-2">Registrar</button>
-                                </a>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="d-flex justify-content-end">
+                            <a href="{{ url('/recicladores') }}" class="w-50 p-2">
+                                <button class="btn btn-danger mr-1 mb-2 w-100 p-2">Regresar</button>
+                            </a>
+                            <a data-toggle="modal" data-target="#detallesModal" class="w-50 p-2">
+                                <button class="btn btn-success mr-2 mb-2 w-100 p-2">Registrar</button>
+                            </a>
                             </div>
                         </div>
                     </div>
@@ -427,7 +450,83 @@
 
     </div>
 </form>
+<div class="modal fade" id="detallesModal" tabindex="-1" role="dialog" aria-labelledby="favoritesModalLabel">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                        aria-hidden="true">&times;</span></button>
+            </div>
+            <div class="modal-body">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-xl-12">
+                            <h1 class="py-2 text-center">¿Deseas eliminar este reciclador(a)?</h1>
+                            <div class="d-flex justify-content-center mt-2 mb-2">
+                                <i class="fas fa-question" style="width: 10% !important; height: 10% !important;"></i>
+                            </div>
+                            <li class="list-group-item">
+                                <div class="row">
+                                    <div class="col-xl-5 col-sm-12 p-0">
+                                        <img src="{{ url('/Jeison.jpg') }}" class="border border-success rounded-circle imgpg" alt="Avimilé" style="display: block; margin-right: auto; margin-left: auto;">
+                                        <p class="text-center mt-1">Miembro hace 4 años</p>
+                                    </div>
+                                    <div class="col-xl-7 col-sm-12 p-0">
+                                        <p class="lead text-center border-bottom"><strong>Jeison Guzmán</strong></p>
+                                        <p>Apodo: Jeison</p>
+                                        <p>Teléfono: 253 19 72</p>
+                                        <p>Usuarios asignados: 12</p>
+        
+                                    </div>
+                                </div>
+                            </li>
+                            <h5 class="lead text-center mt-2">Una vez eliminado el reciclador(a), todos los usuarios asignados pasarán a estar pendientes de asignar. Ver mapa "Mi Comunidad"</h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <span class="pull-right"><button type="button" class="btn btn-danger"
+                        data-dismiss="modal">Regresar</button></span>
+                <a data-dismiss="modal" data-toggle="modal" data-target="#detallesModal1">
+                    <button type="button" class="btn btn-success">Confirmar</button></span>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
 
+<div class="modal fade" id="detallesModal1" tabindex="-1" role="dialog" aria-labelledby="favoritesModalLabel">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title text-success" id="favoritesModalLabel">Exito</h4>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                        aria-hidden="true">&times;</span></button>
+            </div>
+            <div class="modal-body">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-xl-12">
+                            <h1 class="py-2 text-center">Exito!</h1>
+                            <h5 class="lead text-center">Cambios realizados correctamente.</h5>
+                            <div class="d-flex justify-content-center">
+                                <i class="fas fa-check-circle" style="width: 10% !important; height: 10% !important;"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <span class="pull-right">
+                    <a href={{url("/recicladores")}}>
+                        <button type="button" class="btn btn-success">Continuar</button></span>
+                    </a>
+                    
+            </div>
+        </div>
+    </div>
+</div>
 @endsection
 @section('script')
 <script src="{{ asset('js/dropdown.js') }}"></script>
@@ -568,4 +667,5 @@
     });
 
 </script>
+
 @endsection

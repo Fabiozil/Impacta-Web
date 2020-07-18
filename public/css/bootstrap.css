@@ -57,6 +57,17 @@ html {
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 
+.imgp{
+  object-fit: cover;
+  width:120px;
+  height:120px;
+}
+.imgpg{
+  object-fit: cover;
+  width:200px;
+  height:200px;
+}
+
 article, aside, figcaption, figure, footer, header, hgroup, main, nav, section {
   display: block;
 }

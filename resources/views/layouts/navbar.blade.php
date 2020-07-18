@@ -10,13 +10,13 @@
     <ul class="list-unstyled components">
         <li>
         <a href="{{url('/recicladores')}}">
-                <i class="fas fa-users"></i>
+                <i class="fas fa-street-view"></i>
                 Mis recicladores
             </a>
         </li>
         <li>
             <a href="/comunidad">
-                <i class="fas fa-street-view"></i>
+                <i class="fas fa-users"></i>
                 Mi comunidad
             </a>
             <a href="/historial">
