@@ -61,18 +61,29 @@ html {
   object-fit: cover;
   width:120px;
   height:120px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
 .imgpg{
   object-fit: cover;
   width:200px;
   height:200px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 article, aside, figcaption, figure, footer, header, hgroup, main, nav, section {
   display: block;
 }
 .logo-corp{
-  max-width: 50%;
+  height: 100px;
+  width: 100px;
+  object-fit: cover;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
 }
 .logo-corpr{
   max-width: 100%;
@@ -6397,9 +6408,9 @@ a.close.disabled {
 .tooltip-inner {
   max-width: 200px;
   padding: 0.25rem 0.5rem;
-  color: #fff;
+  color: rgb(255, 255, 255);
   text-align: center;
-  background-color: #000;
+  background-color: rgba(0, 0, 0, 0.452);
 }
 
 .popover {

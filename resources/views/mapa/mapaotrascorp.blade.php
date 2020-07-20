@@ -4,26 +4,28 @@
 <div class="card">
     <div class="card-header">
         <h1 class="py-3 text-center text-success">Otras comunidades</h1>
-        <h3 class="lead text-center">Aquí podrás encontrar información acerca de los usuarios que se encuentran afiliados en otras comunidades e informacion sobre su desempeño.</h3>
+        <h3 class="lead text-center">Aquí podrás encontrar información acerca de los usuarios que hacen parte de otras corporaciones de recicladores.</h3>
     </div>
-    <div class="card-body">
-        <div class="d-flex flex-row-reverse">
+    <div class="border border-solid">
+        <div class="d-flex flex-row-reverse p-2">
             <span class="btn btn-info mb-2 ml-0" data-toggle="tooltip" data-placement="top"
-            title="Utiliza la pestaña de otras comunidades para visualizar información acerca de otras organizaciones de reciclaje y de sus comunidades.">
-            <i class="fas fa-info-circle"></i></span>
-            <a href="#">
-                <button type="submit" class="btn btn-outline-success mb-2 mr-0 ml-2">Ver otras comunidades
+                title="Utiliza este botón para visualizar los usuarios que hacen parte de otras corporaciones de recicladores.">
+                <i class="fas fa-info-circle"></i></span>
+            <a href="">
+                <button type="submit" class="btn btn-outline-success mb-2 mr-0 ml-2">Otras comunidades
                 </button>
             </a>
 
             <span class="btn btn-info mb-2 ml-0" data-toggle="tooltip" data-placement="top"
-            title="Utiliza la pestaña de ver mi comunidad para visualizar información acerca de mi organizacion y mi comunidad.">
-            <i class="fas fa-info-circle"></i></span>
+                title="Utiliza este botón para visualizar los usuarios asignados y pendientes por asignación que hacen parte de su comunidad.">
+                <i class="fas fa-info-circle"></i></span>
             <a href="{{ url('/comunidad') }}">
-                <button type="submit" class="btn btn-success mb-2 mr-0">Ver mi comunidad
+                <button type="submit" class="btn btn-success mb-2 mr-0">Mi comunidad
                 </button>
             </a>
         </div>
+    </div>
+    <div class="card-body">
 
         <div id="map" class="h-100 w-100" style="border:2px solid;">
             <img src="{{url("/5.png")}}" alt="Mapa" style="max-height: 100%; max-width: 100%">

@@ -1,5 +1,10 @@
 @extends('layouts.app')
 @section('navbar-left')
+<input type="text" class="form-control ml-2" placeholder="Buscar reciclador" aria-label="Buscador de recicladores" aria-describedby="filtrar">
+            <div class="input-group-append">
+                <button class="btn btn-outline-success" type="button" id="filtrar">
+                <i class="fas fa-search"></i></button>
+            </div>
 @endsection
 @section('content')
 <div class="card shadow w-100">
@@ -13,19 +18,11 @@
             </div>
         </div>
     </div>
-    <div class="card-body">
-        <div class="d-flex justify-content-end">
-            <a class="btn btn-success mr-3" href="{{url('/recicladores/crear')}}"  data-toggle="tooltip" data-placement="bottom" title="Añadir un nuevo reciclador">
-            <i class="fas fa-user-plus"> </i> {{__('Añadir')}} reciclador</a>
-            <input type="text" class="form-control w-25" placeholder="Buscar reciclador" aria-label="Buscador de recicladores" aria-describedby="filtrar">
-            <div class="input-group-append">
-                <button class="btn btn-outline-success" type="button" id="filtrar">
-                <i class="fas fa-search"></i></button>
-            </div>
-        </div>
-        
-        
-        
+    <div class="card-body p-2 pl-3">
+        <a class="btn btn-success mr-3" href="{{url('/recicladores/crear')}}"  data-toggle="tooltip" data-placement="bottom" title="Añadir un nuevo reciclador">
+        <i class="fas fa-user-plus"> </i> {{__('Añadir')}} reciclador</a>
+    </div>
+    <div class="card-footer">
         <div class="row">
             <div class="col-xl-4 col-md-6 col-sm-12 p-1">
                 <ul class="list-group list-group-flush">
@@ -154,9 +151,6 @@
                 </ul>
             </div>
         </div>
-    </div>
-    <div class="card-footer">
-
     </div>
 </div>
 <div class="modal fade" id="detallesModal" tabindex="-1" role="dialog" aria-labelledby="favoritesModalLabel">
