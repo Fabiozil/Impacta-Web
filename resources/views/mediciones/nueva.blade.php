@@ -1,5 +1,11 @@
 @extends('layouts.app')
-
+@section('navbar-left')
+<input type="text" class="form-control ml-2" placeholder="Buscar reciclador" aria-label="Buscador de recicladores" aria-describedby="filtrar">
+            <div class="input-group-append">
+                <button class="btn btn-outline-success" type="button" id="filtrar" onclick="buscar()">
+                <i class="fas fa-search"></i></button>
+            </div>
+@endsection
 @section('content')
 
 
@@ -7,66 +13,90 @@
     <div class="card border shadow">
         <div class="card-header">
             <h1 class="py-2 text-center text-success">
-                Materiales Aprovechados
+                Nueva medición
             </h1>
-            <h3 class="lead text-center">Aquí podrás ingresar los datos de una nueva recoleccion, llena los campos segun
-                la cantidad de material recolectado en su campo correspondiente para registrar la recoleccion</h3>
+            <h3 class="lead text-center">Aquí podrás la cantidad de material reciclable recolectada para una nueva
+                medición. Llena los campos según el tipo de material correspondiente a cada uno de ellos.</h3>
         </div>
-        <div class="card-body">
-            <div class="d-flex flex-row-reverse">
-                <span class="btn btn-info mb-2 ml-0" data-toggle="tooltip" data-placement="top"
-                    title="Utiliza esta pestaña para ingresar una nueva medición.">
-                    <i class="fas fa-info-circle"></i></span>
-                <a href="#">
-                    <button type="submit" class="btn btn-outline-success mb-2 mr-0 ml-2">Ingresar nueva medición
+        <div class="border-bottom border-solid">
+            <div class="d-flex flex-row pl-2 pt-1">
+                <a href="{{ url('/historial') }}">
+                    <button type="submit" class="btn btn-success mb-2 mr-0 ml-2">Información Histórica
                     </button>
                 </a>
                 <span class="btn btn-info mb-2 ml-0" data-toggle="tooltip" data-placement="top"
                     title="Utiliza esta pestaña para ver el histograma de los materiales reciclados por tu corporacion.">
                     <i class="fas fa-info-circle"></i></span>
-                <a href="{{ url('/historial') }}">
-                    <button type="submit" class="btn btn-success mb-2 mr-0 ml-2">Ver historico de emisiones
+
+                <a href="#">
+                    <button type="submit" class="btn btn-outline-success mb-2 mr-0 ml-2">Nueva medición
                     </button>
                 </a>
-
+                <span class="btn btn-info mb-2 ml-0" data-toggle="tooltip" data-placement="top"
+                    title="Utiliza este botón para ingresar una nueva medición del material reciclable recuperado desde la última fecha de corte">
+                    <i class="fas fa-info-circle"></i></span>
 
             </div>
+        </div>
+        <div class="card-body">
             <form action="/indicadores">
-                <label for="fechacorte">Fecha de Corte: </label>
-                <div class="input-group inline w-100 mb-2">
-                    <div class="col-xl-6 col-sm-12 pl-0">
-                        <label class="mr-2">Inicio:</label>
-                        <input class="form-control mb-3" type="date" id="fechacorte" name="fechacorte"
-                            value="1 Enero 2020" />
-                    </div>
-                    <div class="col-xl-6 col-sm-12 pl-0 pr-0">
-                        <label class="ml-2 mr-2">Fin:</label>
-                        <input class="form-control mb-3" type="date" id="fechacorte" name="fechacorte"
-                            value="1 Enero 2020" />
+                <div class="border-bottom border-solid mb-2">
+                    <h2 for="fechacorte">Fecha de Corte: </h2>
+                    <div class="input-group inline w-100">
+                        <div class="col-xl-6 col-sm-12 pl-0">
+                            <label class="mr-2">Desde:</label>
+                            <input class="form-control mb-3" type="date" id="fechacorte" name="fechacorte"
+                                value="1 Enero 2020" />
+                        </div>
+                        <div class="col-xl-6 col-sm-12 pl-0 pr-0">
+                            <label class="ml-2 mr-2">Hasta:</label>
+                            <input class="form-control mb-3" type="date" id="fechacorte" name="fechacorte"
+                                value="1 Enero 2020" />
 
+                        </div>
                     </div>
+
                 </div>
+                <h2>Categorias de material</h2>
                 <div class="form-row">
                     <div class="col-xl-6 col-sm-12">
-                        <label for="organico">Metales (kg):</label>
+                        <label for="organico">Cartón (kg):</label>
                         <div class="input-group mb-2">
                             <input class="form-control" type="number" id="organico" name="organico" value="0" />
                             <div class="input-group-append">
-                                <span class="btn btn-info" data-toggle="tooltip" data-placement="top" title="Registra el
-                            primer y segundo nombre (si aplica) de tu reciclador como en
-                            el ejemplo.">
+                                <span class="btn btn-info" data-toggle="tooltip" data-html="true" data-placement="top"
+                                    title="<ol>
+                                            <li>
+                                                <p><strong>Cartón:</strong> cartón corrugado y plegadiza. P. ej. cajas de cartón.</p>
+                                            </li>
+                                            <li>
+                                                <p><strong>Tetrapak:</strong> cajas de tetrapak. P. ej. cajas tetrapak de leche..</p>
+                                            </li>
+                                        </ol>
+                                ">
                                     <i class="fas fa-info-circle"></i></span>
                             </div>
                         </div>
                     </div>
                     <div class="col-xl-6 col-sm-12">
-                        <label for="vidrio">KG Cartón (kg):</label><br />
+                        <label for="vidrio">Metales (kg):</label><br />
                         <div class="input-group mb-2">
                             <input class="form-control" type="number" id="organico" name="organico" value="0" />
                             <div class="input-group-append">
-                                <span class="btn btn-info" data-toggle="tooltip" data-placement="top" title="Registra el
-                            primer y segundo nombre (si aplica) de tu reciclador como en
-                            el ejemplo.">
+                                <span class="btn btn-info" data-html="true" data-toggle="tooltip" data-placement="top"
+                                    title="
+                                <ol>
+                                    <li>
+                                        <p><strong>Aluminio:</strong>aluminio grueso, aluminio Karla, aluminio perfil y aluminio persiana. P.ej. latas de cerveza</p>
+                                    </li>
+                                    <li>
+                                        <p><strong>Cobre:</strong> cobre amarillo, cobre rojo y cobre rojo brillante. P. ej. tubería de cobre.</p>
+                                    </li>
+                                    <li>
+                                        <p><strong>Cobre: </strong> Materiales hechos de hierro, cobre y/o zinc. P. ej. varillas de acero.</p>
+                                    </li>
+                                </ol>
+                                ">
                                     <i class="fas fa-info-circle"></i></span>
                             </div>
                         </div>
@@ -74,27 +104,12 @@
                 </div>
                 <div class="form-row">
                     <div class="col-xl-6 col-sm-12">
-                        <label for="latas">Vidrio (kg):</label><br />
+                        <label for="latas">Papel:</label><br />
                         <div class="input-group mb-2">
                             <input class="form-control" type="number" id="organico" name="organico" value="0" />
                             <div class="input-group-append">
                                 <span class="btn btn-info" data-toggle="tooltip" data-placement="left" data-html="true"
-                                    title="
-                                    <ol>
-                                        <li>
-                                            <p><strong>Vidrio reciclable:</strong> Materiales de vidrio que serán reciclados
-                                            para generar nueva materia prima, también conocido como vidrio quebrado. P. ej.
-                                            Vidrio casco transparente, vidrio casco verde y vidrio casco ambar.</p>
-                                        </li>
-                                        <li>
-                                            <p><strong>Vidrio reutilizable:</strong> Materiales de vidrio que serán reutilizados
-                                                dentro de una cadena de producción, también llamado frasco bocón P. ej. Vidrio
-                                                casco transparente, vidrio casco verde y vidrio casco ambar. En el caso de no
-                                                contar con esta clasificación, por favor ingresar el material de vidrio en la
-                                                subcategoría de vidrios a reciclar</p>
-                                        </li>
-                                    </ol>
-                                    ">
+                                    title="Materiales reciclables a partir del papel. P.ej. papel de archivo, papel bond y/o papel periódico plano">
 
                                     <i class="fas fa-info-circle"></i>
                                 </span>
@@ -106,9 +121,20 @@
                         <div class="input-group mb-2">
                             <input class="form-control" type="number" id="organico" name="organico" value="0" />
                             <div class="input-group-append">
-                                <span class="btn btn-info" data-toggle="tooltip" data-placement="top" title="Registra el
-                            primer y segundo nombre (si aplica) de tu reciclador como en
-                            el ejemplo.">
+                                <span class="btn btn-info" data-toggle="tooltip" data-html="true" data-placement="top" 
+                                title="
+                                <ol>
+                                    <li>
+                                        <p><strong>Pasta:</strong> plástico definidos 'pasta' por el sector. P. ej. recipientes de detergentes.</p>
+                                    </li>
+                                    <li>
+                                        <p><strong>PET:</strong> plástico hecho de polietileno tereftalato (PET). P. ej. envases de bebidas.</p>
+                                    </li>
+                                    <li>
+                                        <p><strong>Plástico flexible:</strong> plástico definidos 'flexibles' por el sector. P. ej. bolsas plásticas de supermercado.</p>
+                                    </li>
+                                </ol>
+                            ">
                                     <i class="fas fa-info-circle"></i></span>
                             </div>
                         </div>
@@ -116,13 +142,21 @@
                 </div>
                 <div class="form-row">
                     <div class="col-xl-6 col-sm-12">
-                        <label for="papel">Papel (kg):</label><br />
+                        <label for="papel">Vidrio (kg):</label><br />
                         <div class="input-group mb-2">
                             <input class="form-control" type="number" id="organico" name="organico" value="0" />
                             <div class="input-group-append">
-                                <span class="btn btn-info" data-toggle="tooltip" data-placement="top" title="Registra el
-                            primer y segundo nombre (si aplica) de tu reciclador como en
-                            el ejemplo.">
+                                <span class="btn btn-info" data-toggle="tooltip" data-html="true" data-placement="top"
+                                    title="
+                                <ol>
+                                    <li>
+                                        <p><strong>Vidrio reciclable:</strong> vidrio para nueva materia prima o vidrio quebrado. P. ej. vidrio transparente, verde y/o ambar. </p>
+                                    </li>
+                                    <li>
+                                        <p><strong>Vidrio reutilizable:</strong> vidrio a reutilizar dentro de una cadena de producción o frasco bocón P. ej. vidrio transparente, verde y/o ambar.</p>
+                                    </li>
+                                </ol>
+                            ">
                                     <i class="fas fa-info-circle"></i></span>
                             </div>
                         </div>
@@ -133,11 +167,11 @@
         <div class="card-footer">
             <div class="d-flex flex-row-reverse">
                 <a data-toggle="modal" data-target="#detallesModal">
-                    <button type="submit" class="btn btn-success mb-2 mr-0 ml-2">Ingresar nueva medición
+                    <button type="submit" class="btn btn-success mb-2 mr-0 ml-2">Ingresar medición
                     </button>
                 </a>
-                <a href="{{ url('/emisiones') }}">
-                    <button type="submit" class="btn btn-danger mb-2 mr-0 ml-2">Salir
+                <a href="{{ url('/historial') }}">
+                    <button type="submit" class="btn btn-danger mb-2 mr-0 ml-2">Regresar
                     </button>
                 </a>
             </div>

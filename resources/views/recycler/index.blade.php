@@ -2,7 +2,7 @@
 @section('navbar-left')
 <input type="text" class="form-control ml-2" placeholder="Buscar reciclador" aria-label="Buscador de recicladores" aria-describedby="filtrar">
             <div class="input-group-append">
-                <button class="btn btn-outline-success" type="button" id="filtrar">
+                <button class="btn btn-outline-success" type="button" id="filtrar" onclick="buscar()">
                 <i class="fas fa-search"></i></button>
             </div>
 @endsection
@@ -18,27 +18,26 @@
             </div>
         </div>
     </div>
-    <div class="card-body p-2 pl-3">
+    <div class="border-solid border-bottom p-2">
         <a class="btn btn-success mr-3" href="{{url('/recicladores/crear')}}"  data-toggle="tooltip" data-placement="bottom" title="Añadir un nuevo reciclador">
         <i class="fas fa-user-plus"> </i> {{__('Añadir')}} reciclador</a>
     </div>
-    <div class="card-footer">
+    <div class="card-body">
         <div class="row">
             <div class="col-xl-4 col-md-6 col-sm-12 p-1">
-                <ul class="list-group list-group-flush">
-                    <li class="list-group-item">
+                <ul class="list-group list-group-flush" id="col-1">
+                    <li class="list-group-item border border-solid mb-1">
                         <div class="row">
                             <div class="col-xl-5 col-sm-12 p-0">
                                 <img src="{{ url('/Avimile.jpg') }}" class="border border-success rounded-circle imgp" alt="Avimilé" style="display: block; margin-right: auto; margin-left: auto;">
                                 <p class="text-center mt-1">Miembro hace 3 meses</p>
                             </div>
                             <div class="col-xl-7 col-sm-12 p-0">
-                                <p class="lead text-center border-bottom"><strong>Avimilé Ribas</strong></p>
-                                <p>Apodo: Avi</p>
-                                <p>Teléfono: 333 31 42</p>
-                                <p>Usuarios asignados: 4</p>
+                                <h4 class="text-center border-bottom"><strong>Avimilé Ribas</strong></h4>
+                                <p class="pl-3 pt-2"><strong>Apodo:</strong> Avi</p>
+                                <p class="pl-3"><strong>Teléfono:</strong> 333 31 42</p>
+                                <p class="pl-3"><strong>Usuarios asignados:</strong> 4</p>
                             </div>
-                            
                         </div>
                         <div class="d-flex flex-row-reverse bd-highlight">
                             <a href="{{ url('/editar') }}">
@@ -49,17 +48,17 @@
                             </a>
                         </div>
                     </li>
-                    <li class="list-group-item">
+                    <li class="list-group-item border-solid border">
                         <div class="row">
                             <div class="col-xl-5 col-sm-12 p-0">
                                 <img src="{{ url('/Avimile.jpg') }}" class="border border-success rounded-circle imgp" alt="Avimilé" style="display: block; margin-right: auto; margin-left: auto">
                                 <p class="text-center mt-1">Miembro hace 1 mes</p>
                             </div>
                             <div class="col-xl-7 col-sm-12 p-0">
-                                <p class="lead text-center border-bottom"><strong>Kevin Tellez</strong></p>
-                                <p>Apodo: Kete</p>
-                                <p>Teléfono: 330 21 19</p>
-                                <p>Usuarios asignados: 1</p>
+                                <h4 class="text-center border-bottom"><strong>Kevin Tellez</strong></h4>
+                                <p class="pl-3 pt-2"><strong>Apodo:</strong> Kete</p>
+                                <p class="pl-3"><strong>Teléfono:</strong> 330 21 19</p>
+                                <p class="pl-3"><strong>Usuarios asignados:</strong> 1</p>
                             </div>
                             
                         </div>
@@ -75,18 +74,18 @@
                 </ul>
             </div>
             <div class="col-xl-4 col-md-6 col-sm-12 p-1">
-                <ul class="list-group list-group-flush">
-                    <li class="list-group-item">
+                <ul class="list-group list-group-flush" id="col-2">
+                    <li class="list-group-item border-solid border mb-1">
                         <div class="row">
                             <div class="col-xl-5 col-sm-12 p-0">
                                 <img src="{{ url('/Cano.jpg') }}" class="border border-success rounded-circle imgp" alt="Avimilé" style="display: block; margin-right: auto; margin-left: auto">
                                 <p class="text-center mt-1">Miembro hace 2 años</p>
                             </div>
                             <div class="col-xl-7 col-sm-12 p-0">
-                                <p class="lead text-center border-bottom"><strong>German Exequiel Cano</strong></p>
-                                <p>Apodo: Cano</p>
-                                <p>Teléfono: 313 61 72</p>
-                                <p>Usuarios asignados: 6</p>
+                                <h4 class="text-center border-bottom"><strong>German Exequiel Cano</strong></h4>
+                                <p class="pl-3 pt-2"><strong>Apodo:</strong> Cano</p>
+                                <p class="pl-3"><strong>Teléfono:</strong> 313 61 72</p>
+                                <p class="pl-3"><strong>Usuarios asignados:</strong> 6</p>
                             </div>
                         </div>
                         <div class="d-flex flex-row-reverse bd-highlight">
@@ -98,17 +97,17 @@
                             </a>
                         </div>
                     </li>
-                    <li class="list-group-item">
+                    <li class="list-group-item border-solid border">
                         <div class="row">
                             <div class="col-xl-5 col-sm-12 p-0">
                                 <img src="{{ url('/Avimile.jpg') }}" class="border border-success rounded-circle imgp" alt="Avimilé" style="display: block; margin-right: auto; margin-left: auto">
                                 <p class="text-center mt-1">Miembro hace 6 meses</p>
                             </div>
                             <div class="col-xl-7 col-sm-12 p-0">
-                                <p class="lead text-center border-bottom"><strong>Stiven Mendoza</strong></p>
-                                <p>Apodo: Mendo</p>
-                                <p>Teléfono: 313 13 23</p>
-                                <p>Usuarios asignados: 4</p>
+                                <h4 class="text-center border-bottom"><strong>Stiven Mendoza</strong></h4>
+                                <p class="pl-3 pt-2"><strong>Apodo:</strong> Mendo</p>
+                                <p class="pl-3"><strong>Teléfono:</strong> 313 13 23</p>
+                                <p class="pl-3"><strong>Usuarios asignados:</strong> 4</p>
                             </div>
                             
                         </div>
@@ -124,18 +123,18 @@
                 </ul>
             </div>
             <div class="col-xl-4 col-md-6 col-sm-12 p-1">
-                <ul class="list-group list-group-flush">
-                    <li class="list-group-item">
+                <ul class="list-group list-group-flush" id="col-3">
+                    <li class="list-group-item border border-solid">
                         <div class="row">
                             <div class="col-xl-5 col-sm-12 p-0">
                                 <img src="{{ url('/Jeison.jpg') }}" class="border border-success rounded-circle imgp" alt="Avimilé" style="display: block; margin-right: auto; margin-left: auto;">
                                 <p class="text-center mt-1">Miembro hace 4 años</p>
                             </div>
                             <div class="col-xl-7 col-sm-12 p-0">
-                                <p class="lead text-center border-bottom"><strong>Jeison Guzmán</strong></p>
-                                <p>Apodo: Jeison</p>
-                                <p>Teléfono: 253 19 72</p>
-                                <p>Usuarios asignados: 12</p>
+                                <h4 class="text-center border-bottom"><strong>Jeison Guzmán</strong></h4>
+                                <p class="pl-3 pt-2"><strong>Apodo:</strong> Jeison</p>
+                                <p class="pl-3"><strong>Teléfono:</strong> 253 19 72</p>
+                                <p class="pl-3"><strong>Usuarios asignados:</strong> 12</p>
 
                             </div>
                         </div>
@@ -176,9 +175,9 @@
                                     </div>
                                     <div class="col-xl-7 col-sm-12 p-0">
                                         <p class="lead text-center border-bottom"><strong>Jeison Guzmán</strong></p>
-                                        <p>Apodo: Jeison</p>
-                                        <p>Teléfono: 253 19 72</p>
-                                        <p>Usuarios asignados: 12</p>
+                                        <p class="pl-3 pt-2"><strong>Apodo:</strong> Jeison</p>
+                                        <p class="pl-3"><strong>Teléfono:</strong> 253 19 72</p>
+                                        <p class="pl-3"><strong>Usuarios asignados:</strong> 12</p>
         
                                     </div>
                                 </div>
@@ -226,5 +225,26 @@
         </div>
     </div>
 </div>
+
+<script>
+    function buscar() {
+        var columna_1 = document.getElementById("col-1");
+        var columna_2 = document.getElementById("col-2");
+        var columna_3 = document.getElementById("col-3");
+        var limit = columna_1.childNodes.length-2;
+        for (let i = 0; i < limit; i++) {
+            columna_1.removeChild(columna_1.childNodes[columna_1.childNodes.length-3]);
+        }
+        limit = columna_2.childNodes.length-2;
+        for (let i = 0; i < limit; i++) {
+            columna_2.removeChild(columna_2.childNodes[columna_2.childNodes.length-3]);
+        }
+        limit = columna_3.childNodes.length;
+        for (let i = 0; i < limit; i++) {
+            columna_3.removeChild(columna_3.childNodes[columna_3.childNodes.length-1]);
+        }
+        console.log(columna_1);
+    }
+</script>
 
 @endsection

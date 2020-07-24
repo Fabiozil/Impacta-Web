@@ -21,7 +21,7 @@
             </a>
             <a href="/historial">
                 <i class="fas fa-chart-line"></i>
-                Indicadores Ambientales
+                Desempeño Ambiental
             </a>
         </li>
         <li>

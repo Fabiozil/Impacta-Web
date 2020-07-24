@@ -225,9 +225,7 @@ a[data-toggle="collapse"] {
 }
 /*Fabio*/
 .cont-rec{
-    background-color: #f8f9fa;
     margin: 20px;
-    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
     overflow: auto;
 }
 
