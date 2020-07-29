@@ -1,13 +1,66 @@
 @extends('layouts.app')
 @section('navbar-left')
-<input type="text" class="form-control ml-2" placeholder="Buscar reciclador" aria-label="Buscador de recicladores" aria-describedby="filtrar">
-            <div class="input-group-append">
-                <button class="btn btn-outline-success" type="button" id="filtrar" onclick="buscar()">
-                <i class="fas fa-search"></i></button>
-            </div>
+    <form autocomplete="off" action="/action_page.php">
+        <div class="autocomplete" style="width: 300px">
+            <input type="text" id="myInput" name="myCountry" class="form-control ml-2" placeholder="Buscar en mapa" aria-label="Buscador de recicladores" aria-describedby="filtrar">
+        </div>
+    </form>
+    <div class="input-group-append">
+        <button class="btn btn-outline-success ml-2" type="button" id="filtrar" onclick="mostrarMapaDistinto2()">
+        <i class="fas fa-search"></i></button>
+    </div>
 @endsection
 
 @section('content')
+<style>
+    * { box-sizing: border-box; }
+.autocomplete {
+  /*the container must be positioned relative:*/
+  position: relative;
+  display: inline-block;
+}
+input {
+  border: 1px solid transparent;
+  background-color: #f1f1f1;
+  padding: 10px;
+  font-size: 16px;
+}
+input[type=text] {
+  background-color: #f1f1f1;
+  width: 100%;
+}
+input[type=submit] {
+  background-color: DodgerBlue;
+  color: #fff;
+}
+.autocomplete-items {
+  position: absolute;
+  border: 1px solid #d4d4d4;
+  border-bottom: none;
+  border-top: none;
+  z-index: 99;
+  /*position the autocomplete items to be the same width as the container:*/
+  top: 100%;
+  left: 0;
+  right: 0;
+}
+.autocomplete-items div {
+  padding: 10px;
+  cursor: pointer;
+  background-color: #fff;
+  border-bottom: 1px solid #d4d4d4;
+}
+.autocomplete-items div:hover {
+  /*when hovering an item:*/
+  background-color: #e9e9e9;
+}
+.autocomplete-active {
+  /*when navigating through the items using the arrow keys:*/
+  background-color: DodgerBlue !important;
+  color: #ffffff;
+}
+</style>
+
 <div class="card">
     <div class="card-header">
         <h1 class="py-3 text-center text-success">Otras comunidades</h1>
@@ -55,31 +108,31 @@
             style="position:absolute; margin-top: -8%; margin-left: 40%; z-index: 2; max-width: 5%">
                 <img src="{{url("/Corporacion_otro.png")}}" alt="Icono usuario" style="z-index: 2; max-width: 100%; max-height: 100%">
             </a>
-
-            <a href="{{ url('/resultadosCorp') }}" style="position:absolute; margin-top: -40%; margin-left: 2%; z-index: 2; height: 40px !important; width: 40px !important">
-                <i class="fas fa-list bg-primary rounded-circle border border-primary p-1" style="width: 100% !important; height: 100% !important;"></i>
+            <a href="{{ url('/resultadosCorp') }}" style="position:absolute; margin-top: -40%; margin-left: 2%; z-index: 2; height: 60px !important; width: 60px !important">
+                <img src="{{url("/lista.png")}}" alt="lista" class="w-100 h-100 p-1">
             </a>
 
-            
-            <a href="{{url("/editCorp")}}" data-toggle="tooltip" data-html="true" data-placement="left" 
-            title='
-            <div class="row">
-                <div class="col-12">
-                    <img src="{{url("/corp_logo.png")}}" class="logo-corp" alt="Logo corporacion">
-                    <h5><strong>Reciclando Ando</strong></h5>
-                    <p>Se unió hace 2 años</p>
-                    {{-- <p>Dirección: Diagonal 33B #39 sur 40</p>
-                    <p>Telefóno: (4) 561 09 21</p> --}}
-                    <p><strong>Recicladores agremiados:</strong> 3</p>
-                    <p><strong>Usuarios afiliados:</strong> 23</p>
-                    {{-- <p>Emisiones evitadas: 200 ton CO2e</p> --}}
-                    <small>Haz click sobre el icono para editar tu corporación</small>
+            <span style="position:absolute; margin-top: -8%; margin-left: 40%; z-index: 2; max-width: 5%" data-toggle="modal"
+            data-target="#detallesModal4">
+                <a data-toggle="tooltip" data-html="true" data-placement="top" 
+                title='
+                <div class="row">
+                    <div class="col-12">
+                        <img src="{{url("/corp_logo.png")}}" class="logo-corp" alt="Logo corporacion">
+                        <h5><strong>Reciclando Ando</strong></h5>
+                        <p>Se unió hace 2 años</p>
+                        {{-- <p>Dirección: Diagonal 33B #39 sur 40</p>
+                        <p>Telefóno: (4) 561 09 21</p> --}}
+                        <p><strong>Recicladores agremiados:</strong> 3</p>
+                        <p><strong>Usuarios afiliados:</strong> 23</p>
+                        <p><strong>Emisiones evitadas:</strong> 200 ton CO2e</p>
+                    </div>
                 </div>
-            </div>
-            '
-            style="position:absolute; margin-top: -8%; margin-left: 40%; z-index: 2; max-width: 5%">
-                <img src="{{url("/Imagen_corporacion.png")}}" alt="Icono usuario" style="z-index: 2; max-width: 100%; max-height: 100%">
-            </a>
+                '
+                style="">
+                    <img src="{{url("/Imagen_corporacion.png")}}" alt="Icono usuario" style="z-index: 2; max-width: 100%; max-height: 100%">
+                </a>
+            </span>
 
             <span style="position:absolute; margin-top: -35%; margin-left: 56%; z-index: 2; max-width: 4%" data-toggle="modal"
             data-target="#detallesModal1">
@@ -88,18 +141,18 @@
                 <div class="row">
                     <div class="col-12">
                         <img src="{{url("/corp_logo3.png")}}" class="logo-corp" alt="Logo corporacion">
-                        <h5><strong>EIA Recicla</strong></h5>
+                        <h5 class="border-bottom border-solid"><strong>EIA Recicla</strong></h5>
                         <p>Se unió hace 2 años</p>
                         {{-- <p>Dirección: Calle 22 sur Carrera 42b</p>
                         <p>Telefóno: (4) 312 17 54</p> --}}
                         <p><strong>Recicladores agremiados:</strong> 9</p>
                         <p><strong>Usuarios afiliados:</strong> 37</p>
-                        {{-- <p>Emisiones evitadas: 274 ton CO2e</p> --}}
+                        <p><strong>Emisiones evitadas:</strong> 274 ton CO2e</p>
                         <small></small>
                     </div>
                 </div>
                 '>
-                    <img src="{{url("/Corporacion_otro.png")}}" alt="Icono usuario" style="z-index: 2; max-width: 100%; max-height: 100%">
+                    <img src="{{url("/Corporacion_otro.png")}}" alt="Icono usuario" style="z-index: 2; max-width: 100%; max-height: 100%" id="eiarecicla">
                 </a>
             </span>
 
@@ -116,7 +169,7 @@
                         <p>Telefóno: (4) 331 41 13</p> --}}
                         <p><strong>Recicladores agremiados:</strong> 4</p>
                         <p><strong>Usuarios afiliados:</strong> 19</p>
-                        {{-- <p>Emisiones evitadas: 77 ton CO2e</p> --}}
+                        <p><strong>Emisiones evitadas:</strong> 77 ton CO2e</p>
                         <small></small>
                     </div>
                 </div>
@@ -136,11 +189,11 @@
                         <p>Se unió hace 3 años</p>
                         <p><strong>Recicladores agremiados:</strong> 12</p>
                         <p><strong>Usuarios afiliados:</strong> 45</p>
-                        <small></small>
+                        <p><strong>Emisiones evitadas:</strong> 544 ton CO2e</p>
                     </div>
                 </div>
                 '>
-                <img src="{{url("/Corporacion_otro.png")}}" alt="Icono usuario" style="z-index: 2; max-width: 100%; max-height: 100%">
+                <img src="{{url("/Corporacion_otro.png")}}" alt="Icono usuario" style="z-index: 2; max-width: 100%; max-height: 100%" id="recitagui">
                 </a>
             </span>
         </div>
@@ -152,10 +205,10 @@
                     <p>Se unió hace 26 días</p>
                     {{-- <p>Dirección: Diagonal 28C 28 sur 25</p>
                     <p>Municipio de Envigado</p> --}}
-                    <p>Corporaión a la que pertenece: Recicladores las lomas</p>
+                    <p><strong>Corporación:</strong> Recicladores las lomas</p>
                 </div>
             </div>
-            ' style="position:absolute; margin-top: -18%; margin-left: 68%; z-index: 2; max-width: 4%">
+            ' style="position:absolute; margin-top: -18%; margin-left: 68%; z-index: 2; max-width: 3%">
                 <img src="{{url("/Vivienda_particular_otro.png")}}" alt="Icono corporacion"
                     style="z-index: 2; max-width: 110%; max-height: 100%">
         </a>
@@ -172,7 +225,7 @@
         </div>
         ' style="position:absolute; margin-top: -28%; margin-left: 38%; z-index: 2; max-width: 3%">
             <img src="{{url("/Admon_residencial_otro.png")}}" alt="Icono corporacion"
-                style="z-index: 2; max-width: 110%; max-height: 100%">
+                style="z-index: 2; max-width: 110%; max-height: 100%" id="unidad_itagui2">
         </a>
         <a data-toggle="tooltip" data-html="true"
             data-placement="left" title='
@@ -187,7 +240,7 @@
         </div>
         ' style="position:absolute; margin-top: -38%; margin-left: 47%; z-index: 2; max-width: 3%">
             <img src="{{url("/Admon_residencial_otro.png")}}" alt="Icono corporacion"
-                style="z-index: 2; max-width: 110%; max-height: 100%">
+                style="z-index: 2; max-width: 110%; max-height: 100%" id="unidad_eia2">
         </a>
         <a data-toggle="tooltip" data-html="true"
             data-placement="left" title='
@@ -202,7 +255,7 @@
         </div>
         ' style="position:absolute; margin-top: -28%; margin-left: 68%; z-index: 2; max-width: 3%">
             <img src="{{url("/Admon_residencial_otro.png")}}" alt="Icono corporacion"
-                style="z-index: 2; max-width: 110%; max-height: 100%">
+                style="z-index: 2; max-width: 110%; max-height: 100%" id="unidad_eia1">
         </a>
         <a data-toggle="tooltip" data-html="true"
             data-placement="left" title='
@@ -232,7 +285,7 @@
         </div>
         ' style="position:absolute; margin-top: -33%; margin-left: 9%; z-index: 2; max-width: 3%">
             <img src="{{url("/Admon_residencial_otro.png")}}" alt="Icono corporacion"
-                style="z-index: 2; max-width: 110%; max-height: 100%">
+                style="z-index: 2; max-width: 110%; max-height: 100%" id="unidad_itagui1">
         </a>
         <a data-toggle="tooltip" data-html="true"
                 data-placement="left" title='
@@ -247,7 +300,7 @@
             </div>
             ' style="position:absolute; margin-top: -23%; margin-left: 49%; z-index: 2; max-width: 3%">
                 <img src="{{url("/Vivienda_particular_otro.png")}}" alt="Icono corporacion"
-                    style="z-index: 2; max-width: 110%; max-height: 100%">
+                    style="z-index: 2; max-width: 110%; max-height: 100%" id="casa_eia1">
         </a>
         <a data-toggle="tooltip" data-html="true"
                 data-placement="left" title='
@@ -262,7 +315,7 @@
             </div>
             ' style="position:absolute; margin-top: -27%; margin-left: 12%; z-index: 2; max-width: 3%">
                 <img src="{{url("/Vivienda_particular_otro.png")}}" alt="Icono corporacion"
-                    style="z-index: 2; max-width: 110%; max-height: 100%">
+                    style="z-index: 2; max-width: 110%; max-height: 100%" id="casa_itagui1">
         </a>
         <a data-toggle="tooltip" data-html="true"
                 data-placement="left" title='
@@ -283,7 +336,7 @@
         
         
     </div>
-    <div class="card-footer">
+    {{-- <div class="card-footer">
         <div class="input-group inline w-100 mb-2">
             <label for="" class="lead mr-2">Opciones de busqueda:</label>
             <select class="form-control mr-1" name="type" id="type" style="display: inline">
@@ -302,93 +355,62 @@
             <button onclick="" class="btn btn-success ml-2">Buscar</button>
             
         </div>
-    </div>
+    </div> --}}
 </div>
 
 <div class="modal fade" id="detallesModal" tabindex="-1" role="dialog" aria-labelledby="favoritesModalLabel">
     <div class="modal-dialog modal-lg" role="document">
         <div class="modal-content">
             <div class="modal-header">
-                <h4 class="modal-title text-success" id="favoritesModalLabel">Informacion de la corporación</h4>
+                <h2 class="modal-title text-success" id="favoritesModalLabel">Información de la corporación</h2>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
                         aria-hidden="true">&times;</span></button>
             </div>
             <div class="modal-body">
-
                 <div class="container">
                     <div class="row">
-                        <div class="col-xl-12">
-                            <div class="row">
-                                <div class="col-xl-4 col-lg-4 col-md-12 borde-derecha h-100">
-                                    <div class="row h-100">
-                                        <div class="container h-80 border-right">
-                                            <div class="row">
-                                                <div class="col-xl-12 h-100">
-                                                    <div class="container">
-                                                        <div class="py-5">
-                                                        </div>
-                                                        <img src="{{url("/corp_logo2.png")}}" class="logo-corpr" alt="">
-
-
-                                                        <div class="py-4 text-center">
-                                                            <h3><strong>RecItagui</strong></h3>
-                                                            <p>Se unió hace 3 años</p>
-                                                        </div>
-
-                                                    </div>
+                        <div class="col-xl-4 col-lg-4 col-md-12 borde-derecha h-100">
+                            <div class="row h-100">
+                                <div class="container border-right">
+                                    <div class="row">
+                                        <div class="col-xl-12 h-100">
+                                            <div class="container">
+                                                <img src="{{url("/corp_logo2.png")}}"
+                                                    class="imgpg border border-success rounded-circle"
+                                                    alt="">
+                                                <div class="mt-2 ml-1 mr-1 text-center">
+                                                    <h3><strong>RecItagui</strong></h3>
+                                                    <p>Se unió hace 3 años</p>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-xl-8 col-lg-8 col-md-12 borde-derecha h-100">
-                                    <div class="row h-100">
-                                        <div class="container h-95">
-                                            <div class="row h-100">
-                                                <div class="col-xl-10">
-                                                    <div class="py-5 subtitle">
-
-                                                    </div>
-                                                    <br>
-
-                                                    <div class="container cont-rec-nf m-0">
-                                                        <form>
-                                                            <div class="form-group w-100">
-                                                                <div class="form-group row">
-                                                                    <h3>Dirección: </h3>
-                                                                    <div class="col-sm-10">
-                                                                        <h3>Calle 67 carrera 57</h3>
-                                                                    </div>
-                                                                </div>
-                                                                <div class="form-group row">
-                                                                    <h3>Telefóno: </h3>
-                                                                    <div class="col-sm-10">
-                                                                        <h3>(4) 331 41 21</h3>
-                                                                    </div>
-                                                                </div>
-                                                                <div class="form-group row">
-                                                                    <h3>Recicladores afiliados: </h3>
-                                                                    <div class="col-sm-10">
-                                                                        <h3>12</h3>
-                                                                    </div>
-                                                                </div>
-                                                                <div class="form-group row">
-                                                                    <h3><strong>Usuarios afiliados:</strong> </h3>
-                                                                    <div class="col-sm-10">
-                                                                        <h3>45</h3>
-                                                                    </div>
-                                                                </div>
-                                                                <div class="form-group row">
-                                                                    <h3>Emisiones evitadas: </h3>
-                                                                    <div class="col-sm-10">
-                                                                        <h3>544 ton CO2e</h3>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </form>
-                                                    </div>
-                                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-8 col-lg-8 col-md-12 h-100">
+                            <div class="row h-100">
+                                <div class="col-xl-12 h-100">
+                                    <div class="container pt-4">
+                                        <div class="row mb-1">
+                                            <div class="col-8 pl-0">
+                                                <label class="lead pl-0 mb-3"><strong>Dirección: </strong>Calle 67 carrera 57</label>
+                                                <label class="lead pl-0"><strong>Telefóno: </strong>(4) 331 41 21</label>
                                             </div>
+                                            <div class="col-4 pr-0">
+                                            </div>
+                                        </div>
+                                        <div class="row mt-2">
+                                            <label class="lead"><strong>Recicladores agremiados:  </strong></label>
+                                            <p class="pl-1 lead">12</p>
+                                        </div>
+                                        <div class="row">
+                                            <label class="lead"><strong>Usuarios afiliados:  </strong></label>
+                                            <p class="pl-1 lead">45</p>
+                                        </div>
+                                        <div class="row">
+                                            <label class="lead"><strong>Emisiones evitadas:  </strong></label>
+                                            <p class="pl-1 lead">544 ton CO2e</p>
                                         </div>
                                     </div>
                                 </div>
@@ -397,7 +419,7 @@
                     </div>
                 </div>
             </div>
-            <div class="modal-footer">
+            <div class="modal-footer pb-0 pt-2 mb-0">
                 <span class="pull-right"><button type="button" class="btn btn-danger"
                         data-dismiss="modal">Regresar</button></span>
             </div>
@@ -409,74 +431,55 @@
     <div class="modal-dialog modal-lg" role="document">
         <div class="modal-content">
             <div class="modal-header">
-                <h2 class="modal-title text-success" id="favoritesModalLabel">Informacion de la corporación</h2>
+                <h2 class="modal-title text-success" id="favoritesModalLabel">Información de la corporación</h2>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
                         aria-hidden="true">&times;</span></button>
             </div>
             <div class="modal-body">
-
                 <div class="container">
                     <div class="row">
-                        <div class="col-xl-12">
-                            <div class="row">
-                                <div class="col-xl-4 col-lg-4 col-md-12 borde-derecha h-100">
-                                    <div class="row h-100">
-                                        <div class="container h-80 border-right">
-                                            <div class="row">
-                                                <div class="col-xl-12 h-100">
-                                                    <div class="container">
-                                                        <img src="{{url("/corp_logo3.png")}}" class="logo-corpr" alt="">
-
-
-                                                        <div class="py-4 text-center">
-                                                            <h3><strong>EIA Recicla</strong></h3>
-                                                            <p>Se unió hace 2 años</p>
-                                                        </div>
-
-                                                    </div>
+                        <div class="col-xl-4 col-lg-4 col-md-12 borde-derecha h-100">
+                            <div class="row h-100">
+                                <div class="container border-right">
+                                    <div class="row">
+                                        <div class="col-xl-12 h-100">
+                                            <div class="container">
+                                                <img src="{{url("/corp_logo3.png")}}"
+                                                    class="imgpg border border-success rounded-circle"
+                                                    alt="">
+                                                <div class="mt-2 ml-1 mr-1 text-center">
+                                                    <h3><strong>EIA Recicla</strong></h3>
+                                                    <p>Se unió hace 2 años</p>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-xl-8 col-lg-8 col-md-12 borde-derecha h-100">
-                                    <div class="row h-100">
-                                        <div class="container h-95">
-                                            <div class="row h-100">
-                                                <div class="col-xl-10">
-                                                    <div class="py-5 subtitle">
-
-                                                    </div>
-                                                    <br>
-
-                                                    <div class="container cont-rec-nf m-0">
-                                                        <form>
-                                                            <div class="form-group w-100">
-                                                                <div class="row">
-                                                                    <label class="lead"><strong>Dirección:  </strong></label>
-                                                                    <p class="pl-1 lead">Calle 22 sur Carrera 42b</p>
-                                                                </div>
-                                                                <div class="row">
-                                                                    <label class="lead"><strong>Telefóno:  </strong></label>
-                                                                    <p class="pl-1 lead">(4) 312 17 54</p>
-                                                                </div>
-                                                                <div class="row">
-                                                                    <label class="lead"><strong>Recicladores afiliados:  </strong></label>
-                                                                    <p class="pl-1 lead">9</p>
-                                                                </div>
-                                                                <div class="row">
-                                                                    <label class="lead"><strong>Usuarios afiliados:  </strong></label>
-                                                                    <p class="pl-1 lead">37</p>
-                                                                </div>
-                                                                <div class="row">
-                                                                    <label class="lead"><strong>Emisiones evitadas:  </strong></label>
-                                                                    <p class="pl-1 lead">274 ton CO2e</p>
-                                                                </div>
-                                                            </div>
-                                                        </form>
-                                                    </div>
-                                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-8 col-lg-8 col-md-12 h-100">
+                            <div class="row h-100">
+                                <div class="col-xl-12 h-100">
+                                    <div class="container pt-4">
+                                        <div class="row mb-1">
+                                            <div class="col-8 pl-0">
+                                                <label class="lead pl-0 mb-3"><strong>Dirección: </strong>Calle 22 sur Carrera 42b</label>
+                                                <label class="lead pl-0"><strong>Telefóno: </strong>(4) 312 17 54</label>
                                             </div>
+                                            <div class="col-4 pr-0">
+                                            </div>
+                                        </div>
+                                        <div class="row mt-2">
+                                            <label class="lead"><strong>Recicladores agremiados:  </strong></label>
+                                            <p class="pl-1 lead">9</p>
+                                        </div>
+                                        <div class="row">
+                                            <label class="lead"><strong>Usuarios afiliados:  </strong></label>
+                                            <p class="pl-1 lead">37</p>
+                                        </div>
+                                        <div class="row">
+                                            <label class="lead"><strong>Emisiones evitadas:  </strong></label>
+                                            <p class="pl-1 lead">274 ton CO2e</p>
                                         </div>
                                     </div>
                                 </div>
@@ -485,7 +488,84 @@
                     </div>
                 </div>
             </div>
-            <div class="modal-footer">
+            <div class="modal-footer pb-0 pt-2 mb-0">
+                <span class="pull-right"><button type="button" class="btn btn-danger"
+                        data-dismiss="modal">Regresar</button></span>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="detallesModal4" tabindex="-1" role="dialog" aria-labelledby="favoritesModalLabel">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 class="modal-title text-success" id="favoritesModalLabel">Información de la corporación</h2>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                        aria-hidden="true">&times;</span></button>
+            </div>
+            <div class="modal-body">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-xl-4 col-lg-4 col-md-12 borde-derecha h-100">
+                            <div class="row h-100">
+                                <div class="container border-right">
+                                    <div class="row">
+                                        <div class="col-xl-12 h-100">
+                                            <div class="container">
+                                                <img src="{{url("/corp_logo.png")}}"
+                                                    class="imgpg border border-success rounded-circle"
+                                                    alt="">
+                                                <div class="mt-2 ml-1 mr-1 text-center">
+                                                    <h3><strong>Reciclando ando</strong></h3>
+                                                    <p>Se unió hace 2 años</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-8 col-lg-8 col-md-12 h-100">
+                            <div class="row h-100">
+                                <div class="col-xl-12 h-100">
+                                    <div class="container pt-4">
+                                        <div class="row border-solid border-bottom mb-1">
+                                            <div class="col-8 pl-0">
+                                                <label class="lead pl-0 mb-3"><strong>Dirección: </strong> Carrera 42 #22 sur 43C</label>
+                                                <label class="lead pl-0"><strong>Telefóno: </strong>(4) 312 25 67</label>
+                                            </div>
+                                            <div class="col-4 pr-0">
+                                                <div class="d-flex justify-content-end pl-0">
+                                                    <a href="{{url("/configuracion")}}">
+                                                    <button class="btn btn-outline-success btn-sm" data-toggle="modal" data-target="#editarHistoria"
+                                                        data-backdrop="static">
+                                                        <i class="fas fa-edit fa-lg"></i>
+                                                    </button>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row mt-2">
+                                            <label class="lead"><strong>Recicladores agremiados:  </strong></label>
+                                            <p class="pl-1 lead">3</p>
+                                        </div>
+                                        <div class="row">
+                                            <label class="lead"><strong>Usuarios afiliados:  </strong></label>
+                                            <p class="pl-1 lead">23</p>
+                                        </div>
+                                        <div class="row">
+                                            <label class="lead"><strong>Emisiones evitadas:  </strong></label>
+                                            <p class="pl-1 lead">200 ton CO2e</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer pb-0 pt-2 mb-0">
                 <span class="pull-right"><button type="button" class="btn btn-danger"
                         data-dismiss="modal">Regresar</button></span>
             </div>
@@ -497,86 +577,55 @@
     <div class="modal-dialog modal-lg" role="document">
         <div class="modal-content">
             <div class="modal-header">
-                <h4 class="modal-title text-success" id="favoritesModalLabel">Informacion de la corporación</h4>
+                <h2 class="modal-title text-success" id="favoritesModalLabel">Información de la corporación</h2>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
                         aria-hidden="true">&times;</span></button>
             </div>
             <div class="modal-body">
-
                 <div class="container">
                     <div class="row">
-                        <div class="col-xl-12">
-                            <div class="row">
-                                <div class="col-xl-4 col-lg-4 col-md-12 borde-derecha h-100">
-                                    <div class="row h-100">
-                                        <div class="container h-80 border-right">
-                                            <div class="row">
-                                                <div class="col-xl-12 h-100">
-                                                    <div class="container">
-                                                        <div class="py-5">
-                                                        </div>
-                                                        <img src="{{url("/corp_logo1.png")}}" class="logo-corpr" alt="">
-
-
-                                                        <div class="py-4 text-center">
-                                                            <h3>Recicladores las lomas</h3>
-                                                            <p>Se unió hace 1 año</p>
-                                                        </div>
-
-                                                    </div>
+                        <div class="col-xl-4 col-lg-4 col-md-12 borde-derecha h-100">
+                            <div class="row h-100">
+                                <div class="container border-right">
+                                    <div class="row">
+                                        <div class="col-xl-12 h-100">
+                                            <div class="container">
+                                                <img src="{{url("/corp_logo1.png")}}"
+                                                    class="imgpg border border-success rounded-circle"
+                                                    alt="">
+                                                <div class="mt-2 ml-1 mr-1 text-center">
+                                                    <h3><strong>Recicladores las lomas</strong></h3>
+                                                    <p>Se unió hace 1 año</p>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-xl-8 col-lg-8 col-md-12 borde-derecha h-100">
-                                    <div class="row h-100">
-                                        <div class="container h-95">
-                                            <div class="row h-100">
-                                                <div class="col-xl-10">
-                                                    <div class="py-5 subtitle">
-
-                                                    </div>
-                                                    <br>
-
-                                                    <div class="container cont-rec-nf m-0">
-                                                        <form>
-                                                            <div class="form-group w-100">
-                                                                <div class="form-group row">
-                                                                    <h3>Dirección: </h3>
-                                                                    <div class="col-sm-10">
-                                                                        <h3>Calle 27 sur carrera 22</h3>
-                                                                    </div>
-                                                                </div>
-                                                                <div class="form-group row">
-                                                                    <h3>Telefóno: </h3>
-                                                                    <div class="col-sm-10">
-                                                                        <h3>(4) 331 41 13</h3>
-                                                                    </div>
-                                                                </div>
-                                                                <div class="form-group row">
-                                                                    <h3>Recicladores afiliados: </h3>
-                                                                    <div class="col-sm-10">
-                                                                        <h3>4</h3>
-                                                                    </div>
-                                                                </div>
-                                                                <div class="form-group row">
-                                                                    <h3><strong>Usuarios afiliados:</strong> </h3>
-                                                                    <div class="col-sm-10">
-                                                                        <h3>19</h3>
-                                                                    </div>
-                                                                </div>
-                                                                <div class="form-group row">
-                                                                    <h3>Emisiones evitadas: </h3>
-                                                                    <div class="col-sm-10">
-                                                                        <h3>77 ton CO2e</h3>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </form>
-                                                    </div>
-                                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-8 col-lg-8 col-md-12 h-100">
+                            <div class="row h-100">
+                                <div class="col-xl-12 h-100">
+                                    <div class="container pt-4">
+                                        <div class="row mb-1">
+                                            <div class="col-8 pl-0">
+                                                <label class="lead pl-0 mb-3"><strong>Dirección: </strong>Calle 27 sur carrera 22</label>
+                                                <label class="lead pl-0"><strong>Telefóno: </strong>(4) 331 41 13</label>
                                             </div>
+                                            <div class="col-4 pr-0">
+                                            </div>
+                                        </div>
+                                        <div class="row mt-2">
+                                            <label class="lead"><strong>Recicladores agremiados:  </strong></label>
+                                            <p class="pl-1 lead">4</p>
+                                        </div>
+                                        <div class="row">
+                                            <label class="lead"><strong>Usuarios afiliados:  </strong></label>
+                                            <p class="pl-1 lead">19</p>
+                                        </div>
+                                        <div class="row">
+                                            <label class="lead"><strong>Emisiones evitadas:  </strong></label>
+                                            <p class="pl-1 lead">77 ton CO2e</p>
                                         </div>
                                     </div>
                                 </div>
@@ -585,7 +634,7 @@
                     </div>
                 </div>
             </div>
-            <div class="modal-footer">
+            <div class="modal-footer pb-0 pt-2 mb-0">
                 <span class="pull-right"><button type="button" class="btn btn-danger"
                         data-dismiss="modal">Regresar</button></span>
             </div>
@@ -593,5 +642,141 @@
     </div>
 </div>
 
+<script>
+    var countries = ["RecItagui", "EIARecicla"];
+    autocomplete(document.getElementById("myInput"), countries);
+
+    function mostrarMapaDistinto2(){
+        var entrada = document.getElementById("myInput").value;
+        var recitagui = document.getElementById("recitagui");
+        var casai1 = document.getElementById("casa_itagui1");
+        var unidadi1 = document.getElementById("unidad_itagui1");
+        var unidadi2 = document.getElementById("unidad_itagui2");
+        var eiarecicla = document.getElementById("eiarecicla");
+        var casae1 = document.getElementById("casa_eia1");
+        var unidade1 = document.getElementById("unidad_eia1");
+        var unidade2 = document.getElementById("unidad_eia2");
+        console.log(entrada);
+        if (entrada == "RecItagui") {
+            //Mostrar usuarios RecItagui
+            recitagui.setAttribute("src", "{{url("/Corporacion_otroR.png")}}");
+            casai1.setAttribute("src", "{{url("/Vivienda_particular_otroR.png")}}");
+            unidadi1.setAttribute("src", "{{url("/Admon_residencial_otroR.png")}}");
+            unidadi2.setAttribute("src", "{{url("/Admon_residencial_otroR.png")}}");
+            eiarecicla.setAttribute("src", "{{url("/Corporacion_otro.png")}}");
+            casae1.setAttribute("src", "{{url("/Vivienda_particular_otro.png")}}");
+            unidade1.setAttribute("src", "{{url("/Admon_residencial_otro.png")}}");
+            unidade2.setAttribute("src", "{{url("/Admon_residencial_otro.png")}}");
+            return;
+        }
+        if (entrada == "EIARecicla") {
+            //Mostrar usuarios de EIARecila
+            recitagui.setAttribute("src", "{{url("/Corporacion_otro.png")}}");
+            casai1.setAttribute("src", "{{url("/Vivienda_particular_otro.png")}}");
+            unidadi1.setAttribute("src", "{{url("/Admon_residencial_otro.png")}}");
+            unidadi2.setAttribute("src", "{{url("/Admon_residencial_otro.png")}}");
+            eiarecicla.setAttribute("src", "{{url("/Corporacion_otroR.png")}}");
+            casae1.setAttribute("src", "{{url("/Vivienda_particular_otroR.png")}}");
+            unidade1.setAttribute("src", "{{url("/Admon_residencial_otroR.png")}}");
+            unidade2.setAttribute("src", "{{url("/Admon_residencial_otroR.png")}}");
+            return;
+        }
+    }
+    
+    function autocomplete(inp, arr) {
+        var currentFocus;
+        /*execute a function when someone writes in the text field:*/
+        inp.addEventListener("input", function(e) {
+            var a, b, i, val = this.value;
+            /*close any already open lists of autocompleted values*/
+            closeAllLists();
+            if (!val) { return false;}
+            currentFocus = -1;
+            /*create a DIV element that will contain the items (values):*/
+            a = document.createElement("DIV");
+            a.setAttribute("id", this.id + "autocomplete-list");
+            a.setAttribute("class", "autocomplete-items");
+            /*append the DIV element as a child of the autocomplete container:*/
+            this.parentNode.appendChild(a);
+            /*for each item in the array...*/
+            for (i = 0; i < arr.length; i++) {
+                /*check if the item starts with the same letters as the text field value:*/
+                if (arr[i].substr(0, val.length).toUpperCase() == val.toUpperCase()) {
+                /*create a DIV element for each matching element:*/
+                b = document.createElement("DIV");
+                /*make the matching letters bold:*/
+                b.innerHTML = "<strong>" + arr[i].substr(0, val.length) + "</strong>";
+                b.innerHTML += arr[i].substr(val.length);
+                /*insert a input field that will hold the current array item's value:*/
+                b.innerHTML += "<input type='hidden' value='" + arr[i] + "'>";
+                /*execute a function when someone clicks on the item value (DIV element):*/
+                    b.addEventListener("click", function(e) {
+                    /*insert the value for the autocomplete text field:*/
+                    inp.value = this.getElementsByTagName("input")[0].value;
+                    /*close the list of autocompleted values,
+                    (or any other open lists of autocompleted values:*/
+                    closeAllLists();
+                });
+                a.appendChild(b);
+                }
+            }
+        });
+        /*execute a function presses a key on the keyboard:*/
+        inp.addEventListener("keydown", function(e) {
+            var x = document.getElementById(this.id + "autocomplete-list");
+            if (x) x = x.getElementsByTagName("div");
+            if (e.keyCode == 40) {
+                /*If the arrow DOWN key is pressed,
+                increase the currentFocus variable:*/
+                currentFocus++;
+                /*and and make the current item more visible:*/
+                addActive(x);
+            } else if (e.keyCode == 38) { //up
+                /*If the arrow UP key is pressed,
+                decrease the currentFocus variable:*/
+                currentFocus--;
+                /*and and make the current item more visible:*/
+                addActive(x);
+            } else if (e.keyCode == 13) {
+                /*If the ENTER key is pressed, prevent the form from being submitted,*/
+                e.preventDefault();
+                if (currentFocus > -1) {
+                /*and simulate a click on the "active" item:*/
+                if (x) x[currentFocus].click();
+                }
+            }
+        });
+        function addActive(x) {
+            /*a function to classify an item as "active":*/
+            if (!x) return false;
+            /*start by removing the "active" class on all items:*/
+            removeActive(x);
+            if (currentFocus >= x.length) currentFocus = 0;
+            if (currentFocus < 0) currentFocus = (x.length - 1);
+            /*add class "autocomplete-active":*/
+            x[currentFocus].classList.add("autocomplete-active");
+        }
+        function removeActive(x) {
+            /*a function to remove the "active" class from all autocomplete items:*/
+            for (var i = 0; i < x.length; i++) {
+            x[i].classList.remove("autocomplete-active");
+            }
+        }
+        function closeAllLists(elmnt) {
+            /*close all autocomplete lists in the document,
+            except the one passed as an argument:*/
+            var x = document.getElementsByClassName("autocomplete-items");
+            for (var i = 0; i < x.length; i++) {
+            if (elmnt != x[i] && elmnt != inp) {
+            x[i].parentNode.removeChild(x[i]);
+            }
+        }
+        }
+        /*execute a function when someone clicks in the document:*/
+        document.addEventListener("click", function (e) {
+            closeAllLists(e.target);
+    });
+    } 
+</script>
 
 @endsection

@@ -36,11 +36,8 @@
     </div>
     <div class="card-body">
         <div class="input-group inline w-100 mb-2">
-            <select class="form-control mr-1" name="type" id="lista_busqueda" style="display: inline">
-                <option value="Materiales">Ver según materiales</option>
-                <option value="Fecha de corte">Ver según fecha de corte</option>
-            </select>
-            <select class="form-control mr-1" name="type" id="lista_materiales" style="display: inline">
+            <label class="lead"><strong>Material: </strong></label>
+            <select class="form-control mr-3 ml-1" name="type" id="lista_materiales" style="display: inline">
                 <option>Metal</option>
                 <option>Plástico</option>
                 <option>Vidrio</option>
@@ -48,10 +45,10 @@
                 <option>Cartón</option>
                 <option>Todos</option>
             </select>
-            <label for="">Desde: </label>
-            <input class="form-control ml-1" type="date" id="fechacorte" name="fechacorte"
+            <label for="" class="lead"><strong>Desde:</strong>  </label>
+            <input class="form-control ml-1 mr-3" type="date" id="fechacorte" name="fechacorte"
                             value="1 Enero 2020" />
-            <label for="">Hasta:</label>
+            <label for="" class="lead"> <strong>Hasta:</strong> </label>
             <input class="form-control ml-1" type="date" id="fechacorte" name="fechacorte"
                             value="1 Enero 2020" />
             <button type="submit" class="btn btn-primary mr-1 ml-2" onclick="mostrarGraficaDistinta()">Aplicar</button>
@@ -66,52 +63,43 @@
     <div class="card-footer">
         <div class="container">
             <div class="row">
-                <div class="col-xl-4 col-sm-12">
-                    <h2>Emisiones evitadas - última fecha de corte</h2>
+                <div class="col-xl-9 col-sm-12">
+                    <h2 class="text-success">Emisiones evitadas - última fecha de corte</h2>
                     <p>Jul 21, 2020 - Ago 07,2020</p>
-                    <h1 id="emisiones"><strong>28 ton C02</strong></h1>
-                </div>
-                <div class="col-xl-6 col-sm-12">
-                    <small>La fecha de corte ingresada fue del 1 de enero del 2017 al 31 de julio del 2017</small>
-                    <h5 class="lead">
-                        Datos de equivalencia para el periodo registrado:
-                    </h5>
-                    <ol class="text-success bg-white">
-                        <li>
-                            Lo equivalente a retirar X vehículos particulares en 1 año en el Área Metropolitana del Valle de Aburrá.
-                        </li>
-                        <li>
-                            Para compensar esta cantidad de CO2 se requieren de 2X árboles
-                        </li>
-                        <li>
-                            Dato numero 3
-                        </li>
+                    
+                    <ol class="">
+                            <img src="idea_verde.png" alt="" style="width: 30px; height: 30px;">
+                            Lo equivalente a retirar<strong> 20 vehículos particulares </strong>en 1 año en el Área Metropolitana del Valle de Aburrá.
+                            <br>
+                            <img src="idea_verde.png" alt="" style="width: 30px; height: 30px;">
+                            Para compensar esta cantidad de CO2 se requieren de <strong>40 árboles</strong> 
                     </ol>
-
+                </div>
+                <div class="col-xl-3 col-sm-12">
+                    <div class="d-flex justify-content-center align-items-center pt-5 p-1">
+                               <h1 id="emisiones"><strong>52 ton CO2e</strong></h1> 
+                    </div>
+                    
                 </div>
             </div>
             <div class="row mt-3">
-                <div class="col-xl-4 col-sm-12">
-                    <h2>Histórico de emisiones</h2>
-                    <p>Desde 2017</p>
-                    <h1 id="historico"><strong>128 ton CO2</strong></h1>
-                </div>
-                <div class="col-xl-6 col-sm-12">
-                    <small>Emisiones de CO2 evitadas desde el ingreso de la organización</small>
-                    <h5 class="lead">
-                        Datos de equivalencia para el historico de la corporación:
-                    </h5>
-                    <ol class="text-success bg-white">
-                        <li>
-                            Lo equivalente a retirar X vehículos particulares en 1 año en el Área Metropolitana del Valle de Aburrá.
-                        </li>
-                        <li>
-                            Para compensar esta cantidad de CO2 se requieren de 2X árboles
-                        </li>
-                        <li>
-                            Dato numero 3
-                        </li>
+                <div class="col-xl-9 col-sm-12">
+                    <h2 class="text-success">Histórico de emisiones</h2>
+                    <p>Desde 2019</p>
+                    
+                    <ol class="">
+                            <img src="idea_verde.png" alt="" style="width: 30px; height: 30px;">
+                            Lo equivalente a retirar <strong>288 vehículos particulares</strong> en 1 año en el Área Metropolitana del Valle de Aburrá.
+                            <br>
+                            <img src="idea_verde.png" alt="" style="width: 30px; height: 30px;">
+                            Para compensar esta cantidad de CO2 se requieren de <strong>576 árboles</strong> 
                     </ol>
+                </div>
+                <div class="col-xl-3 col-sm-12 pt-5 p-1">
+                    <div class="d-flex justify-content-center align-items-center">
+                        <h1 id="historico"><strong>764 ton</strong></h1>
+                        <img src="co2_verde.png" alt="nube_verde" class="pl-2" style="width: 90px !important; height: 55px !important;">
+                    </div>
                 </div>
             </div>
 

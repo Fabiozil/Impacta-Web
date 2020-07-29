@@ -74,6 +74,12 @@ Route::get('/verify', function () {
 Route::get('/confirm', function () {
     return view('auth.passwords.confirm');
 });
+Route::get('/reset', function () {
+    return view('auth.passwords.reset');
+});
+Route::get('/email', function () {
+    return view('auth.passwords.email');
+});
 //Rutas busquedas
 Route::get('/resultadosCorp', function () {
     return view('busqueda.resultsCorp');
@@ -102,7 +108,7 @@ Route::get('/comunidad/asignarReciclador/Michel', function () {
 Route::get('/comunidad/asignarReciclador/Harlan', function () {
     return view('mapa.asignarRecicladorHarlan');
 });
-Route::get('/comunidad/asignarReciclador/TorresDelRiachuelo', function () {
+Route::get('/comunidad/asignarReciclador/Unidad1', function () {
     return view('mapa.asignarRecicladorUnidad1');
 });
 //Rutas mediciones

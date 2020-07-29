@@ -32,14 +32,13 @@
 
 <body>
     <div id="app" class="wrapper">
-        @include('layouts.navbar')
         <!-- Page Content  -->
         <div id="content">
             <nav class="navbar navbar-expand-lg  navbar-light bg-light ">
                 <div class="container-fluid">
-                    <button type="button" id="sidebarCollapse" class="btn btn-success">
-                        <i class="fas fa-align-left"></i>
-                    </button>
+                <a href="{{url("/")}}" style="max-width: 15%">
+                        <strong><img src="{{ url('/Reciclapp_V2.png') }}" style="width: 100%"></strong>
+                    </a>
 
                     <button class="btn btn-dark d-inline-block d-lg-none ml-auto" type="button" data-toggle="collapse"
                         data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
@@ -56,17 +55,36 @@
                         <!-- Right Side Of Navbar -->
                         <ul class="navbar-nav ml-auto">
                             <!-- Authentication Links -->
-                            <li>
-                                <div class="dropleft rounded-circle border-success border border-solid" style="height: 50px; width: 50px">
-                                    <button class="btn btn-secondary w-100 p-0 rounded-circle border border-solid" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                        <img src="{{url("/Harlan.jpg")}}" alt="Foto de perfil" class="w-100 h-100 p-0 rounded-circle border border-solid">
-                                    </button>
-                                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                                      <a class="dropdown-item" href="{{url("/")}}">Cerrar sesion</a>
-                                    <a class="dropdown-item" href="{{url("/configuracion")}}">Configuracion</a>
-                                    </div>
-                                  </div>
+                            @guest
+                            <li class="nav-item">
+                                <a class="nav-link" href="{{ route('login') }}">Ingresar</a>
                             </li>
+                            @if (Route::has('register'))
+                            <li class="nav-item">
+                                <a class="nav-link text-success border border-success" href="{{ route('register') }}">Registrarse</a>
+                            </li>
+                            @endif
+                            @else
+                            <li class="nav-item ">
+                                <a id="navbarDropdown" class="nav-link dropdown-toggle text-capitalize" href="#"
+                                    role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
+                                    v-pre>
+                                    {{ Auth::user()->name }} <span class="caret"></span>
+                                </a>
+
+                                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                                    <a class="dropdown-item " href="{{ route('logout') }}" onclick="event.preventDefault();
+                                                         document.getElementById('logout-form').submit();">
+                                        {{ __('Logout') }}
+                                    </a>
+
+                                    <form id="logout-form" action="{{ route('logout') }}" method="POST"
+                                        style="display: none;">
+                                        @csrf
+                                    </form>
+                                </div>
+                            </li>
+                            @endguest
                         </ul>
                     </div>
                 </div>

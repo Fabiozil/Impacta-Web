@@ -5,7 +5,10 @@ $body-bg: white;
 $font-family-sans-serif: 'Roboto', sans-serif;
 $font-size-base: 0.9rem;
 $line-height-base: 1.6;
-
+$custom-file-text: (
+  en: "Browse",
+  es: "Elegir"
+);
 
 // Colors
 $blue: #2780E3;

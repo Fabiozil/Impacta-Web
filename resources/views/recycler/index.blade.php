@@ -163,26 +163,13 @@
                 <div class="container">
                     <div class="row">
                         <div class="col-xl-12">
-                            <h1 class="py-2 text-center">¿Deseas eliminar este reciclador(a)?</h1>
+                            <h2 class="py-2 text-center text-success">¿Deseas eliminar este reciclador(a)?</h2>
+                            <h5 class="lead text-center mt-2">Una vez eliminado el reciclador(a), los usuarios asignados al perfil pasarán a estar pendientes de asignar. Ver mapa Mi comunidad.</h5>
                             <div class="d-flex justify-content-center mt-2 mb-2">
                                 <i class="fas fa-question" style="width: 10% !important; height: 10% !important;"></i>
                             </div>
-                            <li class="list-group-item">
-                                <div class="row">
-                                    <div class="col-xl-5 col-sm-12 p-0">
-                                        <img src="{{ url('/Jeison.jpg') }}" class="border border-success rounded-circle imgpg" alt="Avimilé" style="display: block; margin-right: auto; margin-left: auto;">
-                                        <p class="text-center mt-1">Miembro hace 4 años</p>
-                                    </div>
-                                    <div class="col-xl-7 col-sm-12 p-0">
-                                        <p class="lead text-center border-bottom"><strong>Jeison Guzmán</strong></p>
-                                        <p class="pl-3 pt-2"><strong>Apodo:</strong> Jeison</p>
-                                        <p class="pl-3"><strong>Teléfono:</strong> 253 19 72</p>
-                                        <p class="pl-3"><strong>Usuarios asignados:</strong> 12</p>
-        
-                                    </div>
-                                </div>
-                            </li>
-                            <h5 class="lead text-center mt-2">Una vez eliminado el reciclador(a), todos los usuarios asignados pasarán a estar pendientes de asignar. Ver mapa "Mi Comunidad"</h5>
+                            <h5 class="lead text-center">El reciclador(a) <strong>Jeison Guzmán</strong> se eliminará de su lista de Mis recicladores de forma permanente.</h5>
+                            
                         </div>
                     </div>
                 </div>
@@ -191,7 +178,7 @@
                 <span class="pull-right"><button type="button" class="btn btn-danger"
                         data-dismiss="modal">Regresar</button></span>
                 <a data-dismiss="modal" data-toggle="modal" data-target="#detallesModal1">
-                    <button type="button" class="btn btn-success">Confirmar</button></span>
+                    <button type="button" class="btn btn-success">Eliminar</button></span>
                 </a>
             </div>
         </div>

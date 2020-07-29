@@ -41,7 +41,7 @@
         <div class="card-body">
             <form action="/indicadores">
                 <div class="border-bottom border-solid mb-2">
-                    <h2 for="fechacorte">Fecha de Corte: </h2>
+                    <h2 for="fechacorte" class="text-success">Fecha de Corte: </h2>
                     <div class="input-group inline w-100">
                         <div class="col-xl-6 col-sm-12 pl-0">
                             <label class="mr-2">Desde:</label>
@@ -57,7 +57,7 @@
                     </div>
 
                 </div>
-                <h2>Categorias de material</h2>
+                <h2 class="text-success">Categorias de material</h2>
                 <div class="form-row">
                     <div class="col-xl-6 col-sm-12">
                         <label for="organico">Cartón (kg):</label>
@@ -192,83 +192,80 @@
                     <div class="row">
                         <div class="col-xl-12">
                             <div class="row">
-                                <div class="col-xl-4 col-md-12">
-                                    <div class="row">
-                                        <div class="container">
-                                            <div class="row">
-                                                <div class="col-xl-12">
-                                                    <div class="container">
-                                                        <div class="py-5 text-center inline align-middle">
-                                                            Fecha de corte: 3 de Mayo del 2020 al 5 de junio del 2020
-                                                        </div>
-                                                        <div class="py-4 text-center inline align-middle">
-                                                            <h3>Emisiones de CO2 evitadas:</h3>
-                                                            <h1><strong>5 ton CO2</strong></h1>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
+                                <div class="col-xl-12 col-md-12">
+                                    <div class="text-center inline align-middle">
+                                        <strong>Fecha de corte:</strong> 3 de Mayo del 2020 al 5 de junio del 2020
+                                    </div>
+                                    <div class="mt-2 text-center inline align-middle">
+                                        <h3>Emisiones de CO2 evitadas:</h3>
+                                        <h1><strong>5</strong> ton CO2e</h1>
                                     </div>
                                 </div>
-                                <div class="col-xl-8 col-md-12">
-                                    <div class="row h-100">
-                                        <div class="container p-3 border-left">
-                                            <div class="row">
-                                                <div class="col-xl-10">
-                                                    <div class="container">
-                                                        <div class="row">
-                                                            <div class="row mb-2">
-                                                                <div class="col-12">
-                                                                    <h4>Metal: </h4>
-                                                                </div>
-                                                                <div class="col-12">
-                                                                    <h5>Recolectado: 2 (kg)</h5>
-                                                                    <h5>Equivalencia: 0.2 ton CO2</h5>
-                                                                </div>
-                                                            </div>
-                                                            <div class="row mb-2">
-                                                                <div class="col-12">
-                                                                    <h4>Cartón: </h4>
-                                                                </div>
-                                                                <div class="col-12">
-                                                                    <h5>Vidrio: 2 (kg)</h5>
-                                                                    <h5>Equivalencia: 0.2 ton CO2</h5>
-                                                                </div>
-                                                            </div>
-                                                            <div class="row mb-2">
-                                                                <div class="col-12">
-                                                                    <h4>Vidrio: </h4>
-                                                                </div>
-                                                                <div class="col-12">
-                                                                    <h5>Recolectado: 2 (kg)</h5>
-                                                                    <h5>Equivalencia: 0.2 ton CO2</h5>
-                                                                </div>
-                                                            </div>
-                                                            <div class="row mb-2">
-                                                                <div class="col-12">
-                                                                    <h4>Plástico: </h4>
-                                                                </div>
-                                                                <div class="col-12">
-                                                                    <h5>Recolectado: 2 (kg)</h5>
-                                                                    <h5>Equivalencia: 0.2 ton CO2</h5>
-                                                                </div>
-                                                            </div>
-                                                            <div class="row">
-                                                                <div class="col-12">
-                                                                    <h4>Papel: </h4>
-                                                                </div>
-                                                                <div class="col-12">
-                                                                    <h5>Recolectado: 2 (kg)</h5>
-                                                                    <h5>Equivalencia: 0.2 ton CO2</h5>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
+                                <div class="col-xl-12 col-md-12">
+                                    <table class="border border-solid w-100 text-center">
+                                        <thead>
+                                            <th class="col-4 p-1">Material</th>
+                                            <th class="col-4 p-1">Ingresado (kg)</th>
+                                            <th class="col-4 p-1">Emisiones evitadas (ton CO2e)</th>
+                                        </thead>
+                                        <tbody class="lead text-center">
+                                            <tr>
+                                                <td>
+                                                    Cartón
+                                                </td>
+                                                <td>
+                                                    2
+                                                </td>
+                                                <td>
+                                                    0.2
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    Metales
+                                                </td>
+                                                <td>
+                                                    2
+                                                </td>
+                                                <td>
+                                                    0.2
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    Papel
+                                                </td>
+                                                <td>
+                                                    2
+                                                </td>
+                                                <td>
+                                                    0.2
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    Plástico
+                                                </td>
+                                                <td>
+                                                    2
+                                                </td>
+                                                <td>
+                                                    0.2
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    Vidrio
+                                                </td>
+                                                <td>
+                                                    2
+                                                </td>
+                                                <td>
+                                                    0.2
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
                                 </div>
                             </div>
                         </div>

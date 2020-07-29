@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('layouts.app2')
 @section('header')
 <!-- Recaptcha temporal  -->
 {!! htmlScriptTagJsApi([
@@ -14,14 +14,13 @@
             <div class="card shadow">
                 <div class="card-header">
                     <div class="py-3">
-                        <h1 class="text-success text-center">{{ __('Inicial register') }}</h1>
+                        <h1 class="text-success text-center">Registro de cuenta</h1>
                     </div>
                 </div>
                 <div class="card-body">
-                    <form method="POST" action="{{ route('register') }}" id="registro">
                         @csrf
                         <div class="form-group mx-auto w-75">
-                            <label for="name">{{ __('Name') }}</label>
+                            <label for="name">Corporación <strong class="text-danger">*</strong> </label>
                             <input id="name" type="text" class="form-control @error('name') is-invalid @enderror"
                                 name="name" value="{{ old('name') }}" required autocomplete="name" autofocus
                                 placeholder="Ejm: RecilandoAndoCorporación ">
@@ -35,7 +34,7 @@
                             </small>
                         </div>
                         <div class="form-group mx-auto w-75">
-                            <label for="email">{{ __('E-Mail Address') }}</label>
+                            <label for="email">{{ __('E-Mail Address') }}  <strong class="text-danger">*</strong> </label>
                             <input id="email" type="email" class="form-control @error('email') is-invalid @enderror"
                                 name="email" value="{{ old('email') }}" required autocomplete="email"
                                 placeholder="Ej: recilando@reciclando.es">
@@ -50,7 +49,7 @@
                         </div>
 
                         <div class="form-group mx-auto w-75">
-                            <label for="password">{{ __('Password') }}</label>
+                            <label for="password">{{ __('Password') }}  <strong class="text-danger">*</strong> </label>
                             <input id="password" type="password"
                                 class="form-control @error('password') is-invalid @enderror" name="password" required
                                 autocomplete="new-password">
@@ -61,29 +60,29 @@
                             </span>
                             @enderror
                             <small id="emailHelp" class="form-text text-muted">
-                                Ingresa la contraseña de la corporacion con almenos 8 digitos.
+                                Longitud mínima de 8 caracteres alfanuméricos.
                             </small>
                         </div>
 
                         <div class="form-group  mx-auto w-75">
-                            <label for="password-confirm">{{ __('Confirm Password') }}</label>
+                            <label for="password-confirm">{{ __('Confirm Password') }}  <strong class="text-danger">*</strong> </label>
                             <input id="password-confirm" type="password" class="form-control"
                                 name="password_confirmation" required autocomplete="new-password">
                         </div>
 
                         <div class="form-group  mx-auto w-75">
-                            <button type="submit" class="btn btn-success w-100">
-                                {{ __('Register') }}
-                            </button>
+                        <a href="{{url("/register2")}}">
+                                <button class="btn btn-success w-100">
+                                    Registrar
+                                </button>
+                            </a>
                         </div>
-                    </form>
                     <div class="card-footer bg-transparent border">
                         <small id="emailHelp" class="form-text text-muted">
-                            Al hacer click en "Registro" aceptas nuestros
+                            Al hacer clic en "Registrar" aceptas nuestros
                             <a href="#" class="text-decoration-none text-primary">terminos de servicio</a> y
                             <a href="#" class="text-decoration-none text-primary">privacidad.</a>
-                            Te enviaremos correos con informacion sobre tu cuenta ocasionalmente. Se enviará un correo a
-                            la direccion ingresada para confirmar la direccion de correo electronico.
+                            Se enviará un correo a la dirección ingresada para continuar con el proceso de registro.
                         </small>
                     </div>
                 </div>

@@ -87,14 +87,18 @@
                             <table class="table table-borderless table-hover table-light mt-2 " id="datosZona">
                                 <thead>
                                     <tr>
-                                        <th class="col-sm-2 col-md-2" scope="col">Sector</th>
-                                        <th class="col-sm-2 col-md-2" scope="col">Dias</th>
-                                        <th class="col-sm-3 col-md-3" scope="col">Horario</th>
+                                        <th class="col-md-3" scope="col">Barrio</th>
+                                        <th class="col-md-2" scope="col">Comuna</th>
+                                        <th class="col-md-2" scope="col">Municipio</th>
+                                        <th class="col-md-2" scope="col">Dias</th>
+                                        <th class="col-md-3" scope="col">Horario</th>
                                     </tr>
                                 </thead>
                                 <tbody id="listaZonas2">
                                     <tr>
-                                        <td>Envigado - San Marcos</td>
+                                        <td>San Marcos</td>
+                                        <td>No aplica</td>
+                                        <td>Envigado</td>
                                         <td>L-X-V</td>
                                         <td>8:00AM - 10:00AM</td>
                                     </tr>
@@ -370,10 +374,11 @@
                                     <select
                                         class="custom-select  @error('sectors') is-invalid @enderror"
                                         id="comuna" aria-label="Example select with button addon">
-                                        <option value="">Comuna 1</option>
-                                        <option value="">Comuna 2</option>
-                                        <option value="">Comuna 3</option>
-                                        <option value="">Comuna 4</option>
+                                        <option value="Comuna 1">Comuna 1</option>
+                                        <option value="Comuna 2">Comuna 2</option>
+                                        <option value="Comuna 3">Comuna 3</option>
+                                        <option value="Comuna 4">Comuna 4</option>
+                                        <option value="No aplica">No aplica</option>
                                     </select>
                                 </div>
                             </div>
@@ -471,15 +476,18 @@
                             <table class="table table-borderless table-hover table-light mt-2 " id="datosZona">
                                 <thead>
                                     <tr>
-                                        <th class="col-md-5" scope="col">Sector</th>
+                                        <th class="col-md-3" scope="col">Barrio</th>
+                                        <th class="col-md-2" scope="col">Comuna</th>
+                                        <th class="col-md-2" scope="col">Municipio</th>
                                         <th class="col-md-2" scope="col">Dias</th>
                                         <th class="col-md-3" scope="col">Horario</th>
-                                        <th class="col-md-3" scope="col"></th>
                                     </tr>
                                 </thead>
                                 <tbody id="listaZonas">
                                     <tr>
-                                        <td>Envigado - San Marcos</td>
+                                        <td>San Marcos</td>
+                                        <td>No aplica</td>
+                                        <td>Envigado</td>
                                         <td>L-X-V</td>
                                         <td>8:00AM - 10:00AM</td>
                                         <td><button class="btn btn-danger" onclick="eliminarZona()">
@@ -597,7 +605,7 @@
                 <span class="pull-right"><button type="button" class="btn btn-danger"
                         data-dismiss="modal">Regresar</button></span>
                 <a data-dismiss="modal" data-toggle="modal" data-target="#detallesModal1">
-                    <button type="button" class="btn btn-success">Confirmar</button></span>
+                    <button type="button" class="btn btn-success">Confirmar</button>
                 </a>
             </div>
         </div>
@@ -752,7 +760,9 @@
                 tabla_sectores2.removeChild(tabla_sectores2.childNodes[tabla_sectores2.childNodes.length-1]);
             }
         }
-        var sector = document.getElementById("municipio").value+" - "+document.getElementById("sector").value;
+        var barrio = document.getElementById("sector").value;
+        var municipio = document.getElementById("municipio").value;
+        var comuna = document.getElementById("comuna").value;
         var horario = document.getElementById("Hinit").value+" - "+document.getElementById("Hfinal").value;
         var dias = "";
         var dia;
@@ -790,34 +800,50 @@
         var nodo_columna1 = document.createElement("TD");
         var nodo_columna2 = document.createElement("TD");
         var nodo_columna3 = document.createElement("TD");
+        var nodo_columna4 = document.createElement("TD");
+        var nodo_columna5 = document.createElement("TD");
+        var nodo_columna6 = document.createElement("TD");
         var nodo_columna12 = document.createElement("TD");
         var nodo_columna22 = document.createElement("TD");
         var nodo_columna32 = document.createElement("TD");
-        var nodo_columna4 = document.createElement("TD");
+        var nodo_columna52 = document.createElement("TD");
+        var nodo_columna62 = document.createElement("TD");
         var boton_eliminar = document.createElement("BUTTON")
         var nodo_imagen = document.createElement("I")
         boton_eliminar.setAttribute("class","btn btn-danger");
         boton_eliminar.setAttribute("onclick","eliminarZona()");
         boton_eliminar.appendChild(nodo_imagen);
         nodo_imagen.setAttribute("class","fas fa-trash-alt");
-        var nodo_texto1 = document.createTextNode(sector) ;
+        var nodo_texto1 = document.createTextNode(barrio) ;
         var nodo_texto2 = document.createTextNode(horario);
         var nodo_texto3 = document.createTextNode(dias);
-        var nodo_texto12 = document.createTextNode(sector) ;
+        var nodo_texto4 = document.createTextNode(comuna) ;
+        var nodo_texto5 = document.createTextNode(municipio) ;
+        var nodo_texto12 = document.createTextNode(barrio) ;
         var nodo_texto22 = document.createTextNode(horario);
         var nodo_texto32 = document.createTextNode(dias);
+        var nodo_texto42 = document.createTextNode(comuna) ;
+        var nodo_texto52 = document.createTextNode(municipio) ;
         nodo_columna1.appendChild(nodo_texto1);
         nodo_columna3.appendChild(nodo_texto3);
+        nodo_columna5.appendChild(nodo_texto4);
+        nodo_columna6.appendChild(nodo_texto5);
         nodo_columna2.appendChild(nodo_texto2);
         nodo_columna12.appendChild(nodo_texto12);
         nodo_columna32.appendChild(nodo_texto32);
         nodo_columna22.appendChild(nodo_texto22);
+        nodo_columna52.appendChild(nodo_texto42);
+        nodo_columna62.appendChild(nodo_texto52);
         nodo_columna4.appendChild(boton_eliminar);
         nodo_fila.appendChild(nodo_columna1);
+        nodo_fila.appendChild(nodo_columna5);
+        nodo_fila.appendChild(nodo_columna6);
         nodo_fila.appendChild(nodo_columna3);
         nodo_fila.appendChild(nodo_columna2);
         nodo_fila.appendChild(nodo_columna4);
         nodo_fila2.appendChild(nodo_columna12);
+        nodo_fila2.appendChild(nodo_columna52);
+        nodo_fila2.appendChild(nodo_columna62);
         nodo_fila2.appendChild(nodo_columna32);
         nodo_fila2.appendChild(nodo_columna22);
         tabla_sectores2.appendChild(nodo_fila2);

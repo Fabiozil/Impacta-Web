@@ -29,8 +29,8 @@
                                     <div class="row">
                                         <div class="col-xl-12 mb-3">
                                             <div class="container">
-                                                <div class="py-5 text-center subtitle">
-                                                    <h2>Mi perfil</h2>
+                                                <div class="py-5 subtitle text-center mt-2">
+                                                    <h2 class="text-success">Mi perfil</h2>
                                                 </div>
                                                 <div class="text-center">
                                                     <div class="border rounded-circle overflow-hidden border-success"
@@ -44,21 +44,14 @@
                                                     <div class="input-group-prepend">
                                                     </div>
                                                     <div class="custom-file">
-                                                        <input type="file" name="foto"
-                                                            class="custom-file-input @error('foto') is-invalid @enderror"
-                                                            id="file-input" aria-describedby="inputGroupFileAddon01">
-                                                        @error('foto')
-                                                        <div class="invalid-tooltip">{{ $message }}</div>
-                                                        @enderror
-                                                        <label class="custom-file-label"
-                                                            for="inputGroupFile01">Archivo</label>
-                                                    </div>
+                                                        <input type="file" class="custom-file-input" id="customFileLang" lang="es">
+                                                        <label class="custom-file-label" for="customFileLang">Seleccionar Archivo</label>
+                                                      </div>
                                                 </div>
                                                 <label>Capacidad máxima 20 Mb</label><br>
                                                 <small>
                                                     <ul>
                                                         <li>El formato de la foto debe ser .jpg o .png</li>
-                                                        <li>La foto debe ser en lo posible cuadrada</li>
                                                     </ul>
                                                 </small>
                                             </div>
@@ -71,17 +64,17 @@
                             <div class="container">
                                 <div class="row mt-3">
                                     <div class="col-xl-12">
-                                        <div class="py-5 subtitle pb-1">
-                                            <h2>Mis datos personales</h2>
+                                        <div class="py-5 subtitle">
+                                            <h2 class="text-success">Mis datos personales</h2>
                                             <p class="lead">Ingresa la información referente a los datos personales del
-                                                nuevo reciclador(a).</p>
-                                            <small>Los campos señalados con <strong class="text-danger">*</strong> son
-                                                obligatorios.</small>
+                                                nuevo reciclador(a). <small>Los campos señalados con <strong class="text-danger">*</strong> son
+                                                obligatorios.</small></p>
+                                            
                                         </div>
                                     </div>
         
                                 </div>
-                                <div class="row p-4">
+                                <div class="row pl-4 pr-4 pt-0">
                                     <div class="col-xl-12 my-3">
                                         <div class="form-group w-100">
                                             <div class="form-group row">
@@ -194,7 +187,7 @@
                     <div class="container cont-rec m-100 border border-solid">
                         <div class="col-xl-12">
                             <div class="py-5 subtitle">
-                                <h2>Mi labor</h2>
+                                <h2 class="text-success">Mi labor</h2>
                                 <p class="lead">Ingresa la información referente a las condiciones laborales del nuevo
                                     reciclador(a).</p>
                             </div>
@@ -285,10 +278,11 @@
                                                         <select
                                                             class="custom-select  @error('sectors') is-invalid @enderror"
                                                             id="comuna" aria-label="Example select with button addon">
-                                                            <option value="">Comuna 1</option>
-                                                            <option value="">Comuna 2</option>
-                                                            <option value="">Comuna 3</option>
-                                                            <option value="">Comuna 4</option>
+                                                            <option value="Comuna 1">Comuna 1</option>
+                                                            <option value="Comuna 2">Comuna 2</option>
+                                                            <option value="Comuna 3">Comuna 3</option>
+                                                            <option value="Comuna 4">Comuna 4</option>
+                                                            <option value="No aplica">No aplica</option>
                                                         </select>
                                                     </div>
                                                 </div>
@@ -314,68 +308,72 @@
                                             </div>
                                         </div>
                                         <div class="col-xl-6 col-lg-12 col-md-12">
-                                            <p>Día (s):</p>
-                                            <div class="row">
-                                                <div class="col-sm-6">
-                                                    <div class="custom-control custom-checkbox">
-                                                        <input type="checkbox" class="custom-control-input" id="lunes"
-                                                            value="L">
-                                                        <label class="custom-control-label" for="lunes">Lunes</label>
-                                                    </div>
-                                                    <div class="custom-control custom-checkbox">
-                                                        <input type="checkbox" class="custom-control-input" id="martes"
-                                                            value="M">
-                                                        <label class="custom-control-label" for="martes">Martes</label>
-                                                    </div>
-                                                    <div class="custom-control custom-checkbox">
-                                                        <input type="checkbox" class="custom-control-input" id="miercoles"
-                                                            value="X">
-                                                        <label class="custom-control-label"
-                                                            for="miercoles">Miercoles</label>
-                                                    </div>
-                                                    <div class="custom-control custom-checkbox">
-                                                        <input type="checkbox" class="custom-control-input" id="jueves"
-                                                            value="J">
-                                                        <label class="custom-control-label" for="jueves">Jueves</label>
-                                                    </div>
-                                                </div>
-                                                <div class="col-sm-6">
-                                                    <div class="custom-control custom-checkbox">
-                                                        <input type="checkbox" class="custom-control-input" id="viernes"
-                                                            value="V">
-                                                        <label class="custom-control-label" for="viernes">Viernes</label>
-                                                    </div>
-                                                    <div class="custom-control custom-checkbox">
-                                                        <input type="checkbox" class="custom-control-input" id="sabado"
-                                                            value="S">
-                                                        <label class="custom-control-label" for="sabado">Sabado</label>
-                                                    </div>
-                                                    <div class="custom-control custom-checkbox">
-                                                        <input type="checkbox" class="custom-control-input" id="domingo"
-                                                            value="D">
-                                                        <label class="custom-control-label" for="domingo">Domingo</label>
-                                                    </div>
-                                                </div>
-                                            </div>
+                                            
                                         </div>
                                     </div>
-                                    <div class="row">
+                                    <div class="row mb-5">
                                         <div class="col-12">
                                             <h5>Horario de trabajo</h5>
                                         </div>
-                                        
                                         <div class="col-xl-6 col-lg-6 col-md-12">
                                             <div class="form-group">
                                                 <label for="Hinit">Desde</label>
                                                 <input type="time" class="form-control" id="Hinit" value="07:00" min="07:00"
                                                     max="20:00">
                                             </div>
+                                            
                                         </div>
                                         <div class="col-xl-6 col-lg-6 col-md-12">
                                             <div class="form-group ">
                                                 <label for="Hfinal">Hasta</label>
                                                 <input type="time" class="form-control" id="Hfinal" value="20:00"
                                                     min="07:00" max="20:00">
+                                            </div>
+                                        </div>
+                                        <div class="col-12">
+                                            <div class="row">
+                                                <div class="col-12">
+                                                    <p>Día(s):</p>
+                                                    <div class="d-flex justify-content-between">
+                                                        <div class="custom-control custom-checkbox d-inline">
+                                                            <input type="checkbox" class="custom-control-input" id="lunes"
+                                                                value="L">
+                                                            <label class="custom-control-label" for="lunes">Lunes</label>
+                                                        </div>
+                                                        <div class="custom-control custom-checkbox d-inline">
+                                                            <input type="checkbox" class="custom-control-input" id="martes"
+                                                                value="M">
+                                                            <label class="custom-control-label" for="martes">Martes</label>
+                                                        </div>
+                                                        <div class="custom-control custom-checkbox d-inline">
+                                                            <input type="checkbox" class="custom-control-input" id="miercoles"
+                                                                value="X">
+                                                            <label class="custom-control-label"
+                                                                for="miercoles">Miercoles</label>
+                                                        </div>
+                                                        <div class="custom-control custom-checkbox d-inline">
+                                                            <input type="checkbox" class="custom-control-input" id="jueves"
+                                                                value="J">
+                                                            <label class="custom-control-label" for="jueves">Jueves</label>
+                                                        </div>
+                                                        <div class="custom-control custom-checkbox d-inline">
+                                                            <input type="checkbox" class="custom-control-input" id="viernes"
+                                                                value="V">
+                                                            <label class="custom-control-label" for="viernes">Viernes</label>
+                                                        </div> 
+                                                    </div>
+                                                    <br>
+                                                    <div class="custom-control custom-checkbox d-inline mr-4">
+                                                        <input type="checkbox" class="custom-control-input" id="sabado"
+                                                            value="S">
+                                                        <label class="custom-control-label" for="sabado">Sábado</label>
+                                                    </div>
+                                                    <div class="custom-control custom-checkbox d-inline ml-2">
+                                                        <input type="checkbox" class="custom-control-input" id="domingo"
+                                                            value="D">
+                                                        <label class="custom-control-label" for="domingo">Domingo</label>
+                                                    </div>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
@@ -389,10 +387,11 @@
                                         <table class="table table-borderless table-hover table-light mt-2 " id="datosZona">
                                             <thead>
                                                 <tr>
-                                                    <th class="col-md-5" scope="col">Sector</th>
+                                                    <th class="col-md-3" scope="col">Barrio</th>
+                                                    <th class="col-md-2" scope="col">Comuna</th>
+                                                    <th class="col-md-2" scope="col">Municipio</th>
                                                     <th class="col-md-2" scope="col">Dias</th>
                                                     <th class="col-md-3" scope="col">Horario</th>
-                                                    <th class="col-md-3" scope="col"></th>
                                                 </tr>
                                             </thead>
                                             <tbody id="listaZonas">
@@ -415,7 +414,7 @@
                         <div class="row">
                             <div class="container cont-rec h-100 border border-solid">
                                 <div class="py-5 subtitle">
-                                    <h2>Mi historia</h2>
+                                    <h2 class="text-success">Mi historia</h2>
                                     <p class="lead">Ingresa una historia del nuevo reciclador(a) a presentar a los usuarios.</p>
                                 </div>
                                 <div class="container h-100">
@@ -622,7 +621,10 @@
                 tabla_sectores.removeChild(tabla_sectores.childNodes[tabla_sectores.childNodes.length-1]);
             }
         }
-        var sector = document.getElementById("municipio").value+" - "+document.getElementById("sector").value;
+        var barrio = document.getElementById("sector").value;
+        var municipio = document.getElementById("municipio").value;
+        var comuna = document.getElementById("comuna").value;
+        // var sector = document.getElementById("sector").value+" - "+document.getElementById("comuna").value+" - "+document.getElementById("municipio").value
         var horario = document.getElementById("Hinit").value+" - "+document.getElementById("Hfinal").value;
         var dias = "";
         var dia;
@@ -660,20 +662,29 @@
         var nodo_columna2 = document.createElement("TD");
         var nodo_columna3 = document.createElement("TD");
         var nodo_columna4 = document.createElement("TD");
+        var nodo_columna5 = document.createElement("TD");
+        var nodo_columna6 = document.createElement("TD");
         var boton_eliminar = document.createElement("BUTTON")
         var nodo_imagen = document.createElement("I")
         boton_eliminar.setAttribute("class","btn btn-danger");
         boton_eliminar.setAttribute("onclick","eliminarZona()");
         boton_eliminar.appendChild(nodo_imagen);
         nodo_imagen.setAttribute("class","fas fa-trash-alt");
-        var nodo_texto1 = document.createTextNode(sector) ;
+        var nodo_texto1 = document.createTextNode(barrio) ;
+        // var nodo_texto1 = document.createTextNode(sector);
         var nodo_texto2 = document.createTextNode(horario);
         var nodo_texto3 = document.createTextNode(dias);
+        var nodo_texto4 = document.createTextNode(comuna) ;
+        var nodo_texto5 = document.createTextNode(municipio) ;
+        nodo_columna5.appendChild(nodo_texto4);
+        nodo_columna6.appendChild(nodo_texto5);
         nodo_columna1.appendChild(nodo_texto1);
         nodo_columna3.appendChild(nodo_texto3);
         nodo_columna2.appendChild(nodo_texto2);
         nodo_columna4.appendChild(boton_eliminar);
         nodo_fila.appendChild(nodo_columna1);
+        nodo_fila.appendChild(nodo_columna5);
+        nodo_fila.appendChild(nodo_columna6);
         nodo_fila.appendChild(nodo_columna3);
         nodo_fila.appendChild(nodo_columna2);
         nodo_fila.appendChild(nodo_columna4);

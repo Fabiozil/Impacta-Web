@@ -1,6 +1,6 @@
 @extends('layouts.app')
 @section('navbar-left')
-<input type="text" class="form-control ml-2" placeholder="Buscar reciclador" aria-label="Buscador de recicladores"
+<input type="text" class="form-control ml-2" placeholder="Buscar en mapa" aria-label="Buscador de recicladores"
     aria-describedby="filtrar">
 <div class="input-group-append">
     <button class="btn btn-outline-success" type="button" id="filtrar">
@@ -18,7 +18,7 @@
 
     </div>
     <div class="card-body">
-        <div class="row">
+        <div class="row border border-solid bg-light mb-2">
             <div class="col-xl-4 col-sm-12">
                 <img class="imgRecycler border border-success rounded-circle imgpg"
                     style="max-width: 100%; max-height: 100%" src="{{url("/Harlan.jpg")}}" alt="Michele Osama">
@@ -26,7 +26,7 @@
                 <p class="text-center">Miembro hace 1 año</p>
             </div>
             <div class="col-xl-8 col-sm-12">
-                <h2 class="py-4 text-center"><strong>Informacion del usuario</strong></h2>
+                <h2 class="py-4 text-center text-success"><strong>Informacion del usuario</strong></h2>
                 <p class="text-center lead"><strong>Reciclador asignado: </strong> Avimilé Ribas</p>
                 <p class="text-center lead"><strong>Tipo de usuario: </strong> Vivienda</p>
                 <p class="text-center lead"><strong>Municipio: </strong> Envigado</p>
@@ -39,119 +39,115 @@
                     style="display: inline"> --}}
             </div>
         </div>
-        <h2 class="text-center py-3"><strong>Asignar reciclador</strong></h2>
         <div class="row border-solid border">
+            <div class="col-12">
+                <h2 class="text-center py-3 text-success"><strong>Asignar reciclador</strong></h2>
+            </div>
             <div class="col-xl-4 col-md-6 col-sm-12 p-1">
-                <ul class="list-group list-group-flush">
-                    <li class="list-group-item">
+                <ul class="list-group list-group-flush" id="col-1">
+                    <li class="list-group-item border border-solid mb-1">
                         <div class="row">
                             <div class="col-xl-5 col-sm-12 p-0">
-                                <img src="{{ url('/Avimile.jpg') }}" class="border border-success rounded-circle imgp"
-                                    alt="Avimilé" style="display: block; margin-right: auto; margin-left: auto;">
+                                <img src="{{ url('/Avimile.jpg') }}" class="border border-success rounded-circle imgp" alt="Avimilé" style="display: block; margin-right: auto; margin-left: auto;">
                                 <p class="text-center mt-1">Miembro hace 3 meses</p>
                             </div>
                             <div class="col-xl-7 col-sm-12 p-0">
-                                <p class="lead text-center border-bottom"><strong>Avimilé Ribas</strong></p>
-                                <p>Apodo: Avi</p>
-                                <p>Teléfono: 333 31 42</p>
-                                <p>Usuarios asignados: 4</p>
+                                <h4 class="text-center border-bottom"><strong>Avimilé Ribas</strong></h4>
+                                <p class="pl-3 pt-2"><strong>Apodo:</strong> Avi</p>
+                                <p class="pl-3"><strong>Teléfono:</strong> 333 31 42</p>
+                                <p class="pl-3"><strong>Usuarios asignados:</strong> 4</p>
                             </div>
-
                         </div>
                         <div class="d-flex flex-row-reverse bd-highlight">
                             <a data-toggle="modal" data-target="#modalQuitarAsignacion">
-                                <button type="submit" class="btn btn-danger w-100 ">Quitar asignación</button>
+                                <button type="submit" class="btn btn-danger">Quitar asignación</button>
                             </a>
                         </div>
                     </li>
-                    <li class="list-group-item">
+                    <li class="list-group-item border-solid border">
                         <div class="row">
                             <div class="col-xl-5 col-sm-12 p-0">
-                                <img src="{{ url('/Avimile.jpg') }}" class="border border-success rounded-circle imgp"
-                                    alt="Avimilé" style="display: block; margin-right: auto; margin-left: auto">
+                                <img src="{{ url('/Avimile.jpg') }}" class="border border-success rounded-circle imgp" alt="Avimilé" style="display: block; margin-right: auto; margin-left: auto">
                                 <p class="text-center mt-1">Miembro hace 1 mes</p>
                             </div>
                             <div class="col-xl-7 col-sm-12 p-0">
-                                <p class="lead text-center border-bottom"><strong>Kevin Tellez</strong></p>
-                                <p>Apodo: Kete</p>
-                                <p>Teléfono: 330 21 19</p>
-                                <p>Usuarios asignados: 1</p>
+                                <h4 class="text-center border-bottom"><strong>Kevin Tellez</strong></h4>
+                                <p class="pl-3 pt-2"><strong>Apodo:</strong> Kete</p>
+                                <p class="pl-3"><strong>Teléfono:</strong> 330 21 19</p>
+                                <p class="pl-3"><strong>Usuarios asignados:</strong> 1</p>
                             </div>
-
+                            
                         </div>
                         <div class="d-flex flex-row-reverse bd-highlight">
                             <a data-toggle="modal" data-target="#modalConfirmarAsignacion">
-                                <button type="submit" class="btn btn-success w-100 ml-2">Asignar</button>
+                                <button type="submit" class="btn btn-success">Asignar</button>
                             </a>
                         </div>
                     </li>
                 </ul>
             </div>
             <div class="col-xl-4 col-md-6 col-sm-12 p-1">
-                <ul class="list-group list-group-flush">
-                    <li class="list-group-item">
+                <ul class="list-group list-group-flush" id="col-2">
+                    <li class="list-group-item border-solid border mb-1">
                         <div class="row">
                             <div class="col-xl-5 col-sm-12 p-0">
-                                <img src="{{ url('/Cano.jpg') }}" class="border border-success rounded-circle imgp"
-                                    alt="Avimilé" style="display: block; margin-right: auto; margin-left: auto">
+                                <img src="{{ url('/Cano.jpg') }}" class="border border-success rounded-circle imgp" alt="Avimilé" style="display: block; margin-right: auto; margin-left: auto">
                                 <p class="text-center mt-1">Miembro hace 2 años</p>
                             </div>
                             <div class="col-xl-7 col-sm-12 p-0">
-                                <p class="lead text-center border-bottom"><strong>German Exequiel Cano</strong></p>
-                                <p>Apodo: Cano</p>
-                                <p>Teléfono: 313 61 72</p>
-                                <p>Usuarios asignados: 6</p>
+                                <h4 class="text-center border-bottom"><strong>German Exequiel Cano</strong></h4>
+                                <p class="pl-3 pt-2"><strong>Apodo:</strong> Cano</p>
+                                <p class="pl-3"><strong>Teléfono:</strong> 313 61 72</p>
+                                <p class="pl-3"><strong>Usuarios asignados:</strong> 6</p>
                             </div>
                         </div>
                         <div class="d-flex flex-row-reverse bd-highlight">
                             <a data-toggle="modal" data-target="#modalConfirmarAsignacion">
-                                <button type="submit" class="btn btn-success w-100 ml-2">Asignar</button>
+                                <button type="submit" class="btn btn-success">Asignar</button>
                             </a>
                         </div>
                     </li>
-                    <li class="list-group-item">
+                    <li class="list-group-item border-solid border">
                         <div class="row">
                             <div class="col-xl-5 col-sm-12 p-0">
-                                <img src="{{ url('/Avimile.jpg') }}" class="border border-success rounded-circle imgp"
-                                    alt="Avimilé" style="display: block; margin-right: auto; margin-left: auto">
+                                <img src="{{ url('/Avimile.jpg') }}" class="border border-success rounded-circle imgp" alt="Avimilé" style="display: block; margin-right: auto; margin-left: auto">
                                 <p class="text-center mt-1">Miembro hace 6 meses</p>
                             </div>
                             <div class="col-xl-7 col-sm-12 p-0">
-                                <p class="lead text-center border-bottom"><strong>Stiven Mendoza</strong></p>
-                                <p>Apodo: Mendo</p>
-                                <p>Teléfono: 313 13 23</p>
-                                <p>Usuarios asignados: 4</p>
+                                <h4 class="text-center border-bottom"><strong>Stiven Mendoza</strong></h4>
+                                <p class="pl-3 pt-2"><strong>Apodo:</strong> Mendo</p>
+                                <p class="pl-3"><strong>Teléfono:</strong> 313 13 23</p>
+                                <p class="pl-3"><strong>Usuarios asignados:</strong> 4</p>
                             </div>
-
+                            
                         </div>
                         <div class="d-flex flex-row-reverse bd-highlight">
                             <a data-toggle="modal" data-target="#modalConfirmarAsignacion">
-                                <button type="submit" class="btn btn-success w-100 ml-2">Asignar</button>
+                                <button type="submit" class="btn btn-success">Asignar</button>
                             </a>
                         </div>
                     </li>
                 </ul>
             </div>
             <div class="col-xl-4 col-md-6 col-sm-12 p-1">
-                <ul class="list-group list-group-flush">
-                    <li class="list-group-item">
+                <ul class="list-group list-group-flush" id="col-3">
+                    <li class="list-group-item border border-solid">
                         <div class="row">
                             <div class="col-xl-5 col-sm-12 p-0">
-                                <img src="{{ url('/Jeison.jpg') }}" class="border border-success rounded-circle imgp"
-                                    alt="Avimilé" style="display: block; margin-right: auto; margin-left: auto;">
+                                <img src="{{ url('/Jeison.jpg') }}" class="border border-success rounded-circle imgp" alt="Avimilé" style="display: block; margin-right: auto; margin-left: auto;">
                                 <p class="text-center mt-1">Miembro hace 4 años</p>
                             </div>
                             <div class="col-xl-7 col-sm-12 p-0">
-                                <p class="lead text-center border-bottom"><strong>Jeison Guzmán</strong></p>
-                                <p>Apodo: Jeison</p>
-                                <p>Teléfono: 253 19 72</p>
-                                <p>Usuarios asignados: 12</p>
+                                <h4 class="text-center border-bottom"><strong>Jeison Guzmán</strong></h4>
+                                <p class="pl-3 pt-2"><strong>Apodo:</strong> Jeison</p>
+                                <p class="pl-3"><strong>Teléfono:</strong> 253 19 72</p>
+                                <p class="pl-3"><strong>Usuarios asignados:</strong> 12</p>
 
                             </div>
                         </div>
                         <div class="d-flex flex-row-reverse bd-highlight">
                             <a data-toggle="modal" data-target="#modalConfirmarAsignacion">
-                                <button type="submit" class="btn btn-success w-100 ml-2">Asignar</button>
+                                <button type="submit" class="btn btn-success">Asignar</button>
                             </a>
                         </div>
                     </li>
