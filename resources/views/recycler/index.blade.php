@@ -127,7 +127,7 @@
                     <li class="list-group-item border border-solid">
                         <div class="row">
                             <div class="col-xl-5 col-sm-12 p-0">
-                                <img src="{{ url('/Jeison.jpg') }}" class="border border-success rounded-circle imgp" alt="Avimilé" style="display: block; margin-right: auto; margin-left: auto;">
+                                <img src="{{ url('/Jeison.jpg') }}" class="border border-success rounded-circle imgp" style="display: block; margin-right: auto; margin-left: auto;">
                                 <p class="text-center mt-1">Miembro hace 4 años</p>
                             </div>
                             <div class="col-xl-7 col-sm-12 p-0">
@@ -156,6 +156,7 @@
     <div class="modal-dialog modal-lg" role="document">
         <div class="modal-content">
             <div class="modal-header">
+                <h2 class="text-success">Eliminar reciclador</h2>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
                         aria-hidden="true">&times;</span></button>
             </div>
@@ -163,12 +164,12 @@
                 <div class="container">
                     <div class="row">
                         <div class="col-xl-12">
+                            <div class="d-flex justify-content-center mt-2 mb-2">
+                                <img src="/alerta.png" alt="">
+                            </div>
                             <h2 class="py-2 text-center text-success">¿Deseas eliminar este reciclador(a)?</h2>
                             <h5 class="lead text-center mt-2">Una vez eliminado el reciclador(a), los usuarios asignados al perfil pasarán a estar pendientes de asignar. Ver mapa Mi comunidad.</h5>
-                            <div class="d-flex justify-content-center mt-2 mb-2">
-                                <i class="fas fa-question" style="width: 10% !important; height: 10% !important;"></i>
-                            </div>
-                            <h5 class="lead text-center">El reciclador(a) <strong>Jeison Guzmán</strong> se eliminará de su lista de Mis recicladores de forma permanente.</h5>
+                            <h5 class="lead text-center border border-solid">El reciclador(a) <strong>Jeison Guzmán</strong> se eliminará de su lista de "Mis recicladores" de forma permanente.</h5>
                             
                         </div>
                     </div>
@@ -188,7 +189,7 @@
     <div class="modal-dialog modal-lg" role="document">
         <div class="modal-content">
             <div class="modal-header">
-                <h4 class="modal-title text-success" id="favoritesModalLabel">Exito</h4>
+                <h4 class="modal-title text-success" id="favoritesModalLabel">Éxito</h4>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
                         aria-hidden="true">&times;</span></button>
             </div>
@@ -196,11 +197,11 @@
                 <div class="container">
                     <div class="row">
                         <div class="col-xl-12">
-                            <h1 class="py-2 text-center">Exito!</h1>
-                            <h5 class="lead text-center">Cambios realizados correctamente.</h5>
                             <div class="d-flex justify-content-center">
-                                <i class="fas fa-check-circle" style="width: 10% !important; height: 10% !important;"></i>
+                                <img src="Exito.png" alt="">
                             </div>
+                            <h1 class="py-2 text-center">¡Éxito!</h1>
+                            <h5 class="lead text-center">Cambios realizados correctamente.</h5>
                         </div>
                     </div>
                 </div>

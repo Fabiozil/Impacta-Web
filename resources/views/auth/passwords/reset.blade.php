@@ -5,26 +5,18 @@
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card shadow">
-                <div class="card-header text-center text-success">
+                <div class="card-header text-center ">
                     <div class="py-3">
-                        <h2>{{ __('Reset Password') }}</h2>                        
+                        <h2 class="text-success">Restablecer contraseña</h2>       
+                        <p class="lead">Una contraseña segura contribuye a evitar el acceso no autorizado a la cuenta de registrada en Reciclapp.</p>                 
                     </div>
 
                 </div>
                 <div class="card-body">
                         {{-- <input type="hidden" name="token" value="{{ $token }}"> --}}
-                        <div class="form-group mx-auto w-75">
-                            <label for="email">{{ __('E-Mail Address') }}</label>
-                            <input id="email" type="email" class="form-control" name="email" required autocomplete="email" autofocus>
-                            @error('email')
-                                <span class="invalid-feedback" role="alert">
-                                    <strong>{{ $message }}</strong>
-                                </span>
-                            @enderror
-                        </div>
 
                         <div class="form-group mx-auto w-75">
-                            <label for="password">{{ __('Password') }}</label>
+                            <label for="password">Nueva contraseña</label>
                             <input id="password" type="password" class="form-control" name="password" required autocomplete="new-password">
                             @error('password')
                                 <span class="invalid-feedback" role="alert">
@@ -32,7 +24,7 @@
                                 </span>
                             @enderror
                             <small id="emailHelp" class="form-text text-muted">
-                                Ingresa la nueva contraseña
+                                Longitud mínima de 8 caracteres alfanuméricos.
                             </small>
                         </div>
 
@@ -50,8 +42,7 @@
                 </div>
                 <div class="card-footer">
                     <small id="emailHelp" class="form-text text-muted">
-                        Por favor verifica que la dirección de correo auto completada corresponda con la de tu corporación.
-                        Al hacer click en "reestablecer contraseña" autorizas a reemplazar la contraseña actual con la ingresada.
+                        Al hacer clic en "restablecer contraseña" autoriza el reemplazo de la contraseña actual de la cuenta registrada por la nueva contraseña ingresada
                     </small>
                 </div>
             </div>

@@ -57,13 +57,13 @@
                         <ul class="navbar-nav ml-auto">
                             <!-- Authentication Links -->
                             <li>
-                                <div class="dropleft rounded-circle border-success border border-solid" style="height: 50px; width: 50px">
+                                <div class="dropleft" style="height: 50px; width: 50px">
                                     <button class="btn btn-secondary w-100 p-0 rounded-circle border border-solid" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                        <img src="{{url("/Harlan.jpg")}}" alt="Foto de perfil" class="w-100 h-100 p-0 rounded-circle border border-solid">
+                                        <img src="{{url("/Harlan.jpg")}}" alt="Foto de perfil" class="w-100 h-100 p-0 rounded-circle">
                                     </button>
                                     <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                                      <a class="dropdown-item" href="{{url("/")}}">Cerrar sesion</a>
-                                    <a class="dropdown-item" href="{{url("/configuracion")}}">Configuracion</a>
+                                        <a class="dropdown-item border-solid border-bottom" href="{{url("/configuracion")}}">Configuracion</a>
+                                        <a class="dropdown-item" href="{{url("/")}}">Cerrar sesión</a>
                                     </div>
                                   </div>
                             </li>

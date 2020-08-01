@@ -48,6 +48,7 @@
                                                 <h4 class="text-center border-bottom"><strong>RecItagui</strong></h4>
                                                 <p class="pl-3 pt-2"><strong>Recicladores agremiados: </strong><br>12</p>
                                                 <p class="pl-3 pt-2"><strong>Usuarios afiliados: </strong><br>45</p>
+                                                <p class="pl-3 pt-2"><strong>Emisiones evitadas: </strong><br>544 ton CO2e</p>
                                             </div>
                                         </div>
                                         <div class="d-flex justify-content-end">
@@ -70,6 +71,7 @@
                                         <h4 class="text-center border-bottom"><strong>EIA Recicla</strong></h4>
                                         <p class="pl-3 pt-2"><strong>Recicladores agremiados: </strong><br>9</p>
                                         <p class="pl-3 pt-2"><strong>Usuarios afiliados: </strong><br>37</p>
+                                        <p class="pl-3 pt-2"><strong>Emisiones evitadas: </strong><br>274 ton CO2e</p>
                                     </div>
                                 </div>
                                 <div class="d-flex justify-content-end">
@@ -92,6 +94,7 @@
                                         <h4 class="text-center border-bottom"><strong>Recicladores las lomas</strong></h4>
                                         <p class="pl-3 pt-2"><strong>Recicladores agremiados: </strong><br>4</p>
                                         <p class="pl-3 pt-2"><strong>Usuarios afiliados: </strong><br>19</p>
+                                        <p class="pl-3 pt-2"><strong>Emisiones evitadas: </strong><br>77 ton CO2e</p>
                                     </div>
                                 </div>
                                 <div class="d-flex justify-content-end">

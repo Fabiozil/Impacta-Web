@@ -20,7 +20,7 @@
                 <div class="card-body">
                         @csrf
                         <div class="form-group mx-auto w-75">
-                            <label for="name">Corporación <strong class="text-danger">*</strong> </label>
+                            <label for="name">Usuario (Corporación) <strong class="text-danger">*</strong> </label>
                             <input id="name" type="text" class="form-control @error('name') is-invalid @enderror"
                                 name="name" value="{{ old('name') }}" required autocomplete="name" autofocus
                                 placeholder="Ejm: RecilandoAndoCorporación ">

@@ -36,12 +36,12 @@
                 Configuracion
             </a>
         </li>
-        <li>
+        {{-- <li>
             <a href="{{ url('/contacto') }}">
                 <i class="fas fa-phone"></i>
                 Contacto
             </a>
-        </li>
+        </li> --}}
     </ul>
 </nav>
 <!--End Sidebar-->

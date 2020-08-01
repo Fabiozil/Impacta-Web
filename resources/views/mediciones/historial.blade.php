@@ -1,6 +1,6 @@
 @extends('layouts.app')
 @section('navbar-left')
-<input type="text" class="form-control ml-2" placeholder="Buscar reciclador" aria-label="Buscador de recicladores" aria-describedby="filtrar">
+<input type="text" class="form-control ml-2" placeholder="Buscar" aria-label="Buscador de recicladores" aria-describedby="filtrar">
             <div class="input-group-append">
                 <button class="btn btn-outline-success" type="button" id="filtrar" onclick="buscar()">
                 <i class="fas fa-search"></i></button>

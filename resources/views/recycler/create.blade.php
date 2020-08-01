@@ -427,7 +427,9 @@
                                         @enderror
         
                                     </div>
-                                    <small>Capacidad máxima: 500 caracteres</small>
+                                    <div class="d-flex justify-content-end">
+                                        <small class="text-muted">Capacidad máxima: 500 caracteres</small>
+                                    </div>
                                     <small id="emailHelp" class="form-text text-muted">Aquí te damos cuatro consejos para que crees la historia del nuevo reciclador(a):
                                         <ol>
                                             <li>

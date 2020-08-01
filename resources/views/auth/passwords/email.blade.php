@@ -41,7 +41,7 @@
             <div class="card-footer">
                 <div class="d-flex justify-content-end">
                     <a href="{{url("/login")}}">
-                        <button class="btn btn-primary">Regresar</button>
+                        <button class="btn btn-danger">Regresar</button>
                     </a>
                 </div>
             </div>

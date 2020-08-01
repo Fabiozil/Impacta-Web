@@ -276,7 +276,7 @@
                 <span class="pull-right"><button type="button" class="btn btn-danger"
                         data-dismiss="modal">Atras</button></span>
                 <a href="{{url("/historial")}}">
-                    <button type="button" class="btn btn-success">Confirmar nueva medición</button></span>
+                    <button type="button" class="btn btn-success">Confirmar medición</button></span>
                 </a>
 
 
