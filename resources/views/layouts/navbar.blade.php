@@ -9,6 +9,12 @@
 
     <ul class="list-unstyled components">
         <li>
+            <a href="{{url('/home')}}">
+                    <i class="fas fa-street-view"></i>
+                    Home
+                </a>
+            </li>
+        <li>
         <a href="{{url('/recicladores')}}">
                 <i class="fas fa-street-view"></i>
                 Mis recicladores

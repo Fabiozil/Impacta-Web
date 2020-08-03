@@ -15,7 +15,7 @@
                 </div>
                 <div class="card-body">
                     <div class="row">
-                        <div class="col-4 border border-solid p-2">
+                        <div class="col-xl-4 col-sm-12 border border-solid p-2">
                             <h2 class="text-success text-center">
                                 Puesto 2 en recoleccion semanal.
                             </h2>
@@ -29,7 +29,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-8 border border-solid p-2">
+                        <div class="col-xl-8 col-sm-12 border border-solid p-2">
                             <h2 class="text-success text-center">
                                 Tu historico
                             </h2>
@@ -53,7 +53,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-6 border border-solid p-2">
+                        <div class="col-xl-6 col-sm-12 border border-solid p-2">
                             <h2 class="text-success text-center">
                                 Mi comunidad
                             </h2>
@@ -96,7 +96,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-6 border border-solid p-2">
+                        <div class="col-xl-6 col-sm-12 border border-solid p-2">
                             <h2 class="text-success text-center">
                                 Mis recicladores
                             </h2>
@@ -138,6 +138,82 @@
                                     </ul>
                                 </div>
                             </div>
+                        </div>
+                        <div class="col-12 border-solid border">
+                            <h2 class="text-success text-center mt-2">Notificaciones</h2>
+                                
+                                <div class="row">
+                                    <div class="col-6">
+                                        <div class="d-flex justify-content-center">
+                                            <label for="" class="lead font-weight-bold">Ultimos enviados</label>
+                                        </div>
+                                        <table class="mt-3">
+                                            <thead>
+                                                <th class="col-2 p-1"></th>
+                                                <th class="col-10 p-1 overflow-hidden"></th>
+                                            </thead>
+                                            <tbody>
+                                                <tr class="border-bottom border-solid">
+                                                    <td>23 julio
+                                                        
+                                                    </td>
+                                                    <td class="overflow-hidden">
+                                                        <a class="bg-primary text-white p-1">AUT</a> <br>
+                                                        <p> Hola <a href="" class="text-success">@nombre de usuario!</a>
+                                                        No olvides sacar tu material reciclable y entregarlos a <a class="text-success">@nombre reciclador</a> los días
+                                                        laborales del reciclador</p>
+                                                        </td>
+                                                </tr>
+                                                <tr class="border-bottom border-solid">
+                                                    <td>
+                                                        19 de julio
+                                                    </td>
+                                                    <td class="overflow-hidden"><a class="bg-warning text-white p-1">MAN</a> <br>
+                                                        Hola <a class="text-success">@nombre de usuario!</a>
+                                                        El reciclador <a class="text-success">@nombre del reciclador</a> no pudo pasar el dia
+                                                        de ayer por el reciclaje por las condiciones climaticas. Pasará hoy a las 5:00PM
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                    <div class="col-6">
+                                        <div class="d-flex justify-content-center">
+                                            <label for="" class="lead font-weight-bold">Proximos a enviar</label>
+                                        </div>
+                                        <table class="mt-3">
+                                            <thead>
+                                                <th class="col-2 p-1"></th>
+                                                <th class="col-10 p-1 overflow-hidden"></th>
+                                            </thead>
+                                            <tbody>
+                                                <tr class="border-bottom border-solid">
+                                                    <td>
+                                                        <br>
+                                                        <p class="text-center">2 Sep 2020 8:00AM</p>
+                                                    </td>
+                                                    <td class="overflow-hidden"><a class="bg-warning text-white p-1">MAN</a> <br>Hola <a class="text-success">@nombre de usuario!</a>
+                                                        El reciclador asignado para esta semana es <a class="text-success">@nombre del reciclador</a> debido a que tu reciclador
+                                                         asignado estará en una capacitación.</td>
+                                                </tr>
+                                                <tr class="border-bottom border-solid">
+                                                    <td>
+                                                        <br>
+                                                        <p class="text-center">5 Sep 2020 7:00AM</p>
+                                                    </td>
+                                                    <td class="overflow-hidden"><a class="bg-warning text-white p-1">MAN</a> <br>Hola <a class="text-success">@nombre de usuario!</a>
+                                                        El pasado viernes no pudimos recolectar tu reciclaje pues el reciclador timbró y nadie entregó el reciclaje, tenlo en cuenta para la proxima entrega.
+                                                        </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                        <div class="d-flex justify-content-end mt-3 mb-3">
+                                        <a href="{{url("/notificaciones")}}">
+                                                <button class="btn btn-success">Ver notificaciones</button>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
                         </div>
                     </div>
                 </div>

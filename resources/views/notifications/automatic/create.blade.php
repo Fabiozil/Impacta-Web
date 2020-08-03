@@ -35,7 +35,7 @@
                 title="Utiliza la pestaña para definir una nueva notificación manual">
                 <i class="fas fa-info-circle"></i></span>
             <a href="{{ url( '/crearAutomatica' ) }}" class="w-25">
-                <button type="submit" class="btn btn-outline-success mb-2 mr-0 w-100">Automaticas
+                <button type="submit" class="btn btn-outline-success mb-2 mr-0 w-100">Automáticas
                 </button>
             </a>
             <span class="btn btn-info mb-2 ml-0" data-toggle="tooltip" data-placement="top"
