@@ -41,14 +41,14 @@
                             <li class="list-group-item border border-solid" id="item-lista-usuarios">
                                         <div class="row">
                                             <div class="col-xl-5 col-sm-12 p-0">
-                                                <img src="{{ url('/corp_logo2.png') }}" class="border border-success rounded-circle imgp" alt="Avimilé" style="display: block; margin-right: auto; margin-left: auto;">
+                                                <img src="{{ url('/corp_logo2.jpg') }}" class="border border-success rounded-circle imgp" alt="Avimilé" style="display: block; margin-right: auto; margin-left: auto;">
                                                 <p class="text-center mt-1">Miembro hace 3 años</p>
                                             </div>
                                             <div class="col-xl-7 col-sm-12 p-0">
-                                                <h4 class="text-center border-bottom"><strong>RecItagui</strong></h4>
+                                                <h4 class="text-center border-bottom"><strong>CORPOOCCIDENTE</strong></h4>
                                                 <p class="pl-3 pt-2"><strong>Recicladores agremiados: </strong><br>12</p>
-                                                <p class="pl-3 pt-2"><strong>Usuarios afiliados: </strong><br>45</p>
-                                                <p class="pl-3 pt-2"><strong>Emisiones evitadas: </strong><br>544 ton CO2e</p>
+                                                <p class="pl-3"><strong>Usuarios afiliados: </strong><br>45</p>
+                                                <p class="pl-3"><strong>Emisiones evitadas: </strong><br>544 ton CO2e</p>
                                             </div>
                                         </div>
                                         <div class="d-flex justify-content-end">
@@ -68,10 +68,10 @@
                                         <p class="text-center mt-1">Miembro hace 2 años</p>
                                     </div>
                                     <div class="col-xl-7 col-sm-12 p-0">
-                                        <h4 class="text-center border-bottom"><strong>EIA Recicla</strong></h4>
+                                        <h4 class="text-center border-bottom"><strong>CORPORACIÓN CAMPO SANTO</strong></h4>
                                         <p class="pl-3 pt-2"><strong>Recicladores agremiados: </strong><br>9</p>
-                                        <p class="pl-3 pt-2"><strong>Usuarios afiliados: </strong><br>37</p>
-                                        <p class="pl-3 pt-2"><strong>Emisiones evitadas: </strong><br>274 ton CO2e</p>
+                                        <p class="pl-3"><strong>Usuarios afiliados: </strong><br>37</p>
+                                        <p class="pl-3"><strong>Emisiones evitadas: </strong><br>274 ton CO2e</p>
                                     </div>
                                 </div>
                                 <div class="d-flex justify-content-end">
@@ -91,10 +91,10 @@
                                         <p class="text-center mt-1">Miembro hace 1 año</p>
                                     </div>
                                     <div class="col-xl-7 col-sm-12 p-0">
-                                        <h4 class="text-center border-bottom"><strong>Recicladores las lomas</strong></h4>
+                                        <h4 class="text-center border-bottom"><strong>COPRESAP</strong></h4>
                                         <p class="pl-3 pt-2"><strong>Recicladores agremiados: </strong><br>4</p>
-                                        <p class="pl-3 pt-2"><strong>Usuarios afiliados: </strong><br>19</p>
-                                        <p class="pl-3 pt-2"><strong>Emisiones evitadas: </strong><br>77 ton CO2e</p>
+                                        <p class="pl-3"><strong>Usuarios afiliados: </strong><br>19</p>
+                                        <p class="pl-3"><strong>Emisiones evitadas: </strong><br>77 ton CO2e</p>
                                     </div>
                                 </div>
                                 <div class="d-flex justify-content-end">
@@ -134,11 +134,11 @@
                                     <div class="row">
                                         <div class="col-xl-12 h-100">
                                             <div class="container">
-                                                <img src="{{url("/corp_logo2.png")}}"
+                                                <img src="{{url("/corp_logo2.jpg")}}"
                                                     class="imgpg border border-success rounded-circle"
                                                     alt="">
                                                 <div class="mt-2 ml-1 mr-1 text-center">
-                                                    <h3><strong>RecItagui</strong></h3>
+                                                    <h3><strong>CORPOOCCIDENTE</strong></h3>
                                                     <p>Se unió hace 3 años</p>
                                                 </div>
                                             </div>
@@ -153,8 +153,9 @@
                                     <div class="container pt-4">
                                         <div class="row mb-1">
                                             <div class="col-8 pl-0">
-                                                <label class="lead pl-0 mb-3"><strong>Dirección: </strong>Calle 67 carrera 57</label>
-                                                <label class="lead pl-0"><strong>Telefóno: </strong>(4) 331 41 21</label>
+                                                <label class="lead pl-0 mb-3"><strong>Municipio: </strong>Medellín</label> <br>
+                                                <label class="lead pl-0 mb-3"><strong>Dirección: </strong>Carrera 109a #63b - 420</label> <br>
+                                                <label class="lead pl-0"><strong>Telefóno: </strong>(4) 2322668</label>
                                             </div>
                                             <div class="col-4 pr-0">
                                             </div>
@@ -207,7 +208,7 @@
                                                     class="imgpg border border-success rounded-circle"
                                                     alt="">
                                                 <div class="mt-2 ml-1 mr-1 text-center">
-                                                    <h3><strong>EIA Recicla</strong></h3>
+                                                    <h3><strong>CORPORACIÓN CAMPO SANTO</strong></h3>
                                                     <p>Se unió hace 2 años</p>
                                                 </div>
                                             </div>
@@ -221,9 +222,10 @@
                                 <div class="col-xl-12 h-100">
                                     <div class="container pt-4">
                                         <div class="row mb-1">
-                                            <div class="col-8 pl-0">
-                                                <label class="lead pl-0 mb-3"><strong>Dirección: </strong>Calle 22 sur Carrera 42b</label>
-                                                <label class="lead pl-0"><strong>Telefóno: </strong>(4) 312 17 54</label>
+                                            <div class="col-12 pl-0">
+                                                <label class="lead pl-0 mb-3"><strong>Municipio: </strong>Medellín</label> <br>
+                                                <label class="lead pl-0 mb-3"><strong>Dirección: </strong>Calle 53 #10c - 63</label> <br>
+                                                <label class="lead pl-0"><strong>Telefóno: </strong>(4) 2260243</label>
                                             </div>
                                             <div class="col-4 pr-0">
                                             </div>
@@ -291,7 +293,7 @@
                                     <div class="container pt-4">
                                         <div class="row border-solid border-bottom mb-1">
                                             <div class="col-8 pl-0">
-                                                <label class="lead pl-0 mb-3"><strong>Dirección: </strong> Carrera 42 #22 sur 43C</label>
+                                                <label class="lead pl-0 mb-3"><strong>Dirección: </strong> # 42 #22 sur 43C</label>
                                                 <label class="lead pl-0"><strong>Telefóno: </strong>(4) 312 25 67</label>
                                             </div>
                                             <div class="col-4 pr-0">
@@ -353,7 +355,7 @@
                                                     class="imgpg border border-success rounded-circle"
                                                     alt="">
                                                 <div class="mt-2 ml-1 mr-1 text-center">
-                                                    <h3><strong>Recicladores las lomas</strong></h3>
+                                                    <h3><strong>COPRESAP</strong></h3>
                                                     <p>Se unió hace 1 año</p>
                                                 </div>
                                             </div>
@@ -368,8 +370,9 @@
                                     <div class="container pt-4">
                                         <div class="row mb-1">
                                             <div class="col-8 pl-0">
-                                                <label class="lead pl-0 mb-3"><strong>Dirección: </strong>Calle 27 sur carrera 22</label>
-                                                <label class="lead pl-0"><strong>Telefóno: </strong>(4) 331 41 13</label>
+                                                <label class="lead pl-0 mb-3"><strong>Municipio: </strong>Medellín</label> <br>
+                                                <label class="lead pl-0 mb-3"><strong>Dirección: </strong>Carrera 32a #102b - 53</label> <br>
+                                                <label class="lead pl-0"><strong>Telefóno: </strong>(4) 5295490</label>
                                             </div>
                                             <div class="col-4 pr-0">
                                             </div>

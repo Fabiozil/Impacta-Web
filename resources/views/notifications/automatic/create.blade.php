@@ -21,7 +21,7 @@
         <h3 class="lead text-center">
             Aquí podrás configurar los mensajes automáticos que deseas enviar de forma periódica a todos los usuarios de
             la comunidad. Este tipo de notificaciones es de uso exclusivo para compartir información de recordación
-            sobre el servicio o del impacto ambiental generado.
+            sobre el servicio o del impacto ambiental positivo generado.
         </h3>
     </div>
 
@@ -32,14 +32,14 @@
                 </button>
             </a>
             <span class="btn btn-info mb-2 ml-0 mr-2" data-toggle="tooltip" data-placement="top"
-                title="Utiliza la pestaña para definir una nueva notificación manual">
+                title="Utiliza este botón para definir una nueva notificación manual">
                 <i class="fas fa-info-circle"></i></span>
             <a href="{{ url( '/crearAutomatica' ) }}" class="w-25">
                 <button type="submit" class="btn btn-outline-success mb-2 mr-0 w-100">Automáticas
                 </button>
             </a>
             <span class="btn btn-info mb-2 ml-0" data-toggle="tooltip" data-placement="top"
-                title="Utiliza la pestaña para definir una nueva notificación automática">
+                title="Utiliza este botón para definir una nueva notificación automática">
                 <i class="fas fa-info-circle"></i></span>
         </div>
         <main class="container contenedor">
@@ -51,7 +51,7 @@
                         <select class="form-control inline w-25"
                         id="sector" aria-label="Example select with button addon">
                             <option value="El Poblado">Servicio de recolección</option>
-                            <option value="Zuñiga">Información de reciclador</option>
+                            <option value="Zuñiga">Información de reciclador(a)</option>
                             <option value="San Marcos">Otro</option>
                         </select>
                     </div>
@@ -159,20 +159,21 @@
                                 </td>
                                 <td>Mensaje de servicio</td>
                                 <td class="overflow-hidden">Hola <a class="text-success">@nombre de usuario!</a>
-                                    No olvides sacar tu material reciclable y entregarlos a <a class="text-success">@nombre reciclador</a>  los días
-                                    laborales del reciclador</td>
+                                    ! No olvides preparar el material reciclable para que sea entregado al reciclador(a) asignado, <a class="text-success">@nombre reciclador(a)</a> entre los días y las horas correctas. !Gracias por su colaboración!
+                                </td>
                                 <td><button class="btn btn-outline-success ml-5" data-target="#modal3" data-toggle="modal"><i class="fas fa-edit fa-lg"></i></button></td>
                             </tr>
                             <tr class="border-bottom border-solid">
                                 <td class="d-flex justify-content-center">
-                                    <div class="custom-control custom-switch d-inline">
+                                    <div class="custom-control custom-switch d-inline mt-3">
                                         <input type="checkbox" class="custom-control-input" id="customSwitch3">
                                         <label class="custom-control-label" for="customSwitch3"></label>
                                     </div>
                                 </td>
                                 <td>Indicador ambiental</td>
                                 <td class="overflow-hidden">Hola <a class="text-success">@nombre de usuario!</a>
-                                    Con tu ayuda, hemos ayudado a evitar la emision de X toneladas de CO2e</td>
+                                    Con su ayuda, hemos ayudado a evitar la emision de <a class="text-success">@histórico toneladas CO2e</a> desde el 2019. Lo que equivale a retirar <a class="text-success">@equivalencia</a> vehículos particulares en 1 año el Área Metropolitana del Valle de Áburra.
+                                </td>
                                 <td><button class="btn btn-outline-success ml-5" data-target="#modal4" data-toggle="modal"><i class="fas fa-edit fa-lg"></i></button></td>
                             </tr>
                         </tbody>
@@ -184,7 +185,7 @@
 
     <div class="card-footer">
         <div class="d-flex flex-row-reverse">
-            <button onclick="history.back()" class="btn btn-success ml-2">Establecer mensaje</button>
+            <button data-toggle="modal" data-target="#detallesModal" class="btn btn-success ml-2">Establecer mensaje</button>
             <button onclick="history.back()" class="btn btn-danger mr-2">Regresar</button>
         </div>
     </div>
@@ -194,41 +195,48 @@
     <div class="modal-dialog modal-lg" role="document">
         <div class="modal-content">
             <div class="modal-header">
-                <h4 class="modal-title text-success" id="favoritesModalLabel">Resumen de nueva notificación automática
+                <h4 class="modal-title text-success" id="favoritesModalLabel">Resumen nuevo mensaje automático
                 </h4>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
                         aria-hidden="true">&times;</span></button>
             </div>
             <div class="modal-body">
-                <h2 class="text-center">Por favor confirma la información:</h2>
-                <h3>
-                    Mensajes establecidos:
-                </h3>
-                <ol class="lead">
-                    <li>
-                        Servicio
-                    </li>
-                    <li>
-                        Indicador ambiental
-                    </li>
-                </ol>
-                <h3>
-                    Condiciones de envío:
-                </h3>
-                <ol class="lead">
-                    <li>
-                        Semanal - Lunes - Jueves 8:00 AM
-                    </li>
-                    <li>
-                        Diario 8:00 AM
-                    </li>
-                </ol>
+                <div class="d-flex justify-content-center mt-2 mb-2">
+                    <img src="/alerta.png" alt="">
+                </div>
+                <h2 class="text-center">Por favor confirma la información</h2>
+                <h5 class="text-center font-weight-bold">
+                    Mensaje establecido
+                </h5>
+                <p class="lead text-center border border-solid p-2">
+                    Hola <a class="text-success">@nombre de usuario!</a>
+                                    ! No olvides preparar el material reciclable para que sea entregado al reciclador(a) asignado, <a class="text-success">@nombre reciclador(a)</a> entre los días y las horas correctas. !Gracias por su colaboración!
+                </p>
+                <h5 class="text-center font-weight-bold">
+                    Condiciones de envío
+                </h5>
+                <table class="w-100 text-center">
+                    <thead>
+                        <th class="col-3">Tipo de mensaje</th>
+                        <th class="col-3">Frecuencia</th>
+                        <th class="col-3">Día de la semana</th>
+                        <th class="col-3">Hora</th>
+                    </thead>
+                    <tbody>
+                        <tr class="text-center">
+                            <td>Información de reciclador(a)</td>
+                            <td>Semanal</td>
+                            <td>Lunes</td>
+                            <td>8:00AM</td>
+                        </tr>
+                    </tbody>
+                </table>
             </div>
             <div class="modal-footer">
                 <span class="pull-right"><button type="button" class="btn btn-danger"
-                        data-dismiss="modal">Atras</button></span>
-                <a data-dismiss="modal" data-toggle="modal" data-target="#detallesModal1">
-                    <button type="button" class="btn btn-success">Confirmar nueva notificación</button></span>
+                        data-dismiss="modal">Regresar</button></span>
+                <a data-dismiss="modal" data-toggle="modal" data-target="#detallesModal13">
+                    <button type="button" class="btn btn-success">Confirmar</button></span>
                 </a>
             </div>
         </div>
@@ -238,7 +246,7 @@
     <div class="modal-dialog modal-lg" role="document">
         <div class="modal-content">
             <div class="modal-header">
-                <h4 class="modal-title text-success" id="favoritesModalLabel">Exito</h4>
+                <h4 class="modal-title text-success" id="favoritesModalLabel">Éxito</h4>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
                         aria-hidden="true">&times;</span></button>
             </div>
@@ -246,19 +254,47 @@
                 <div class="container">
                     <div class="row">
                         <div class="col-xl-12">
-                            <h1 class="py-2 text-center">Exito!</h1>
-                            <h5 class="lead text-center">Notificación establecida correctamente.</h5>
                             <div class="d-flex justify-content-center">
-                                <i class="fas fa-check-circle"
-                                    style="width: 10% !important; height: 10% !important;"></i>
+                                <img src="{{url("Exito.png")}}" alt="">
                             </div>
+                            <h1 class="py-2 text-center">¡Éxito!</h1>
+                            <h5 class="lead text-center">Cambios realizados correctamente.</h5>
                         </div>
                     </div>
                 </div>
             </div>
             <div class="modal-footer">
-                <a href="{{url("/notificaciones")}}">
-                    <button type="button" class="btn btn-success">Continuar</button>
+                <a data-dismiss="modal">
+                    <button type="button" class="btn btn-success">Confirmar</button></span>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal fade" id="detallesModal13" tabindex="-1" role="dialog" aria-labelledby="favoritesModalLabel">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title text-success" id="favoritesModalLabel">Éxito</h4>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                        aria-hidden="true">&times;</span></button>
+            </div>
+            <div class="modal-body">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-xl-12">
+                            <div class="d-flex justify-content-center">
+                                <img src="{{url("Exito.png")}}" alt="">
+                            </div>
+                            <h1 class="py-2 text-center">¡Éxito!</h1>
+                            <h5 class="lead text-center">Cambios realizados correctamente.</h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+            <a href="{{url("/notificaciones")}}">
+                    <button type="button" class="btn btn-success">Confirmar</button></span>
                 </a>
             </div>
         </div>
@@ -271,6 +307,9 @@
                 <h2 class="modal-title text-success" id="favoritesModalLabel">Nuevo mensaje automatico</h2>
             </div>
             <div class="modal-body">
+                <div class="d-flex justify-content-center mt-2 mb-2">
+                    <img src="/alerta.png" alt="">
+                </div>
                 <h2 class="col-md-6 mt-3 mb-4">Mensajes a establecer:</h2>
                 <section class="container">
                     <div class="row"
@@ -284,10 +323,9 @@
                             <b>Condiciones de envío</b>
                         </div>
                         <div class="col-md-6">
-                            <p class="bg-gray">Hola <a class="text-primary">Nombre de usuario</a>!<br>No olvides sacar
-                                tu material reciclable y
-                                entregarlos a <a class="text-primary">Nombre Reciclador</a> los días laborales del
-                                reciclador.</p>
+                            <p class="bg-gray">Hola <a class="text-success">@nombre de usuario!</a>
+                                ! No olvides preparar el material reciclable para que sea entregado al reciclador(a) asignado, <a class="text-success">@nombre reciclador(a)</a> entre los días y las horas correctas. ¡Gracias por su colaboración!
+                            </p>
                         </div>
                         <div class="col-md-6">
                             <label for="frecuencia">
@@ -325,7 +363,7 @@
                             <b>Condiciones de envío</b>
                         </div>
                         <div class="col-md-6">
-                            <p class="bg-gray">Hola <a class="text-primary">Nombre de usuario</a>!<br>Con tu ayuda,
+                            <p class="bg-gray">Hola <a class="text-primary">Nombre de usuario</a>!<br>Con su ayuda,
                                 hemos ayudado a evitar la emision de X toneladas de CO2e</p>
                         </div>
                         <div class="col-md-6">
@@ -379,29 +417,40 @@
                         aria-hidden="true">&times;</span></button>
             </div>
             <div class="modal-body">
-                <h2 class="text-center">Por favor confirma la información:</h2>
-                <h3>
-                    Mensajes establecidos:
-                </h3>
-                <ol class="lead">
-                    <li>
-                        Servicio
-                    </li>
-                    <li>
-                        Indicador ambiental
-                    </li>
-                </ol>
-                <h3>
-                    Condiciones de envío:
-                </h3>
-                <ol class="lead">
-                    <li>
-                        Semanal - Lunes - Jueves 8:00 AM
-                    </li>
-                    <li>
-                        Diario 8:00 AM
-                    </li>
-                </ol>
+                <div class="d-flex justify-content-center mt-2 mb-2">
+                    <img src="/alerta.png" alt="">
+                </div>
+                <h2 class="text-center">Por favor confirma la información</h2>
+                <h5 class="text-center font-weight-bold">
+                    Mensaje establecido
+                </h5>
+                <p class="lead text-center border border-solid p-2">
+                    Hola <a class="text-success">@nombre de usuario!</a>
+                                    El reciclador(a) <a class="text-success">@nombre del reciclador(a)</a> no pudo pasar el dia
+                                    de ayer por el reciclaje debido las condiciones climaticas. Pasará hoy a las 5:00PM
+                </p>
+                <h5 class="text-center font-weight-bold">
+                    Condiciones de envío
+                </h5>
+                <table class="w-100 text-center">
+                    <thead>
+                        <th class="col-4">Tipo de condición</th>
+                        <th class="col-4">Condición</th>
+                        <th class="col-4">Fecha programada</th>
+                    </thead>
+                    <tbody>
+                        <tr class="text-center">
+                            <td>Reciclador(a)</td>
+                            <td>Alejandra Uribe</td>
+                            <td>N/A</td>
+                        </tr>
+                        <tr class="text-center">
+                            <td>Localidad</td>
+                            <td>Medellín - El tesoro - Comuna 14</td>
+                            <td>N/A</td>
+                        </tr>
+                    </tbody>
+                </table>
             </div>
             <div class="modal-footer">
                 <span class="pull-right"><button type="button" class="btn btn-danger"
@@ -460,13 +509,14 @@
                             <select class="form-control inline w-50"
                             id="sector" aria-label="Example select with button addon">
                                 <option value="El Poblado">Servicio de recolección</option>
-                                <option value="Zuñiga">Información de reciclador</option>
+                                <option value="Zuñiga">Información de reciclador(a)</option>
                                 <option value="San Marcos">Otro</option>
                             </select>
                         </div>
                         <div class="d-flex justify-content-center w-100 mt-3">
                             <textarea name="Mensaje" id="" cols="25" rows="10" maxlength="150"
-                            placeholder=" 	Hola @nombre de usuario! No olvides sacar tu material reciclable y entregarlos a @nombre reciclador los días laborales del reciclador" style="width: 90%"></textarea>
+                            placeholder="Hola @nombre de usuario! No olvides preparar el material reciclable para que sea entregado al reciclador(a) asignado, @nombre reciclador(a) entre los días y las horas correctas. !Gracias por su colaboración!
+                        " style="width: 90%"></textarea>
                         </div>
                         
                     </div>  
@@ -533,7 +583,7 @@
                 <a data-dismiss="modal">
                     <button type="button" class="btn btn-danger">Regresar</button>
                 </a>
-                <a data-target="#detallesModal22" data-toggle="modal" data-dismiss="modal">
+                <a data-target="#detallesModal1" data-toggle="modal" data-dismiss="modal">
                     <button type="button" class="btn btn-success">Confirmar</button>
                 </a>
             </div>
@@ -558,13 +608,13 @@
                             <select class="form-control inline w-50"
                             id="sector" aria-label="Example select with button addon">
                                 <option value="El Poblado">Servicio de recolección</option>
-                                <option value="Zuñiga">Información de reciclador</option>
+                                <option value="Zuñiga">Información de reciclador(a)</option>
                                 <option value="San Marcos">Otro</option>
                             </select>
                         </div>
                         <div class="d-flex justify-content-center w-100 mt-3">
                             <textarea name="Mensaje" id="" cols="25" rows="10" maxlength="150"
-                            placeholder="Mensaje" style="width: 90%"></textarea>
+                            placeholder="Hola @nombre de usuario! Con su ayuda, hemos ayudado a evitar la emision de @histórico toneladas CO2e desde el 2019. Lo que equivale a retirar @equivalencia vehículos particulares en 1 año el Área Metropolitana del Valle de Áburra." style="width: 90%"></textarea>
                         </div>
                         
                     </div>  
@@ -631,7 +681,7 @@
                 <a data-dismiss="modal">
                     <button type="button" class="btn btn-danger">Regresar</button>
                 </a>
-                <a data-target="#detallesModal22" data-toggle="modal" data-dismiss="modal">
+                <a data-target="#detallesModal1" data-toggle="modal" data-dismiss="modal">
                     <button type="button" class="btn btn-success">Confirmar</button>
                 </a>
             </div>

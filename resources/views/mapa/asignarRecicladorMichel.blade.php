@@ -11,26 +11,25 @@
 <div class="card shadow">
     <div class="card-header">
         <h1 class="py-3 text-center text-success">Asignación de reciclador(a)</h1>
-        <p class="lead text-center">Aquí podrás seleccionar al reciclador o recicladora de su comunidad, quien será el o
-            la
-            encargada de aprovechar el material reciclable a disponer por el usuario. Ten en cuenta la dirección de
+        <p class="lead text-center">Aquí podrás seleccionar al reciclador(a) de su comunidad, quien será el encargado(a)
+            de aprovechar el material reciclable a disponer por el usuario. Ten en cuenta la dirección de
             vivienda del usuario</p>
 
     </div>
     <div class="card-body">
-        <div class="row">
+        <div class="row border border-solid bg-light mb-2">
             <div class="col-xl-4 col-sm-12">
                 <img class="imgRecycler border border-success rounded-circle imgpg"
                     style="max-width: 100%; max-height: 100%" src="{{url("/Michel.jpg")}}" alt="Michele Osama">
-                <h3 class="text-center mb-1 pb-1 mt-2"><strong>Michel Osama</strong></h3>
-                <p class="text-center">Miembro hace 1 año</p>
+                <h3 class="text-center mb-1 pb-1 mt-2"><strong>Sara Valencia</strong></h3>
+                <p class="text-center">Miembro hace 1 dia</p>
             </div>
             <div class="col-xl-8 col-sm-12">
-                <h2 class="py-4 text-center"><strong>Informacion del usuario</strong></h2>
-                <p class="text-center lead text-danger"><strong>Reciclador asignado: </strong> Sin designar</p>
+                <h2 class="py-4 text-center text-success"><strong>Informacion del usuario</strong></h2>
+                <p class="text-center lead text-danger"><strong>Reciclador asignado: </strong>Pendiente de asignar</p>
                 <p class="text-center lead"><strong>Tipo de usuario: </strong> Vivienda</p>
                 <p class="text-center lead"><strong>Municipio: </strong> Envigado</p>
-                <p class="text-center lead"><strong>Dirección: </strong> Diagonal 32D #32 sur 40</p>
+                <p class="text-center lead"><strong>Dirección: </strong> Calle 33 sur #34B - 22</p>
                 <p class="text-center lead"><strong>Condición de entrega: </strong> Tocar el timbre</p>
 
 
@@ -39,46 +38,52 @@
                     style="display: inline"> --}}
             </div>
         </div>
-        <h2 class="text-center py-3"><strong>Asignar reciclador</strong></h2>
         <div class="row border-solid border">
+            <div class="col-12">
+                <h2 class="text-center py-3 text-success"><strong>Asignar reciclador</strong></h2>
+            </div>
             <div class="col-xl-4 col-md-6 col-sm-12 p-1">
                 <ul class="list-group list-group-flush" id="col-1">
-                    <li class="list-group-item border border-solid mb-1">
+                    <li class="list-group-item border-solid border mb-1">
                         <div class="row">
                             <div class="col-xl-5 col-sm-12 p-0">
-                                <img src="{{ url('/Avimile.jpg') }}" class="border border-success rounded-circle imgp" alt="Avimilé" style="display: block; margin-right: auto; margin-left: auto;">
-                                <p class="text-center mt-1">Miembro hace 3 meses</p>
+                                <img src="{{ url('/Alejita_Uribe.png') }}"
+                                    class="border border-success rounded-circle imgp" alt="Avimilé"
+                                    style="display: block; margin-right: auto; margin-left: auto">
+                                <p class="text-center mt-1">Miembro hace 2 años</p>
                             </div>
                             <div class="col-xl-7 col-sm-12 p-0">
-                                <h4 class="text-center border-bottom"><strong>Avimilé Ribas</strong></h4>
-                                <p class="pl-3 pt-2"><strong>Apodo:</strong> Avi</p>
-                                <p class="pl-3"><strong>Teléfono:</strong> 333 31 42</p>
-                                <p class="pl-3"><strong>Usuarios asignados:</strong> 4</p>
+                                <h4 class="text-center border-bottom"><strong>Alejandra Uribe</strong></h4>
+                                <p class="pl-3 pt-2"><strong>Apodo:</strong> Alejita</p>
+                                <p class="pl-3"><strong>Teléfono:</strong> 310 202 0001</p>
+                                <p class="pl-3"><strong>Usuarios asignados:</strong> 6</p>
                             </div>
                         </div>
                         <div class="d-flex flex-row-reverse bd-highlight">
                             <a data-toggle="modal" data-target="#modalConfirmarAsignacion">
-                                <button type="submit" class="btn btn-success">Asignar</button>
+                                <button type="submit" class="btn btn-success w-100 ml-2">Asignar</button>
                             </a>
                         </div>
                     </li>
                     <li class="list-group-item border-solid border">
                         <div class="row">
                             <div class="col-xl-5 col-sm-12 p-0">
-                                <img src="{{ url('/Avimile.jpg') }}" class="border border-success rounded-circle imgp" alt="Avimilé" style="display: block; margin-right: auto; margin-left: auto">
+                                <img src="{{ url('/Rodrigo_hincapie.png') }}"
+                                    class="border border-success rounded-circle imgp" alt="Avimilé"
+                                    style="display: block; margin-right: auto; margin-left: auto">
                                 <p class="text-center mt-1">Miembro hace 1 mes</p>
                             </div>
                             <div class="col-xl-7 col-sm-12 p-0">
-                                <h4 class="text-center border-bottom"><strong>Kevin Tellez</strong></h4>
-                                <p class="pl-3 pt-2"><strong>Apodo:</strong> Kete</p>
+                                <h4 class="text-center border-bottom"><strong>Rodrigo Hincapie</strong></h4>
+                                <p class="pl-3 pt-2"><strong>Apodo:</strong> El Rodri</p>
                                 <p class="pl-3"><strong>Teléfono:</strong> 330 21 19</p>
                                 <p class="pl-3"><strong>Usuarios asignados:</strong> 1</p>
                             </div>
-                            
+
                         </div>
                         <div class="d-flex flex-row-reverse bd-highlight">
                             <a data-toggle="modal" data-target="#modalConfirmarAsignacion">
-                                <button type="submit" class="btn btn-success">Asignar</button>
+                                <button type="submit" class="btn btn-success w-100 ml-2">Asignar</button>
                             </a>
                         </div>
                     </li>
@@ -86,42 +91,47 @@
             </div>
             <div class="col-xl-4 col-md-6 col-sm-12 p-1">
                 <ul class="list-group list-group-flush" id="col-2">
-                    <li class="list-group-item border-solid border mb-1">
+                    
+                    <li class="list-group-item border border-solid mb-1">
                         <div class="row">
                             <div class="col-xl-5 col-sm-12 p-0">
-                                <img src="{{ url('/Cano.jpg') }}" class="border border-success rounded-circle imgp" alt="Avimilé" style="display: block; margin-right: auto; margin-left: auto">
-                                <p class="text-center mt-1">Miembro hace 2 años</p>
+                                <img src="{{ url('/Reinaldo_Ochoa.png') }}"
+                                    class="border border-success rounded-circle imgp" alt="Avimilé"
+                                    style="display: block; margin-right: auto; margin-left: auto;">
+                                <p class="text-center mt-1">Miembro hace 3 meses</p>
                             </div>
                             <div class="col-xl-7 col-sm-12 p-0">
-                                <h4 class="text-center border-bottom"><strong>German Exequiel Cano</strong></h4>
-                                <p class="pl-3 pt-2"><strong>Apodo:</strong> Cano</p>
-                                <p class="pl-3"><strong>Teléfono:</strong> 313 61 72</p>
-                                <p class="pl-3"><strong>Usuarios asignados:</strong> 6</p>
+                                <h4 class="text-center border-bottom"><strong>Reinaldo Ochoa</strong></h4>
+                                <p class="pl-3 pt-2"><strong>Apodo:</strong> Rey</p>
+                                <p class="pl-3"><strong>Teléfono:</strong> 333 31 42</p>
+                                <p class="pl-3"><strong>Usuarios asignados:</strong> 12</p>
                             </div>
                         </div>
                         <div class="d-flex flex-row-reverse bd-highlight">
                             <a data-toggle="modal" data-target="#modalConfirmarAsignacion">
-                                <button type="submit" class="btn btn-success">Asignar</button>
+                                <button type="submit" class="btn btn-success w-100 ml-2">Asignar</button>
                             </a>
                         </div>
                     </li>
                     <li class="list-group-item border-solid border">
                         <div class="row">
                             <div class="col-xl-5 col-sm-12 p-0">
-                                <img src="{{ url('/Avimile.jpg') }}" class="border border-success rounded-circle imgp" alt="Avimilé" style="display: block; margin-right: auto; margin-left: auto">
+                                <img src="{{ url('/Armando_lopez.png') }}"
+                                    class="border border-success rounded-circle imgp" alt="Avimilé"
+                                    style="display: block; margin-right: auto; margin-left: auto">
                                 <p class="text-center mt-1">Miembro hace 6 meses</p>
                             </div>
                             <div class="col-xl-7 col-sm-12 p-0">
-                                <h4 class="text-center border-bottom"><strong>Stiven Mendoza</strong></h4>
-                                <p class="pl-3 pt-2"><strong>Apodo:</strong> Mendo</p>
+                                <h4 class="text-center border-bottom"><strong>Armando López</strong></h4>
+                                <p class="pl-3 pt-2"><strong>Apodo:</strong> Armando</p>
                                 <p class="pl-3"><strong>Teléfono:</strong> 313 13 23</p>
                                 <p class="pl-3"><strong>Usuarios asignados:</strong> 4</p>
                             </div>
-                            
+
                         </div>
                         <div class="d-flex flex-row-reverse bd-highlight">
                             <a data-toggle="modal" data-target="#modalConfirmarAsignacion">
-                                <button type="submit" class="btn btn-success">Asignar</button>
+                                <button type="submit" class="btn btn-success w-100 ml-2">Asignar</button>
                             </a>
                         </div>
                     </li>
@@ -132,12 +142,14 @@
                     <li class="list-group-item border border-solid">
                         <div class="row">
                             <div class="col-xl-5 col-sm-12 p-0">
-                                <img src="{{ url('/Jeison.jpg') }}" class="border border-success rounded-circle imgp" alt="Avimilé" style="display: block; margin-right: auto; margin-left: auto;">
+                                <img src="{{ url('/Claudia_Marin.png') }}"
+                                    class="border border-success rounded-circle imgp"
+                                    style="display: block; margin-right: auto; margin-left: auto;">
                                 <p class="text-center mt-1">Miembro hace 4 años</p>
                             </div>
                             <div class="col-xl-7 col-sm-12 p-0">
-                                <h4 class="text-center border-bottom"><strong>Jeison Guzmán</strong></h4>
-                                <p class="pl-3 pt-2"><strong>Apodo:</strong> Jeison</p>
+                                <h4 class="text-center border-bottom"><strong>Claudia Marín</strong></h4>
+                                <p class="pl-3 pt-2"><strong>Apodo:</strong> Clau</p>
                                 <p class="pl-3"><strong>Teléfono:</strong> 253 19 72</p>
                                 <p class="pl-3"><strong>Usuarios asignados:</strong> 12</p>
 
@@ -145,7 +157,29 @@
                         </div>
                         <div class="d-flex flex-row-reverse bd-highlight">
                             <a data-toggle="modal" data-target="#modalConfirmarAsignacion">
-                                <button type="submit" class="btn btn-success">Asignar</button>
+                                <button type="submit" class="btn btn-success w-100 ml-2">Asignar</button>
+                            </a>
+                        </div>
+                    </li>
+                    <li class="list-group-item border border-solid mt-1">
+                        <div class="row">
+                            <div class="col-xl-5 col-sm-12 p-0">
+                                <img src="{{ url('/Monica_Garcia.png') }}"
+                                    class="border border-success rounded-circle imgp"
+                                    style="display: block; margin-right: auto; margin-left: auto;">
+                                <p class="text-center mt-1">Miembro hace 4 años</p>
+                            </div>
+                            <div class="col-xl-7 col-sm-12 p-0">
+                                <h4 class="text-center border-bottom"><strong>Mónica García</strong></h4>
+                                <p class="pl-3 pt-2"><strong>Apodo:</strong> La Negra</p>
+                                <p class="pl-3"><strong>Teléfono:</strong> 253 19 72</p>
+                                <p class="pl-3"><strong>Usuarios asignados:</strong> 11</p>
+
+                            </div>
+                        </div>
+                        <div class="d-flex flex-row-reverse bd-highlight">
+                            <a data-toggle="modal" data-target="#modalConfirmarAsignacion">
+                                <button type="submit" class="btn btn-success w-100 ml-2">Asignar</button>
                             </a>
                         </div>
                     </li>
@@ -168,6 +202,7 @@
     <div class="modal-dialog modal-lg" role="document">
         <div class="modal-content">
             <div class="modal-header">
+                <h2 class="modal-title text-success">Asignar reciclador(a)</h2>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
                         aria-hidden="true">&times;</span></button>
             </div>
@@ -175,29 +210,14 @@
                 <div class="container">
                     <div class="row">
                         <div class="col-xl-12">
-                            <h1 class="py-2 text-center">¿Deseas asignar este reciclador(a)?</h1>
                             <div class="d-flex justify-content-center mt-2 mb-2">
-                                <i class="fas fa-question" style="width: 10% !important; height: 10% !important;"></i>
+                                <img src="{{url("alerta.png")}}" alt="">
                             </div>
-                            <li class="list-group-item">
-                                <div class="row">
-                                    <div class="col-xl-5 col-sm-12 p-0">
-                                        <img src="{{ url('/Jeison.jpg') }}"
-                                            class="border border-success rounded-circle imgpg" alt="Avimilé"
-                                            style="display: block; margin-right: auto; margin-left: auto;">
-                                        <p class="text-center mt-1">Miembro hace 4 años</p>
-                                    </div>
-                                    <div class="col-xl-7 col-sm-12 p-0">
-                                        <p class="lead text-center border-bottom"><strong>Jeison Guzmán</strong></p>
-                                        <p>Apodo: Jeison</p>
-                                        <p>Teléfono: 253 19 72</p>
-                                        <p>Usuarios asignados: 12</p>
-
-                                    </div>
-                                </div>
-                            </li>
-                            <h5 class="lead text-center mt-2">Una asignado este reciclador(a), el reciclador asignado
-                                anteriormente será reemplazado.</h5>
+                            <h1 class="py-2 text-center">¿Deseas seleccionar este reciclador(a)?</h1>
+                            <h5 class="lead border-solid text-center border p-3">El reciclador(a) <strong>Alejandra Uribe</strong> será asignado(a) al usuario <strong>Sara Valencia</strong>, quien
+                                será el responsable de recolectar el material reciclable dispuesto.</h5>
+                            <h5 class="lead text-center mt-2">Una vez asignado el reciclador(a), podras modificar esta
+                                selección en el perfil del usuario.</h5>
                         </div>
                     </div>
                 </div>
@@ -227,20 +247,19 @@
                             <div class="d-flex justify-content-center mt-2 mb-2">
                                 <i class="fas fa-question" style="width: 10% !important; height: 10% !important;"></i>
                             </div>
-                            <li class="list-group-item">
+                            <li class="list-group-item border border-solid mb-1">
                                 <div class="row">
                                     <div class="col-xl-5 col-sm-12 p-0">
-                                        <img src="{{ url('/Avimile.jpg') }}"
-                                            class="border border-success rounded-circle imgpg" alt="Avimilé"
+                                        <img src="{{ url('/Reinaldo_Ochoa.png') }}"
+                                            class="border border-success rounded-circle imgp" alt="Avimilé"
                                             style="display: block; margin-right: auto; margin-left: auto;">
                                         <p class="text-center mt-1">Miembro hace 3 meses</p>
                                     </div>
                                     <div class="col-xl-7 col-sm-12 p-0">
-                                        <p class="lead text-center border-bottom"><strong>Avimilé Ribas</strong></p>
-                                        <p>Apodo: Avi</p>
-                                        <p>Teléfono: 333 31 42</p>
-                                        <p>Usuarios asignados: 4</p>
-
+                                        <h4 class="text-center border-bottom"><strong>Reinaldo Ochoa</strong></h4>
+                                        <p class="pl-3 pt-2"><strong>Apodo:</strong> Rey</p>
+                                        <p class="pl-3"><strong>Teléfono:</strong> 333 31 42</p>
+                                        <p class="pl-3"><strong>Usuarios asignados:</strong> 4</p>
                                     </div>
                                 </div>
                             </li>
@@ -264,7 +283,7 @@
     <div class="modal-dialog modal-lg" role="document">
         <div class="modal-content">
             <div class="modal-header">
-                <h4 class="modal-title text-success" id="favoritesModalLabel">Exito</h4>
+                <h4 class="modal-title text-success" id="favoritesModalLabel">Éxito</h4>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
                         aria-hidden="true">&times;</span></button>
             </div>
@@ -272,12 +291,11 @@
                 <div class="container">
                     <div class="row">
                         <div class="col-xl-12">
-                            <h1 class="py-2 text-center">Exito!</h1>
-                            <h5 class="lead text-center">Cambios realizados correctamente.</h5>
                             <div class="d-flex justify-content-center">
-                                <i class="fas fa-check-circle"
-                                    style="width: 10% !important; height: 10% !important;"></i>
+                                <img src="{{url("Exito.png")}}" alt="">
                             </div>
+                            <h1 class="py-2 text-center">¡Éxito!</h1>
+                            <h5 class="lead text-center">Cambios realizados correctamente.</h5>
                         </div>
                     </div>
                 </div>
@@ -289,11 +307,11 @@
         </div>
     </div>
 </div>
-<div class="modal fade" id="modalConfirmarCambios" tabindex="-1" role="dialog" aria-labelledby="favoritesModalLabel">
+<div class="modal fade" id="detallesModal11" tabindex="-1" role="dialog" aria-labelledby="favoritesModalLabel">
     <div class="modal-dialog modal-lg" role="document">
         <div class="modal-content">
             <div class="modal-header">
-                <h4 class="modal-title text-success" id="favoritesModalLabel"></h4>
+                <h4 class="modal-title text-success" id="favoritesModalLabel">Éxito</h4>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
                         aria-hidden="true">&times;</span></button>
             </div>
@@ -301,10 +319,40 @@
                 <div class="container">
                     <div class="row">
                         <div class="col-xl-12">
-                            <h1 class="py-2 text-center">¿Deseas confirmar los cambios realizados?</h1>
-                            <div class="d-flex justify-content-center mt-2 mb-2">
-                                <i class="fas fa-question" style="width: 10% !important; height: 10% !important;"></i>
+                            <div class="d-flex justify-content-center">
+                                <img src="{{url("Exito.png")}}" alt="">
                             </div>
+                            <h1 class="py-2 text-center">¡Éxito!</h1>
+                            <h5 class="lead text-center">Cambios realizados correctamente.</h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+            <a href="{{url("/comunidad")}}"><button class="btn btn-success">Continuar</button></span></a>
+                
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal fade" id="modalConfirmarCambios" tabindex="-1" role="dialog" aria-labelledby="favoritesModalLabel">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 class="modal-title text-success" id="favoritesModalLabel">Confirmar cambios</h2>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                        aria-hidden="true">&times;</span></button>
+            </div>
+            <div class="modal-body">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-xl-12">
+                            <div class="d-flex justify-content-center">
+                                <img src="{{url("alerta.png")}}" alt="">
+                            </div>
+                            <h1 class="py-2 text-center">¿Deseas confirmar los cambios realizados?</h1>
+                            <h5 class="lead border-solid text-center border p-3">El reciclador(a) <strong>Alejandra Uribe</strong> fue asignado(a) al usuario<strong> Sara Valencia</strong>, quien
+                                será el responsable de recolectar el material reciclable dispuesto.</h5>
                         </div>
                     </div>
                 </div>
@@ -314,7 +362,7 @@
                     <span class="pull-right"><button type="button" class="btn btn-danger"
                             data-dismiss="modal">Regresar</button></span>
                 </a>
-                <a data-toggle="modal" data-target="#detallesModal2">
+                <a data-toggle="modal" data-target="#detallesModal11">
                     <span class="pull-right"><button type="button" class="btn btn-success"
                             data-dismiss="modal">Continuar</button></span>
                 </a>

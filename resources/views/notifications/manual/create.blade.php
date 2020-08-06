@@ -1,5 +1,16 @@
 @extends('layouts.app')
-
+@section('navbar-left')
+<form autocomplete="off" action="/action_page.php">
+    <div class="autocomplete" style="width: 300px">
+        <input type="text" id="myInput" name="myCountry" class="form-control ml-2"
+            placeholder="Buscar en notificaciones" aria-label="Buscador de recicladores" aria-describedby="filtrar">
+    </div>
+</form>
+<div class="input-group-append">
+    <button class="btn btn-outline-success ml-2" type="button" id="filtrar" onclick="mostrarMapaDistinto2()">
+        <i class="fas fa-search"></i></button>
+</div>
+@endsection
 @section('content')
 <div class="card shadow">
     <div class="card-header">
@@ -9,7 +20,7 @@
         <h3 class="lead text-center">
             Aquí podrás configurar las notificaciones manuales que deseas enviar de forma puntual a los usuarios de la
             comunidad. Este tipo de notificaciones es de uso exclusivo para compartir actualizaciones del servicio
-            prestado por los recicladores o las condiciones de mejora de vida que ha tenido.
+            prestado por los recicladores o las condiciones de mejora de vida que han tenido.
         </h3>
     </div>
     <div class="card-body">
@@ -19,14 +30,14 @@
                 </button>
             </a>
             <span class="btn btn-info mb-2 ml-0 mr-2" data-toggle="tooltip" data-placement="top"
-                title="Utiliza la pestaña para definir una nueva notificación manual">
+                title="Utiliza este botón para definir una nueva notificación manual">
                 <i class="fas fa-info-circle"></i></span>
             <a href="{{ url( '/crearAutomatica' ) }}" class="w-25">
                 <button type="submit" class="btn btn-success mb-2 mr-0 w-100">Automáticas
                 </button>
             </a>
             <span class="btn btn-info mb-2 ml-0" data-toggle="tooltip" data-placement="top"
-                title="Utiliza la pestaña para definir una nueva notificación automática">
+                title="Utiliza este botón para definir una nueva notificación automática">
                 <i class="fas fa-info-circle"></i></span>
         </div>
         <main class="container contenedor">
@@ -38,7 +49,7 @@
                             <div class="d-flex justify-content-between">
                                 <label for="todos">Compartir este mensaje entre todos los usuarios
                                     <button class="btn btn-info" type="button" data-toggle="tooltip" data-placement="right"
-                                        title="Al activar esta opción, el mensaje manual será compartido entre todos los usuarios comprometidos con la corporación. En caso contrario, desactiva esta opción y específica las condiciones de envío por usuarios según su localidad o usuarios según el reciclador designado.">
+                                        title="Al activar esta opción, el mensaje manual será compartido entre todos los usuarios comprometidos con la corporación. En caso contrario, desactiva esta opción y específica las condiciones de envío por localidad o nombre del reciclador(a) asignado">
                                         <i class="fas fa-info-circle"></i>
                                     </button>
                                 </label>
@@ -55,7 +66,7 @@
                             <select class="form-control inline w-25"
                             aria-label="Example select with button addon">
                                 <option value="El Poblado">Servicio de recolección</option>
-                                <option value="Zuñiga">Información de reciclador</option>
+                                <option value="Zuñiga">Información de reciclador(a)</option>
                                 <option value="San Marcos">Otro</option>
                             </select>
                         </div>
@@ -132,9 +143,9 @@
                     </div>
                     <div class="row mt-3 border-solid border-bottom">
                         <div class="col-md-11 lead mb-3">
-                            <label for="reciclador">Selecciona usuarios por reciclador 
+                            <label for="reciclador">Selecciona usuarios por reciclador(a) 
                                 <button class="btn btn-info" type="button" data-toggle="tooltip" data-placement="right"
-                                    title="Esta opción de selección te permite compartir el mensaje manual entre los usuarios que tienen asignado un reciclador en específico.">
+                                    title="Esta opción de selección te permite compartir el mensaje manual entre los usuarios que tienen asignado un reciclador(a) en específico.">
                                     <i class="fas fa-info-circle"></i>
                                 </button>
                             </label>
@@ -147,19 +158,19 @@
                         </div>
                         <div class="col-md-12">
                             <div class="form-group-row d-flex mb-2">
-                                <label for="" class="lead"> <strong>Reciclador </strong> </label>
+                                <label for="" class="lead"> <strong>Reciclador(a) </strong> </label>
                                 <select class="form-control ml-2" name="reciclador" id="reciclador">
-                                    <option value="Avimilé Ribas">Avimilé Ribas</option>
-                                    <option value="Jeison Guzman">Jeison Guzman</option>
-                                    <option value="German Exequiel Cano">German Exequiel Cano</option>
-                                    <option value="Kevin Tellez">Kevin Tellez</option>
-                                    <option value="Stiven Mendoza">Stiven Mendoza</option>
+                                    <option value="Reinaldo Ochoa">Reinaldo Ochoa</option>
+                                        <option value="Alejandra Uribe">Alejandra Uribe</option>
+                                        <option value="Rodrigo Hincapie">Rodrigo Hincapie</option>
+                                        <option value="Armando Lopez">Armando Lopez</option>
+                                        <option value="Claudia Marín">Claudia Marín</option>
                                 </select>
                                 <button class="btn btn-outline-primary ml-2" onclick="agregarReciclador()">Adicionar</button>
                             </div>
                             <table class="w-100 mb-3">
                                 <thead class="text-center">
-                                    <th class="col-12">Reciclador</th>
+                                    <th class="col-12">Reciclador(a)</th>
                                 </thead>
                                 <tbody class="text-center" id="recicladores">
                                     <tr>
@@ -173,8 +184,7 @@
                         <div class="col-md-11">
                             <label class="lead" for="fecha">Programar envío
                                 <button class="btn btn-info" type="button" data-toggle="tooltip" data-placement="right"
-                                    title="Selecciona el momento adecuado para que el mensaje sea compartido.
-                                    Establecer formato fecha y hora como se ha manejado anteriormente.">
+                                    title="Selecciona el momento adecuado para que el mensaje manual sea compartido.">
                                     <i class="fas fa-info-circle"></i>
                                 </button>
                             </label>
@@ -211,40 +221,52 @@
     <div class="modal-dialog modal-lg" role="document">
         <div class="modal-content">
             <div class="modal-header">
-                <h4 class="modal-title text-success" id="favoritesModalLabel">Resumen de nueva notificación automática
-                </h4>
+                <h2 class="modal-title text-success" id="favoritesModalLabel">Resumen nueva notificación manual
+                </h2>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
                         aria-hidden="true">&times;</span></button>
             </div>
             <div class="modal-body">
-                <h2 class="text-center">Por favor confirma la información:</h2>
-                <h3>
-                    Mensajes establecido:
-                </h3>
-                <p class="lead">
-                    Hola usuario, te notificamos que tu reciclaje no pudo ser recogido por las condiciones climaticas
-                    del día de ayer, el reciclador pasará por el hoy a las 5:00 PM
+                <div class="d-flex justify-content-center mt-2 mb-2">
+                    <img src="/alerta.png" alt="">
+                </div>
+                <h2 class="text-center">Por favor confirma la información</h2>
+                <h5 class="text-center font-weight-bold">
+                    Mensaje establecido
+                </h5>
+                <p class="lead text-center border border-solid p-2">
+                    Hola <a class="text-success">@nombre de usuario!</a>
+                                    El reciclador(a) <a class="text-success">@nombre del reciclador(a)</a> no pudo pasar el dia
+                                    de ayer por el reciclaje debido las condiciones climaticas. Pasará hoy a las 5:00PM
                 </p>
-                <h3>
-                    Condiciones de envío:
-                </h3>
-                <ol class="lead">
-                    <li>
-                        Reciclador: Jeison Guzman
-                    </li>
-                    <li>
-                        Localidad: Envigado - El Dorado
-                    </li>
-                    <li>
-                        Compartir mensaje: Inmediatamente
-                    </li>
-                </ol>
+                <h5 class="text-center font-weight-bold">
+                    Condiciones de envío
+                </h5>
+                <table class="w-100 text-center">
+                    <thead>
+                        <th class="col-4">Tipo de condición</th>
+                        <th class="col-4">Condición</th>
+                        <th class="col-4">Fecha programada</th>
+                    </thead>
+                    <tbody>
+                        <tr class="text-center">
+                            <td>Reciclador(a)</td>
+                            <td>Alejandra Uribe</td>
+                            <td>N/A</td>
+                        </tr>
+                        <tr class="text-center">
+                            <td>Localidad</td>
+                            <td>Medellín - El tesoro - Comuna 14</td>
+                            <td>N/A</td>
+                        </tr>
+                    </tbody>
+                </table>
             </div>
             <div class="modal-footer">
                 <span class="pull-right"><button type="button" class="btn btn-danger"
-                        data-dismiss="modal">Atras</button></span>
+                        data-dismiss="modal">Regresar</button></span>
                 <a data-dismiss="modal" data-toggle="modal" data-target="#detallesModal1">
-                    <button type="button" class="btn btn-success">Confirmar nueva notificación</button></span>
+                    <button type="button" class="btn btn-success">Confirmar</button></span>
                 </a>
             </div>
         </div>
@@ -254,7 +276,7 @@
     <div class="modal-dialog modal-lg" role="document">
         <div class="modal-content">
             <div class="modal-header">
-                <h4 class="modal-title text-success" id="favoritesModalLabel">Exito</h4>
+                <h4 class="modal-title text-success" id="favoritesModalLabel">Éxito</h4>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
                         aria-hidden="true">&times;</span></button>
             </div>
@@ -262,19 +284,18 @@
                 <div class="container">
                     <div class="row">
                         <div class="col-xl-12">
-                            <h1 class="py-2 text-center">Exito!</h1>
-                            <h5 class="lead text-center">Notificación establecida correctamente.</h5>
                             <div class="d-flex justify-content-center">
-                                <i class="fas fa-check-circle"
-                                    style="width: 10% !important; height: 10% !important;"></i>
+                                <img src="{{url("Exito.png")}}" alt="">
                             </div>
+                            <h1 class="py-2 text-center">¡Éxito!</h1>
+                            <h5 class="lead text-center">Cambios realizados correctamente.</h5>
                         </div>
                     </div>
                 </div>
             </div>
             <div class="modal-footer">
                 <a href="{{url("/notificaciones")}}">
-                    <button type="button" class="btn btn-success">Continuar</button>
+                    <button type="button" class="btn btn-success">Confirmar</button></span>
                 </a>
             </div>
         </div>

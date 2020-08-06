@@ -20,7 +20,7 @@
                         <span class="input-group-addon" id="sizing-addon1"><i class="glyphicon glyphicon-user"></i></span>
                         <input type="email" class="form-control" name="email"
                             placeholder="{{ __('E-Mail Address') }}" id="Usuario" aria-describedby="sizing-addon1"
-                            required autocomplete="email" autofocus>
+                            required autocomplete="email" autofocus value="arreciclar@impacta.com">
                     </div>
                     <br>
                     <label for="password">{{ __('Password') }}</label>
@@ -28,7 +28,7 @@
                         <span class="input-group-addon" id="sizing-addon1"><i class="glyphicon glyphicon-lock"></i></span>
                         <input type="password" name="password" class="form-control"
                             placeholder="{{ __('Password') }}" aria-describedby="sizing-addon1" required
-                            autocomplete="current-password">
+                            autocomplete="current-password" value="sadasdasdassa">
                     </div>
                     <div class="opcioncontra mt-2">
                         <a class="text-primary" href="{{url("/email") }}">
@@ -44,8 +44,8 @@
                 </div>
                <div class="card-footer">
                 <small id="emailHelp" class="form-text text-muted">
-                    Al hacer click en "Acceder" aceptas nuestros
-                    <a href="#" class="text-decoration-none text-primary">terminos de servicio</a> y
+                    Al hacer click en "Ingresar" aceptas nuestros
+                    <a href="#" class="text-decoration-none text-primary">términos de servicio</a> y
                     <a href="#" class="text-decoration-none text-primary">privacidad.</a> Si aun no tienes una cuenta haz click
                     <a href="{{ route('register') }}" class="text-decoration-none text-primary">aquí</a> para crear una.
                 </small>

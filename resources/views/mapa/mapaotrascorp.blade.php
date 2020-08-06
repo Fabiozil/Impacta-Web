@@ -73,7 +73,7 @@ input[type=submit] {
                 </button>
             </a>
             <span class="btn btn-info mb-2 ml-0 mr-2" data-toggle="tooltip" data-placement="top"
-                title="Utiliza este botón para visualizar los usuarios asignados y pendientes por asignación que hacen parte de su comunidad.">
+                title="Utiliza este botón para visualizar los usuarios asignados y pendientes de asignación que hacen parte de su comunidad.">
                 <i class="fas fa-info-circle"></i></span>
                 
             <a href="#">
@@ -94,13 +94,13 @@ input[type=submit] {
             title='
             <div class="row">
                 <div class="col-12">
-                    <img src="{{url("/corp_logo.png")}}" class="logo-corp" alt="Logo corporacion">
-                    <h5><strong>Reciclando Ando</strong></h5>
+                    <img src="{{url("/corp_logo.png")}}" class="logo-corp rounded-circle border-solid border border-success" alt="Logo corporacion">
+                    <h5><strong>ARRECICLAR</strong></h5>
                     <p>Se unió hace 2 años</p>
-                    {{-- <p>Dirección: Diagonal 33B #39 sur 40</p>
+                    {{-- <p>Dirección: Diagonal 33B #39 Sur 40</p>
                     <p>Telefóno: (4) 561 09 21</p> --}}
                     <p><strong>Recicladores agremiados:</strong> 5</p>
-                    <p><strong>Usuarios afiliados:</strong> 23</p>
+                    <p><strong>Usuarios afiliados:</strong> 45</p>
                     {{-- <p>Emisiones evitadas: 200 ton CO2e</p> --}}
                 </div>
             </div>
@@ -118,14 +118,14 @@ input[type=submit] {
                 title='
                 <div class="row">
                     <div class="col-12">
-                        <img src="{{url("/corp_logo.png")}}" class="logo-corp" alt="Logo corporacion">
-                        <h5><strong>Reciclando Ando</strong></h5>
+                        <img src="{{url("/Arreciclar.png")}}" class="logo-corp rounded-circle border-solid border border-success" alt="Logo corporacion">
+                        <h5><strong>ARRECICLAR</strong></h5>
                         <p>Se unió hace 2 años</p>
-                        {{-- <p>Dirección: Diagonal 33B #39 sur 40</p>
+                        {{-- <p>Dirección: Diagonal 33B #39 Sur 40</p>
                         <p>Telefóno: (4) 561 09 21</p> --}}
                         <p><strong>Recicladores agremiados:</strong> 3</p>
-                        <p><strong>Usuarios afiliados:</strong> 23</p>
-                        <p><strong>Emisiones evitadas:</strong> 200 ton CO2e</p>
+                        <p><strong>Usuarios afiliados:</strong> 45</p>
+                        <p><strong>Emisiones evitadas:</strong> 764 ton CO2e</p>
                     </div>
                 </div>
                 '
@@ -140,10 +140,10 @@ input[type=submit] {
                     title='
                 <div class="row">
                     <div class="col-12">
-                        <img src="{{url("/corp_logo3.png")}}" class="logo-corp" alt="Logo corporacion">
-                        <h5 class="border-bottom border-solid"><strong>EIA Recicla</strong></h5>
+                        <img src="{{url("/corp_logo3.png")}}" class="logo-corp rounded-circle border-solid border border-success" alt="Logo corporacion">
+                        <h5 class="border-bottom border-solid"><strong>CORPORACIÓN CAMPO SANTO</strong></h5>
                         <p>Se unió hace 2 años</p>
-                        {{-- <p>Dirección: Calle 22 sur Carrera 42b</p>
+                        {{-- <p>Dirección: Calle 22 Sur # 42b - 11</p>
                         <p>Telefóno: (4) 312 17 54</p> --}}
                         <p><strong>Recicladores agremiados:</strong> 9</p>
                         <p><strong>Usuarios afiliados:</strong> 37</p>
@@ -152,7 +152,7 @@ input[type=submit] {
                     </div>
                 </div>
                 '>
-                    <img src="{{url("/Corporacion_otro.png")}}" alt="Icono usuario" style="z-index: 2; max-width: 100%; max-height: 100%" id="eiarecicla">
+                    <img src="{{url("/Corporacion_otro.png")}}" alt="Icono usuario" style="z-index: 2; max-width: 100%; max-height: 100%" id="CORPORACIÓN CAMPO SANTO">
                 </a>
             </span>
 
@@ -162,10 +162,10 @@ input[type=submit] {
                 title='
                 <div class="row">
                     <div class="col-12">
-                        <img src="{{url("/corp_logo1.png")}}" class="logo-corp" alt="Logo corporacion">
-                        <h5><strong>Recicladores las lomas</strong></h5>
+                        <img src="{{url("/corp_logo1.png")}}" class="logo-corp rounded-circle border-solid border border-success" alt="Logo corporacion">
+                        <h5><strong>COPRESAP</strong></h5>
                         <p>Se unió hace 1 año</p>
-                        {{-- <p>Dirección: Calle 27 sur carrera 22</p>
+                        {{-- <p>Dirección: Calle 27 Sur # 22 - 20</p>
                         <p>Telefóno: (4) 331 41 13</p> --}}
                         <p><strong>Recicladores agremiados:</strong> 4</p>
                         <p><strong>Usuarios afiliados:</strong> 19</p>
@@ -184,8 +184,8 @@ input[type=submit] {
                 title='
                 <div class="row">
                     <div class="col-12">
-                        <img src="{{url("/corp_logo2.png")}}" class="logo-corp" alt="Logo corporacion">
-                        <h5><strong>RecItagui</strong></h5>
+                        <img src="{{url("/corp_logo2.jpg")}}" class="logo-corp rounded-circle border-solid border border-success" alt="Logo corporacion">
+                        <h5><strong>CORPOOCCIDENTE</strong></h5>
                         <p>Se unió hace 3 años</p>
                         <p><strong>Recicladores agremiados:</strong> 12</p>
                         <p><strong>Usuarios afiliados:</strong> 45</p>
@@ -193,7 +193,7 @@ input[type=submit] {
                     </div>
                 </div>
                 '>
-                <img src="{{url("/Corporacion_otro.png")}}" alt="Icono usuario" style="z-index: 2; max-width: 100%; max-height: 100%" id="recitagui">
+                <img src="{{url("/Corporacion_otro.png")}}" alt="Icono usuario" style="z-index: 2; max-width: 100%; max-height: 100%" id="CORPOOCCIDENTE">
                 </a>
             </span>
         </div>
@@ -203,9 +203,9 @@ input[type=submit] {
                 <div class="col-12">
                     <h5 class="border-bottom border-solid"><strong>Vivienda</strong></h5>
                     <p>Se unió hace 26 días</p>
-                    {{-- <p>Dirección: Diagonal 28C 28 sur 25</p>
+                    {{-- <p>Dirección: Diagonal 28C 28 Sur 25</p>
                     <p>Municipio de Envigado</p> --}}
-                    <p><strong>Corporación:</strong> Recicladores las lomas</p>
+                    <p><strong>Corporación:</strong> COPRESAP</p>
                 </div>
             </div>
             ' style="position:absolute; margin-top: -18%; margin-left: 68%; z-index: 2; max-width: 3%">
@@ -218,9 +218,9 @@ input[type=submit] {
             <div class="col-12">
                 <h5 class="border-solid border-bottom"><strong>Unidad residencial</strong></h5>
                 <p>Se unió hace 12 día</p>
-                {{-- <p>Dirección: Diagonal 28C 28 sur 25</p>
+                {{-- <p>Dirección: Diagonal 28C 28 Sur 25</p>
                 <p>Municipio de Envigado</p> --}}
-                <p><strong>Corporación:</strong> RecItagui</p>
+                <p><strong>Corporación:</strong> CORPOOCCIDENTE</p>
             </div>
         </div>
         ' style="position:absolute; margin-top: -28%; margin-left: 38%; z-index: 2; max-width: 3%">
@@ -233,9 +233,9 @@ input[type=submit] {
             <div class="col-12">
                 <h5 class="border-solid border-bottom"><strong>Unidad residencial</strong></h5>
                 <p>Se unió hace 3 meses</p>
-                {{-- <p>Dirección: Diagonal 28C 28 sur 25</p>
+                {{-- <p>Dirección: Diagonal 28C 28 Sur 25</p>
                 <p>Municipio de Envigado</p> --}}
-                <p><strong>Corporación:</strong> EIA Recicla</p>
+                <p><strong>Corporación:</strong> CORPORACIÓN CAMPO SANTO</p>
             </div>
         </div>
         ' style="position:absolute; margin-top: -38%; margin-left: 47%; z-index: 2; max-width: 3%">
@@ -248,9 +248,9 @@ input[type=submit] {
             <div class="col-12">
                 <h5 class="border-solid border-bottom"><strong>Unidad residencial</strong></h5>
                 <p>Se unió hace 5 meses</p>
-                {{-- <p>Dirección: Diagonal 28C 28 sur 25</p>
+                {{-- <p>Dirección: Diagonal 28C 28 Sur 25</p>
                 <p>Municipio de Envigado</p> --}}
-                <p><strong>Corporación:</strong> EIA Recicla</p>
+                <p><strong>Corporación:</strong> CORPORACIÓN CAMPO SANTO</p>
             </div>
         </div>
         ' style="position:absolute; margin-top: -28%; margin-left: 68%; z-index: 2; max-width: 3%">
@@ -263,9 +263,9 @@ input[type=submit] {
             <div class="col-12">
                 <h5 class="border-solid border-bottom"><strong>Unidad residencial</strong></h5>
                 <p>Se unió hace 9 meses</p>
-                {{-- <p>Dirección: Diagonal 28C 28 sur 25</p>
+                {{-- <p>Dirección: Diagonal 28C 28 Sur 25</p>
                 <p>Municipio de Envigado</p> --}}
-                <p><strong>Corporación:</strong> Recicladores las lomas</p>
+                <p><strong>Corporación:</strong> COPRESAP</p>
             </div>
         </div>
         ' style="position:absolute; margin-top: -10%; margin-left: 76%; z-index: 2; max-width: 3%">
@@ -278,9 +278,9 @@ input[type=submit] {
             <div class="col-12">
                 <h5 class="border-solid border-bottom"><strong>Unidad residencial</strong></h5>
                 <p>Se unió hace 12 días</p>
-                {{-- <p>Dirección: Diagonal 28C 28 sur 25</p>
+                {{-- <p>Dirección: Diagonal 28C 28 Sur 25</p>
                 <p>Municipio de Envigado</p> --}}
-                <p><strong>Corporación:</strong> RecItagui</p>
+                <p><strong>Corporación:</strong> CORPOOCCIDENTE</p>
             </div>
         </div>
         ' style="position:absolute; margin-top: -33%; margin-left: 9%; z-index: 2; max-width: 3%">
@@ -293,9 +293,9 @@ input[type=submit] {
                 <div class="col-12">
                     <h5 class="border-bottom border-solid"><strong>Vivienda</strong></h5>
                     <p>Se unió hace 5 meses</p>
-                    {{-- <p>Dirección: Diagonal 28C 28 sur 25</p>
+                    {{-- <p>Dirección: Diagonal 28C 28 Sur 25</p>
                     <p>Municipio de Envigado</p> --}}
-                    <p><strong>Corporación:</strong> EIA Recicla</p>
+                    <p><strong>Corporación:</strong> CORPORACIÓN CAMPO SANTO</p>
                 </div>
             </div>
             ' style="position:absolute; margin-top: -23%; margin-left: 49%; z-index: 2; max-width: 3%">
@@ -308,9 +308,9 @@ input[type=submit] {
                 <div class="col-12">
                     <h5 class="border-bottom border-solid"><strong>Vivienda</strong></h5>
                     <p>Se unió hace 10 meses</p>
-                    {{-- <p>Dirección: Diagonal 28C 28 sur 25</p>
+                    {{-- <p>Dirección: Diagonal 28C 28 Sur 25</p>
                     <p>Municipio de Envigado</p> --}}
-                    <p><strong>Corporación:</strong> RecItagui</p>
+                    <p><strong>Corporación:</strong> CORPOOCCIDENTE</p>
                 </div>
             </div>
             ' style="position:absolute; margin-top: -27%; margin-left: 12%; z-index: 2; max-width: 3%">
@@ -323,9 +323,9 @@ input[type=submit] {
                 <div class="col-12">
                     <h5 class="border-bottom border-solid"><strong>Vivienda</strong></h5>
                     <p>Se unió hace 7 meses</p>
-                    {{-- <p>Dirección: Diagonal 28C 28 sur 25</p>
+                    {{-- <p>Dirección: Diagonal 28C 28 Sur 25</p>
                     <p>Municipio de Envigado</p> --}}
-                    <p><strong>Corporación:</strong> Recicladores las lomas</p>
+                    <p><strong>Corporación:</strong> COPRESAP</p>
                 </div>
             </div>
             ' style="position:absolute; margin-top: -16%; margin-left: 78%; z-index: 2; max-width: 3%">
@@ -375,11 +375,11 @@ input[type=submit] {
                                     <div class="row">
                                         <div class="col-xl-12 h-100">
                                             <div class="container">
-                                                <img src="{{url("/corp_logo2.png")}}"
+                                                <img src="{{url("/corp_logo2.jpg")}}"
                                                     class="imgpg border border-success rounded-circle"
                                                     alt="">
                                                 <div class="mt-2 ml-1 mr-1 text-center">
-                                                    <h3><strong>RecItagui</strong></h3>
+                                                    <h3><strong>CORPOOCCIDENTE</strong></h3>
                                                     <p>Se unió hace 3 años</p>
                                                 </div>
                                             </div>
@@ -394,8 +394,9 @@ input[type=submit] {
                                     <div class="container pt-4">
                                         <div class="row mb-1">
                                             <div class="col-8 pl-0">
-                                                <label class="lead pl-0 mb-3"><strong>Dirección: </strong>Calle 67 carrera 57</label>
-                                                <label class="lead pl-0"><strong>Telefóno: </strong>(4) 331 41 21</label>
+                                                <label class="lead pl-0 mb-3"><strong>Municipio: </strong>Medellín</label> <br>
+                                                <label class="lead pl-0 mb-3"><strong>Dirección: </strong>Carrera 109a #63b - 420</label> <br>
+                                                <label class="lead pl-0"><strong>Telefóno: </strong>(4) 2322668</label>
                                             </div>
                                             <div class="col-4 pr-0">
                                             </div>
@@ -448,7 +449,7 @@ input[type=submit] {
                                                     class="imgpg border border-success rounded-circle"
                                                     alt="">
                                                 <div class="mt-2 ml-1 mr-1 text-center">
-                                                    <h3><strong>EIA Recicla</strong></h3>
+                                                    <h3><strong>CORPORACIÓN CAMPO SANTO</strong></h3>
                                                     <p>Se unió hace 2 años</p>
                                                 </div>
                                             </div>
@@ -462,9 +463,10 @@ input[type=submit] {
                                 <div class="col-xl-12 h-100">
                                     <div class="container pt-4">
                                         <div class="row mb-1">
-                                            <div class="col-8 pl-0">
-                                                <label class="lead pl-0 mb-3"><strong>Dirección: </strong>Calle 22 sur Carrera 42b</label>
-                                                <label class="lead pl-0"><strong>Telefóno: </strong>(4) 312 17 54</label>
+                                            <div class="col-12 pl-0">
+                                                <label class="lead pl-0 mb-3"><strong>Municipio: </strong>Medellín</label> <br>
+                                                <label class="lead pl-0 mb-3"><strong>Dirección: </strong>Calle 53 #10c - 63</label> <br>
+                                                <label class="lead pl-0"><strong>Telefóno: </strong>(4) 2260243</label>
                                             </div>
                                             <div class="col-4 pr-0">
                                             </div>
@@ -513,11 +515,11 @@ input[type=submit] {
                                     <div class="row">
                                         <div class="col-xl-12 h-100">
                                             <div class="container">
-                                                <img src="{{url("/corp_logo.png")}}"
+                                                <img src="{{url("/Arreciclar.png")}}"
                                                     class="imgpg border border-success rounded-circle"
                                                     alt="">
                                                 <div class="mt-2 ml-1 mr-1 text-center">
-                                                    <h3><strong>Reciclando ando</strong></h3>
+                                                    <h3><strong>ARRECICLAR</strong></h3>
                                                     <p>Se unió hace 2 años</p>
                                                 </div>
                                             </div>
@@ -532,8 +534,9 @@ input[type=submit] {
                                     <div class="container pt-4">
                                         <div class="row border-solid border-bottom mb-1">
                                             <div class="col-8 pl-0">
-                                                <label class="lead pl-0 mb-3"><strong>Dirección: </strong> Carrera 42 #22 sur 43C</label>
-                                                <label class="lead pl-0"><strong>Telefóno: </strong>(4) 312 25 67</label>
+                                                <label class="lead pl-0 mb-3"><strong>Municipio: </strong>Medellín</label> <br>
+                                                <label class="lead pl-0 mb-3"><strong>Dirección: </strong>Calle 26 # 44 - 27</label> <br>
+                                                <label class="lead pl-0"><strong>Telefóno: </strong>(4) 2322668</label>
                                             </div>
                                             <div class="col-4 pr-0">
                                                 <div class="d-flex justify-content-end pl-0">
@@ -548,15 +551,15 @@ input[type=submit] {
                                         </div>
                                         <div class="row mt-2">
                                             <label class="lead"><strong>Recicladores agremiados:  </strong></label>
-                                            <p class="pl-1 lead">3</p>
+                                            <p class="pl-1 lead">6</p>
                                         </div>
                                         <div class="row">
                                             <label class="lead"><strong>Usuarios afiliados:  </strong></label>
-                                            <p class="pl-1 lead">23</p>
+                                            <p class="pl-1 lead">45</p>
                                         </div>
                                         <div class="row">
                                             <label class="lead"><strong>Emisiones evitadas:  </strong></label>
-                                            <p class="pl-1 lead">200 ton CO2e</p>
+                                            <p class="pl-1 lead">764 ton CO2e</p>
                                         </div>
                                     </div>
                                 </div>
@@ -594,7 +597,7 @@ input[type=submit] {
                                                     class="imgpg border border-success rounded-circle"
                                                     alt="">
                                                 <div class="mt-2 ml-1 mr-1 text-center">
-                                                    <h3><strong>Recicladores las lomas</strong></h3>
+                                                    <h3><strong>COPRESAP</strong></h3>
                                                     <p>Se unió hace 1 año</p>
                                                 </div>
                                             </div>
@@ -609,8 +612,9 @@ input[type=submit] {
                                     <div class="container pt-4">
                                         <div class="row mb-1">
                                             <div class="col-8 pl-0">
-                                                <label class="lead pl-0 mb-3"><strong>Dirección: </strong>Calle 27 sur carrera 22</label>
-                                                <label class="lead pl-0"><strong>Telefóno: </strong>(4) 331 41 13</label>
+                                                <label class="lead pl-0 mb-3"><strong>Municipio: </strong>Medellín</label> <br>
+                                                <label class="lead pl-0 mb-3"><strong>Dirección: </strong>Carrera 32a #102b - 53</label> <br>
+                                                <label class="lead pl-0"><strong>Telefóno: </strong>(4) 5295490</label>
                                             </div>
                                             <div class="col-4 pr-0">
                                             </div>
@@ -643,39 +647,39 @@ input[type=submit] {
 </div>
 
 <script>
-    var countries = ["RecItagui", "EIARecicla"];
+    var countries = ["CORPOOCCIDENTE", "CORPORACIÓN CAMPO SANTO"];
     autocomplete(document.getElementById("myInput"), countries);
 
     function mostrarMapaDistinto2(){
         var entrada = document.getElementById("myInput").value;
-        var recitagui = document.getElementById("recitagui");
+        var CORPOOCCIDENTE = document.getElementById("CORPOOCCIDENTE");
         var casai1 = document.getElementById("casa_itagui1");
         var unidadi1 = document.getElementById("unidad_itagui1");
         var unidadi2 = document.getElementById("unidad_itagui2");
-        var eiarecicla = document.getElementById("eiarecicla");
+        var CORPORACIÓNCAMPOSANTO = document.getElementById("CORPORACIÓN CAMPO SANTO");
         var casae1 = document.getElementById("casa_eia1");
         var unidade1 = document.getElementById("unidad_eia1");
         var unidade2 = document.getElementById("unidad_eia2");
         console.log(entrada);
-        if (entrada == "RecItagui") {
-            //Mostrar usuarios RecItagui
-            recitagui.setAttribute("src", "{{url("/Corporacion_otroR.png")}}");
+        if (entrada == "CORPOOCCIDENTE") {
+            //Mostrar usuarios CORPOOCCIDENTE
+            CORPOOCCIDENTE.setAttribute("src", "{{url("/Corporacion_otroR.png")}}");
             casai1.setAttribute("src", "{{url("/Vivienda_particular_otroR.png")}}");
             unidadi1.setAttribute("src", "{{url("/Admon_residencial_otroR.png")}}");
             unidadi2.setAttribute("src", "{{url("/Admon_residencial_otroR.png")}}");
-            eiarecicla.setAttribute("src", "{{url("/Corporacion_otro.png")}}");
+            CORPORACIÓNCAMPOSANTO.setAttribute("src", "{{url("/Corporacion_otro.png")}}");
             casae1.setAttribute("src", "{{url("/Vivienda_particular_otro.png")}}");
             unidade1.setAttribute("src", "{{url("/Admon_residencial_otro.png")}}");
             unidade2.setAttribute("src", "{{url("/Admon_residencial_otro.png")}}");
             return;
         }
-        if (entrada == "EIARecicla") {
+        if (entrada == "CORPORACIÓN CAMPO SANTO") {
             //Mostrar usuarios de EIARecila
-            recitagui.setAttribute("src", "{{url("/Corporacion_otro.png")}}");
+            CORPOOCCIDENTE.setAttribute("src", "{{url("/Corporacion_otro.png")}}");
             casai1.setAttribute("src", "{{url("/Vivienda_particular_otro.png")}}");
             unidadi1.setAttribute("src", "{{url("/Admon_residencial_otro.png")}}");
             unidadi2.setAttribute("src", "{{url("/Admon_residencial_otro.png")}}");
-            eiarecicla.setAttribute("src", "{{url("/Corporacion_otroR.png")}}");
+            CORPORACIÓNCAMPOSANTO.setAttribute("src", "{{url("/Corporacion_otroR.png")}}");
             casae1.setAttribute("src", "{{url("/Vivienda_particular_otroR.png")}}");
             unidade1.setAttribute("src", "{{url("/Admon_residencial_otroR.png")}}");
             unidade2.setAttribute("src", "{{url("/Admon_residencial_otroR.png")}}");

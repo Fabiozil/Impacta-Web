@@ -21,7 +21,7 @@
                 </button>
             </a>
             <span class="btn btn-info mb-2 ml-0" data-toggle="tooltip" data-placement="top"
-                title="Utiliza esta pestaña para ver el histograma de los materiales reciclados por tu corporacion.">
+                title="Utiliza este botón para ver el histograma de los materiales reciclados por la corporacion.">
                 <i class="fas fa-info-circle"></i></span>
                 
                 <a href="{{ url('/nuevamedicion') }}">
@@ -98,7 +98,7 @@
                 <div class="col-xl-3 col-sm-12 pt-5 p-1">
                     <div class="d-flex justify-content-center align-items-center">
                         <h1 id="historico"><strong>764 ton</strong></h1>
-                        <img src="co2_verde.png" alt="nube_verde" class="pl-2" style="width: 90px !important; height: 55px !important;">
+                    <img src="{{url("co2_verde.png")}}" alt="nube_verde" class="pl-2" style="width: 80px !important; height: 55px !important;">
                     </div>
                 </div>
             </div>

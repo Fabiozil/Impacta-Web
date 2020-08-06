@@ -22,8 +22,8 @@
                         <div class="form-group mx-auto w-75">
                             <label for="name">Usuario (Corporación) <strong class="text-danger">*</strong> </label>
                             <input id="name" type="text" class="form-control @error('name') is-invalid @enderror"
-                                name="name" value="{{ old('name') }}" required autocomplete="name" autofocus
-                                placeholder="Ejm: RecilandoAndoCorporación ">
+                                name="name" required autocomplete="name" autofocus
+                                placeholder="Ejm: RecilandoAndoCorporación " value="Arreciclar">
                             @error('string')
                             <span class="invalid-feedback" role="alert">
                                 <strong>{{ $message }}</strong>
@@ -35,9 +35,9 @@
                         </div>
                         <div class="form-group mx-auto w-75">
                             <label for="email">{{ __('E-Mail Address') }}  <strong class="text-danger">*</strong> </label>
-                            <input id="email" type="email" class="form-control @error('email') is-invalid @enderror"
-                                name="email" value="{{ old('email') }}" required autocomplete="email"
-                                placeholder="Ej: recilando@reciclando.es">
+                            <input id="email" type="email" class="form-control"
+                                name="email" required autocomplete="email"
+                                placeholder="Ej: recilando@reciclando.es" value="arreciclar@impacta.com">
                             @error('email')
                             <span class="invalid-feedback" role="alert">
                                 <strong>{{ $message }}</strong>
@@ -52,7 +52,7 @@
                             <label for="password">{{ __('Password') }}  <strong class="text-danger">*</strong> </label>
                             <input id="password" type="password"
                                 class="form-control @error('password') is-invalid @enderror" name="password" required
-                                autocomplete="new-password">
+                                autocomplete="new-password" value="sadasdasdassa">
 
                             @error('password')
                             <span class="invalid-feedback" role="alert">
@@ -67,7 +67,7 @@
                         <div class="form-group  mx-auto w-75">
                             <label for="password-confirm">{{ __('Confirm Password') }}  <strong class="text-danger">*</strong> </label>
                             <input id="password-confirm" type="password" class="form-control"
-                                name="password_confirmation" required autocomplete="new-password">
+                                name="password_confirmation" required autocomplete="new-password" value="sadasdasdassa">
                         </div>
 
                         <div class="form-group  mx-auto w-75">
@@ -80,7 +80,7 @@
                     <div class="card-footer bg-transparent border">
                         <small id="emailHelp" class="form-text text-muted">
                             Al hacer clic en "Registrar" aceptas nuestros
-                            <a href="#" class="text-decoration-none text-primary">terminos de servicio</a> y
+                            <a href="#" class="text-decoration-none text-primary">términos de servicio</a> y
                             <a href="#" class="text-decoration-none text-primary">privacidad.</a>
                             Se enviará un correo a la dirección ingresada para continuar con el proceso de registro.
                         </small>

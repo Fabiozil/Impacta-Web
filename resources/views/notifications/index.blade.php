@@ -30,19 +30,19 @@
                 </button>
             </a>
             <span class="btn btn-info mb-2 ml-0 mr-2" data-toggle="tooltip" data-placement="top"
-                title="Utiliza la pestaña para definir una nueva notificación manual">
+                title="Utiliza este botón para definir una nueva notificación manual">
                 <i class="fas fa-info-circle"></i></span>
             <a href="{{ url( '/crearAutomatica' ) }}" class="w-25">
                 <button type="submit" class="btn btn-success mb-2 mr-0 w-100">Automáticas
                 </button>
             </a>
             <span class="btn btn-info mb-2 ml-0" data-toggle="tooltip" data-placement="top"
-                title="Utiliza la pestaña para definir una nueva notificación automática">
+                title="Utiliza este botón para definir una nueva notificación automática">
                 <i class="fas fa-info-circle"></i></span>
         </div>
 
         <main class="container contenedor">
-            <h2 class="text-success">Historial de notificaciones enviadas</h2>
+            <h2 class="text-success">Historial notificaciones enviadas</h2>
             <div class="row">
                 <div class="col-12">
                     <table class="mt-3">
@@ -60,10 +60,9 @@
                                 <td>Mensaje de servicio</td>
                                 <td class="overflow-hidden">
                                     <a class="bg-primary text-white p-1">AUT</a> <br>
-                                    <p> Hola <a href="" class="text-success">@nombre de usuario!</a>
-                                    No olvides sacar tu material reciclable y entregarlos a <a class="text-success">@nombre reciclador</a> los días
-                                    laborales del reciclador</p>
-                                    </div>
+                                    Hola <a class="text-success">@nombre de usuario!</a>
+                                    ! No olvides preparar el material reciclable para que sea entregado al reciclador(a) asignado, <a class="text-success">@nombre reciclador(a)</a> entre los días y las horas correctas. ¡Gracias por su colaboración!
+                                
                                     
                                     </td>
                                 <td><a href="" class="text-primary ml-3" data-toggle="modal"
@@ -73,11 +72,11 @@
                                 <td>
                                     19 de julio
                                 </td>
-                                <td>Informacion del reciclador</td>
+                                <td>Informacion del reciclador(a)</td>
                                 <td class="overflow-hidden"><a class="bg-warning text-white p-1">MAN</a> <br>
                                     Hola <a class="text-success">@nombre de usuario!</a>
-                                    El reciclador <a class="text-success">@nombre del reciclador</a> no pudo pasar el dia
-                                    de ayer por el reciclaje por las condiciones climaticas. Pasará hoy a las 5:00PM
+                                    El reciclador(a) <a class="text-success">@nombre del reciclador(a)</a> no pudo pasar el dia
+                                    de ayer por el reciclaje debido las condiciones climaticas. Pasará hoy a las 5:00PM
                                 </td>
                                 <td><a href="" class="text-primary ml-3" data-toggle="modal"
                                     data-target="#modal2">Ver detalles</a></td>
@@ -88,9 +87,8 @@
                                 </td>
                                 <td> Otro</td>
                                 <td class="overflow-hidden"><a class="bg-warning text-white p-1">MAN</a> <br>Hola <a class="text-success">@nombre de usuario!</a>
-                                    El reciclador <a class="text-success">@nombre del reciclador</a> estará en una
-                                    capacitación la siguiente semana por lo que no podra realizar la ruta, se te
-                                    asignará otro reciclador y se te notificará.</td>
+                                    El reciclador(a) <a class="text-success">@nombre del reciclador(a)</a> estará en capacitación sobre "Buenas Prácticas" a la hora de Manipular el Material Reciclable la próxima semana. Su ruta será remplazada por Alejita Uribe el día Martes y Jueves de 6:00 am a 10:00 am.
+                                </td>
                                 <td><a href="" class="text-primary ml-3" data-toggle="modal"
                                     data-target="#modal2">Ver detalles</a></td>
                             </tr>
@@ -100,7 +98,8 @@
                                 </td>
                                 <td>Indicador ambiental</td>
                                 <td class="overflow-hidden"><a class="bg-primary text-white p-1">AUT</a> <br>Hola <a class="text-success">@nombre de usuario!</a>
-                                    Con tu ayuda, hemos ayudado a evitar la emision de X toneladas de CO2e</td>
+                                    Con tu ayuda, hemos ayudado a evitar la emision de <a class="text-success">@histórico toneladas CO2e</a> desde el 2019. Lo que equivale a retirar <a class="text-success">@equivalencia</a> vehículos particulares en 1 año el Área Metropolitana del Valle de Áburra.
+                                </td>
                                 <td><a href="" class="text-primary ml-3" data-toggle="modal"
                                     data-target="#modal1">Ver detalles</a></td>
                             </tr>
@@ -131,9 +130,9 @@
                                         <p class="text-center">2 Sep 2020 8:00AM</p>
                                         
                                     </td>
-                                    <td>Información del reciclador</td>
+                                    <td>Información del reciclador(a)</td>
                                     <td class="overflow-hidden"><a class="bg-warning text-white p-1">MAN</a> <br>Hola <a class="text-success">@nombre de usuario!</a>
-                                        El reciclador asignado para esta semana es <a class="text-success">@nombre del reciclador</a> debido a que tu reciclador
+                                        El reciclador(a) asignado para esta semana es <a class="text-success">@nombre del reciclador(a)</a> debido a que su reciclador(a)
                                          asignado estará en una capacitación.</td>
                                     <td><button class="btn btn-outline-success ml-5" data-toggle="modal" data-target="#modal4"><i class="fas fa-edit fa-lg"></i></button></td>
                                 </tr>
@@ -143,8 +142,9 @@
                                         <p class="text-center">5 Sep 2020 7:00AM</p>
                                     </td>
                                     <td>Mensaje de servicio</td>
-                                    <td class="overflow-hidden"><a class="bg-warning text-white p-1">MAN</a> <br>Hola <a class="text-success">@nombre de usuario!</a>
-                                        El pasado viernes no pudimos recolectar tu reciclaje pues el reciclador timbró y nadie entregó el reciclaje, tenlo en cuenta para la proxima entrega.
+                                    <td class="overflow-hidden"><a class="bg-warning text-white p-1">MAN</a> <br>Hola <a class="text-success">@nombre de usuario!</a> Durante Semana Santa, el/la <a class="text-success">@nombre del reciclador(a)</a> 
+                                        realizará su ruta el lunes 01 de abril de 2020 desde las 7:00 am hasta las 10:00 am. Ten presente de entregar el material en este horario.
+
                                         </td>
                                     <td><button class="btn btn-outline-success ml-5" data-toggle="modal" data-target="#modal5"><i class="fas fa-edit fa-lg"></i></button></td>
                                 </tr>
@@ -173,8 +173,7 @@
                             <p class="lead mb-2"><strong>Mensaje:</strong></p>
                             <div class="border border-solid p-2 mb-2">
                                 <p class="lead">Hola <a class="text-success">@nombre de usuario!</a>
-                                    No olvides sacar tu material reciclable y entregarlos a <a class="text-success">@nombre reciclador</a> los días
-                                    laborales del reciclador.</p>
+                                    ! No olvides preparar el material reciclable para que sea entregado al reciclador(a) asignado, <a class="text-success">@nombre reciclador(a)</a> entre los días y las horas correctas. ¡Gracias por su colaboración!</p>
                                 <div class="d-flex justify-content-end">
                                     <small>Enviado: 23 de julio 2020 8:01AM</small>
                                 </div>
@@ -224,21 +223,22 @@
                 <div class="container">
                     <div class="row">
                         <div class="col-12 p-1">
-                            <p class="lead"><strong>Tipo del mensaje:</strong> Informacion del reciclador</p>
+                            <p class="lead"><strong>Tipo del mensaje:</strong> Información del reciclador(a)</p>
                             <p class="lead"><strong>Naturaleza del mensaje:</strong> <a class="bg-warning text-white p-1">MAN</a></p>
                             <p class="lead"><strong>Mensaje:</strong></p>
                             <div class="border-solid border p-2">
                                 <p class="lead">
-                                    Hola <a class="text-success">@nombre de usuario!</a> El reciclador <a class="text-success">@nombre del reciclador</a> no pudo pasar el dia
-                                    de ayer por el reciclaje por las condiciones climaticas. Pasará hoy a las 5:00PM
+                                    Hola <a class="text-success">@nombre de usuario!</a>
+                                    El reciclador(a) <a class="text-success">@nombre del reciclador(a)</a> no pudo pasar el dia
+                                    de ayer por el reciclaje debido las condiciones climaticas. Pasará hoy a las 5:00PM
                                 </p>
                                 <div class="d-flex justify-content-end">
                                     <small>Enviado: 19 de julio 2020 8:05AM</small> 
                                 </div>
                             </div>
                             <div class="d-flex justify-content-around">
-                                <p class="lead"><strong>Mensajes enviados:</strong> 9</p>
-                                <p class="lead"><strong>Mensajes entregados:</strong> 9</p>
+                                <p class="lead"><b>Mensajes enviados:</b> 9</p>
+                                <p class="lead"><b>Mensajes entregados:</b> 9</p>
                             </div>
                             <div class="row border-top border-solid pt-2 d-flex justify-content-center">
                                 <h2 class="lead text-center"><strong>Condiciones de envío</strong></h2>
@@ -256,8 +256,8 @@
                                         <td class="text-center col-4">19 de julio 2020 8:00AM</td>
                                     </tr>
                                     <tr>
-                                        <td class="text-center col-4">Reciclador</td>
-                                        <td class="text-center col-4">Avimilé Ribas</td>
+                                        <td class="text-center col-4">Reciclador(a)</td>
+                                        <td class="text-center col-4">Alejandra Uribe</td>
                                         <td class="text-center col-4">19 de julio 2020 8:00AM</td>
                                     </tr>
                                 </tbody>
@@ -330,7 +330,7 @@
                     <div class="row">
                         <div class="col-xl-12">
                             <div class="d-flex justify-content-center">
-                                <img src="Exito.png" alt="">
+                                <img src="{{url("Exito.png")}}" alt="">
                             </div>
                             <h1 class="py-2 text-center">¡Éxito!</h1>
                             <h5 class="lead text-center">Cambios realizados correctamente.</h5>
@@ -367,7 +367,7 @@
                         <div class="col-md-6">
                             <p class="bg-gray">Hola <a class="text-primary">Nombre de usuario</a>!<br>No olvides sacar
                                 tu material reciclable y
-                                entregarlos a <a class="text-primary">Nombre Reciclador</a> los días laborales del
+                                entregarlos a <a class="text-primary">Nombre Reciclador(a)</a> los días laborales del
                                 reciclador.</p>
                         </div>
                         <div class="col-md-6">
@@ -465,7 +465,7 @@
                             <div class="col-12 lead d-flex justify-content-between mb-3 border-bottom border-solid">
                                 <label for="todos">Compartir este mensaje entre todos los usuarios
                                     <button class="btn btn-info" type="button" data-toggle="tooltip" data-placement="right"
-                                        title="Al activar esta opción, el mensaje manual será compartido entre todos los usuarios comprometidos con la corporación. En caso contrario, desactiva esta opción y específica las condiciones de envío por usuarios según su localidad o usuarios según el reciclador designado.">
+                                        title="Al activar esta opción, el mensaje manual será compartido entre todos los usuarios comprometidos con la corporación. En caso contrario, desactiva esta opción y específica las condiciones de envío por localidad o nombre del reciclador(a) asignado.">
                                         <i class="fas fa-info-circle"></i>
                                     </button>
                                 </label>
@@ -479,14 +479,14 @@
                                 <select class="form-control inline w-75"
                                 id="sector" aria-label="Example select with button addon">
                                     <option value="El Poblado">Servicio de recolección</option>
-                                    <option value="Zuñiga">Información de reciclador</option>
+                                    <option value="Zuñiga">Información de reciclador(a)</option>
                                     <option value="San Marcos">Otro</option>
                                 </select>
                             </div>
                         </div>
                         <div class="d-flex justify-content-center mt-3">
                             <textarea name="Mensaje" id="" cols="30" rows="10" maxlength="150"
-                                placeholder="Hola @nombre de usuario! El reciclador asignado para esta semana es @nombre del reciclador debido a que tu reciclador asignado estará en una capacitación." style="width: 700px"></textarea>
+                                placeholder="Hola @nombre de usuario! El reciclador(a) asignado para esta semana es @nombre del reciclador debido a que tu reciclador(a) asignado estará en una capacitación." style="width: 700px"></textarea>
                         </div>
                         <h2 class="mt-3 mb-3 text-success">Condiciones de envío</h2>
                         <div class="row mt-3">
@@ -549,9 +549,9 @@
                         </div>
                         <div class="row mt-3 border-solid border-bottom">
                             <div class="col-md-12 lead d-flex justify-content-between">
-                                <label for="reciclador">Selecciona usuarios por reciclador
+                                <label for="reciclador">Selecciona usuarios por reciclador(a)
                                     <button class="btn btn-info" type="button" data-toggle="tooltip" data-placement="right"
-                                        title="Esta opción de selección te permite compartir el mensaje manual entre los usuarios que tienen asignado un reciclador en específico.">
+                                        title="Esta opción de selección te permite compartir el mensaje manual entre los usuarios que tienen asignado un reciclador(a) en específico.">
                                         <i class="fas fa-info-circle"></i>
                                     </button>
                                 </label>
@@ -562,23 +562,23 @@
                             </div>
                             <div class="col-md-12">
                                 <div class="form-group-row d-flex mb-2">
-                                    <label for="" class="lead"> <strong>Reciclador </strong> </label>
+                                    <label for="" class="lead"> <strong>Reciclador(a) </strong> </label>
                                     <select class="form-control ml-2" name="reciclador" id="reciclador">
-                                        <option value="Avimilé Ribas">Avimilé Ribas</option>
-                                        <option value="Jeison Guzman">Jeison Guzman</option>
-                                        <option value="German Exequiel Cano">German Exequiel Cano</option>
-                                        <option value="Kevin Tellez">Kevin Tellez</option>
-                                        <option value="Stiven Mendoza">Stiven Mendoza</option>
+                                        <option value="Reinaldo Ochoa">Reinaldo Ochoa</option>
+                                        <option value="Alejandra Uribe">Alejandra Uribe</option>
+                                        <option value="Rodrigo Hincapie">Rodrigo Hincapie</option>
+                                        <option value="Armando Lopez">Armando Lopez</option>
+                                        <option value="Claudia Marín">Claudia Marín</option>
                                     </select>
                                     <button class="btn btn-outline-primary ml-2" onclick="agregarReciclador('recicladores')">Adicionar</button>
                                 </div>
                                 <table class="w-100 mb-3">
                                     <thead class="text-center">
-                                        <th class="col-12">Reciclador</th>
+                                        <th class="col-12">Reciclador(a)</th>
                                     </thead>
                                     <tbody class="text-center" id="recicladores">
                                         <tr>
-                                            <td>Jeison Guzman</td>
+                                            <td>Alejandra Uribe</td>
                                             <td><button class="btn btn-danger" onclick="eliminarReciclador('recicladores')"><i class="fas fa-trash-alt"></i></button></td>
                                         </tr>
                                     </tbody>
@@ -589,8 +589,8 @@
                             <div class="col-md-12 d-flex justify-content-between">
                                 <label class="lead" for="fecha">Programar envío
                                     <button class="btn btn-info" type="button" data-toggle="tooltip" data-placement="right"
-                                        title="Selecciona el momento adecuado para que el mensaje sea compartido.
-                                        Establecer formato fecha y hora como se ha manejado anteriormente.">
+                                        title="Selecciona el momento adecuado para que el mensaje manual sea compartido.
+                                      ">
                                         <i class="fas fa-info-circle"></i>
                                     </button>
                                 </label>
@@ -636,7 +636,7 @@
                             <div class="col-12 lead d-flex justify-content-between mb-3 border-bottom border-solid">
                                 <label for="todos">Compartir este mensaje entre todos los usuarios
                                     <button class="btn btn-info" type="button" data-toggle="tooltip" data-placement="right"
-                                        title="Al activar esta opción, el mensaje manual será compartido entre todos los usuarios comprometidos con la corporación. En caso contrario, desactiva esta opción y específica las condiciones de envío por usuarios según su localidad o usuarios según el reciclador designado.">
+                                        title="Al activar esta opción, el mensaje manual será compartido entre todos los usuarios comprometidos con la corporación. En caso contrario, desactiva esta opción y específica las condiciones de envío por usuarios según su localidad o usuarios según el reciclador(a) designado.">
                                         <i class="fas fa-info-circle"></i>
                                     </button>
                                 </label>
@@ -650,14 +650,14 @@
                                 <select class="form-control inline w-75"
                                 id="sector" aria-label="Example select with button addon">
                                     <option value="El Poblado">Servicio de recolección</option>
-                                    <option value="Zuñiga">Información de reciclador</option>
+                                    <option value="Zuñiga">Información de reciclador(a)</option>
                                     <option value="San Marcos">Otro</option>
                                 </select>
                             </div>
                         </div>
                         <div class="d-flex justify-content-center mt-3">
                             <textarea name="Mensaje" id="" cols="30" rows="10" maxlength="150"
-                                placeholder="Hola @nombre de usuario! El pasado viernes no pudimos recolectar tu reciclaje pues el reciclador timbró y nadie entregó el reciclaje, tenlo en cuenta para la proxima entrega. " style="width: 700px"></textarea>
+                                placeholder="Hola @nombre de usuario! El pasado viernes no pudimos recolectar tu reciclaje pues el reciclador(a) timbró y nadie entregó el reciclaje, tenlo en cuenta para la proxima entrega. " style="width: 700px"></textarea>
                         </div>
                         <h2 class="mt-3 mb-3 text-success">Condiciones de envío</h2>
                         <div class="row mt-3">
@@ -722,7 +722,7 @@
                             <div class="col-md-12 lead d-flex justify-content-between">
                                 <label for="reciclador">Selecciona usuarios por reciclador
                                     <button class="btn btn-info" type="button" data-toggle="tooltip" data-placement="right"
-                                        title="Esta opción de selección te permite compartir el mensaje manual entre los usuarios que tienen asignado un reciclador en específico.">
+                                        title="Esta opción de selección te permite compartir el mensaje manual entre los usuarios que tienen asignado un reciclador(a) en específico.">
                                         <i class="fas fa-info-circle"></i>
                                     </button>
                                 </label>
@@ -733,23 +733,23 @@
                             </div>
                             <div class="col-md-12">
                                 <div class="form-group-row d-flex mb-2">
-                                    <label for="" class="lead"> <strong>Reciclador </strong> </label>
+                                    <label for="" class="lead"> <strong>Reciclador(a) </strong> </label>
                                     <select class="form-control ml-2" name="reciclador" id="reciclador">
-                                        <option value="Avimilé Ribas">Avimilé Ribas</option>
-                                        <option value="Jeison Guzman">Jeison Guzman</option>
-                                        <option value="German Exequiel Cano">German Exequiel Cano</option>
-                                        <option value="Kevin Tellez">Kevin Tellez</option>
-                                        <option value="Stiven Mendoza">Stiven Mendoza</option>
+                                        <option value="Reinaldo Ochoa">Reinaldo Ochoa</option>
+                                        <option value="Alejandra Uribe">Alejandra Uribe</option>
+                                        <option value="Rodrigo Hincapie">Rodrigo Hincapie</option>
+                                        <option value="Armando Lopez">Armando Lopez</option>
+                                        <option value="Claudia Marín">Claudia Marín</option>
                                     </select>
                                     <button class="btn btn-outline-primary ml-2" onclick="agregarReciclador('recicladores1')">Adicionar</button>
                                 </div>
                                 <table class="w-100 mb-3">
                                     <thead class="text-center">
-                                        <th class="col-12">Reciclador</th>
+                                        <th class="col-12">Reciclador(a)</th>
                                     </thead>
                                     <tbody class="text-center" id="recicladores1">
                                         <tr>
-                                            <td>Avimilé Ribas</td>
+                                            <td>Reinaldo Ochoa</td>
                                             <td><button class="btn btn-danger" onclick="eliminarReciclador('recicladores1')"><i class="fas fa-trash-alt"></i></button></td>
                                         </tr>
                                     </tbody>
@@ -760,8 +760,8 @@
                             <div class="col-md-12 d-flex justify-content-between">
                                 <label class="lead" for="fecha">Programar envío
                                     <button class="btn btn-info" type="button" data-toggle="tooltip" data-placement="right"
-                                        title="Selecciona el momento adecuado para que el mensaje sea compartido.
-                                        Establecer formato fecha y hora como se ha manejado anteriormente.">
+                                        title="Selecciona el momento adecuado para que el mensaje manual sea compartido.
+                                        ">
                                         <i class="fas fa-info-circle"></i>
                                     </button>
                                 </label>

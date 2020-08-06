@@ -74,7 +74,7 @@ input[type=submit] {
                 </button>
             </a>
             <span class="btn btn-info mb-2 ml-0 mr-2" data-toggle="tooltip" data-placement="top"
-                title="Utiliza este botón para visualizar los usuarios asignados y pendientes por asignación que hacen parte de su comunidad.">
+                title="Utiliza este botón para visualizar los usuarios asignados y pendientes de asignación que hacen parte de su comunidad.">
                 <i class="fas fa-info-circle"></i></span>
                 
             <a href="{{ url('/comunidad/corporaciones') }}">
@@ -96,12 +96,12 @@ input[type=submit] {
             <div class="row">
                 <div class="col-12">
                     <img src="{{url("/corp_logo.png")}}" class="logo-corp" alt="Logo corporacion">
-                    <h5 class="border-solid border-bottom"><strong>Reciclando Ando</strong></h5>
+                    <h5 class="border-solid border-bottom"><strong>ARRECICLAR</strong></h5>
                     <p>Se unió hace 2 años</p>
-                    <p>Dirección: Diagonal 33B #39 sur 40</p>
+                    <p>Dirección: Calle 26 # 44 - 27</p>
                     <p>Telefóno: (4) 561 09 21</p>
                     <p>Recicladores agremiados: 5</p>
-                    <p>Usuarios afiliados: 23</p>
+                    <p>Usuarios afiliados: 45</p>
                     <p>Emisiones evitadas: 200 ton CO2e</p>
                 </div>
             </div>
@@ -114,35 +114,39 @@ input[type=submit] {
                 <img src="{{url("/lista.png")}}" alt="lista" class="w-100 h-100 p-1">
             </a>
 
-            <a href="{{url("/editCorp")}}" data-toggle="tooltip" data-html="true" data-placement="left" title='
-            <div class="row">
-                <div class="col-12">
-                    <img src="{{url("/corp_logo.png")}}" class="logo-corp border border-success rounded-circle" alt="Logo corporacion">
-                    <h5 class="border-solid border-bottom"><strong>Reciclando Ando</strong></h5>
-                    <p>Se unió hace 2 años</p>
-                    <p>Dirección: Diagonal 33B #39 sur 40</p>
-                    <p>Telefóno: (4) 561 09 21</p>
-{{--                     <p>Recicladores agremiados: 5</p>
-                    <p>Usuarios afiliados: 23</p>
-                    <p>Emisiones evitadas: 200 ton CO2e</p> --}}
-                    <small>Haz click sobre el icono para editar tu corporación</small>
+            <span style="position:absolute; margin-top: -8%; margin-left: 40%; z-index: 2; max-width: 5%" data-toggle="modal"
+            data-target="#detallesModal19">
+                <a data-toggle="tooltip" data-html="true" data-placement="top" 
+                title='
+                <div class="row">
+                    <div class="col-12">
+                        <img src="{{url("/Arreciclar.png")}}" class="logo-corp" alt="Logo corporacion">
+                        <h5><strong>ARRECICLAR</strong></h5>
+                        <p>Se unió hace 2 años</p>
+                        {{-- <p>Dirección: Diagonal 33B #39 Sur 40</p>
+                        <p>Telefóno: (4) 561 09 21</p> --}}
+                        <p><strong>Recicladores agremiados:</strong> 3</p>
+                        <p><strong>Usuarios afiliados:</strong> 45</p>
+                        <p><strong>Emisiones evitadas:</strong> 764 ton CO2e</p>
+                    </div>
                 </div>
-            </div>
-            ' style="position:absolute; margin-top: -8%; margin-left: 40%; z-index: 2; max-width: 5%">
-                <img src="{{url("/Imagen_corporacion.png")}}" alt="Icono usuario"
-                    style="z-index: 2; max-width: 100%; max-height: 100%">
-            </a>
+                '
+                style="">
+                    <img src="{{url("/Imagen_corporacion.png")}}" alt="Icono usuario" style="z-index: 2; max-width: 100%; max-height: 100%">
+                </a>
+            </span>
+
             <span data-toggle="modal" data-target="#detallesModal"
                 style="position:absolute; margin-top: -24%; margin-left: 45%; z-index: 2; max-width: 3%;">
                 <a data-toggle="tooltip" data-html="true" data-placement="left" title='
                 <div class="row">
                     <div class="col-12">
                         <img src="{{url("/Harlan.jpg")}}" class="logo-corp border border-success rounded-circle" alt="Foto perfil">
-                        <h5 class="border-bottom border-solid"><strong>Harlan Barrera</strong></h5>
+                        <h5 class="border-bottom border-solid"><strong>Felipe Bernal</strong></h5>
                         <p>Se unió hace 1 año</p>
-                        {{-- <p>Dirección: Diagonal 32D #32 sur 40</p> --}}
+                        {{-- <p>Dirección: Diagonal 32D #32 Sur 40</p> --}}
                         {{-- <p>Municipio de Envigado</p> --}}
-                        <p><strong>Reciclador:</strong> Avimilé Ribas</p>
+                        <p><strong>Reciclador(a):</strong> Alejandra Uribe</p>
                         <small></small>
                     </div>
                 </div>
@@ -158,11 +162,11 @@ input[type=submit] {
                 <div class="row">
                     <div class="col-12">
                         <img src="{{url("/Michel.jpg")}}" class="logo-corp border border-success rounded-circle" alt="Foto perfil">
-                        <h5 class="border-solid border-bottom"><strong>Raquel Murillo</strong></h5>
+                        <h5 class="border-solid border-bottom"><strong>Raquel Morales</strong></h5>
                         <p>Se unió hace 2 años</p>
-                        {{-- <p>Dirección: Diagonal 32D #32 sur 40</p> --}}
+                        {{-- <p>Dirección: Diagonal 32D #32 Sur 40</p> --}}
                         {{-- <p>Municipio de Envigado</p> --}}
-                        <p><strong>Reciclador: </strong> Stiven Mendoza</p>
+                        <p><strong>Reciclador(a): </strong> Rodrigo Hincapie</p>
                         <small></small>
                     </div>
                 </div>
@@ -178,11 +182,11 @@ input[type=submit] {
                 <div class="row">
                     <div class="col-12">
                         <img src="{{url("/Harlan.jpg")}}" class="logo-corp border border-success rounded-circle" alt="Foto perfil">
-                        <h5 class="border-solid border-bottom"><strong>Andres Betancur</strong></h5>
+                        <h5 class="border-solid border-bottom"><strong>Andrés Betancur</strong></h5>
                         <p>Se unió hace 1 año</p>
-                        {{-- <p>Dirección: Diagonal 32D #32 sur 40</p> --}}
+                        {{-- <p>Dirección: Diagonal 32D #32 Sur 40</p> --}}
                         {{-- <p>Municipio de Envigado</p> --}}
-                        <p><strong>Reciclador: </strong> Kevin Tellez</p>
+                        <p><strong>Reciclador(a): </strong> Armando López</p>
                         <small></small>
                     </div>
                 </div>
@@ -200,9 +204,9 @@ input[type=submit] {
                         <img src="{{url("/Harlan.jpg")}}" class="logo-corp border border-success rounded-circle" alt="Foto perfil">
                         <h5 class="border-solid border-bottom"><strong>Kevin Viveros</strong></h5>
                         <p>Se unió hace 1 año</p>
-                        {{-- <p>Dirección: Diagonal 32D #32 sur 40</p> --}}
+                        {{-- <p>Dirección: Diagonal 32D #32 Sur 40</p> --}}
                         {{-- <p>Municipio de Envigado</p> --}}
-                        <p><strong>Reciclador: </strong> Avimilé Ribas</p>
+                        <p><strong>Reciclador(a): </strong> Alejandra Uribe</p>
                         <small></small>
                     </div>
                 </div>
@@ -219,11 +223,11 @@ input[type=submit] {
                 <div class="row">
                     <div class="col-12">
                         <img src="{{url("/Harlan.jpg")}}" class="logo-corp border border-success rounded-circle" alt="Foto perfil">
-                        <h5 class="border-solid border-bottom"><strong>Fabio Benjamin</strong></h5>
+                        <h5 class="border-solid border-bottom"><strong>Fabio Mejía</strong></h5>
                         <p>Se unió hace 3 años</p>
-                        {{-- <p>Dirección: Diagonal 32D #32 sur 40</p> --}}
+                        {{-- <p>Dirección: Diagonal 32D #32 Sur 40</p> --}}
                         {{-- <p>Municipio de Envigado</p> --}}
-                        <p><strong>Reciclador: </strong> Avimilé Ribas</p>
+                        <p><strong>Reciclador(a): </strong> Alejandra Uribe</p>
                         <small></small>
                     </div>
                 </div>
@@ -241,9 +245,9 @@ input[type=submit] {
                         <img src="{{url("/unidad1.jpg")}}" class="logo-corp border border-success rounded-circle" alt="Foto perfil">
                         <h5 class="border-solid border-bottom"><strong>Torres de la magnolia</strong></h5>
                         <p>Se unió hace 2 años</p>
-                        {{-- <p>Dirección: Diagonal 32D #32 sur 40</p> --}}
+                        {{-- <p>Dirección: Diagonal 32D #32 Sur 40</p> --}}
                         {{-- <p>Municipio de Envigado</p> --}}
-                        <p class="text-danger"><strong>Reciclador:</strong> Sin designar</p>
+                        <p class="text-danger"><strong>Reciclador(a):</strong> Sin designar</p>
                         <small></small>
                     </div>
                 </div>
@@ -259,11 +263,11 @@ input[type=submit] {
                 <div class="row">
                     <div class="col-12">
                         <img src="{{url("/Michel.jpg")}}" class="logo-corp border border-success rounded-circle" alt="Logo corporacion">
-                        <h5 class="border-solid border-bottom"><strong>Michel Osama</strong></h5>
+                        <h5 class="border-solid border-bottom"><strong>Sara Valencia</strong></h5>
                         <p>Se unió hace 1 día</p>
-                        {{-- <p>Dirección: Diagonal 28C 28 sur 25</p>
+                        {{-- <p>Dirección: Diagonal 28C 28 Sur 25</p>
                         <p>Municipio de Envigado</p> --}}
-                        <p class="text-danger"><strong>Reciclador:</strong> Sin designar</p>
+                        <p class="text-danger"><strong>Reciclador(a):</strong> Sin designar</p>
                         <small></small>
                     </div>
                 </div>
@@ -283,7 +287,7 @@ input[type=submit] {
                         {{-- <p>Apartamentos: 89<p> --}}
                         {{-- <p>Dirección: Calle 62B Carrera 50</p>
                         <p>Municipio de Itagui</p> --}}
-                        <p><strong>Reciclador: </strong> German Exequiel Cano</p>
+                        <p><strong>Reciclador(a): </strong> Reinaldo Ochoa</p>
                         <small></small>
                     </div>
                 </div>
@@ -317,7 +321,7 @@ input[type=submit] {
         </div>
     </div> --}}
 </div>
-{{-- Modal Harlan Barrera --}}
+{{-- Modal Felipe Bernal --}}
 <div class="modal fade" id="detallesModal" tabindex="-1" role="dialog" aria-labelledby="favoritesModalLabel">
     <div class="modal-dialog modal-lg" role="document">
         <div class="modal-content">
@@ -339,7 +343,7 @@ input[type=submit] {
                                                     class="imgpg border border-success rounded-circle"
                                                     alt="">
                                                 <div class="mt-2 ml-1 mr-1 text-center">
-                                                    <h3><strong>Harlan Barrera</strong></h3>
+                                                    <h3><strong>Felipe Bernal</strong></h3>
                                                     <p>Se unió hace 1 año</p>
                                                 </div>
                                             </div>
@@ -353,10 +357,10 @@ input[type=submit] {
                                 <div class="col-xl-12 h-100">
                                     <div class="container pt-4">
                                         <div class="row border-solid border-bottom mb-1">
-                                            <div class="col-6 pl-0">
-                                                <label class="lead pl-0"><strong>Reciclador:</strong> Avimilé Ribas</label>
+                                            <div class="col-10 pl-0">
+                                                <label class="lead pl-0"><strong>Reciclador(a):</strong> Alejandra Uribe</label>
                                             </div>
-                                            <div class="col-6 pr-0">
+                                            <div class="col-2 pr-0">
                                                 <div class="d-flex justify-content-end pl-0">
                                                     <a href="{{url("/comunidad/asignarReciclador/Harlan")}}">
                                                     <button class="btn btn-outline-success btn-sm" data-toggle="modal" data-target="#editarHistoria"
@@ -377,7 +381,7 @@ input[type=submit] {
                                         </div>
                                         <div class="row">
                                             <label class="lead"><strong>Dirección:  </strong></label>
-                                            <p class="pl-1 lead">Diagonal 32D #32 sur 40</p>
+                                            <p class="pl-1 lead">Diagonal 32D #32 Sur 40</p>
                                         </div>
                                         <div class="row">
                                             <label class="lead"><strong>Condición de entrega:  </strong></label>
@@ -420,7 +424,7 @@ input[type=submit] {
                                                     class="imgpg border border-success rounded-circle"
                                                     alt="">
                                                 <div class="mt-2 ml-1 mr-1 text-center">
-                                                    <h3><strong>Michel Osama</strong></h3>
+                                                    <h3><strong>Sara Valencia</strong></h3>
                                                     <p>Se unió hace 1 dia</p>
                                                 </div>
                                             </div>
@@ -435,11 +439,11 @@ input[type=submit] {
                                     <div class="container pt-4">
                                         <div class="row border-solid border-bottom mb-1">
                                             <div class="col-10 pl-0">
-                                                <label class="lead pl-0 text-danger"><strong>Reciclador:</strong> Pendiente de asignar</label>
+                                                <label class="lead pl-0 text-danger"><strong>Reciclador(a):</strong> Pendiente de asignar</label>
                                             </div>
                                             <div class="col-2 pr-0">
                                                 <div class="d-flex justify-content-end pl-0">
-                                                    <a href="{{url("/comunidad/asignarReciclador/Harlan")}}">
+                                                    <a href="{{url("/comunidad/asignarReciclador/Michel")}}">
                                                     <button class="btn btn-outline-success btn-sm" data-toggle="modal" data-target="#editarHistoria"
                                                         data-backdrop="static">
                                                         <i class="fas fa-edit fa-lg"></i>
@@ -458,7 +462,7 @@ input[type=submit] {
                                         </div>
                                         <div class="row">
                                             <label class="lead"><strong>Dirección:  </strong></label>
-                                            <p class="pl-1 lead">Diagonal 32D #32 sur 40</p>
+                                            <p class="pl-1 lead">Diagonal 32D #32 Sur 40</p>
                                         </div>
                                         <div class="row">
                                             <label class="lead"><strong>Condición de entrega:  </strong></label>
@@ -517,11 +521,11 @@ input[type=submit] {
                                     <div class="container pt-4">
                                         <div class="row border-solid border-bottom mb-1">
                                             <div class="col-10 pl-0">
-                                                <label class="lead pl-0"><strong>Reciclador:</strong> German Exequiel Cano</label>
+                                                <label class="lead pl-0"><strong>Reciclador(a):</strong> Reinaldo Ochoa</label>
                                             </div>
                                             <div class="col-2 pr-0">
                                                 <div class="d-flex justify-content-end pl-0">
-                                                    <a href="{{url("/comunidad/asignarReciclador/Harlan")}}">
+                                                    <a href="{{url("/comunidad/asignarReciclador/Unidad1")}}">
                                                     <button class="btn btn-outline-success btn-sm" data-toggle="modal" data-target="#editarHistoria"
                                                         data-backdrop="static">
                                                         <i class="fas fa-edit fa-lg"></i>
@@ -540,7 +544,7 @@ input[type=submit] {
                                         </div>
                                         <div class="row">
                                             <label class="lead"><strong>Dirección:  </strong></label>
-                                            <p class="pl-1 lead">Calle 62B Carrera 50</p>
+                                            <p class="pl-1 lead">Calle 62B Carrera 50 - 23</p>
                                         </div>
                                         <div class="row">
                                             <label class="lead"><strong>Condición de entrega:  </strong></label>
@@ -599,11 +603,11 @@ input[type=submit] {
                                     <div class="container pt-4">
                                         <div class="row border-solid border-bottom mb-1">
                                             <div class="col-10 pl-0">
-                                                <label class="lead pl-0 text-danger"><strong>Reciclador:</strong> Pendiente de asignar</label>
+                                                <label class="lead pl-0 text-danger"><strong>Reciclador(a):</strong> Pendiente de asignar</label>
                                             </div>
                                             <div class="col-2 pr-0">
                                                 <div class="d-flex justify-content-end pl-0">
-                                                    <a href="{{url("/comunidad/asignarReciclador/Harlan")}}">
+                                                    <a href="{{url("/comunidad/asignarReciclador/Unidad1")}}">
                                                     <button class="btn btn-outline-success btn-sm" data-toggle="modal" data-target="#editarHistoria"
                                                         data-backdrop="static">
                                                         <i class="fas fa-edit fa-lg"></i>
@@ -622,7 +626,7 @@ input[type=submit] {
                                         </div>
                                         <div class="row">
                                             <label class="lead"><strong>Dirección:  </strong></label>
-                                            <p class="pl-1 lead">Diagonal 32B #32 sur 42</p>
+                                            <p class="pl-1 lead">Diagonal 32B #32 Sur 42</p>
                                         </div>
                                         <div class="row">
                                             <label class="lead"><strong>Condición de entrega:  </strong></label>
@@ -666,7 +670,7 @@ input[type=submit] {
                                                     class="imgpg border border-success rounded-circle"
                                                     alt="">
                                                 <div class="mt-2 ml-1 mr-1 text-center">
-                                                    <h3><strong>Fabio Benjamin</strong></h3>
+                                                    <h3><strong>Fabio Mejía</strong></h3>
                                                     <p>Se unió hace 1 año</p>
                                                 </div>
                                             </div>
@@ -680,10 +684,10 @@ input[type=submit] {
                                 <div class="col-xl-12 h-100">
                                     <div class="container pt-4">
                                         <div class="row border-solid border-bottom mb-1">
-                                            <div class="col-6 pl-0">
-                                                <label class="lead pl-0"><strong>Reciclador:</strong> Avimilé Ribas</label>
+                                            <div class="col-10 pl-0">
+                                                <label class="lead pl-0"><strong>Reciclador(a):</strong> Alejandra Uribe</label>
                                             </div>
-                                            <div class="col-6 pr-0">
+                                            <div class="col-2 pr-0">
                                                 <div class="d-flex justify-content-end pl-0">
                                                     <a href="{{url("/comunidad/asignarReciclador/Harlan")}}">
                                                     <button class="btn btn-outline-success btn-sm" data-toggle="modal" data-target="#editarHistoria"
@@ -704,7 +708,7 @@ input[type=submit] {
                                         </div>
                                         <div class="row">
                                             <label class="lead"><strong>Dirección:  </strong></label>
-                                            <p class="pl-1 lead">Calle 27 #32 sur 40</p>
+                                            <p class="pl-1 lead">Calle 27 #32 Sur 40 - 10</p>
                                         </div>
                                         <div class="row">
                                             <label class="lead"><strong>Condición de entrega:  </strong></label>
@@ -725,7 +729,7 @@ input[type=submit] {
     </div>
 </div>
 {{-- 
-Modal Andres Betancur --}}
+Modal Andrés Betancur --}}
 
 <div class="modal fade" id="detallesModal5" tabindex="-1" role="dialog" aria-labelledby="favoritesModalLabel">
     <div class="modal-dialog modal-lg" role="document">
@@ -748,7 +752,7 @@ Modal Andres Betancur --}}
                                                     class="imgpg border border-success rounded-circle"
                                                     alt="">
                                                 <div class="mt-2 ml-1 mr-1 text-center">
-                                                    <h3><strong>Andres Betancur</strong></h3>
+                                                    <h3><strong>Andrés Betancur</strong></h3>
                                                     <p>Se unió hace 2 años</p>
                                                 </div>
                                             </div>
@@ -762,10 +766,10 @@ Modal Andres Betancur --}}
                                 <div class="col-xl-12 h-100">
                                     <div class="container pt-4">
                                         <div class="row border-solid border-bottom mb-1">
-                                            <div class="col-6 pl-0">
-                                                <label class="lead pl-0"><strong>Reciclador:</strong> Kevin Tellez</label>
+                                            <div class="col-10 pl-0">
+                                                <label class="lead pl-0"><strong>Reciclador(a):</strong> Armando López</label>
                                             </div>
-                                            <div class="col-6 pr-0">
+                                            <div class="col-2 pr-0">
                                                 <div class="d-flex justify-content-end pl-0">
                                                     <a href="{{url("/comunidad/asignarReciclador/Harlan")}}">
                                                     <button class="btn btn-outline-success btn-sm" data-toggle="modal" data-target="#editarHistoria"
@@ -786,7 +790,7 @@ Modal Andres Betancur --}}
                                         </div>
                                         <div class="row">
                                             <label class="lead"><strong>Dirección:  </strong></label>
-                                            <p class="pl-1 lead">Calle 16 sur #14</p>
+                                            <p class="pl-1 lead">Calle 16 Sur #14 - 20</p>
                                         </div>
                                         <div class="row">
                                             <label class="lead"><strong>Condición de entrega:  </strong></label>
@@ -808,7 +812,7 @@ Modal Andres Betancur --}}
     </div>
 </div>
 
-{{-- Modal Raquel Murillo --}}
+{{-- Modal Raquel Morales --}}
 
 <div class="modal fade" id="detallesModal6" tabindex="-1" role="dialog" aria-labelledby="favoritesModalLabel">
     <div class="modal-dialog modal-lg" role="document">
@@ -845,12 +849,12 @@ Modal Andres Betancur --}}
                                 <div class="col-xl-12 h-100">
                                     <div class="container pt-4">
                                         <div class="row border-solid border-bottom mb-1">
-                                            <div class="col-6 pl-0">
-                                                <label class="lead pl-0"><strong>Reciclador:</strong> Stiven Mendoza</label>
+                                            <div class="col-10 pl-0">
+                                                <label class="lead pl-0"><strong>Reciclador(a):</strong> Rodrigo Hincapie</label>
                                             </div>
-                                            <div class="col-6 pr-0">
+                                            <div class="col-2 pr-0">
                                                 <div class="d-flex justify-content-end pl-0">
-                                                    <a href="{{url("/comunidad/asignarReciclador/Harlan")}}">
+                                                    <a href="{{url("/comunidad/asignarReciclador/Michel")}}">
                                                     <button class="btn btn-outline-success btn-sm" data-toggle="modal" data-target="#editarHistoria"
                                                         data-backdrop="static">
                                                         <i class="fas fa-edit fa-lg"></i>
@@ -869,7 +873,7 @@ Modal Andres Betancur --}}
                                         </div>
                                         <div class="row">
                                             <label class="lead"><strong>Dirección:  </strong></label>
-                                            <p class="pl-1 lead">Diagonal 33 #32 sur 37</p>
+                                            <p class="pl-1 lead">Diagonal 33 #32 Sur 37</p>
                                         </div>
                                         <div class="row">
                                             <label class="lead"><strong>Condición de entrega:  </strong></label>
@@ -926,10 +930,10 @@ Modal Andres Betancur --}}
                                 <div class="col-xl-12 h-100">
                                     <div class="container pt-4">
                                         <div class="row border-solid border-bottom mb-1">
-                                            <div class="col-6 pl-0">
-                                                <label class="lead pl-0"><strong>Reciclador:</strong> Avimilé Ribas</label>
+                                            <div class="col-10 pl-0">
+                                                <label class="lead pl-0"><strong>Reciclador(a):</strong> Alejandra Uribe</label>
                                             </div>
-                                            <div class="col-6 pr-0">
+                                            <div class="col-2 pr-0">
                                                 <div class="d-flex justify-content-end pl-0">
                                                     <a href="{{url("/comunidad/asignarReciclador/Harlan")}}">
                                                     <button class="btn btn-outline-success btn-sm" data-toggle="modal" data-target="#editarHistoria"
@@ -950,7 +954,7 @@ Modal Andres Betancur --}}
                                         </div>
                                         <div class="row">
                                             <label class="lead"><strong>Dirección:  </strong></label>
-                                            <p class="pl-1 lead">Calle 33 #16 sur</p>
+                                            <p class="pl-1 lead">Calle 33 #16 sur - 33</p>
                                         </div>
                                         <div class="row">
                                             <label class="lead"><strong>Condición de entrega:  </strong></label>
@@ -971,8 +975,86 @@ Modal Andres Betancur --}}
     </div>
 </div>
 
+<div class="modal fade" id="detallesModal19" tabindex="-1" role="dialog" aria-labelledby="favoritesModalLabel">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 class="modal-title text-success" id="favoritesModalLabel">Información de la corporación</h2>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                        aria-hidden="true">&times;</span></button>
+            </div>
+            <div class="modal-body">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-xl-4 col-lg-4 col-md-12 borde-derecha h-100">
+                            <div class="row h-100">
+                                <div class="container border-right">
+                                    <div class="row">
+                                        <div class="col-xl-12 h-100">
+                                            <div class="container">
+                                                <img src="{{url("/Arreciclar.png")}}"
+                                                    class="imgpg border border-success rounded-circle"
+                                                    alt="">
+                                                <div class="mt-2 ml-1 mr-1 text-center">
+                                                    <h3><strong>ARRECICLAR</strong></h3>
+                                                    <p>Se unió hace 2 años</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-8 col-lg-8 col-md-12 h-100">
+                            <div class="row h-100">
+                                <div class="col-xl-12 h-100">
+                                    <div class="container pt-4">
+                                        <div class="row border-solid border-bottom mb-1">
+                                            <div class="col-8 pl-0">
+                                                <label class="lead pl-0 mb-3"><strong>Municipio: </strong>Medellín</label> <br>
+                                                <label class="lead pl-0 mb-3"><strong>Dirección: </strong> Calle 26 # 44 - 27</label>
+                                                <label class="lead pl-0"><strong>Telefóno: </strong>(4) 2322668</label>
+                                            </div>
+                                            <div class="col-4 pr-0">
+                                                <div class="d-flex justify-content-end pl-0">
+                                                    <a href="{{url("/configuracion")}}">
+                                                    <button class="btn btn-outline-success btn-sm" data-toggle="modal" data-target="#editarHistoria"
+                                                        data-backdrop="static">
+                                                        <i class="fas fa-edit fa-lg"></i>
+                                                    </button>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row mt-2">
+                                            <label class="lead"><strong>Recicladores agremiados:  </strong></label>
+                                            <p class="pl-1 lead">6</p>
+                                        </div>
+                                        <div class="row">
+                                            <label class="lead"><strong>Usuarios afiliados:  </strong></label>
+                                            <p class="pl-1 lead">45</p>
+                                        </div>
+                                        <div class="row">
+                                            <label class="lead"><strong>Emisiones evitadas:  </strong></label>
+                                            <p class="pl-1 lead">764 ton CO2e</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer pb-0 pt-2 mb-0">
+                <span class="pull-right"><button type="button" class="btn btn-danger"
+                        data-dismiss="modal">Regresar</button></span>
+            </div>
+        </div>
+    </div>
+</div>
+
 <script>
-    var countries = ["Avimilé Ribas", "La Magnolia, No aplica, Envigado"];
+    var countries = ["Alejandra Uribe", "La Magnolia, No aplica, Envigado"];
     autocomplete(document.getElementById("myInput"), countries);
     function mostrarMapaDistinto2(){
         var entrada = document.getElementById("myInput").value;
@@ -981,7 +1063,7 @@ Modal Andres Betancur --}}
         var fabio = document.getElementById("fabio");
         var kevin = document.getElementById("kevin");
         var raquel = document.getElementById("raquel");
-        if (entrada == "Avimilé Ribas") {
+        if (entrada == "Alejandra Uribe") {
             //Mostrar usuarios de Avimilé
             mapa.setAttribute("src", "{{url("/5.png")}}");
             harlan.setAttribute("src", "{{url("/Vivienda_particularR.png")}}");

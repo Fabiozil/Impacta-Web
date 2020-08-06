@@ -10,10 +10,10 @@
     <ul class="list-unstyled components">
         <li>
             <a href="{{url('/home')}}">
-                    <i class="fas fa-street-view"></i>
+                <i class="fas fa-home"></i>
                     Home
-                </a>
-            </li>
+            </a>
+        </li>
         <li>
         <a href="{{url('/recicladores')}}">
                 <i class="fas fa-street-view"></i>
@@ -39,7 +39,7 @@
         <li>
             <a href="{{ url('/configuracion') }}">
                 <i class="fas fa-cogs"></i>
-                Configuracion
+                Configuración
             </a>
         </li>
         {{-- <li>

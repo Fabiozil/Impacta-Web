@@ -15,7 +15,7 @@
             <h1 class="py-2 text-center text-success">
                 Nueva medición
             </h1>
-            <h3 class="lead text-center">Aquí podrás la cantidad de material reciclable recolectada para una nueva
+            <h3 class="lead text-center">Aquí podrás visualizar la cantidad de material reciclable recolectada para una nueva
                 medición. Llena los campos según el tipo de material correspondiente a cada uno de ellos.</h3>
         </div>
         <div class="border-bottom border-solid">
@@ -25,7 +25,7 @@
                     </button>
                 </a>
                 <span class="btn btn-info mb-2 ml-0" data-toggle="tooltip" data-placement="top"
-                    title="Utiliza esta pestaña para ver el histograma de los materiales reciclados por tu corporacion.">
+                    title="Utiliza este botón para ver el histograma de los materiales reciclados por la corporacion.">
                     <i class="fas fa-info-circle"></i></span>
 
                 <a href="#">
@@ -87,13 +87,13 @@
                                     title="
                                 <ol>
                                     <li>
-                                        <p><strong>Aluminio:</strong>aluminio grueso, aluminio Karla, aluminio perfil y aluminio persiana. P.ej. latas de cerveza</p>
+                                        <p><strong>Aluminio: </strong>aluminio grueso, aluminio Karla, aluminio perfil y aluminio persiana. P.ej. latas de cerveza</p>
                                     </li>
                                     <li>
                                         <p><strong>Cobre:</strong> cobre amarillo, cobre rojo y cobre rojo brillante. P. ej. tubería de cobre.</p>
                                     </li>
                                     <li>
-                                        <p><strong>Cobre: </strong> Materiales hechos de hierro, cobre y/o zinc. P. ej. varillas de acero.</p>
+                                        <p><strong>Chatarra: </strong> materiales hechos de hierro, cobre y/o zinc. P. ej. varillas de acero.</p>
                                     </li>
                                 </ol>
                                 ">
@@ -150,7 +150,7 @@
                                     title="
                                 <ol>
                                     <li>
-                                        <p><strong>Vidrio reciclable:</strong> vidrio para nueva materia prima o vidrio quebrado. P. ej. vidrio transparente, verde y/o ambar. </p>
+                                        <p><strong>Vidrio reciclable:</strong> vidrio para materia prima o vidrio quebrado. P. ej. vidrio transparente, verde y/o ambar. </p>
                                     </li>
                                     <li>
                                         <p><strong>Vidrio reutilizable:</strong> vidrio a reutilizar dentro de una cadena de producción o frasco bocón P. ej. vidrio transparente, verde y/o ambar.</p>
@@ -183,7 +183,7 @@
     <div class="modal-dialog modal-lg" role="document">
         <div class="modal-content">
             <div class="modal-header">
-                <h4 class="modal-title text-success" id="favoritesModalLabel">Resumen del nuevo ingreso</h4>
+                <h2 class="modal-title text-success" id="favoritesModalLabel">Resumen nuevo ingreso</h2>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
                         aria-hidden="true">&times;</span></button>
             </div>
@@ -193,12 +193,12 @@
                         <div class="col-xl-12">
                             <div class="row">
                                 <div class="col-xl-12 col-md-12">
-                                    <div class="text-center inline align-middle">
-                                        <strong>Fecha de corte:</strong> 3 de Mayo del 2020 al 5 de junio del 2020
+                                    <div class="d-flex justify-content-center mt-2 mb-2">
+                                        <img src="/alerta.png" alt="">
                                     </div>
-                                    <div class="mt-2 text-center inline align-middle">
-                                        <h3>Emisiones de CO2 evitadas:</h3>
-                                        <h1><strong>5</strong> ton CO2e</h1>
+
+                                    <div class="text-center inline align-middle">
+                                        <h2 class="py-2 text-center">Confirmar materiales ingresados para fecha de corte <b>Jul 21/20 - Ago 07/20</b> </h2>
                                     </div>
                                 </div>
                                 <div class="col-xl-12 col-md-12">
@@ -214,10 +214,10 @@
                                                     Cartón
                                                 </td>
                                                 <td>
-                                                    2
+                                                    14.4
                                                 </td>
                                                 <td>
-                                                    0.2
+                                                    13
                                                 </td>
                                             </tr>
                                             <tr>
@@ -225,10 +225,10 @@
                                                     Metales
                                                 </td>
                                                 <td>
-                                                    2
+                                                    1.7
                                                 </td>
                                                 <td>
-                                                    0.2
+                                                    10
                                                 </td>
                                             </tr>
                                             <tr>
@@ -236,10 +236,10 @@
                                                     Papel
                                                 </td>
                                                 <td>
-                                                    2
+                                                    10
                                                 </td>
                                                 <td>
-                                                    0.2
+                                                    9
                                                 </td>
                                             </tr>
                                             <tr>
@@ -247,10 +247,10 @@
                                                     Plástico
                                                 </td>
                                                 <td>
-                                                    2
+                                                    6.25
                                                 </td>
                                                 <td>
-                                                    0.2
+                                                    10
                                                 </td>
                                             </tr>
                                             <tr>
@@ -258,14 +258,17 @@
                                                     Vidrio
                                                 </td>
                                                 <td>
-                                                    2
+                                                    17
                                                 </td>
                                                 <td>
-                                                    0.2
+                                                    10
                                                 </td>
                                             </tr>
                                         </tbody>
                                     </table>
+                                    <div class="mt-2 text-center inline align-middle">
+                                        <h5>Emisiones evitadas: <b>52 ton CO2e</b></h5>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -274,9 +277,9 @@
             </div>
             <div class="modal-footer">
                 <span class="pull-right"><button type="button" class="btn btn-danger"
-                        data-dismiss="modal">Atras</button></span>
+                        data-dismiss="modal">Regresar</button></span>
                 <a href="{{url("/historial")}}">
-                    <button type="button" class="btn btn-success">Confirmar medición</button></span>
+                    <button type="button" class="btn btn-success">Confirmar</button></span>
                 </a>
 
 

@@ -59,7 +59,7 @@
                             <li>
                                 <div class="dropleft" style="height: 50px; width: 50px">
                                     <button class="btn btn-secondary w-100 p-0 rounded-circle border border-solid" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                        <img src="{{url("/Harlan.jpg")}}" alt="Foto de perfil" class="w-100 h-100 p-0 rounded-circle">
+                                        <img src="{{url("/Arreciclar.png")}}" alt="Foto de perfil" class="w-100 h-100 p-0 rounded-circle bg-light">
                                     </button>
                                     <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
                                         <a class="dropdown-item border-solid border-bottom" href="{{url("/configuracion")}}">Configuracion</a>

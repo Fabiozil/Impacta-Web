@@ -46,7 +46,7 @@
                                         <p class="text-center mt-1">Miembro hace 1 dia</p>
                                     </div>
                                     <div class="col-xl-7 col-sm-12 p-0">
-                                        <h4 class="text-center border-bottom"><strong>Michel Osama</strong></h4>
+                                        <h4 class="text-center border-bottom"><strong>Sara Valencia</strong></h4>
                                         <p class="pl-3 pt-4 text-danger mb-4"><strong>Reciclador: </strong>Sin designar</p>
                                         <div class="d-flex justify-content-center">
                                             <button type="submit" class="btn btn-success w-75" data-toggle="modal"
@@ -62,8 +62,8 @@
                                         <p class="text-center mt-1">Miembro hace 1 año</p>
                                     </div>
                                     <div class="col-xl-7 col-sm-12 p-0">
-                                        <h4 class="text-center border-bottom"><strong>Harlan Barrera</strong></h4>
-                                        <p class="pl-3 pt-4 mb-4"><strong>Reciclador: </strong>Avimilé Ribas</p>
+                                        <h4 class="text-center border-bottom"><strong>Felipe Bernal</strong></h4>
+                                        <p class="pl-3 pt-4 mb-4"><strong>Reciclador: </strong>Alejandra Uribe</p>
                                         <div class="d-flex justify-content-center">
                                             <button type="submit" class="btn btn-success w-75" data-toggle="modal"
                                                     data-target="#detallesModal">Ver perfil</button>
@@ -84,7 +84,7 @@
                                     </div>
                                     <div class="col-xl-7 col-sm-12 p-0">
                                         <h4 class="text-center border-bottom"><strong>Torres del riachuelo</strong></h4>
-                                        <p class="pl-3 pt-4 mb-4"><strong>Reciclador: </strong>German Exequiel Cano</p>
+                                        <p class="pl-3 pt-4 mb-4"><strong>Reciclador: </strong>Reinaldo Ochoa</p>
                                         <div class="d-flex justify-content-center">
                                             <button type="submit" class="btn btn-success w-75" data-toggle="modal"
                                                     data-target="#detallesModal2">Ver perfil</button>
@@ -120,8 +120,8 @@
                                         <p class="text-center mt-1">Miembro hace 1 año</p>
                                     </div>
                                     <div class="col-xl-7 col-sm-12 p-0">
-                                        <h4 class="text-center border-bottom"><strong>Fabio Benjamin</strong></h4>
-                                        <p class="pl-3 pt-4 mb-4"><strong>Reciclador: </strong>Avimilé Ribas</p>
+                                        <h4 class="text-center border-bottom"><strong>Fabio Mejía</strong></h4>
+                                        <p class="pl-3 pt-4 mb-4"><strong>Reciclador: </strong>Alejandra Uribe</p>
                                         <div class="d-flex justify-content-center">
                                             <button type="submit" class="btn btn-success w-75" data-toggle="modal"
                                                     data-target="#detallesModal4">Ver perfil</button>
@@ -137,7 +137,7 @@
                                     </div>
                                     <div class="col-xl-7 col-sm-12 p-0">
                                         <h4 class="text-center border-bottom"><strong>Andres Betancur</strong></h4>
-                                        <p class="pl-3 pt-4 mb-4"><strong>Reciclador: </strong>Kevin Tellez</p>
+                                        <p class="pl-3 pt-4 mb-4"><strong>Reciclador: </strong>Armando López</p>
                                         <div class="d-flex justify-content-center">
                                             <button type="submit" class="btn btn-success w-75" data-toggle="modal"
                                                     data-target="#detallesModal5">Ver perfil</button>
@@ -181,7 +181,7 @@
                                                     class="imgpg border border-success rounded-circle"
                                                     alt="">
                                                 <div class="mt-2 ml-1 mr-1 text-center">
-                                                    <h3><strong>Harlan Barrera</strong></h3>
+                                                    <h3><strong>Felipe Bernal</strong></h3>
                                                     <p>Se unió hace 1 año</p>
                                                 </div>
                                             </div>
@@ -196,7 +196,7 @@
                                     <div class="container pt-4">
                                         <div class="row border-solid border-bottom mb-1">
                                             <div class="col-6 pl-0">
-                                                <label class="lead pl-0"><strong>Reciclador:</strong> Avimilé Ribas</label>
+                                                <label class="lead pl-0"><strong>Reciclador:</strong> Alejandra Uribe</label>
                                             </div>
                                             <div class="col-6 pr-0">
                                                 <div class="d-flex justify-content-end pl-0">
@@ -219,7 +219,7 @@
                                         </div>
                                         <div class="row">
                                             <label class="lead"><strong>Dirección:  </strong></label>
-                                            <p class="pl-1 lead">Diagonal 32D #32 sur 40</p>
+                                            <p class="pl-1 lead">Diagonal 32D #32 Sur 40</p>
                                         </div>
                                         <div class="row">
                                             <label class="lead"><strong>Condición de entrega:  </strong></label>
@@ -262,7 +262,7 @@
                                                     class="imgpg border border-success rounded-circle"
                                                     alt="">
                                                 <div class="mt-2 ml-1 mr-1 text-center">
-                                                    <h3><strong>Michel Osama</strong></h3>
+                                                    <h3><strong>Sara Valencia</strong></h3>
                                                     <p>Se unió hace 1 dia</p>
                                                 </div>
                                             </div>
@@ -300,7 +300,7 @@
                                         </div>
                                         <div class="row">
                                             <label class="lead"><strong>Dirección:  </strong></label>
-                                            <p class="pl-1 lead">Diagonal 32D #32 sur 40</p>
+                                            <p class="pl-1 lead">Calle 33 Sur #34B - 22</p>
                                         </div>
                                         <div class="row">
                                             <label class="lead"><strong>Condición de entrega:  </strong></label>
@@ -359,7 +359,7 @@
                                     <div class="container pt-4">
                                         <div class="row border-solid border-bottom mb-1">
                                             <div class="col-10 pl-0">
-                                                <label class="lead pl-0"><strong>Reciclador:</strong> German Exequiel Cano</label>
+                                                <label class="lead pl-0"><strong>Reciclador:</strong> Alejandra Uribe</label>
                                             </div>
                                             <div class="col-2 pr-0">
                                                 <div class="d-flex justify-content-end pl-0">
@@ -382,7 +382,7 @@
                                         </div>
                                         <div class="row">
                                             <label class="lead"><strong>Dirección:  </strong></label>
-                                            <p class="pl-1 lead">Calle 62B Carrera 50</p>
+                                            <p class="pl-1 lead">Calle 62B Carrera 50 - 23</p>
                                         </div>
                                         <div class="row">
                                             <label class="lead"><strong>Condición de entrega:  </strong></label>
@@ -445,7 +445,7 @@
                                             </div>
                                             <div class="col-2 pr-0">
                                                 <div class="d-flex justify-content-end pl-0">
-                                                    <a href="{{url("/comunidad/asignarReciclador/Harlan")}}">
+                                                    <a href="{{url("/comunidad/asignarReciclador/Unidad1")}}">
                                                     <button class="btn btn-outline-success btn-sm" data-toggle="modal" data-target="#editarHistoria"
                                                         data-backdrop="static">
                                                         <i class="fas fa-edit fa-lg"></i>
@@ -464,7 +464,7 @@
                                         </div>
                                         <div class="row">
                                             <label class="lead"><strong>Dirección:  </strong></label>
-                                            <p class="pl-1 lead">Diagonal 32B #32 sur 42</p>
+                                            <p class="pl-1 lead">Diagonal 32B #32 Sur 42</p>
                                         </div>
                                         <div class="row">
                                             <label class="lead"><strong>Condición de entrega:  </strong></label>
@@ -508,7 +508,7 @@
                                                     class="imgpg border border-success rounded-circle"
                                                     alt="">
                                                 <div class="mt-2 ml-1 mr-1 text-center">
-                                                    <h3><strong>Fabio Benjamin</strong></h3>
+                                                    <h3><strong>Fabio Mejía</strong></h3>
                                                     <p>Se unió hace 1 año</p>
                                                 </div>
                                             </div>
@@ -523,7 +523,7 @@
                                     <div class="container pt-4">
                                         <div class="row border-solid border-bottom mb-1">
                                             <div class="col-6 pl-0">
-                                                <label class="lead pl-0"><strong>Reciclador:</strong> Avimilé Ribas</label>
+                                                <label class="lead pl-0"><strong>Reciclador:</strong> Alejandra Uribe</label>
                                             </div>
                                             <div class="col-6 pr-0">
                                                 <div class="d-flex justify-content-end pl-0">
@@ -546,7 +546,7 @@
                                         </div>
                                         <div class="row">
                                             <label class="lead"><strong>Dirección:  </strong></label>
-                                            <p class="pl-1 lead">Calle 27 #32 sur 40</p>
+                                            <p class="pl-1 lead">Calle 27 #32 Sur 40 - 10</p>
                                         </div>
                                         <div class="row">
                                             <label class="lead"><strong>Condición de entrega:  </strong></label>
@@ -605,7 +605,7 @@ Modal Andres Betancur --}}
                                     <div class="container pt-4">
                                         <div class="row border-solid border-bottom mb-1">
                                             <div class="col-6 pl-0">
-                                                <label class="lead pl-0"><strong>Reciclador:</strong> Kevin Tellez</label>
+                                                <label class="lead pl-0"><strong>Reciclador:</strong> Armando López</label>
                                             </div>
                                             <div class="col-6 pr-0">
                                                 <div class="d-flex justify-content-end pl-0">
@@ -628,7 +628,7 @@ Modal Andres Betancur --}}
                                         </div>
                                         <div class="row">
                                             <label class="lead"><strong>Dirección:  </strong></label>
-                                            <p class="pl-1 lead">Calle 16 sur #14</p>
+                                            <p class="pl-1 lead">Calle 16 Sur #14</p>
                                         </div>
                                         <div class="row">
                                             <label class="lead"><strong>Condición de entrega:  </strong></label>
@@ -711,7 +711,7 @@ Modal Andres Betancur --}}
                                         </div>
                                         <div class="row">
                                             <label class="lead"><strong>Dirección:  </strong></label>
-                                            <p class="pl-1 lead">Diagonal 33 #32 sur 37</p>
+                                            <p class="pl-1 lead">Diagonal 33 #32 Sur 37</p>
                                         </div>
                                         <div class="row">
                                             <label class="lead"><strong>Condición de entrega:  </strong></label>
@@ -769,7 +769,7 @@ Modal Andres Betancur --}}
                                     <div class="container pt-4">
                                         <div class="row border-solid border-bottom mb-1">
                                             <div class="col-6 pl-0">
-                                                <label class="lead pl-0"><strong>Reciclador:</strong> Avimilé Ribas</label>
+                                                <label class="lead pl-0"><strong>Reciclador:</strong> Alejandra Uribe</label>
                                             </div>
                                             <div class="col-6 pr-0">
                                                 <div class="d-flex justify-content-end pl-0">

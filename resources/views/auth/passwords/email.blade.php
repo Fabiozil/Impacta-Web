@@ -15,7 +15,7 @@
                 <div class="input-group input-group-lg">
                     <span class="input-group-addon" id="sizing-addon1"><i class="glyphicon glyphicon-list"></i></span>
                     <input id="email" type="email" class="form-control" aria-describedby="sizing-addon1"
-                        placeholder="{{ __('E-Mail Address') }}" name="email" required autocomplete="email" autofocus>
+                        placeholder="{{ __('E-Mail Address') }}" name="email" required autocomplete="email" autofocus value="arreciclar@impacta.com">
                     @error('email')
                     <span class="invalid-feedback" role="alert">
                         <strong>{{ $message }}</strong>

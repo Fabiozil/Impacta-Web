@@ -4,10 +4,10 @@
 <div class="card shadow">
     <div class="card-header">
         <div class="py-2 text-center text-success" style="height: 20%">
-            <h1>{{ __('Editar los datos de la corporación') }}</h1>
+            <h1>Configuración</h1>
             <!-- <h1>{{ __('Edit the corporation data') }}</h1> -->
 
-            <p class="lead text-dark">{{ __('Presione el botón Editar cuando termine de editar') }}</p>
+            <p class="lead text-dark">Aquí podras editar la información referente a los datos principales de la corporación.</p>
             <!-- <p class="lead">{{ __('Push the button Edit when done editing') }}</p> -->
         </div>
     </div>
@@ -25,8 +25,7 @@
                                     <div class="text-center mb-3">
                                         <div class="border rounded-circle overflow-hidden border-success"
                                             style="height: 100px; width: 100px; margin-left: auto; margin-right: auto">
-                                            <i class="fas fa-user-tie"
-                                                style="width: 100% !important; height: 100% !important;"></i>
+                                            <img src="{{url("/Arreciclar.png")}}" alt="" class="w-100">
                                         </div>
                                     </div>
                                 </th>
@@ -36,37 +35,37 @@
                             <tbody class="">
                                 <tr class="text-center border-bottom border-solid">
                                     <td><label for="" class="lead font-weight-bold">Nombre corporación</label></td>
-                                    <td><label for="" class="lead">Reciclando Ando</label></td>
+                                    <td><label for="" class="lead">Arreciclar</label></td>
                                     <td><a href="" data-toggle="modal" data-target="#modalNombreC"
                                             class="text-success btn btn-outline-success ml-5"><i class="fas fa-edit fa-lg"></i></a></td>
                                 </tr>
                                 <tr class="text-center border-bottom border-solid p-5">
-                                    <td><label for="" class="lead font-weight-bold">Correo electronico</label></td>
-                                    <td><label for="" class="lead">ReciclandoAndo@reciclar.com</label></td>
+                                    <td><label for="" class="lead font-weight-bold">Correo electrónico</label></td>
+                                    <td><label for="" class="lead">arreciclar@impacta.com</label></td>
                                     <td><button href="" data-toggle="modal" data-target="#modalCorreo" class="text-success btn btn-outline-success ml-5"><i class="fas fa-edit fa-lg"></i></button>
                                     </td>
                                 </tr>
                                 <tr class="text-center border-bottom border-solid p-5">
                                     <td><label for="" class="lead font-weight-bold">Número de documento</label></td>
-                                    <td><label for="" class="lead">123 456 78910</label></td>
+                                    <td><label for="" class="lead">NIT 901007006</label></td>
                                     <td><a href="" data-toggle="modal" data-target="#modalDocumento"
                                             class="text-success btn btn-outline-success ml-5"><i class="fas fa-edit fa-lg"></i></a></td>
                                 </tr>
                                 <tr class="text-center border-bottom border-solid p-5">
                                     <td><label for="" class="lead font-weight-bold">Teléfono</label></td>
-                                    <td><label for="" class="lead">(4) 123 45 67</label></td>
+                                    <td><label for="" class="lead">(4) 2322668</label></td>
                                     <td><a href="" data-toggle="modal" data-target="#modalTelefono"
                                             class="text-success btn btn-outline-success ml-5"><i class="fas fa-edit fa-lg"></i></a></td>
                                 </tr>
                                 <tr class="text-center border-bottom border-solid p-5">
                                     <td><label for="" class="lead font-weight-bold">Localidad</label></td>
-                                    <td><label for="" class="lead">Envigado, Villagrande</label></td>
+                                    <td><label for="" class="lead">Medellin, Barrio Colombia</label></td>
                                     <td><a href="" data-toggle="modal" data-target="#modalLocalidad"
                                             class="text-success btn btn-outline-success ml-5"><i class="fas fa-edit fa-lg"></i></a></td>
                                 </tr>
                                 <tr class="text-center">
                                     <td><label for="" class="lead font-weight-bold">Dirección</label></td>
-                                    <td><label for="" class="lead">Calle 7A sur #42D oeste 70 AP 306</label></td>
+                                    <td><label for="" class="lead">Calle 26 # 44 - 27</label></td>
                                     <td><a href="" data-toggle="modal" data-target="#modalDireccion"
                                             class="text-success btn btn-outline-success ml-5"><i class="fas fa-edit fa-lg"></i></a></td>
                                 </tr>
@@ -74,7 +73,28 @@
                         </table>
 
                     </div>
-
+                </div>
+                <div class="row border-solid p-2">
+                    <div class="col-12">
+                        <h2 class="text-center text-success">Jornada Laboral</h2>
+                        <table class="w-100 text-center border border-solid mb-3 lead">
+                            <thead>
+                                <th class="col-4">Día de la semana</th>
+                                <th class="col-4">Horario</th>
+                                <th class="col-4"><a href="" data-toggle="modal" data-target="#modalHorario" class="text-success btn btn-outline-success ml-5"><i class="fas fa-edit fa-lg"></i></a></th>
+                            </thead>
+                            <tbody id="">
+                                <tr>
+                                    <td>L M X J V</td> 
+                                    <td>7:00AM - 5:00PM</td> 
+                                </tr>
+                                <tr>
+                                    <td>S</td> 
+                                    <td>8:00AM - 12:00PM</td> 
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
                 </div>
                 <div class="border-solid border mt-3 p-2">
                     <h2 class="text-success text-center">Persona de contacto</h2>
@@ -88,19 +108,125 @@
                         <tbody>
                             <tr class="text-center border-bottom border-solid p-5">
                                 <td><label for="" class="lead font-weight-bold">Nombre</label></td>
-                                <td><label for="" class="lead">Edwin Cardona</label></td>
+                                <td><label for="" class="lead">Paula Córdoba</label></td>
                                 <td><a href="" data-toggle="modal" data-target="#modalNombreR"
                                         class="text-success btn btn-outline-success ml-5"><i class="fas fa-edit fa-lg"></i></a></td>
                             </tr>
                             <tr class="text-center">
                                 <td><label for="" class="lead font-weight-bold">Cargo</label></td>
-                                <td><label for="" class="lead">Gerente</label></td>
+                                <td><label for="" class="lead">Directora de proyecto</label></td>
                                 <td><a href="" data-toggle="modal" data-target="#modalCargo" class="text-success btn btn-outline-success ml-5"><i class="fas fa-edit fa-lg"></i></a>
                                 </td>
                             </tr>
                         </tbody>
                     </table>
                 </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+{{-- Modal editar horario --}}
+
+<div class="modal fade bd-example-modal-lg" id="modalHorario" data-backdrop="static" tabindex="-1" role="dialog"
+    aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 class="modal-title text-success">Editar jornada laboral</h2>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="container">
+                    <div class="row mb-4">
+                        <div class="col-xl-6 col-lg-6 col-md-12">
+                            <div class="form-group">
+                                <label for="Hinit">Desde</label>
+                                <input type="time" class="form-control" id="Hinit" value="07:00" min="07:00"
+                                    max="20:00">
+                            </div>
+                        </div>
+                        <div class="col-xl-6 col-lg-6 col-md-12">
+                            <div class="form-group ">
+                                <label for="Hfinal">Hasta</label>
+                                <input type="time" class="form-control" id="Hfinal" value="20:00"
+                                    min="07:00" max="20:00">
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <div class="row">
+                                <div class="col-12">
+                                    <p>Día(s):</p>
+                                    <div class="d-flex justify-content-between">
+                                        <div class="custom-control custom-checkbox d-inline">
+                                            <input type="checkbox" class="custom-control-input" id="lunes"
+                                                value="L">
+                                            <label class="custom-control-label" for="lunes">Lunes</label>
+                                        </div>
+                                        <div class="custom-control custom-checkbox d-inline">
+                                            <input type="checkbox" class="custom-control-input" id="martes"
+                                                value="M">
+                                            <label class="custom-control-label" for="martes">Martes</label>
+                                        </div>
+                                        <div class="custom-control custom-checkbox d-inline">
+                                            <input type="checkbox" class="custom-control-input" id="miercoles"
+                                                value="X">
+                                            <label class="custom-control-label"
+                                                for="miercoles">Miércoles</label>
+                                        </div>
+                                        <div class="custom-control custom-checkbox d-inline">
+                                            <input type="checkbox" class="custom-control-input" id="jueves"
+                                                value="J">
+                                            <label class="custom-control-label" for="jueves">Jueves</label>
+                                        </div>
+                                        <div class="custom-control custom-checkbox d-inline">
+                                            <input type="checkbox" class="custom-control-input" id="viernes"
+                                                value="V">
+                                            <label class="custom-control-label" for="viernes">Viernes</label>
+                                        </div> 
+                                    </div>
+                                    <br>
+                                    <div class="custom-control custom-checkbox d-inline mr-5">
+                                        <input type="checkbox" class="custom-control-input" id="sabado"
+                                            value="S">
+                                        <label class="custom-control-label" for="sabado">Sábado</label>
+                                    </div>
+                                    <div class="custom-control custom-checkbox d-inline ml-4">
+                                        <input type="checkbox" class="custom-control-input" id="domingo"
+                                            value="D">
+                                        <label class="custom-control-label" for="domingo">Domingo</label>
+                                    </div>
+                                    <button class="btn w-100 btn-outline-primary mt-4" onclick="agregarZona()">Adicionar</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <table class="w-100 text-center border border-solid mb-3">
+                        <thead>
+                            <th class="col-5">Día de la semana</th>
+                            <th class="col-5">Horario</th>
+                            <th class="col-1"></th>
+                        </thead>
+                        <tbody id="listaZonas">
+                            <tr>
+                                <td>L M X J V</td> 
+                                <td>7:00AM - 5:00PM</td> 
+                                <td><button class="btn btn-danger" onclick="eliminarZona()"><i class="fas fa-trash-alt"></i></button></td>
+                            </tr>
+                            <tr>
+                                <td>S</td> 
+                                <td>8:00AM - 12:00PM</td> 
+                                <td><button class="btn btn-danger" onclick="eliminarZona()"><i class="fas fa-trash-alt"></i></button></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-danger" data-dismiss="modal">Regresar</button>
+                <button type="button" class="btn btn-success" data-target="#detallesModal1" data-dismiss="modal" data-toggle="modal"><i class="fas fa-save fa-lg"></i> Guardar</button>
             </div>
         </div>
     </div>
@@ -122,7 +248,7 @@
                     <div class="text-center">
                         <div class="border rounded-circle overflow-hidden border-success"
                             style="height: 250px; width: 250px; margin-left: auto; margin-right: auto">
-                            <i class="fas fa-user-tie" style="width: 100% !important; height: 100% !important;"></i>
+                        <img src="{{url("Arreciclar.png")}}" alt="" class="w-100">
                         </div>
                         <label class="mt-2">Carga una foto de perfil.</label>
                     </div>
@@ -144,7 +270,7 @@
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-danger" data-dismiss="modal">Regresar</button>
-                <button type="button" class="btn btn-success" data-target="#detallesModal1" data-dismiss="modal" data-toggle="modal">Guardar cambios</button>
+                <button type="button" class="btn btn-success" data-target="#detallesModal1" data-dismiss="modal" data-toggle="modal"><i class="fas fa-save fa-lg"></i> Guardar</button>
             </div>
         </div>
     </div>
@@ -164,13 +290,13 @@
             <div class="modal-body">
                 <div class="form-group-row">
                     <label for="nombre" class="lead font-weight-bold">Nombre corporación</label>
-                    <input type="text" name="nombre" class="form-control" placeholder="Ejm: Nuevo Reciclando Ando">
+                    <input type="text" name="nombre" class="form-control" placeholder="Ejm: Nuevo Reciclando Ando" value="Arreciclar">
                     <small>Ingrese el nuevo nombre de la corporación.</small>
                 </div>
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-danger" data-dismiss="modal">Regresar</button>
-                <button type="button" class="btn btn-success" data-target="#detallesModal1" data-dismiss="modal" data-toggle="modal">Guardar cambios</button>
+                <button type="button" class="btn btn-success" data-target="#detallesModal1" data-dismiss="modal" data-toggle="modal"><i class="fas fa-save fa-lg"></i> Guardar</button>
             </div>
         </div>
     </div>
@@ -182,21 +308,21 @@
     <div class="modal-dialog" role="document">
         <div class="modal-content">
             <div class="modal-header">
-                <h2 class="modal-title text-success">Editar correo electronico</h2>
+                <h2 class="modal-title text-success">Editar correo electrónico</h2>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                 </button>
             </div>
             <div class="modal-body">
                 <div class="form-group-row">
-                    <label for="nombre" class="lead font-weight-bold">Correo electronico</label>
-                    <input type="text" name="nombre" class="form-control" placeholder="Ejm: NuevoCorreo@Nuevocorreo.com">
+                    <label for="nombre" class="lead font-weight-bold">Correo electrónico</label>
+                    <input type="text" name="nombre" class="form-control" placeholder="Ejm: NuevoCorreo@Nuevocorreo.com" value="arreciclar@impacta.com">
                     <small>Ingrese el nuevo correo de la corporación.</small>
                 </div>
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-danger" data-dismiss="modal">Regresar</button>
-                <button type="button" class="btn btn-success" data-target="#detallesModal1" data-dismiss="modal" data-toggle="modal">Guardar cambios</button>
+                <button type="button" class="btn btn-success" data-target="#detallesModal1" data-dismiss="modal" data-toggle="modal"><i class="fas fa-save fa-lg"></i> Guardar</button>
             </div>
         </div>
     </div>
@@ -217,17 +343,17 @@
                 <div class="form-group-row">
                     <label for="nombre" class="lead font-weight-bold">Tipo de documento</label>
                     <select name="" class="form-control" id="">
-                        <option value="">C.C.</option>
                         <option value="">NIT</option>
+                        <option value="">C.C.</option>
                     </select>
                     <label for="nombre" class="lead font-weight-bold">Numero de documento</label>
-                    <input type="text" name="nombre" class="form-control" placeholder="Ejm: 1173 567 434">
+                    <input type="text" name="nombre" class="form-control" placeholder="Ejm: 1173 567 434" value="901007006">
                     <small>Ingrese el nuevo documento de la corporación.</small>
                 </div>
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-danger" data-dismiss="modal">Regresar</button>
-                <button type="button" class="btn btn-success" data-target="#detallesModal1" data-dismiss="modal" data-toggle="modal">Guardar cambios</button>
+                <button type="button" class="btn btn-success" data-target="#detallesModal1" data-dismiss="modal" data-toggle="modal"><i class="fas fa-save fa-lg"></i> Guardar</button>
             </div>
         </div>
     </div>
@@ -247,13 +373,13 @@
             <div class="modal-body">
                 <div class="form-group-row">
                     <label for="nombre" class="lead font-weight-bold">Numero de teléfono</label>
-                    <input type="text" name="nombre" class="form-control" placeholder="Ejm: (4) 312 34 53">
+                    <input type="text" name="nombre" class="form-control" placeholder="Ejm: (4) 312 34 53" value="(4) 2322668">
                     <small>Ingrese el nuevo teléfono de la corporación.</small>
                 </div>
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-danger" data-dismiss="modal">Regresar</button>
-                <button type="button" class="btn btn-success" data-target="#detallesModal1" data-dismiss="modal" data-toggle="modal">Guardar cambios</button>
+                <button type="button" class="btn btn-success" data-target="#detallesModal1" data-dismiss="modal" data-toggle="modal"><i class="fas fa-save fa-lg"></i> Guardar</button>
             </div>
         </div>
     </div>
@@ -263,7 +389,7 @@
     <div class="modal-dialog modal-lg" role="document">
         <div class="modal-content">
             <div class="modal-header">
-                <h2 class="modal-title text-success" id="favoritesModalLabel">Editar la dirección de la corporación</h2>
+                <h2 class="modal-title text-success" id="favoritesModalLabel">Editar dirección</h2>
                 
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
                         aria-hidden="true">&times;</span></button>
@@ -287,14 +413,14 @@
                             </div>
                             <div class="form-group  mx-auto w-100">
                                 <label for="name"># Nro vía 2</label>
-                                <input type="text" class="form-control" placeholder="Ejm: 42">
+                                <input type="text" class="form-control" placeholder="Ejm: 42" value="44">
                             </div>
                         </div>
                         <div class="col-2">
                             
                             <div class="form-group w-100">
                                 <label for="name">Nro vía 1</label>
-                                <input class="form-control" name="num_doc_corp"  required autocomplete="num_doc_corp" autofocus placeholder="Ejm: 7">
+                                <input class="form-control" name="num_doc_corp"  required autocomplete="num_doc_corp" autofocus placeholder="Ejm: 7" value="26">
                                 @error('numd_doc')
                                     <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>
@@ -304,6 +430,7 @@
                             <div class="form-group w-100">
                                 <label for="name">Letra vía 2</label>
                                 <select name="" id="" class="form-control">
+                                    <option value=""></option>
                                     <option value="">A</option>
                                     <option value="">AA</option>
                                     <option value="">AB</option>
@@ -325,6 +452,7 @@
                             <div class="form-group w-100">
                                 <label for="name">Letra vía 1</label>
                                 <select name="" id="" class="form-control">
+                                    <option value=""></option>
                                     <option value="">A</option>
                                     <option value="">AA</option>
                                     <option value="">AB</option>
@@ -344,6 +472,7 @@
                             <div class="form-group w-100">
                                 <label for="name">Cardinalidad vía 2</label>
                                 <select class="form-control" name="type_doc" id="type"  required autocomplete="type_doc" autofocus>
+                                    <option value=""></option>
                                     <option value="Comuna 1">Norte</option>
                                     <option value="Comuna 2">Sur</option>
                                     <option value="Comuna 3">Este</option>
@@ -357,6 +486,7 @@
                             <div class="form-group w-100">
                                 <label for="name">Cardinalidad vía 1</label>
                                 <select class="form-control" name="type_doc" id="type"  required autocomplete="type_doc" autofocus>
+                                    <option value=""></option>
                                     <option value="Comuna 1">Norte</option>
                                     <option value="Comuna 2">Sur</option>
                                     <option value="Comuna 3">Este</option>
@@ -366,7 +496,7 @@
                             </div>
                             <div class="form-group w-100">
                                 <label for="name">- Nro</label>
-                                <input type="text" class="form-control" placeholder=" Ejm: 70">
+                                <input type="text" class="form-control" placeholder=" Ejm: 70" value="27">
                             </div>
                         </div>
                     </div>
@@ -375,6 +505,7 @@
                             <label for="name">Complemento</label>
                             <div class="form-group w-100 d-flex">
                                 <select class="form-control" name="type_doc" id="type"  required autocomplete="type_doc" autofocus>
+                                    <option value=""></option>
                                     <option value="Comuna 1">Apartamento</option>
                                     <option value="Comuna 2">Edificio</option>
                                     <option value="Comuna 3">Casa</option>
@@ -401,7 +532,7 @@
                 <span class="pull-right"><button type="button" class="btn btn-danger"
                     data-dismiss="modal">Regresar</button></span>
             <a data-dismiss="modal" data-toggle="modal" data-target="#detallesModal1">
-                <button type="button" class="btn btn-success">Confirmar</button>
+                <button type="button" class="btn btn-success"><i class="fas fa-save fa-lg"></i> Guardar</button>
             </a>
             </div>
         </div>
@@ -412,7 +543,7 @@
     <div class="modal-dialog modal-lg" role="document">
         <div class="modal-content">
             <div class="modal-header">
-                <h2 class="modal-title text-success" id="favoritesModalLabel">Editar la localidad de la corporación</h2>
+                <h2 class="modal-title text-success" id="favoritesModalLabel">Editar localidad</h2>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
                         aria-hidden="true">&times;</span></button>
             </div>
@@ -440,6 +571,7 @@
                             <div class="form-group  mx-auto w-100">
                                 <label for="name">Comuna</label>
                                 <select class="form-control" name="type_doc" id="type"  required autocomplete="type_doc" autofocus>
+                                    <option value="">Comuna 14</option>
                                     <option value="Comuna 1">Comuna 1</option>
                                     <option value="Comuna 2">Comuna 2</option>
                                     <option value="Comuna 3">Comuna 3</option>
@@ -452,6 +584,7 @@
                             <div class="form-group  mx-auto w-100">
                                 <label for="name">Barrio</label>
                                 <select class="form-control" name="type_doc" id="type"  required autocomplete="type_doc" autofocus>
+                                    <option value="">Barrio Colombia</option>
                                     <option value="El Poblado">El Poblado</option>
                                     <option value="Zuñiga">Zuñiga</option>
                                     <option value="San Marcos">San Marcos</option>
@@ -470,7 +603,7 @@
                 <span class="pull-right"><button type="button" class="btn btn-danger"
                     data-dismiss="modal">Regresar</button></span>
             <a data-dismiss="modal" data-toggle="modal" data-target="#detallesModal1">
-                <button type="button" class="btn btn-success" data-target="#detallesModal1" data-dismiss="modal" data-toggle="modal">Guardar cambios</button>
+                <button type="button" class="btn btn-success" data-target="#detallesModal1" data-dismiss="modal" data-toggle="modal"><i class="fas fa-save fa-lg"></i> Guardar</button>
             </a>
             </div>
         </div>
@@ -483,7 +616,7 @@
     <div class="modal-dialog" role="document">
         <div class="modal-content">
             <div class="modal-header">
-                <h2 class="modal-title text-success">Editar nombre del representante</h2>
+                <h2 class="modal-title text-success">Editar nombre</h2>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                 </button>
@@ -491,16 +624,14 @@
             <div class="modal-body">
                 <div class="form-group-row">
                     <label for="nombre" class="lead font-weight-bold">Nombre</label>
-                    <input type="text" name="nombre" class="form-control" placeholder="Ejm: Luis Felipe">
-                    <small>Ingrese el nombre del nuevo representante.</small><br>
+                    <input type="text" name="nombre" class="form-control" placeholder="Ejm: Luis Felipe" value="Paula">
                     <label for="nombre" class="lead font-weight-bold">Apellido</label>
-                    <input type="text" name="nombre" class="form-control" placeholder="Ejm: Rodriguez">
-                    <small>Ingrese el apellido del nuevo representante.</small>
+                    <input type="text" name="nombre" class="form-control" placeholder="Ejm: Rodriguez" value="Córdoba">
                 </div>
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-danger" data-dismiss="modal">Regresar</button>
-                <button type="button" class="btn btn-success" data-target="#detallesModal1" data-dismiss="modal" data-toggle="modal">Guardar cambios</button>
+                <button type="button" class="btn btn-success" data-target="#detallesModal1" data-dismiss="modal" data-toggle="modal"><i class="fas fa-save fa-lg"></i> Guardar</button>
             </div>
         </div>
     </div>
@@ -511,7 +642,7 @@
     <div class="modal-dialog" role="document">
         <div class="modal-content">
             <div class="modal-header">
-                <h2 class="modal-title text-success">Editar cargo del representante</h2>
+                <h2 class="modal-title text-success">Editar cargo</h2>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                 </button>
@@ -519,13 +650,12 @@
             <div class="modal-body">
                 <div class="form-group-row">
                     <label for="nombre" class="lead font-weight-bold">Cargo</label>
-                    <input type="text" name="nombre" class="form-control" placeholder="Ejm: Gerente">
-                    <small>Ingrese el nuevo cargo del representante.</small>
+                    <input type="text" name="nombre" class="form-control" placeholder="Ejm: Gerente" value="Directora de proyecto">
                 </div>
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-danger" data-dismiss="modal">Regresar</button>
-                <button type="button" class="btn btn-success" data-target="#detallesModal1" data-dismiss="modal" data-toggle="modal">Guardar cambios</button>
+                <button type="button" class="btn btn-success" data-target="#detallesModal1" data-dismiss="modal" data-toggle="modal"><i class="fas fa-save fa-lg"></i> Guardar</button>
             </div>
         </div>
     </div>
@@ -559,6 +689,92 @@
         </div>
     </div>
 </div>
+
+<script>
+    var contador_zonas = 2;
+    function eliminarZona(){
+        var lista_zonas = document.getElementById("listaZonas");
+        if (contador_zonas==1) {
+            contador_zonas = 0;
+            lista_zonas.removeChild(lista_zonas.childNodes[lista_zonas.childNodes.length-1]);
+            var nodo_lista = document.createElement("TR");
+            var nodo_lista2 = document.createElement("TH");
+            var residuo_lista = document.createTextNode("No hay horarios seleccionados");
+            nodo_lista2.appendChild(residuo_lista);
+            nodo_lista.appendChild(nodo_lista2);
+            lista_zonas.appendChild(nodo_lista);
+            return;
+        }
+        if (contador_zonas==0) {
+            return;
+        }
+        lista_zonas.removeChild(lista_zonas.childNodes[lista_zonas.childNodes.length-1]);
+        contador_zonas -=1;
+        console.log(contador_zonas);
+    }
+    function agregarZona(){
+        var tabla_sectores = document.getElementById("listaZonas");
+        if (contador_zonas==0) {
+            var limit = tabla_sectores.childNodes.length;
+            for (let index = 0; index < limit; index++) {
+                tabla_sectores.removeChild(tabla_sectores.childNodes[tabla_sectores.childNodes.length-1]);
+            }
+        }
+        var horario = document.getElementById("Hinit").value+" - "+document.getElementById("Hfinal").value;
+        var dias = "";
+        var dia;
+        dia = document.getElementById("lunes");
+        if (dia.checked == true) {
+            dias = dias+dia.value+" ";
+        }
+        dia = document.getElementById("martes");
+        if (dia.checked == true) {
+            dias = dias+dia.value+" ";
+        }
+        dia = document.getElementById("miercoles");
+        if (dia.checked == true) {
+            dias = dias+dia.value+" ";
+        }
+        dia = document.getElementById("jueves");
+        if (dia.checked == true) {
+            dias = dias+dia.value+" ";
+        }
+        dia = document.getElementById("viernes");
+        if (dia.checked == true) {
+            dias = dias+dia.value+" ";
+        }
+        dia = document.getElementById("sabado");
+        if (dia.checked == true) {
+            dias = dias+dia.value+" ";
+        }
+        dia = document.getElementById("domingo");
+        if (dia.checked == true) {
+            dias = dias+dia.value+" ";
+        }
+        var lista = document.getElementById("datosZona");
+        var nodo_fila = document.createElement("TR");
+        var nodo_columna2 = document.createElement("TD");
+        var nodo_columna3 = document.createElement("TD");
+        var nodo_columna4 = document.createElement("TD");
+        var boton_eliminar = document.createElement("BUTTON")
+        var nodo_imagen = document.createElement("I")
+        boton_eliminar.setAttribute("class","btn btn-danger");
+        boton_eliminar.setAttribute("onclick","eliminarZona()");
+        boton_eliminar.appendChild(nodo_imagen);
+        nodo_imagen.setAttribute("class","fas fa-trash-alt");
+        // var nodo_texto1 = document.createTextNode(sector);
+        var nodo_texto2 = document.createTextNode(horario);
+        var nodo_texto3 = document.createTextNode(dias);
+        nodo_columna3.appendChild(nodo_texto3);
+        nodo_columna2.appendChild(nodo_texto2);
+        nodo_columna4.appendChild(boton_eliminar);
+        nodo_fila.appendChild(nodo_columna3);
+        nodo_fila.appendChild(nodo_columna2);
+        nodo_fila.appendChild(nodo_columna4);
+        tabla_sectores.appendChild(nodo_fila);
+        contador_zonas += 1;
+    }
+</script>
 
 
 @endsection

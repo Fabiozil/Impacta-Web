@@ -11,7 +11,7 @@
                     </h1>
 
                     <h5 class="text-center">Reciclapp busca <strong class="font-weight-bold">conectar</strong> a los recicladores con los ciudadanos y a <strong class="font-weight-bold"> aumentar </strong>
-                        acceso del material reciclable para ellos, mientras <strong class="font-weight-bold">mejoramos</strong>  las condiciones de vida y de
+                        el acceso del material reciclable para ellos, mientras <strong class="font-weight-bold">mejoramos</strong>  las condiciones de vida y de
                         trabajo para los recicladores en el Área Metropolitana del valle de Aburrá</h5>
                 </div>
             </div>
@@ -21,11 +21,11 @@
                 <div class="card-body text">
                     <div class="form-group">
                         <label>Usuario o correo eletrónico</label>
-                        <input type="text" class="form-control" placeholder="James David Rodriguez Rubio">
+                        <input type="text" class="form-control" placeholder="James David Rodriguez Rubio" value="arreciclar@impacta.com">
                     </div>
                     <div class="form-group">
                         <label>Contraseña</label>
-                        <input type="password" class="form-control" placeholder="Contraseña">
+                        <input type="password" class="form-control" placeholder="Contraseña" value="asadasdasd">
                     </div>
                     <div class="opcioncontra mt-2 mb-3">
                         <a class="text-primary" href="{{url("/email") }}">
@@ -39,7 +39,7 @@
                 <div class="card-footer bg-transparent border">
                     <small id="emailHelp" class="form-text text-muted">
                         Al hacer click en "Entrar" aceptas nuestros
-                        <a href="#" class="text-decoration-none text-primary">terminos de servicio</a> y
+                        <a href="#" class="text-decoration-none text-primary">términos de servicio</a> y
                         <a href="#" class="text-decoration-none text-primary">privacidad.</a> Si aún no tienes una
                         cuenta haz click
                         <a href="{{ url('/register') }}" class="text-decoration-none text-primary">aquí</a> para
