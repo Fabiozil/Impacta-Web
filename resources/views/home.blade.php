@@ -4,7 +4,7 @@
 <div class="card shadow">
     <div class="card-header">
         <h1 class="text-success text-center">
-            !Bienvenido, Arreciclar!
+            ¡Bienvenido, Arreciclar!
         </h1>
         <p class="lead text-center">
             Aquí podrás visualizar la información más importante con la cual podrás moniterear la gestión de la corporación en Reciclapp.
