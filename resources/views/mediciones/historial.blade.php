@@ -11,7 +11,7 @@
     <div class="card-header">
         <h1 class="py-3 text-center text-success">Desempeño Ambiental</h1>
         <h3 class="lead text-center">Aquí podrás visualizar la información histórica del material reciclable aprovechado
-            por la corporación. Además, se presenta el impacto ambiental positivo logrado por su recuperación</h3>
+            por la corporación. Además, se presenta el impacto ambiental positivo logrado por su recuperación.</h3>
 
     </div>
     <div class="border-bottom border-solid">
@@ -36,7 +36,7 @@
     </div>
     <div class="card-body">
         <div class="input-group inline w-100 mb-2">
-            <label class="lead"><strong>Material: </strong></label>
+            <label class="lead"><strong>Material </strong></label>
             <select class="form-control mr-3 ml-1" name="type" id="lista_materiales" style="display: inline">
                 <option>Metal</option>
                 <option>Plástico</option>
@@ -45,10 +45,10 @@
                 <option>Cartón</option>
                 <option>Todos</option>
             </select>
-            <label for="" class="lead"><strong>Desde:</strong>  </label>
+            <label for="" class="lead"><strong>Desde</strong>  </label>
             <input class="form-control ml-1 mr-3" type="date" id="fechacorte" name="fechacorte"
                             value="1 Enero 2020" />
-            <label for="" class="lead"> <strong>Hasta:</strong> </label>
+            <label for="" class="lead"> <strong>Hasta</strong> </label>
             <input class="form-control ml-1" type="date" id="fechacorte" name="fechacorte"
                             value="1 Enero 2020" />
             <button type="submit" class="btn btn-primary mr-1 ml-2" onclick="mostrarGraficaDistinta()">Aplicar</button>
@@ -72,7 +72,7 @@
                             Lo equivalente a retirar<strong> 20 vehículos particulares </strong>en 1 año en el Área Metropolitana del Valle de Aburrá.
                             <br>
                             <img src="idea_verde.png" alt="" style="width: 30px; height: 30px;">
-                            Para compensar esta cantidad de CO2 se requieren de <strong>40 árboles</strong> 
+                            Para compensar esta cantidad de CO2 se requieren de <strong>40 árboles</strong>. 
                     </ol>
                 </div>
                 <div class="col-xl-3 col-sm-12">
@@ -92,7 +92,7 @@
                             Lo equivalente a retirar <strong>288 vehículos particulares</strong> en 1 año en el Área Metropolitana del Valle de Aburrá.
                             <br>
                             <img src="idea_verde.png" alt="" style="width: 30px; height: 30px;">
-                            Para compensar esta cantidad de CO2 se requieren de <strong>576 árboles</strong> 
+                            Para compensar esta cantidad de CO2 se requieren de <strong>576 árboles</strong>. 
                     </ol>
                 </div>
                 <div class="col-xl-3 col-sm-12 pt-5 p-1">

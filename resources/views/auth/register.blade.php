@@ -44,7 +44,7 @@
                             </span>
                             @enderror
                             <small id="emailHelp" class="form-text text-muted">
-                                Ingresa el correo electronico de la corporacion.
+                                Ingresa el correo electrónico de la corporacion.
                             </small>
                         </div>
 

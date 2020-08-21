@@ -59,7 +59,7 @@
                                 </tr>
                                 <tr class="text-center border-bottom border-solid p-5">
                                     <td><label for="" class="lead font-weight-bold">Localidad</label></td>
-                                    <td><label for="" class="lead">Medellin, Barrio Colombia</label></td>
+                                    <td><label for="" class="lead">Medellín, Comuna 14, Barrio Colombia</label></td>
                                     <td><a href="" data-toggle="modal" data-target="#modalLocalidad"
                                             class="text-success btn btn-outline-success ml-5"><i class="fas fa-edit fa-lg"></i></a></td>
                                 </tr>
@@ -517,7 +517,7 @@
                                     <option value="Comuna 4">Oficina</option>
                                     <option value="No aplica">No aplica</option>
                                 </select>
-                                <input class="form-control ml-2" name="num_doc_corp" required autocomplete="num_doc_corp" autofocus placeholder="Ejm: Edificio 'El edificio' interior 504 ">
+                                <input class="form-control ml-2" name="num_doc_corp" required autocomplete="num_doc_corp" autofocus placeholder="Ejm: interior 504 ">
                                 @error('numd_doc')
                                     <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>

@@ -42,7 +42,7 @@
                 </div>
                 <div class="card-footer">
                     <small id="emailHelp" class="form-text text-muted">
-                        Al hacer clic en "Restablecer contraseña" autoriza el reemplazo de la contraseña actual de la cuenta registrada por la nueva contraseña ingresada
+                        Al hacer clic en "Restablecer contraseña" autoriza el reemplazo de la contraseña actual de la cuenta registrada por la nueva contraseña ingresada.
                     </small>
                 </div>
             </div>

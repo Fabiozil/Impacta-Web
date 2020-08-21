@@ -20,7 +20,7 @@
         </h1>
         <h3 class="lead  text-center">
             Aquí podrás enviar notificaciones automáticas o manuales a los usuarios de la comunidad. También podrás
-            visualizar los mensajes enviados y programados
+            visualizar los mensajes enviados y programados.
         </h3>
     </div>
     <div class="card-body">
@@ -76,7 +76,7 @@
                                 <td class="overflow-hidden"><a class="bg-warning text-white p-1">MAN</a> <br>
                                     Hola <a class="text-success">@nombre de usuario!</a>
                                     El reciclador(a) <a class="text-success">@nombre del reciclador(a)</a> no pudo pasar el dia
-                                    de ayer por el reciclaje debido las condiciones climaticas. Pasará hoy a las 5:00PM
+                                    de ayer por el reciclaje debido las condiciones climáticas. Pasará hoy a las 5:00PM
                                 </td>
                                 <td><a href="" class="text-primary ml-3" data-toggle="modal"
                                     data-target="#modal2">Ver detalles</a></td>
@@ -98,7 +98,7 @@
                                 </td>
                                 <td>Indicador ambiental</td>
                                 <td class="overflow-hidden"><a class="bg-primary text-white p-1">AUT</a> <br>Hola <a class="text-success">@nombre de usuario!</a>
-                                    Con tu ayuda, hemos ayudado a evitar la emision de <a class="text-success">@histórico toneladas CO2e</a> desde el 2019. Lo que equivale a retirar <a class="text-success">@equivalencia</a> vehículos particulares en 1 año el Área Metropolitana del Valle de Áburra.
+                                    Con tu ayuda, hemos ayudado a evitar la emision de <a class="text-success">@histórico toneladas CO2e</a> desde el 2019. Lo que equivale a retirar <a class="text-success">@equivalencia</a> vehículos particulares en 1 año el Área Metropolitana del Valle de Aburrá.
                                 </td>
                                 <td><a href="" class="text-primary ml-3" data-toggle="modal"
                                     data-target="#modal1">Ver detalles</a></td>
@@ -230,7 +230,7 @@
                                 <p class="lead">
                                     Hola <a class="text-success">@nombre de usuario!</a>
                                     El reciclador(a) <a class="text-success">@nombre del reciclador(a)</a> no pudo pasar el dia
-                                    de ayer por el reciclaje debido las condiciones climaticas. Pasará hoy a las 5:00PM
+                                    de ayer por el reciclaje debido las condiciones climáticas. Pasará hoy a las 5:00PM
                                 </p>
                                 <div class="d-flex justify-content-end">
                                     <small>Enviado: 19 de julio 2020 8:05AM</small> 

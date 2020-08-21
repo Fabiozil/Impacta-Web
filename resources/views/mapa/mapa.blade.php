@@ -96,7 +96,7 @@ input[type=submit] {
             <div class="row">
                 <div class="col-12">
                     <img src="{{url("/corp_logo.png")}}" class="logo-corp" alt="Logo corporacion">
-                    <h5 class="border-solid border-bottom"><strong>ARRECICLAR</strong></h5>
+                    <h5 class="border-solid border-bottom"><strong>Arreciclar</strong></h5>
                     <p>Se unió hace 2 años</p>
                     <p>Dirección: Calle 26 # 44 - 27</p>
                     <p>Telefóno: (4) 561 09 21</p>
@@ -111,7 +111,7 @@ input[type=submit] {
                     style="z-index: 2; max-width: 10%; max-height: 10%">
             </a>
             <a href="{{ url('/usuarios') }}" style="position:absolute; margin-top: -40%; margin-left: 2%; z-index: 2; height: 60px !important; width: 60px !important">
-                <img src="{{url("/lista.png")}}" alt="lista" class="w-100 h-100 p-1">
+                <img src="{{url("/Lista.png")}}" alt="lista" class="w-100 h-100 p-1">
             </a>
 
             <span style="position:absolute; margin-top: -8%; margin-left: 40%; z-index: 2; max-width: 5%" data-toggle="modal"
@@ -121,7 +121,7 @@ input[type=submit] {
                 <div class="row">
                     <div class="col-12">
                         <img src="{{url("/Arreciclar.png")}}" class="logo-corp" alt="Logo corporacion">
-                        <h5><strong>ARRECICLAR</strong></h5>
+                        <h5><strong>Arreciclar</strong></h5>
                         <p>Se unió hace 2 años</p>
                         {{-- <p>Dirección: Diagonal 33B #39 Sur 40</p>
                         <p>Telefóno: (4) 561 09 21</p> --}}
@@ -141,7 +141,7 @@ input[type=submit] {
                 <a data-toggle="tooltip" data-html="true" data-placement="left" title='
                 <div class="row">
                     <div class="col-12">
-                        <img src="{{url("/Harlan.jpg")}}" class="logo-corp border border-success rounded-circle" alt="Foto perfil">
+                        <img src="{{url("/FELIPE_BERNAL.jpg")}}" class="logo-corp border border-success rounded-circle" alt="Foto perfil">
                         <h5 class="border-bottom border-solid"><strong>Felipe Bernal</strong></h5>
                         <p>Se unió hace 1 año</p>
                         {{-- <p>Dirección: Diagonal 32D #32 Sur 40</p> --}}
@@ -161,7 +161,7 @@ input[type=submit] {
                 <a data-toggle="tooltip" data-html="true" data-placement="left" title='
                 <div class="row">
                     <div class="col-12">
-                        <img src="{{url("/Michel.jpg")}}" class="logo-corp border border-success rounded-circle" alt="Foto perfil">
+                        <img src="{{url("/RAQUEL_MORALES.jpeg")}}" class="logo-corp border border-success rounded-circle" alt="Foto perfil">
                         <h5 class="border-solid border-bottom"><strong>Raquel Morales</strong></h5>
                         <p>Se unió hace 2 años</p>
                         {{-- <p>Dirección: Diagonal 32D #32 Sur 40</p> --}}
@@ -181,7 +181,7 @@ input[type=submit] {
                 <a data-toggle="tooltip" data-html="true" data-placement="left" title='
                 <div class="row">
                     <div class="col-12">
-                        <img src="{{url("/Harlan.jpg")}}" class="logo-corp border border-success rounded-circle" alt="Foto perfil">
+                        <img src="{{url("/ANDRES_BETANCUR.jpg")}}" class="logo-corp border border-success rounded-circle" alt="Foto perfil">
                         <h5 class="border-solid border-bottom"><strong>Andrés Betancur</strong></h5>
                         <p>Se unió hace 1 año</p>
                         {{-- <p>Dirección: Diagonal 32D #32 Sur 40</p> --}}
@@ -201,7 +201,7 @@ input[type=submit] {
                 <a data-toggle="tooltip" data-html="true" data-placement="left" title='
                 <div class="row">
                     <div class="col-12">
-                        <img src="{{url("/Harlan.jpg")}}" class="logo-corp border border-success rounded-circle" alt="Foto perfil">
+                        <img src="{{url("/KEVIN_VIVEROS.jpg")}}" class="logo-corp border border-success rounded-circle" alt="Foto perfil">
                         <h5 class="border-solid border-bottom"><strong>Kevin Viveros</strong></h5>
                         <p>Se unió hace 1 año</p>
                         {{-- <p>Dirección: Diagonal 32D #32 Sur 40</p> --}}
@@ -222,7 +222,7 @@ input[type=submit] {
                 <a data-toggle="tooltip" data-html="true" data-placement="left" title='
                 <div class="row">
                     <div class="col-12">
-                        <img src="{{url("/Harlan.jpg")}}" class="logo-corp border border-success rounded-circle" alt="Foto perfil">
+                        <img src="{{url("/FABIO_MEJIA.jpg")}}" class="logo-corp border border-success rounded-circle" alt="Foto perfil">
                         <h5 class="border-solid border-bottom"><strong>Fabio Mejía</strong></h5>
                         <p>Se unió hace 3 años</p>
                         {{-- <p>Dirección: Diagonal 32D #32 Sur 40</p> --}}
@@ -242,7 +242,7 @@ input[type=submit] {
                 <a data-toggle="tooltip" data-html="true" data-placement="left" title='
                 <div class="row">
                     <div class="col-12">
-                        <img src="{{url("/unidad1.jpg")}}" class="logo-corp border border-success rounded-circle" alt="Foto perfil">
+                        <img src="{{url("/TORRES_DE_LA_MAGNOLIA.jpg")}}" class="logo-corp border border-success rounded-circle" alt="Foto perfil">
                         <h5 class="border-solid border-bottom"><strong>Torres de la magnolia</strong></h5>
                         <p>Se unió hace 2 años</p>
                         {{-- <p>Dirección: Diagonal 32D #32 Sur 40</p> --}}
@@ -262,7 +262,7 @@ input[type=submit] {
                 <a data-toggle="tooltip" data-html="true" data-placement="left" title='
                 <div class="row">
                     <div class="col-12">
-                        <img src="{{url("/Michel.jpg")}}" class="logo-corp border border-success rounded-circle" alt="Logo corporacion">
+                        <img src="{{url("/SARA_VALENCIA.jpg")}}" class="logo-corp border border-success rounded-circle" alt="Logo corporacion">
                         <h5 class="border-solid border-bottom"><strong>Sara Valencia</strong></h5>
                         <p>Se unió hace 1 día</p>
                         {{-- <p>Dirección: Diagonal 28C 28 Sur 25</p>
@@ -281,7 +281,7 @@ input[type=submit] {
                 <a data-toggle="tooltip" data-html="true" data-placement="left" title='
                 <div class="row">
                     <div class="col-12">
-                        <img src="{{url("/unidad1.jpg")}}" class="logo-corp border border-success rounded-circle" alt="Foto unidad">
+                        <img src="{{url("/TORRES_DEL_RIACHUELO.jpg")}}" class="logo-corp border border-success rounded-circle" alt="Foto unidad">
                         <h5 class="border-solid border-bottom"><strong>Torres del riachuelo</strong></h5>
                         <p>Se unió hace 1 año</p>
                         {{-- <p>Apartamentos: 89<p> --}}
@@ -339,7 +339,7 @@ input[type=submit] {
                                     <div class="row">
                                         <div class="col-xl-12 h-100">
                                             <div class="container">
-                                                <img src="{{url("/harlan.jpg")}}"
+                                                <img src="{{url("/FELIPE_BERNAL.jpg")}}"
                                                     class="imgpg border border-success rounded-circle"
                                                     alt="">
                                                 <div class="mt-2 ml-1 mr-1 text-center">
@@ -420,7 +420,7 @@ input[type=submit] {
                                     <div class="row">
                                         <div class="col-xl-12 h-100">
                                             <div class="container">
-                                                <img src="{{url("/Michel.jpg")}}"
+                                                <img src="{{url("/SARA_VALENCIA.jpg")}}"
                                                     class="imgpg border border-success rounded-circle"
                                                     alt="">
                                                 <div class="mt-2 ml-1 mr-1 text-center">
@@ -502,7 +502,7 @@ input[type=submit] {
                                     <div class="row">
                                         <div class="col-xl-12 h-100">
                                             <div class="container">
-                                                <img src="{{url("/unidad1.jpg")}}"
+                                                <img src="{{url("/TORRES_DEL_RIACHUELO.jpg")}}"
                                                     class="imgpg border border-success rounded-circle"
                                                     alt="">
                                                 <div class="mt-2 ml-1 mr-1 text-center">
@@ -536,7 +536,7 @@ input[type=submit] {
                                         </div>
                                         <div class="row">
                                             <label class="lead"><strong>Tipo de usuario:  </strong></label>
-                                            <p class="pl-1 lead">Administracion residencial</p>
+                                            <p class="pl-1 lead">Administrador residencial</p>
                                         </div>
                                         <div class="row">
                                             <label class="lead"><strong>Municipio:  </strong></label>
@@ -584,7 +584,7 @@ input[type=submit] {
                                     <div class="row">
                                         <div class="col-xl-12 h-100">
                                             <div class="container">
-                                                <img src="{{url("/unidad1.jpg")}}"
+                                                <img src="{{url("/TORRES_DE_LA_MAGNOLIA.jpg")}}"
                                                     class="imgpg border border-success rounded-circle"
                                                     alt="">
                                                 <div class="mt-2 ml-1 mr-1 text-center">
@@ -618,7 +618,7 @@ input[type=submit] {
                                         </div>
                                         <div class="row">
                                             <label class="lead"><strong>Tipo de usuario: </strong></label>
-                                            <p class="pl-1 lead">Administracion residencial</p>
+                                            <p class="pl-1 lead">Administrador residencial</p>
                                         </div>
                                         <div class="row">
                                             <label class="lead"><strong>Municipio:  </strong></label>
@@ -666,7 +666,7 @@ input[type=submit] {
                                     <div class="row">
                                         <div class="col-xl-12 h-100">
                                             <div class="container">
-                                                <img src="{{url("/harlan.jpg")}}"
+                                                <img src="{{url("/FABIO_MEJIA.jpg")}}"
                                                     class="imgpg border border-success rounded-circle"
                                                     alt="">
                                                 <div class="mt-2 ml-1 mr-1 text-center">
@@ -748,7 +748,7 @@ Modal Andrés Betancur --}}
                                     <div class="row">
                                         <div class="col-xl-12 h-100">
                                             <div class="container">
-                                                <img src="{{url("/harlan.jpg")}}"
+                                                <img src="{{url("/ANDRES_BETANCUR.jpg")}}"
                                                     class="imgpg border border-success rounded-circle"
                                                     alt="">
                                                 <div class="mt-2 ml-1 mr-1 text-center">
@@ -831,7 +831,7 @@ Modal Andrés Betancur --}}
                                     <div class="row">
                                         <div class="col-xl-12 h-100">
                                             <div class="container">
-                                                <img src="{{url("/Michel.jpg")}}"
+                                                <img src="{{url("/RAQUEL_MORALES.jpeg")}}"
                                                     class="imgpg border border-success rounded-circle"
                                                     alt="">
                                                 <div class="mt-2 ml-1 mr-1 text-center">
@@ -912,7 +912,7 @@ Modal Andrés Betancur --}}
                                     <div class="row">
                                         <div class="col-xl-12 h-100">
                                             <div class="container">
-                                                <img src="{{url("/harlan.jpg")}}"
+                                                <img src="{{url("/KEVIN_VIVEROS.jpg")}}"
                                                     class="imgpg border border-success rounded-circle"
                                                     alt="">
                                                 <div class="mt-2 ml-1 mr-1 text-center">
@@ -996,7 +996,7 @@ Modal Andrés Betancur --}}
                                                     class="imgpg border border-success rounded-circle"
                                                     alt="">
                                                 <div class="mt-2 ml-1 mr-1 text-center">
-                                                    <h3><strong>ARRECICLAR</strong></h3>
+                                                    <h3><strong>Arreciclar</strong></h3>
                                                     <p>Se unió hace 2 años</p>
                                                 </div>
                                             </div>
@@ -1031,8 +1031,12 @@ Modal Andrés Betancur --}}
                                             <p class="pl-1 lead">6</p>
                                         </div>
                                         <div class="row">
-                                            <label class="lead"><strong>Usuarios afiliados:  </strong></label>
-                                            <p class="pl-1 lead">45</p>
+                                            <label class="lead"><strong>Viviendas:  </strong></label>
+                                            <p class="pl-1 lead">37</p>
+                                        </div>
+                                        <div class="row">
+                                            <label class="lead"><strong>Administradores residenciales:  </strong></label>
+                                            <p class="pl-1 lead">23</p>
                                         </div>
                                         <div class="row">
                                             <label class="lead"><strong>Emisiones evitadas:  </strong></label>

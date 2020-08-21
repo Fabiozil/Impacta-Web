@@ -35,7 +35,7 @@
                             <div class="col-xl-7 col-sm-12 p-0">
                                 <h4 class="text-center border-bottom"><strong>Alejandra Uribe</strong></h4>
                                 <p class="pl-3 pt-2"><strong>Apodo:</strong> Alejita</p>
-                                <p class="pl-3"><strong>Teléfono:</strong> 313 61 72</p>
+                                <p class="pl-3"><strong>Celular:</strong> 310 202 0001</p>
                                 <p class="pl-3"><strong>Usuarios asignados:</strong> 6</p>
                             </div>
                         </div>
@@ -57,7 +57,7 @@
                             <div class="col-xl-7 col-sm-12 p-0">
                                 <h4 class="text-center border-bottom"><strong>Rodrigo Hincapie</strong></h4>
                                 <p class="pl-3 pt-2"><strong>Apodo:</strong> El Rodri</p>
-                                <p class="pl-3"><strong>Teléfono:</strong> 330 21 19</p>
+                                <p class="pl-3"><strong>Celular:</strong> 310 330 2119</p>
                                 <p class="pl-3"><strong>Usuarios asignados:</strong> 1</p>
                             </div>
                             
@@ -84,7 +84,7 @@
                             <div class="col-xl-7 col-sm-12 p-0">
                                 <h4 class="text-center border-bottom"><strong>Reinaldo Ochoa</strong></h4>
                                 <p class="pl-3 pt-2"><strong>Apodo:</strong> Rey</p>
-                                <p class="pl-3"><strong>Teléfono:</strong> 333 31 42</p>
+                                <p class="pl-3"><strong>Celular:</strong> 310 333 3142</p>
                                 <p class="pl-3"><strong>Usuarios asignados:</strong> 12</p>
                             </div>
                         </div>
@@ -106,7 +106,7 @@
                             <div class="col-xl-7 col-sm-12 p-0">
                                 <h4 class="text-center border-bottom"><strong>Armando López</strong></h4>
                                 <p class="pl-3 pt-2"><strong>Apodo:</strong> Armando</p>
-                                <p class="pl-3"><strong>Teléfono:</strong> 313 13 23</p>
+                                <p class="pl-3"><strong>Celular:</strong> 310 313 1323</p>
                                 <p class="pl-3"><strong>Usuarios asignados:</strong> 4</p>
                             </div>
                             
@@ -133,7 +133,7 @@
                             <div class="col-xl-7 col-sm-12 p-0">
                                 <h4 class="text-center border-bottom"><strong>Claudia Marín</strong></h4>
                                 <p class="pl-3 pt-2"><strong>Apodo:</strong> Clau</p>
-                                <p class="pl-3"><strong>Teléfono:</strong> 253 19 72</p>
+                                <p class="pl-3"><strong>Celular:</strong> 310 253 1972</p>
                                 <p class="pl-3"><strong>Usuarios asignados:</strong> 12</p>
 
                             </div>
@@ -156,7 +156,7 @@
                             <div class="col-xl-7 col-sm-12 p-0">
                                 <h4 class="text-center border-bottom"><strong>Mónica García</strong></h4>
                                 <p class="pl-3 pt-2"><strong>Apodo:</strong> La Negra</p>
-                                <p class="pl-3"><strong>Teléfono:</strong> 253 19 72</p>
+                                <p class="pl-3"><strong>Celular:</strong> 310 253 1972</p>
                                 <p class="pl-3"><strong>Usuarios asignados:</strong> 11</p>
 
                             </div>
@@ -191,7 +191,7 @@
                                 <img src="/alerta.png" alt="">
                             </div>
                             <h2 class="py-2 text-center text-success">¿Deseas eliminar este reciclador(a)?</h2>
-                            <h5 class="lead text-center border border-solid mb-3 p-2">El reciclador(a) <strong>Reinaldo Ochoa</strong> se eliminará de su lista de "Mis recicladores" de forma permanente.</h5>
+                            <h5 class="lead text-center border border-solid mb-3 p-2">El reciclador(a) <strong>Alejandra Uribe</strong> se eliminará de su lista de "Mis recicladores" de forma permanente.</h5>
                             <h5 class="lead text-center mt-2">Una vez eliminado el reciclador(a), los usuarios asignados al perfil pasarán a estar pendientes de asignar. Ver mapa Mi comunidad.</h5>
                             
                         </div>

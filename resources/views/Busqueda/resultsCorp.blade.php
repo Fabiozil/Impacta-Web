@@ -45,7 +45,7 @@
                                                 <p class="text-center mt-1">Miembro hace 3 años</p>
                                             </div>
                                             <div class="col-xl-7 col-sm-12 p-0">
-                                                <h4 class="text-center border-bottom"><strong>CORPOOCCIDENTE</strong></h4>
+                                                <h4 class="text-center border-bottom"><strong>Corpooccidente</strong></h4>
                                                 <p class="pl-3 pt-2"><strong>Recicladores agremiados: </strong><br>12</p>
                                                 <p class="pl-3"><strong>Usuarios afiliados: </strong><br>45</p>
                                                 <p class="pl-3"><strong>Emisiones evitadas: </strong><br>544 ton CO2e</p>
@@ -68,7 +68,7 @@
                                         <p class="text-center mt-1">Miembro hace 2 años</p>
                                     </div>
                                     <div class="col-xl-7 col-sm-12 p-0">
-                                        <h4 class="text-center border-bottom"><strong>CORPORACIÓN CAMPO SANTO</strong></h4>
+                                        <h4 class="text-center border-bottom"><strong>Corporación campo santo</strong></h4>
                                         <p class="pl-3 pt-2"><strong>Recicladores agremiados: </strong><br>9</p>
                                         <p class="pl-3"><strong>Usuarios afiliados: </strong><br>37</p>
                                         <p class="pl-3"><strong>Emisiones evitadas: </strong><br>274 ton CO2e</p>
@@ -138,7 +138,7 @@
                                                     class="imgpg border border-success rounded-circle"
                                                     alt="">
                                                 <div class="mt-2 ml-1 mr-1 text-center">
-                                                    <h3><strong>CORPOOCCIDENTE</strong></h3>
+                                                    <h3><strong>Corpooccidente</strong></h3>
                                                     <p>Se unió hace 3 años</p>
                                                 </div>
                                             </div>
@@ -152,7 +152,7 @@
                                 <div class="col-xl-12 h-100">
                                     <div class="container pt-4">
                                         <div class="row mb-1">
-                                            <div class="col-8 pl-0">
+                                            <div class="col-12 pl-0 border-bottom border-solid">
                                                 <label class="lead pl-0 mb-3"><strong>Municipio: </strong>Medellín</label> <br>
                                                 <label class="lead pl-0 mb-3"><strong>Dirección: </strong>Carrera 109a #63b - 420</label> <br>
                                                 <label class="lead pl-0"><strong>Telefóno: </strong>(4) 2322668</label>
@@ -165,8 +165,12 @@
                                             <p class="pl-1 lead">12</p>
                                         </div>
                                         <div class="row">
-                                            <label class="lead"><strong>Usuarios afiliados:  </strong></label>
-                                            <p class="pl-1 lead">45</p>
+                                            <label class="lead"><strong>Viviendas:  </strong></label>
+                                            <p class="pl-1 lead">23</p>
+                                        </div>
+                                        <div class="row">
+                                            <label class="lead"><strong>Administradores residenciales:  </strong></label>
+                                            <p class="pl-1 lead">22</p>
                                         </div>
                                         <div class="row">
                                             <label class="lead"><strong>Emisiones evitadas:  </strong></label>
@@ -208,7 +212,7 @@
                                                     class="imgpg border border-success rounded-circle"
                                                     alt="">
                                                 <div class="mt-2 ml-1 mr-1 text-center">
-                                                    <h3><strong>CORPORACIÓN CAMPO SANTO</strong></h3>
+                                                    <h3><strong>Corporación campo santo</strong></h3>
                                                     <p>Se unió hace 2 años</p>
                                                 </div>
                                             </div>
@@ -222,7 +226,7 @@
                                 <div class="col-xl-12 h-100">
                                     <div class="container pt-4">
                                         <div class="row mb-1">
-                                            <div class="col-12 pl-0">
+                                            <div class="col-12 pl-0 border-bottom border-solid">
                                                 <label class="lead pl-0 mb-3"><strong>Municipio: </strong>Medellín</label> <br>
                                                 <label class="lead pl-0 mb-3"><strong>Dirección: </strong>Calle 53 #10c - 63</label> <br>
                                                 <label class="lead pl-0"><strong>Telefóno: </strong>(4) 2260243</label>
@@ -235,8 +239,12 @@
                                             <p class="pl-1 lead">9</p>
                                         </div>
                                         <div class="row">
-                                            <label class="lead"><strong>Usuarios afiliados:  </strong></label>
-                                            <p class="pl-1 lead">37</p>
+                                            <label class="lead"><strong>Viviendas:  </strong></label>
+                                            <p class="pl-1 lead">30</p>
+                                        </div>
+                                        <div class="row">
+                                            <label class="lead"><strong>Administradores residenciales:  </strong></label>
+                                            <p class="pl-1 lead">7</p>
                                         </div>
                                         <div class="row">
                                             <label class="lead"><strong>Emisiones evitadas:  </strong></label>
@@ -292,7 +300,7 @@
                                 <div class="col-xl-12 h-100">
                                     <div class="container pt-4">
                                         <div class="row border-solid border-bottom mb-1">
-                                            <div class="col-8 pl-0">
+                                            <div class="col-12 pl-0 border-bottom border-solid">
                                                 <label class="lead pl-0 mb-3"><strong>Dirección: </strong> # 42 #22 sur 43C</label>
                                                 <label class="lead pl-0"><strong>Telefóno: </strong>(4) 312 25 67</label>
                                             </div>
@@ -369,7 +377,7 @@
                                 <div class="col-xl-12 h-100">
                                     <div class="container pt-4">
                                         <div class="row mb-1">
-                                            <div class="col-8 pl-0">
+                                            <div class="col-12 pl-0 border-bottom border-solid">
                                                 <label class="lead pl-0 mb-3"><strong>Municipio: </strong>Medellín</label> <br>
                                                 <label class="lead pl-0 mb-3"><strong>Dirección: </strong>Carrera 32a #102b - 53</label> <br>
                                                 <label class="lead pl-0"><strong>Telefóno: </strong>(4) 5295490</label>
@@ -382,8 +390,12 @@
                                             <p class="pl-1 lead">4</p>
                                         </div>
                                         <div class="row">
-                                            <label class="lead"><strong>Usuarios afiliados:  </strong></label>
-                                            <p class="pl-1 lead">19</p>
+                                            <label class="lead"><strong>Viviendas:  </strong></label>
+                                            <p class="pl-1 lead">17</p>
+                                        </div>
+                                        <div class="row">
+                                            <label class="lead"><strong>Administradores residenciales:  </strong></label>
+                                            <p class="pl-1 lead">2</p>
                                         </div>
                                         <div class="row">
                                             <label class="lead"><strong>Emisiones evitadas:  </strong></label>

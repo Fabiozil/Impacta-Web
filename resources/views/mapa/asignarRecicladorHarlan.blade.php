@@ -12,20 +12,20 @@
     <div class="card-header">
         <h1 class="py-3 text-center text-success">Asignación de reciclador(a)</h1>
         <p class="lead text-center">Aquí podrás seleccionar al reciclador(a) de su comunidad, quien será el encargado(a) de aprovechar el material reciclable a disponer por el usuario. Ten en cuenta la dirección de
-            vivienda del usuario</p>
+            vivienda del usuario.</p>
 
     </div>
     <div class="card-body">
         <div class="row border border-solid bg-light mb-2">
             <div class="col-xl-4 col-sm-12">
                 <img class="imgRecycler border border-success rounded-circle imgpg"
-                    style="max-width: 100%; max-height: 100%" src="{{url("/Harlan.jpg")}}" alt="Michele Osama">
+                    style="max-width: 100%; max-height: 100%" src="{{url("/FELIPE_BERNAL.jpg")}}" alt="Michele Osama">
                 <h3 class="text-center mb-1 pb-1 mt-2"><strong>Felipe Bernal</strong></h3>
                 <p class="text-center">Miembro hace 1 año</p>
             </div>
             <div class="col-xl-8 col-sm-12">
-                <h2 class="py-4 text-center text-success"><strong>Informacion del usuario</strong></h2>
-                <p class="text-center lead"><strong>Reciclador asignado: </strong> Alejandra Uribe</p>
+                <h2 class="py-4 text-center text-success"><strong>Información del usuario</strong></h2>
+                <p class="text-center lead"><strong>Reciclador(a) asignado: </strong> Alejandra Uribe</p>
                 <p class="text-center lead"><strong>Tipo de usuario: </strong> Vivienda</p>
                 <p class="text-center lead"><strong>Municipio: </strong> Envigado</p>
                 <p class="text-center lead"><strong>Dirección: </strong> Diagonal 32D #32 sur - 40</p>
@@ -39,7 +39,7 @@
         </div>
         <div class="row border-solid border">
             <div class="col-12">
-                <h2 class="text-center py-3 text-success"><strong>Asignar reciclador</strong></h2>
+                <h2 class="text-center py-3 text-success"><strong>Asignar reciclador(a)</strong></h2>
             </div>
             <div class="col-xl-4 col-md-6 col-sm-12 p-1">
                 <ul class="list-group list-group-flush" id="col-1">
@@ -52,7 +52,7 @@
                             <div class="col-xl-7 col-sm-12 p-0">
                                 <h4 class="text-center border-bottom"><strong>Alejandra Uribe</strong></h4>
                                 <p class="pl-3 pt-2"><strong>Apodo:</strong> Alejita</p>
-                                <p class="pl-3"><strong>Teléfono:</strong> 310 202 0001</p>
+                                <p class="pl-3"><strong>Celular:</strong> 310 202 0001</p>
                                 <p class="pl-3"><strong>Usuarios asignados:</strong> 6</p>
                             </div>
                         </div>
@@ -71,7 +71,7 @@
                             <div class="col-xl-7 col-sm-12 p-0">
                                 <h4 class="text-center border-bottom"><strong>Rodrigo Hincapie</strong></h4>
                                 <p class="pl-3 pt-2"><strong>Apodo:</strong> El Rodri</p>
-                                <p class="pl-3"><strong>Teléfono:</strong> 330 21 19</p>
+                                <p class="pl-3"><strong>Celular:</strong> 310 330 2119</p>
                                 <p class="pl-3"><strong>Usuarios asignados:</strong> 1</p>
                             </div>
                             
@@ -95,7 +95,7 @@
                             <div class="col-xl-7 col-sm-12 p-0">
                                 <h4 class="text-center border-bottom"><strong>Reinaldo Ochoa</strong></h4>
                                 <p class="pl-3 pt-2"><strong>Apodo:</strong> Rey</p>
-                                <p class="pl-3"><strong>Teléfono:</strong> 333 31 42</p>
+                                <p class="pl-3"><strong>Celular:</strong> 310 333 3142</p>
                                 <p class="pl-3"><strong>Usuarios asignados:</strong> 12</p>
                             </div>
                         </div>
@@ -115,7 +115,7 @@
                             <div class="col-xl-7 col-sm-12 p-0">
                                 <h4 class="text-center border-bottom"><strong>Armando López</strong></h4>
                                 <p class="pl-3 pt-2"><strong>Apodo:</strong> Armando</p>
-                                <p class="pl-3"><strong>Teléfono:</strong> 313 13 23</p>
+                                <p class="pl-3"><strong>Celular:</strong> 310 313 1323</p>
                                 <p class="pl-3"><strong>Usuarios asignados:</strong> 4</p>
                             </div>
                             
@@ -139,7 +139,7 @@
                             <div class="col-xl-7 col-sm-12 p-0">
                                 <h4 class="text-center border-bottom"><strong>Claudia Marín</strong></h4>
                                 <p class="pl-3 pt-2"><strong>Apodo:</strong> Clau</p>
-                                <p class="pl-3"><strong>Teléfono:</strong> 253 19 72</p>
+                                <p class="pl-3"><strong>Celular:</strong> 310 253 1972</p>
                                 <p class="pl-3"><strong>Usuarios asignados:</strong> 12</p>
 
                             </div>
@@ -159,7 +159,7 @@
                             <div class="col-xl-7 col-sm-12 p-0">
                                 <h4 class="text-center border-bottom"><strong>Mónica García</strong></h4>
                                 <p class="pl-3 pt-2"><strong>Apodo:</strong> La Negra</p>
-                                <p class="pl-3"><strong>Teléfono:</strong> 253 19 72</p>
+                                <p class="pl-3"><strong>Celular:</strong> 310 253 1972</p>
                                 <p class="pl-3"><strong>Usuarios asignados:</strong> 11</p>
 
                             </div>
@@ -201,8 +201,8 @@
                                 <img src="{{url("alerta.png")}}" alt="">
                             </div>
                             <h1 class="py-2 text-center">¿Deseas seleccionar este reciclador(a)?</h1>
-                            <h5 class="lead border-solid text-center border p-3">El reciclador(a) <strong>Claudia Marín</strong> será asignado(a) al usuario <strong>Felipe Bernal</strong>, quien
-                                será el responsable de recolectar el material reciclable dispuesto.</h5>
+                            <h5 class="lead border-solid text-center border p-3">El reciclador(a) <strong>Reinaldo Ochoa</strong> será asignado(a) al usuario <strong>Felipe Bernal</strong>, quien
+                                será el responsable de recolectar el material reciclable a disponer.</h5>
                             <h5 class="lead text-center mt-2">Una vez asignado el reciclador(a), podras modificar esta
                                 selección en el perfil del usuario.</h5>
                         </div>
@@ -324,7 +324,7 @@
                             </div>
                             <h1 class="py-2 text-center">¿Deseas confirmar los cambios realizados?</h1>
                             <h5 class="lead border-solid text-center border p-3">El reciclador(a) <strong>Alejandra Uribe</strong> fue asignado(a) al usuario<strong> Felipe Bernal</strong>, quien
-                                será el responsable de recolectar el material reciclable dispuesto.</h5>
+                                será el responsable de recolectar el material reciclable a disponer.</h5>
                         </div>
                     </div>
                 </div>

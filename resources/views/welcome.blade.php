@@ -12,7 +12,7 @@
 
                     <h5 class="text-center">Reciclapp busca <strong class="font-weight-bold">conectar</strong> a los recicladores con los ciudadanos y a <strong class="font-weight-bold"> aumentar </strong>
                         el acceso del material reciclable para ellos, mientras <strong class="font-weight-bold">mejoramos</strong>  las condiciones de vida y de
-                        trabajo para los recicladores en el Área Metropolitana del valle de Aburrá</h5>
+                        trabajo para los recicladores en el Área Metropolitana del Valle de Aburrá.</h5>
                 </div>
             </div>
         </div>
@@ -20,7 +20,7 @@
             <div class="card border mb-3">
                 <div class="card-body text">
                     <div class="form-group">
-                        <label>Usuario o correo eletrónico</label>
+                        <label>Usuario o correo electrónico</label>
                         <input type="text" class="form-control" placeholder="James David Rodriguez Rubio" value="arreciclar@impacta.com">
                     </div>
                     <div class="form-group">
@@ -43,7 +43,7 @@
                         <a href="#" class="text-decoration-none text-primary">privacidad.</a> Si aún no tienes una
                         cuenta haz click
                         <a href="{{ url('/register') }}" class="text-decoration-none text-primary">aquí</a> para
-                        registrarte
+                        registrarte.
                     </small>
                 </div>
             </div>

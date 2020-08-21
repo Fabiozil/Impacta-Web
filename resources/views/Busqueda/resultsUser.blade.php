@@ -42,7 +42,7 @@
                             <li class="list-group-item border border-solid mb-2" id="item-lista-usuarios">
                                 <div class="row">
                                     <div class="col-xl-5 col-sm-12 p-0">
-                                        <img src="{{ url('/Michel.jpg') }}" class="border border-success rounded-circle imgp" alt="Avimilé" style="display: block; margin-right: auto; margin-left: auto;">
+                                        <img src="{{ url('/SARA_VALENCIA.jpg') }}" class="border border-success rounded-circle imgp" alt="Avimilé" style="display: block; margin-right: auto; margin-left: auto;">
                                         <p class="text-center mt-1">Miembro hace 1 dia</p>
                                     </div>
                                     <div class="col-xl-7 col-sm-12 p-0">
@@ -58,7 +58,7 @@
                             <li class="list-group-item border border-solid" id="item-lista-usuarios">
                                 <div class="row">
                                     <div class="col-xl-5 col-sm-12 p-0">
-                                        <img src="{{ url('/harlan.jpg') }}" class="border border-success rounded-circle imgp" alt="Avimilé" style="display: block; margin-right: auto; margin-left: auto;">
+                                        <img src="{{ url('/FELIPE_BERNAL.jpg') }}" class="border border-success rounded-circle imgp" alt="Avimilé" style="display: block; margin-right: auto; margin-left: auto;">
                                         <p class="text-center mt-1">Miembro hace 1 año</p>
                                     </div>
                                     <div class="col-xl-7 col-sm-12 p-0">
@@ -79,7 +79,7 @@
                             <li class="list-group-item border border-solid mb-2" id="item-lista-usuarios">
                                 <div class="row">
                                     <div class="col-xl-5 col-sm-12 p-0">
-                                        <img src="{{ url('/unidad1.jpg') }}" class="border border-success rounded-circle imgp" alt="Avimilé" style="display: block; margin-right: auto; margin-left: auto;">
+                                        <img src="{{ url('/TORRES_DEL_RIACHUELO.jpg') }}" class="border border-success rounded-circle imgp" alt="Avimilé" style="display: block; margin-right: auto; margin-left: auto;">
                                         <p class="text-center mt-1">Miembro hace 1 año</p>
                                     </div>
                                     <div class="col-xl-7 col-sm-12 p-0">
@@ -95,7 +95,7 @@
                             <li class="list-group-item border border-solid" id="item-lista-usuarios">
                                 <div class="row">
                                     <div class="col-xl-5 col-sm-12 p-0">
-                                        <img src="{{ url('/unidad1.jpg') }}" class="border border-success rounded-circle imgp" alt="Avimilé" style="display: block; margin-right: auto; margin-left: auto;">
+                                        <img src="{{ url('/TORRES_DE_LA_MAGNOLIA.jpg') }}" class="border border-success rounded-circle imgp" alt="Avimilé" style="display: block; margin-right: auto; margin-left: auto;">
                                         <p class="text-center mt-1">Miembro hace 2 dias</p>
                                     </div>
                                     <div class="col-xl-7 col-sm-12 p-0">
@@ -116,7 +116,7 @@
                             <li class="list-group-item border border-solid mb-2" id="item-lista-usuarios">
                                 <div class="row">
                                     <div class="col-xl-5 col-sm-12 p-0">
-                                        <img src="{{ url('/harlan.jpg') }}" class="border border-success rounded-circle imgp" alt="Avimilé" style="display: block; margin-right: auto; margin-left: auto;">
+                                        <img src="{{ url('/FABIO_MEJIA.jpg') }}" class="border border-success rounded-circle imgp" alt="Avimilé" style="display: block; margin-right: auto; margin-left: auto;">
                                         <p class="text-center mt-1">Miembro hace 1 año</p>
                                     </div>
                                     <div class="col-xl-7 col-sm-12 p-0">
@@ -132,11 +132,11 @@
                             <li class="list-group-item border border-solid" id="item-lista-usuarios">
                                 <div class="row">
                                     <div class="col-xl-5 col-sm-12 p-0">
-                                        <img src="{{ url('/harlan.jpg') }}" class="border border-success rounded-circle imgp" alt="Avimilé" style="display: block; margin-right: auto; margin-left: auto;">
+                                        <img src="{{ url('/ANDRES_BETANCUR.jpg') }}" class="border border-success rounded-circle imgp" alt="Avimilé" style="display: block; margin-right: auto; margin-left: auto;">
                                         <p class="text-center mt-1">Miembro hace 2 años</p>
                                     </div>
                                     <div class="col-xl-7 col-sm-12 p-0">
-                                        <h4 class="text-center border-bottom"><strong>Andres Betancur</strong></h4>
+                                        <h4 class="text-center border-bottom"><strong>Andrés Betancur</strong></h4>
                                         <p class="pl-3 pt-4 mb-4"><strong>Reciclador: </strong>Armando López</p>
                                         <div class="d-flex justify-content-center">
                                             <button type="submit" class="btn btn-success w-75" data-toggle="modal"
@@ -177,7 +177,7 @@
                                     <div class="row">
                                         <div class="col-xl-12 h-100">
                                             <div class="container">
-                                                <img src="{{url("/harlan.jpg")}}"
+                                                <img src="{{url("/FELIPE_BERNAL.jpg")}}"
                                                     class="imgpg border border-success rounded-circle"
                                                     alt="">
                                                 <div class="mt-2 ml-1 mr-1 text-center">
@@ -258,7 +258,7 @@
                                     <div class="row">
                                         <div class="col-xl-12 h-100">
                                             <div class="container">
-                                                <img src="{{url("/Michel.jpg")}}"
+                                                <img src="{{url("/SARA_VALENCIA.jpg")}}"
                                                     class="imgpg border border-success rounded-circle"
                                                     alt="">
                                                 <div class="mt-2 ml-1 mr-1 text-center">
@@ -340,7 +340,7 @@
                                     <div class="row">
                                         <div class="col-xl-12 h-100">
                                             <div class="container">
-                                                <img src="{{url("/unidad1.jpg")}}"
+                                                <img src="{{url("/TORRES_DEL_RIACHUELO.jpg")}}"
                                                     class="imgpg border border-success rounded-circle"
                                                     alt="">
                                                 <div class="mt-2 ml-1 mr-1 text-center">
@@ -374,7 +374,7 @@
                                         </div>
                                         <div class="row">
                                             <label class="lead"><strong>Tipo de usuario:  </strong></label>
-                                            <p class="pl-1 lead">Administracion residencial</p>
+                                            <p class="pl-1 lead">Administrador residencial</p>
                                         </div>
                                         <div class="row">
                                             <label class="lead"><strong>Municipio:  </strong></label>
@@ -422,7 +422,7 @@
                                     <div class="row">
                                         <div class="col-xl-12 h-100">
                                             <div class="container">
-                                                <img src="{{url("/unidad1.jpg")}}"
+                                                <img src="{{url("/TORRES_DE_LA_MAGNOLIA.jpg")}}"
                                                     class="imgpg border border-success rounded-circle"
                                                     alt="">
                                                 <div class="mt-2 ml-1 mr-1 text-center">
@@ -456,7 +456,7 @@
                                         </div>
                                         <div class="row">
                                             <label class="lead"><strong>Tipo de usuario: </strong></label>
-                                            <p class="pl-1 lead">Administracion residencial</p>
+                                            <p class="pl-1 lead">Administrador residencial</p>
                                         </div>
                                         <div class="row">
                                             <label class="lead"><strong>Municipio:  </strong></label>
@@ -504,7 +504,7 @@
                                     <div class="row">
                                         <div class="col-xl-12 h-100">
                                             <div class="container">
-                                                <img src="{{url("/harlan.jpg")}}"
+                                                <img src="{{url("/FABIO_MEJIA.jpg")}}"
                                                     class="imgpg border border-success rounded-circle"
                                                     alt="">
                                                 <div class="mt-2 ml-1 mr-1 text-center">
@@ -586,11 +586,11 @@ Modal Andres Betancur --}}
                                     <div class="row">
                                         <div class="col-xl-12 h-100">
                                             <div class="container">
-                                                <img src="{{url("/harlan.jpg")}}"
+                                                <img src="{{url("/ANDRES_BETANCUR.jpg")}}"
                                                     class="imgpg border border-success rounded-circle"
                                                     alt="">
                                                 <div class="mt-2 ml-1 mr-1 text-center">
-                                                    <h3><strong>Andres Betancur</strong></h3>
+                                                    <h3><strong>Andrés Betancur</strong></h3>
                                                     <p>Se unió hace 2 años</p>
                                                 </div>
                                             </div>

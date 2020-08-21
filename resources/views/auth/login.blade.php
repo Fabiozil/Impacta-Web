@@ -15,7 +15,7 @@
                     </div>
                 </div>
                 <div class="card-body">
-                    <label for="email">Usuario o correo eletrónico</label>
+                    <label for="email">Usuario o correo electrónico</label>
                     <div class="input-group input-group-lg">
                         <span class="input-group-addon" id="sizing-addon1"><i class="glyphicon glyphicon-user"></i></span>
                         <input type="email" class="form-control" name="email"

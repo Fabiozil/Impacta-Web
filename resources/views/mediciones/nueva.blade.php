@@ -41,15 +41,15 @@
         <div class="card-body">
             <form action="/indicadores">
                 <div class="border-bottom border-solid mb-2">
-                    <h2 for="fechacorte" class="text-success">Fecha de Corte: </h2>
+                    <h2 for="fechacorte" class="text-success">Fecha de Corte </h2>
                     <div class="input-group inline w-100">
                         <div class="col-xl-6 col-sm-12 pl-0">
-                            <label class="mr-2">Desde:</label>
+                            <label class="mr-2">Desde</label>
                             <input class="form-control mb-3" type="date" id="fechacorte" name="fechacorte"
                                 value="1 Enero 2020" />
                         </div>
                         <div class="col-xl-6 col-sm-12 pl-0 pr-0">
-                            <label class="ml-2 mr-2">Hasta:</label>
+                            <label class="ml-2 mr-2">Hasta</label>
                             <input class="form-control mb-3" type="date" id="fechacorte" name="fechacorte"
                                 value="1 Enero 2020" />
 
@@ -60,7 +60,7 @@
                 <h2 class="text-success">Categorias de material</h2>
                 <div class="form-row">
                     <div class="col-xl-6 col-sm-12">
-                        <label for="organico">Cartón (kg):</label>
+                        <label for="organico">Cartón (kg)</label>
                         <div class="input-group mb-2">
                             <input class="form-control" type="number" id="organico" name="organico" value="0" />
                             <div class="input-group-append">
@@ -79,7 +79,7 @@
                         </div>
                     </div>
                     <div class="col-xl-6 col-sm-12">
-                        <label for="vidrio">Metales (kg):</label><br />
+                        <label for="vidrio">Metales (kg)</label><br />
                         <div class="input-group mb-2">
                             <input class="form-control" type="number" id="organico" name="organico" value="0" />
                             <div class="input-group-append">
@@ -104,7 +104,7 @@
                 </div>
                 <div class="form-row">
                     <div class="col-xl-6 col-sm-12">
-                        <label for="latas">Papel:</label><br />
+                        <label for="latas">Papel (kg)</label><br />
                         <div class="input-group mb-2">
                             <input class="form-control" type="number" id="organico" name="organico" value="0" />
                             <div class="input-group-append">
@@ -117,7 +117,7 @@
                         </div>
                     </div>
                     <div class="col-xl-6 col-sm-12">
-                        <label for="plastico">Plástico (kg):</label><br />
+                        <label for="plastico">Plástico (kg)</label><br />
                         <div class="input-group mb-2">
                             <input class="form-control" type="number" id="organico" name="organico" value="0" />
                             <div class="input-group-append">
@@ -142,7 +142,7 @@
                 </div>
                 <div class="form-row">
                     <div class="col-xl-6 col-sm-12">
-                        <label for="papel">Vidrio (kg):</label><br />
+                        <label for="papel">Vidrio (kg)</label><br />
                         <div class="input-group mb-2">
                             <input class="form-control" type="number" id="organico" name="organico" value="0" />
                             <div class="input-group-append">
@@ -205,7 +205,7 @@
                                     <table class="border border-solid w-100 text-center">
                                         <thead>
                                             <th class="col-4 p-1">Material</th>
-                                            <th class="col-4 p-1">Ingresado (kg)</th>
+                                            <th class="col-4 p-1">Cantidad (kg)</th>
                                             <th class="col-4 p-1">Emisiones evitadas (ton CO2e)</th>
                                         </thead>
                                         <tbody class="lead text-center">

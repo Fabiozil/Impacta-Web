@@ -6,12 +6,12 @@
         <div class="card shadow">
             <div class="card-header">
                 <div class="py-3 text-success text-center">
-                    <h2>Reestablecer contraseña</h2>
+                    <h2>Restablecer contraseña</h2>
                 </div>
             </div>
             <div class="card-body">
                 <p class="lead">Ingrese su nombre de usuario o correo electrónico y le enviaremos un enlace al
-                    correo electrónico registrado para restablecer la contraseña</p>
+                    correo electrónico registrado para restablecer la contraseña.</p>
                 <div class="input-group input-group-lg">
                     <span class="input-group-addon" id="sizing-addon1"><i class="glyphicon glyphicon-list"></i></span>
                     <input id="email" type="email" class="form-control" aria-describedby="sizing-addon1"

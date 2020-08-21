@@ -17,10 +17,7 @@
                     Ranking material recolectado
                 </h2>
                 <div class="row">
-                    <div class="col-3 p-1 d-flex align-items-center">
-                        <img src="/ranking_icon.png" alt="" class="border-solid border" style="width: 110px; height: 110px; margin-left: auto; margin-right: auto; display: block">
-                    </div>
-                    <div class="col-9 p-1">
+                    <div class="col-12 pl-3 pr-3">
                         <h1 for=" " class="lead text-center">Arreciclar</h1>
                         <h1 for=" " class="font-weight-bold text-center border-bottom border-solid pb-3">1ero</h1>
                         <table class="w-100 lead">
@@ -51,11 +48,8 @@
                     Histórico material recolectado
                 </h2>
                 <div class="row">
-                    <div class="col-3 p-1 d-flex align-items-center">
-                        <img src="/co22_gris.png" alt="" class="border-solid border" style="width: 110px; height: 110px; margin-left: auto; margin-right: auto; display: block">
-                    </div>
-                    <div class="col-9 p-1">
-                        <p class="lead text-center">Arreciclar</p>
+                    <div class="col-12 pr-3 pl-3">
+                        <h1 class="lead text-center">Arreciclar</h1>
                         <h1 for=" " class="font-weight-bold text-center border-bottom border-solid pb-3">764 ton</h1>
                         <table class="w-100 lead">
                             <thead>
@@ -80,15 +74,12 @@
                     </div>
                 </div>
             </div>
-            <div class="col-xl-5 col-sm-12 border border-solid p-2 mr-2 mb-2">
+            <div class="col-xl-5 col-sm-12 border border-solid p-3 mr-2 mb-2">
                 <h2 class="text-success text-center">
                     <a href="{{url("/comunidad")}}">Mi comunidad</a>
                 </h2>
                 <div class="row">
-                    <div class="col-3 p-1 d-flex align-items-center">
-                    <img src="{{url("comunidad.png")}}" class="border-solid border p-1" style="width: 110px; height: 110px; margin-left: auto; margin-right: auto; display: block">
-                    </div>
-                    <div class="col-9 p-1">
+                    <div class="col-12 pr-3 pl-3">
                         <h1 for=" " class="lead text-center">Usuarios afiliados</h1>
                         <h1 for=" " class="font-weight-bold text-center border-bottom border-solid pb-3">45</h1>
                         <table class="w-100 lead">
@@ -98,27 +89,24 @@
                             </thead>
                             <tbody>
                                 <tr>
-                                <td>1. Sara Valencia</td>
-                                    <th class="text-danger font-weight-bold"><a href="{{url("/comunidad/asignarReciclador/Michel")}}">Pendiente de asignar</a></th>
+                                    <td>1. Sara Valencia</td>
+                                    <td class="text-danger font-weight-bold d-flex justify-content-end"><a href="{{url("/comunidad/asignarReciclador/Michel")}}">Pendiente de asignar</a></td>
                                 </tr>
                                 <tr>
-                                <td>2. Torres de la magnolia</td>
-                                    <th class="text-danger font-weight-bold"><a href="{{url("/comunidad/asignarReciclador/Unidad1")}}">Pendiente de asignar</a></th>
+                                    <td>2. Torres de la magnolia</td>
+                                    <td class="text-danger font-weight-bold d-flex justify-content-end"><a href="{{url("/comunidad/asignarReciclador/Unidad1")}}">Pendiente de asignar</a></td>
                                 </tr>
                             </tbody>
                         </table>
                     </div>
                 </div>
             </div>
-            <div class="col-xl-5 col-sm-12 border border-solid p-2 mb-2">
+            <div class="col-xl-5 col-sm-12 border border-solid p-3 mb-2">
                 <h2 class="text-success text-center">
                     <a href="{{url("/recicladores")}}">Mis recicladores</a> 
                 </h2>
                 <div class="row">
-                    <div class="col-3 p-1 d-flex align-items-center">
-                    <img src="{{url("recicladores.png")}}" class="border-solid border p-1" style="width: 110px; height: 110px; margin-left: auto; margin-right: auto; display: block">
-                    </div>
-                    <div class="col-9 p-1">
+                    <div class="col-12 pl-3 pr-3">
                         <h1 for=" " class="lead text-center">Recicladores afiliados</h1>
                         <h1 for=" " class="font-weight-bold text-center border-bottom border-solid pb-3">6</h1>
                         <table class="w-100 lead">
@@ -129,15 +117,15 @@
                             <tbody>
                                 <tr>
                                     <td>1. Reinaldo Ochoa</td>
-                                    <th class="text-center"><a href="{{url("/editar")}}">12 usuarios</a></th>
+                                    <th class="text-center d-flex justify-content-center"><a href="{{url("/editar")}}">12 usuarios</a></th>
                                 </tr>
                                 <tr>
-                                    <td>2. Monica Garcia</a></td>
-                                    <th class="text-center"><a href="{{url("/editar")}}">11 usuarios</a></th>
+                                    <td>2. Mónica García</a></td>
+                                    <th class="text-center d-flex justify-content-center"><a href="{{url("/editar")}}">11 usuarios</a></th>
                                 </tr>
                                 <tr>
                                     <td>3. Armando López</td>
-                                    <th class="text-center"><a href="{{url("/editar")}}">4 usuarios</a></th>
+                                    <th class="text-center d-flex justify-content-center"><a href="{{url("/editar")}}">4 usuarios</a></th>
                                 </tr>
                             </tbody>
                         </table>
@@ -198,9 +186,9 @@
                                         <p class="text-center">2 Sep 2020 8:00AM</p>
                                         
                                     </td>
-                                    <td>Información del reciclador</td>
+                                    <td>Información del reciclador(a)</td>
                                     <td class="overflow-hidden"><a class="bg-warning text-white p-1">MAN</a> <br>Hola <a class="text-success">@nombre de usuario!</a>
-                                        El reciclador asignado para esta semana es <a class="text-success">@nombre del reciclador</a> debido a que tu reciclador
+                                        El reciclador(a) asignado para esta semana es <a class="text-success">@nombre del reciclador(a)</a> debido a que tu reciclador(a)
                                          asignado estará en una capacitación.</td>
                                     <td><button class="btn btn-outline-success ml-4" data-toggle="modal" data-target="#modal4"><i class="fas fa-edit fa-lg"></i></button></td>
                                 </tr>
@@ -210,7 +198,7 @@
                                         <p class="text-center">5 Sep 2020 7:00AM</p>
                                     </td>
                                     <td>Mensaje de servicio</td>
-                                    <td class="overflow-hidden"><a class="bg-warning text-white p-1">MAN</a> <br>Hola <a class="text-success">@nombre de usuario!</a> Durante Semana Santa, el/la <a class="text-success">@nombre del reciclador</a> 
+                                    <td class="overflow-hidden"><a class="bg-warning text-white p-1">MAN</a> <br>Hola <a class="text-success">@nombre de usuario!</a> Durante Semana Santa, el/la <a class="text-success">@nombre del reciclador(a)</a> 
                                         realizará su ruta el lunes 01 de abril de 2020 desde las 7:00 am hasta las 10:00 am. Ten presente de entregar el material en este horario.
 
                                         </td>
@@ -327,14 +315,14 @@
                                 <select class="form-control inline w-75"
                                 id="sector" aria-label="Example select with button addon">
                                     <option value="El Poblado">Servicio de recolección</option>
-                                    <option value="Zuñiga">Información de reciclador</option>
+                                    <option value="Zuñiga">Información de reciclador(a)</option>
                                     <option value="San Marcos">Otro</option>
                                 </select>
                             </div>
                         </div>
                         <div class="d-flex justify-content-center mt-3">
                             <textarea name="Mensaje" id="" cols="30" rows="10" maxlength="150"
-                                placeholder="Hola @nombre de usuario! El reciclador asignado para esta semana es @nombre del reciclador debido a que tu reciclador asignado estará en una capacitación." style="width: 700px"></textarea>
+                                placeholder="Hola @nombre de usuario! El reciclador(a) asignado para esta semana es @nombre del reciclador(a) debido a que tu reciclador(a) asignado estará en una capacitación." style="width: 700px"></textarea>
                         </div>
                         <h2 class="mt-3 mb-3 text-success">Condiciones de envío</h2>
                         <div class="row mt-3">
@@ -397,9 +385,9 @@
                         </div>
                         <div class="row mt-3 border-solid border-bottom">
                             <div class="col-md-12 lead d-flex justify-content-between">
-                                <label for="reciclador">Selecciona usuarios por reciclador
+                                <label for="reciclador">Selecciona usuarios por reciclador(a)
                                     <button class="btn btn-info" type="button" data-toggle="tooltip" data-placement="right"
-                                        title="Esta opción de selección te permite compartir el mensaje manual entre los usuarios que tienen asignado un reciclador en específico.">
+                                        title="Esta opción de selección te permite compartir el mensaje manual entre los usuarios que tienen asignado un reciclador(a) en específico.">
                                         <i class="fas fa-info-circle"></i>
                                     </button>
                                 </label>
@@ -410,23 +398,23 @@
                             </div>
                             <div class="col-md-12">
                                 <div class="form-group-row d-flex mb-2">
-                                    <label for="" class="lead"> <strong>Reciclador </strong> </label>
+                                    <label for="" class="lead"> <strong>Reciclador(a) </strong> </label>
                                     <select class="form-control ml-2" name="reciclador" id="reciclador">
-                                        <option value="Avimilé Ribas">Avimilé Ribas</option>
-                                        <option value="Jeison Guzman">Jeison Guzman</option>
-                                        <option value="German Exequiel Cano">German Exequiel Cano</option>
-                                        <option value="Kevin Tellez">Kevin Tellez</option>
-                                        <option value="Stiven Mendoza">Stiven Mendoza</option>
+                                        <option value="Avimilé Ribas">Alejandra Uribe</option>
+                                        <option value="Jeison Guzman">Rodrigo Hincapie</option>
+                                        <option value="German Exequiel Cano">Reinaldo Ochoa</option>
+                                        <option value="Kevin Tellez">Armando López</option>
+                                        <option value="Stiven Mendoza">Claudia Marín</option>
                                     </select>
                                     <button class="btn btn-outline-primary ml-2" onclick="agregarReciclador('recicladores')">Adicionar</button>
                                 </div>
                                 <table class="w-100 mb-3">
                                     <thead class="text-center">
-                                        <th class="col-12">Reciclador</th>
+                                        <th class="col-12">Reciclador(a)</th>
                                     </thead>
                                     <tbody class="text-center" id="recicladores">
                                         <tr>
-                                            <td>Jeison Guzman</td>
+                                            <td>Alejandra Uribe</td>
                                             <td><button class="btn btn-danger" onclick="eliminarReciclador('recicladores')"><i class="fas fa-trash-alt"></i></button></td>
                                         </tr>
                                     </tbody>
@@ -498,14 +486,14 @@
                                 <select class="form-control inline w-75"
                                 id="sector" aria-label="Example select with button addon">
                                     <option value="El Poblado">Servicio de recolección</option>
-                                    <option value="Zuñiga">Información de reciclador</option>
+                                    <option value="Zuñiga">Información de reciclador(a)</option>
                                     <option value="San Marcos">Otro</option>
                                 </select>
                             </div>
                         </div>
                         <div class="d-flex justify-content-center mt-3">
                             <textarea name="Mensaje" id="" cols="30" rows="10" maxlength="150"
-                                placeholder="Hola @nombre de usuario! El pasado viernes no pudimos recolectar tu reciclaje pues el reciclador timbró y nadie entregó el reciclaje, tenlo en cuenta para la proxima entrega. " style="width: 700px"></textarea>
+                                placeholder="Hola @nombre de usuario! Durante Semana Santa, el/la @nombre del reciclador(a) realizará su ruta el lunes 01 de abril de 2020 desde las 7:00 am hasta las 10:00 am. Ten presente de entregar el material en este horario." style="width: 700px"></textarea>
                         </div>
                         <h2 class="mt-3 mb-3 text-success">Condiciones de envío</h2>
                         <div class="row mt-3">
@@ -568,7 +556,7 @@
                         </div>
                         <div class="row mt-3 border-solid border-bottom">
                             <div class="col-md-12 lead d-flex justify-content-between">
-                                <label for="reciclador">Selecciona usuarios por reciclador
+                                <label for="reciclador">Selecciona usuarios por reciclador(a)
                                     <button class="btn btn-info" type="button" data-toggle="tooltip" data-placement="right"
                                         title="Esta opción de selección te permite compartir el mensaje manual entre los usuarios que tienen asignado un reciclador en específico.">
                                         <i class="fas fa-info-circle"></i>
@@ -581,23 +569,23 @@
                             </div>
                             <div class="col-md-12">
                                 <div class="form-group-row d-flex mb-2">
-                                    <label for="" class="lead"> <strong>Reciclador </strong> </label>
+                                    <label for="" class="lead"> <strong>Reciclador(a) </strong> </label>
                                     <select class="form-control ml-2" name="reciclador" id="reciclador">
-                                        <option value="Avimilé Ribas">Avimilé Ribas</option>
-                                        <option value="Jeison Guzman">Jeison Guzman</option>
-                                        <option value="German Exequiel Cano">German Exequiel Cano</option>
-                                        <option value="Kevin Tellez">Kevin Tellez</option>
-                                        <option value="Stiven Mendoza">Stiven Mendoza</option>
+                                        <option value="Avimilé Ribas">Alejandra Uribe</option>
+                                        <option value="Jeison Guzman">Rodrigo Hincapie</option>
+                                        <option value="German Exequiel Cano">Reinaldo Ochoa</option>
+                                        <option value="Kevin Tellez">Armando López</option>
+                                        <option value="Stiven Mendoza">Claudia Marín</option>
                                     </select>
                                     <button class="btn btn-outline-primary ml-2" onclick="agregarReciclador('recicladores1')">Adicionar</button>
                                 </div>
                                 <table class="w-100 mb-3">
                                     <thead class="text-center">
-                                        <th class="col-12">Reciclador</th>
+                                        <th class="col-12">Reciclador(a)</th>
                                     </thead>
                                     <tbody class="text-center" id="recicladores1">
                                         <tr>
-                                            <td>Avimilé Ribas</td>
+                                            <td>Alejandra Uribe</td>
                                             <td><button class="btn btn-danger" onclick="eliminarReciclador('recicladores1')"><i class="fas fa-trash-alt"></i></button></td>
                                         </tr>
                                     </tbody>

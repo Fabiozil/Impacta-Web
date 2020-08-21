@@ -84,7 +84,7 @@
                                                         <input type="text" name="nombres"
                                                             class="form-control @error('nombres') is-invalid @enderror"
                                                             id="nombres" placeholder="James David"
-                                                            value="Reinaldo">
+                                                            value="Alejandra">
                                                         <div class="input-group-append">
                                                             <span class="btn btn-info" data-toggle="tooltip"
                                                                 data-placement="top"
@@ -105,7 +105,7 @@
                                                         <input type="text" name="apellidos"
                                                             class="form-control @error('apellidos') is-invalid @enderror"
                                                             id="apellidos" placeholder="Rodriguez Rubio"
-                                                            value="Ochoa">
+                                                            value="Uribe">
                                                         <div class="input-group-append">
                                                             <span class="btn btn-info" data-toggle="tooltip"
                                                                 data-placement="top"
@@ -124,7 +124,7 @@
                                                     <div class="input-group mb-2">
                                                         <input type="text" name="apodo"
                                                             class="form-control @error('apodo') is-invalid @enderror"
-                                                            id="apodo" placeholder="James" value="Rey">
+                                                            id="apodo" placeholder="James" value="Alejita">
                                                         <div class="input-group-append">
                                                             <span class="btn btn-info" data-toggle="tooltip"
                                                                 data-placement="top"
@@ -143,7 +143,7 @@
         
                                                     <input type="date" name="fecha_nacimiento"
                                                         class="form-control @error('fecha_nacimiento') is-invalid @enderror"
-                                                        id="fecha_nacimiento" placeholder="28" value="1985-07-22"
+                                                        id="fecha_nacimiento" placeholder="28" value="1965-07-22"
                                                         min="1900-01-01" max="2000-01-01"
                                                         value="1979-09-16">
                                                     @error('fecha_nacimiento')
@@ -158,7 +158,7 @@
                                                         <input type="text" name="celular"
                                                             class="form-control  @error('celular') is-invalid @enderror"
                                                             id="celular" placeholder="3102020540"
-                                                            value="333 31 42">
+                                                            value="310 202 0001">
                                                         <div class="input-group-append">
                                                             <span class="btn btn-info" data-toggle="tooltip"
                                                                 data-placement="top"
@@ -454,7 +454,7 @@
                                     <div class="input-group h-100">
                                         <textarea name="historia"
                                             class="form-control  @error('historia') is-invalid @enderror" rows="15"
-                                            placeholder="Historia">He caminado por las calles de la ciudad durante más de 30 años recuperando material reciclaje para sustentar a mi familia y cuidar este mundo que nos ha regalado tanto. Es así como te agradecería si me ayudas en esta misión, separando este material y dándome la oportunidad de llegar con mi familia con excelentes noticias y una oportunidad para sonreír.</textarea>
+                                            placeholder="Historia">He caminado por las calles de la ciudad durante más de 30 años recuperando material reciclaje para sustentar a mi familia y cuidar este mundo que nos ha regalado tanto. Soy abuela, madre y una super héroe para mis nietos y tengo como misión al igual que mis compañeros darles la posibilidad de construir un futuro y hacer realidad sus sueños. Es así como te agradecería si me ayudas en esta misión, separando este material y dándome la oportunidad de llegar con mi familia con excelentes noticias y una oportunidad para sonreír.</textarea>
                                         @error('historia')
                                         <div class="invalid-tooltip">{{ $message }}</div>
                                         @enderror

@@ -293,7 +293,7 @@
                                             <input type="date" name="fecha_nacimiento"
                                                 class="form-control @error('fecha_nacimiento') is-invalid @enderror"
                                                 id="fecha_nacimiento" placeholder="28" min="1900-01-01" max="2000-01-01"
-                                                value="1971-16-09">
+                                                value="1965-07-22">
                                             @error('fecha_nacimiento')
                                             <div class="invalid-tooltip">{{ $message }}</div>
                                             @enderror
@@ -450,7 +450,7 @@
                                         </div>
                                         <div class="custom-control custom-checkbox">
                                             <input type="checkbox" class="custom-control-input" id="sabado" value="S">
-                                            <label class="custom-control-label" for="sabado">Sabado</label>
+                                            <label class="custom-control-label" for="sabado">Sábado</label>
                                         </div>
                                         <div class="custom-control custom-checkbox">
                                             <input type="checkbox" class="custom-control-input" id="domingo" value="D">
@@ -622,7 +622,7 @@
                             <img src="{{url("alerta.png")}}" alt="">
                             </div>
                             <h2 class="py-2 text-center text-success">¿Deseas eliminar este reciclador(a)?</h2>
-                            <h5 class="lead text-center border border-solid mb-3 p-2">El reciclador(a) <strong>Reinaldo Ochoa</strong> se eliminará de su lista de "Mis recicladores" de forma permanente.</h5>
+                            <h5 class="lead text-center border border-solid mb-3 p-2">El reciclador(a) <strong>Alejandra Uribe</strong> se eliminará de su lista de "Mis recicladores" de forma permanente.</h5>
                             <h5 class="lead text-center mt-2">Una vez eliminado el reciclador(a), los usuarios asignados al perfil pasarán a estar pendientes de asignar. Ver mapa Mi comunidad.</h5>
                             
                         </div>

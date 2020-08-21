@@ -17,7 +17,7 @@
                                     <div class="col-12">
                                         <div class="py-5 subtitle text-center mt-2">
                                             <h2 class="text-success">Sobre la corporación</h2>
-                                            <p class="lead text-center">Ingresa la información referente a los datos principales sobre la corporación de reciclaje</p>
+                                            <p class="lead text-center">Ingresa la información referente a los datos principales sobre la corporación de reciclaje.</p>
                                         </div>
                                     </div>
                                     <div class="col-xl-5 d-flex align-items-center col-sm-12 justify-content-cen">
@@ -46,10 +46,10 @@
                                         </div>
                                     </div>
                                     <div class="col-xl-7 col-sm-12">
-                                        <label for="name">Nombre o Razón social <strong class="text-danger">*</strong></label>
+                                        <label for="name">Nombre o razón social <strong class="text-danger">*</strong></label>
                                         <input class="form-control" value="Arreciclar" readonly>
                                         <div class="form-group  mx-auto mt-3">
-                                            <label for="name">Correo <strong class="text-danger">*</strong></label>
+                                            <label for="name">Correo electrónico<strong class="text-danger">*</strong></label>
                                             <input class="form-control" value="arreciclar@impacta.com" readonly>
                                         </div>                     
                                         <label for="name">{{__('Tipo de documento')}} <strong class="text-danger">*</strong></label>
@@ -138,7 +138,7 @@
                             <div class="row border-solid border d-flex justify-content-center">
                                 <div class="col-10 pl-5 pr-5">
                                     <h2 class="text-center text-success">Jornada Laboral</h2>
-                                    <h5 class="lead text-center">Ingresa el horario de atención de la corporación</h5>
+                                    <h5 class="lead text-center">Ingresa el horario de atención de la corporación.</h5>
                                     <div class="row mb-4">
                                         <div class="col-xl-6 col-lg-6 col-md-12">
                                             <div class="form-group">
@@ -405,7 +405,7 @@
                                     <option value="Comuna 4">Oficina</option>
                                     <option value="No aplica">No aplica</option>
                                 </select>
-                                <input class="form-control ml-2" name="num_doc_corp" required autocomplete="num_doc_corp" autofocus placeholder="Ejm: Edificio 'El edificio' interior 504 ">
+                                <input class="form-control ml-2" name="num_doc_corp" required autocomplete="num_doc_corp" autofocus placeholder="Ejm: interior 504 ">
                                 @error('numd_doc')
                                     <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>

@@ -95,7 +95,7 @@ input[type=submit] {
             <div class="row">
                 <div class="col-12">
                     <img src="{{url("/corp_logo.png")}}" class="logo-corp rounded-circle border-solid border border-success" alt="Logo corporacion">
-                    <h5><strong>ARRECICLAR</strong></h5>
+                    <h5><strong>Arreciclar</strong></h5>
                     <p>Se unió hace 2 años</p>
                     {{-- <p>Dirección: Diagonal 33B #39 Sur 40</p>
                     <p>Telefóno: (4) 561 09 21</p> --}}
@@ -109,7 +109,7 @@ input[type=submit] {
                 <img src="{{url("/Corporacion_otro.png")}}" alt="Icono usuario" style="z-index: 2; max-width: 100%; max-height: 100%">
             </a>
             <a href="{{ url('/resultadosCorp') }}" style="position:absolute; margin-top: -40%; margin-left: 2%; z-index: 2; height: 60px !important; width: 60px !important">
-                <img src="{{url("/lista.png")}}" alt="lista" class="w-100 h-100 p-1">
+                <img src="{{url("/Lista.png")}}" alt="lista" class="w-100 h-100 p-1">
             </a>
 
             <span style="position:absolute; margin-top: -8%; margin-left: 40%; z-index: 2; max-width: 5%" data-toggle="modal"
@@ -119,7 +119,7 @@ input[type=submit] {
                 <div class="row">
                     <div class="col-12">
                         <img src="{{url("/Arreciclar.png")}}" class="logo-corp rounded-circle border-solid border border-success" alt="Logo corporacion">
-                        <h5><strong>ARRECICLAR</strong></h5>
+                        <h5><strong>Arreciclar</strong></h5>
                         <p>Se unió hace 2 años</p>
                         {{-- <p>Dirección: Diagonal 33B #39 Sur 40</p>
                         <p>Telefóno: (4) 561 09 21</p> --}}
@@ -141,7 +141,7 @@ input[type=submit] {
                 <div class="row">
                     <div class="col-12">
                         <img src="{{url("/corp_logo3.png")}}" class="logo-corp rounded-circle border-solid border border-success" alt="Logo corporacion">
-                        <h5 class="border-bottom border-solid"><strong>CORPORACIÓN CAMPO SANTO</strong></h5>
+                        <h5 class="border-bottom border-solid"><strong>Corporación campo santo</strong></h5>
                         <p>Se unió hace 2 años</p>
                         {{-- <p>Dirección: Calle 22 Sur # 42b - 11</p>
                         <p>Telefóno: (4) 312 17 54</p> --}}
@@ -185,7 +185,7 @@ input[type=submit] {
                 <div class="row">
                     <div class="col-12">
                         <img src="{{url("/corp_logo2.jpg")}}" class="logo-corp rounded-circle border-solid border border-success" alt="Logo corporacion">
-                        <h5><strong>CORPOOCCIDENTE</strong></h5>
+                        <h5><strong>Corpooccidente</strong></h5>
                         <p>Se unió hace 3 años</p>
                         <p><strong>Recicladores agremiados:</strong> 12</p>
                         <p><strong>Usuarios afiliados:</strong> 45</p>
@@ -220,7 +220,7 @@ input[type=submit] {
                 <p>Se unió hace 12 día</p>
                 {{-- <p>Dirección: Diagonal 28C 28 Sur 25</p>
                 <p>Municipio de Envigado</p> --}}
-                <p><strong>Corporación:</strong> CORPOOCCIDENTE</p>
+                <p><strong>Corporación:</strong> Corpooccidente</p>
             </div>
         </div>
         ' style="position:absolute; margin-top: -28%; margin-left: 38%; z-index: 2; max-width: 3%">
@@ -235,7 +235,7 @@ input[type=submit] {
                 <p>Se unió hace 3 meses</p>
                 {{-- <p>Dirección: Diagonal 28C 28 Sur 25</p>
                 <p>Municipio de Envigado</p> --}}
-                <p><strong>Corporación:</strong> CORPORACIÓN CAMPO SANTO</p>
+                <p><strong>Corporación:</strong> Corporación campo santo</p>
             </div>
         </div>
         ' style="position:absolute; margin-top: -38%; margin-left: 47%; z-index: 2; max-width: 3%">
@@ -250,7 +250,7 @@ input[type=submit] {
                 <p>Se unió hace 5 meses</p>
                 {{-- <p>Dirección: Diagonal 28C 28 Sur 25</p>
                 <p>Municipio de Envigado</p> --}}
-                <p><strong>Corporación:</strong> CORPORACIÓN CAMPO SANTO</p>
+                <p><strong>Corporación:</strong> Corporación campo santo</p>
             </div>
         </div>
         ' style="position:absolute; margin-top: -28%; margin-left: 68%; z-index: 2; max-width: 3%">
@@ -280,7 +280,7 @@ input[type=submit] {
                 <p>Se unió hace 12 días</p>
                 {{-- <p>Dirección: Diagonal 28C 28 Sur 25</p>
                 <p>Municipio de Envigado</p> --}}
-                <p><strong>Corporación:</strong> CORPOOCCIDENTE</p>
+                <p><strong>Corporación:</strong> Corpooccidente</p>
             </div>
         </div>
         ' style="position:absolute; margin-top: -33%; margin-left: 9%; z-index: 2; max-width: 3%">
@@ -295,7 +295,7 @@ input[type=submit] {
                     <p>Se unió hace 5 meses</p>
                     {{-- <p>Dirección: Diagonal 28C 28 Sur 25</p>
                     <p>Municipio de Envigado</p> --}}
-                    <p><strong>Corporación:</strong> CORPORACIÓN CAMPO SANTO</p>
+                    <p><strong>Corporación:</strong> Corporación campo santo</p>
                 </div>
             </div>
             ' style="position:absolute; margin-top: -23%; margin-left: 49%; z-index: 2; max-width: 3%">
@@ -310,7 +310,7 @@ input[type=submit] {
                     <p>Se unió hace 10 meses</p>
                     {{-- <p>Dirección: Diagonal 28C 28 Sur 25</p>
                     <p>Municipio de Envigado</p> --}}
-                    <p><strong>Corporación:</strong> CORPOOCCIDENTE</p>
+                    <p><strong>Corporación:</strong> Corpooccidente</p>
                 </div>
             </div>
             ' style="position:absolute; margin-top: -27%; margin-left: 12%; z-index: 2; max-width: 3%">
@@ -379,7 +379,7 @@ input[type=submit] {
                                                     class="imgpg border border-success rounded-circle"
                                                     alt="">
                                                 <div class="mt-2 ml-1 mr-1 text-center">
-                                                    <h3><strong>CORPOOCCIDENTE</strong></h3>
+                                                    <h3><strong>Corpooccidente</strong></h3>
                                                     <p>Se unió hace 3 años</p>
                                                 </div>
                                             </div>
@@ -393,7 +393,7 @@ input[type=submit] {
                                 <div class="col-xl-12 h-100">
                                     <div class="container pt-4">
                                         <div class="row mb-1">
-                                            <div class="col-8 pl-0">
+                                            <div class="col-12 pl-0 border-bottom border-solid">
                                                 <label class="lead pl-0 mb-3"><strong>Municipio: </strong>Medellín</label> <br>
                                                 <label class="lead pl-0 mb-3"><strong>Dirección: </strong>Carrera 109a #63b - 420</label> <br>
                                                 <label class="lead pl-0"><strong>Telefóno: </strong>(4) 2322668</label>
@@ -406,8 +406,12 @@ input[type=submit] {
                                             <p class="pl-1 lead">12</p>
                                         </div>
                                         <div class="row">
-                                            <label class="lead"><strong>Usuarios afiliados:  </strong></label>
-                                            <p class="pl-1 lead">45</p>
+                                            <label class="lead"><strong>Viviendas:  </strong></label>
+                                            <p class="pl-1 lead">23</p>
+                                        </div>
+                                        <div class="row">
+                                            <label class="lead"><strong>Administradores residenciales:  </strong></label>
+                                            <p class="pl-1 lead">22</p>
                                         </div>
                                         <div class="row">
                                             <label class="lead"><strong>Emisiones evitadas:  </strong></label>
@@ -449,7 +453,7 @@ input[type=submit] {
                                                     class="imgpg border border-success rounded-circle"
                                                     alt="">
                                                 <div class="mt-2 ml-1 mr-1 text-center">
-                                                    <h3><strong>CORPORACIÓN CAMPO SANTO</strong></h3>
+                                                    <h3><strong>Corporación campo santo</strong></h3>
                                                     <p>Se unió hace 2 años</p>
                                                 </div>
                                             </div>
@@ -463,7 +467,7 @@ input[type=submit] {
                                 <div class="col-xl-12 h-100">
                                     <div class="container pt-4">
                                         <div class="row mb-1">
-                                            <div class="col-12 pl-0">
+                                            <div class="col-12 pl-0 border-bottom border-solid">
                                                 <label class="lead pl-0 mb-3"><strong>Municipio: </strong>Medellín</label> <br>
                                                 <label class="lead pl-0 mb-3"><strong>Dirección: </strong>Calle 53 #10c - 63</label> <br>
                                                 <label class="lead pl-0"><strong>Telefóno: </strong>(4) 2260243</label>
@@ -476,8 +480,12 @@ input[type=submit] {
                                             <p class="pl-1 lead">9</p>
                                         </div>
                                         <div class="row">
-                                            <label class="lead"><strong>Usuarios afiliados:  </strong></label>
-                                            <p class="pl-1 lead">37</p>
+                                            <label class="lead"><strong>Viviendas:  </strong></label>
+                                            <p class="pl-1 lead">30</p>
+                                        </div>
+                                        <div class="row">
+                                            <label class="lead"><strong>Administradores residenciales:  </strong></label>
+                                            <p class="pl-1 lead">7</p>
                                         </div>
                                         <div class="row">
                                             <label class="lead"><strong>Emisiones evitadas:  </strong></label>
@@ -519,7 +527,7 @@ input[type=submit] {
                                                     class="imgpg border border-success rounded-circle"
                                                     alt="">
                                                 <div class="mt-2 ml-1 mr-1 text-center">
-                                                    <h3><strong>ARRECICLAR</strong></h3>
+                                                    <h3><strong>Arreciclar</strong></h3>
                                                     <p>Se unió hace 2 años</p>
                                                 </div>
                                             </div>
@@ -533,7 +541,7 @@ input[type=submit] {
                                 <div class="col-xl-12 h-100">
                                     <div class="container pt-4">
                                         <div class="row border-solid border-bottom mb-1">
-                                            <div class="col-8 pl-0">
+                                            <div class="col-8 p-0">
                                                 <label class="lead pl-0 mb-3"><strong>Municipio: </strong>Medellín</label> <br>
                                                 <label class="lead pl-0 mb-3"><strong>Dirección: </strong>Calle 26 # 44 - 27</label> <br>
                                                 <label class="lead pl-0"><strong>Telefóno: </strong>(4) 2322668</label>
@@ -554,8 +562,12 @@ input[type=submit] {
                                             <p class="pl-1 lead">6</p>
                                         </div>
                                         <div class="row">
-                                            <label class="lead"><strong>Usuarios afiliados:  </strong></label>
-                                            <p class="pl-1 lead">45</p>
+                                            <label class="lead"><strong>Viviendas:  </strong></label>
+                                            <p class="pl-1 lead">37</p>
+                                        </div>
+                                        <div class="row">
+                                            <label class="lead"><strong>Administradores residenciales:  </strong></label>
+                                            <p class="pl-1 lead">8</p>
                                         </div>
                                         <div class="row">
                                             <label class="lead"><strong>Emisiones evitadas:  </strong></label>
@@ -611,7 +623,7 @@ input[type=submit] {
                                 <div class="col-xl-12 h-100">
                                     <div class="container pt-4">
                                         <div class="row mb-1">
-                                            <div class="col-8 pl-0">
+                                            <div class="col-12 pl-0 border-bottom border-solid">
                                                 <label class="lead pl-0 mb-3"><strong>Municipio: </strong>Medellín</label> <br>
                                                 <label class="lead pl-0 mb-3"><strong>Dirección: </strong>Carrera 32a #102b - 53</label> <br>
                                                 <label class="lead pl-0"><strong>Telefóno: </strong>(4) 5295490</label>
@@ -624,8 +636,12 @@ input[type=submit] {
                                             <p class="pl-1 lead">4</p>
                                         </div>
                                         <div class="row">
-                                            <label class="lead"><strong>Usuarios afiliados:  </strong></label>
-                                            <p class="pl-1 lead">19</p>
+                                            <label class="lead"><strong>Viviendas:  </strong></label>
+                                            <p class="pl-1 lead">17</p>
+                                        </div>
+                                        <div class="row">
+                                            <label class="lead"><strong>Administradores residenciales:  </strong></label>
+                                            <p class="pl-1 lead">2</p>
                                         </div>
                                         <div class="row">
                                             <label class="lead"><strong>Emisiones evitadas:  </strong></label>
@@ -647,7 +663,7 @@ input[type=submit] {
 </div>
 
 <script>
-    var countries = ["CORPOOCCIDENTE", "CORPORACIÓN CAMPO SANTO"];
+    var countries = ["Corpooccidente", "Corporación campo santo"];
     autocomplete(document.getElementById("myInput"), countries);
 
     function mostrarMapaDistinto2(){
@@ -661,7 +677,7 @@ input[type=submit] {
         var unidade1 = document.getElementById("unidad_eia1");
         var unidade2 = document.getElementById("unidad_eia2");
         console.log(entrada);
-        if (entrada == "CORPOOCCIDENTE") {
+        if (entrada == "Corpooccidente") {
             //Mostrar usuarios CORPOOCCIDENTE
             CORPOOCCIDENTE.setAttribute("src", "{{url("/Corporacion_otroR.png")}}");
             casai1.setAttribute("src", "{{url("/Vivienda_particular_otroR.png")}}");
@@ -673,7 +689,7 @@ input[type=submit] {
             unidade2.setAttribute("src", "{{url("/Admon_residencial_otro.png")}}");
             return;
         }
-        if (entrada == "CORPORACIÓN CAMPO SANTO") {
+        if (entrada == "Corporación campo santo") {
             //Mostrar usuarios de EIARecila
             CORPOOCCIDENTE.setAttribute("src", "{{url("/Corporacion_otro.png")}}");
             casai1.setAttribute("src", "{{url("/Vivienda_particular_otro.png")}}");

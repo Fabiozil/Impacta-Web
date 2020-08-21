@@ -82,10 +82,10 @@ Route::get('/email', function () {
 });
 //Rutas busquedas
 Route::get('/resultadosCorp', function () {
-    return view('busqueda.resultsCorp');
+    return view('Busqueda.resultsCorp');
 });
 Route::get('/resultadosUser', function () {
-    return view('busqueda.resultsUser');
+    return view('Busqueda.resultsUser');
 });
 //Rutas editar corporacion
 Route::get('/editCorp', function () {

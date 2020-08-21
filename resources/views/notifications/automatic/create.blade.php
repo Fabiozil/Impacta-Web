@@ -159,7 +159,7 @@
                                 </td>
                                 <td>Mensaje de servicio</td>
                                 <td class="overflow-hidden">Hola <a class="text-success">@nombre de usuario!</a>
-                                    ! No olvides preparar el material reciclable para que sea entregado al reciclador(a) asignado, <a class="text-success">@nombre reciclador(a)</a> entre los días y las horas correctas. !Gracias por su colaboración!
+                                    ! No olvides preparar el material reciclable para que sea entregado al reciclador(a) asignado, <a class="text-success">@nombre reciclador(a)</a> entre los días y las horas correctas. ¡Gracias por su colaboración!
                                 </td>
                                 <td><button class="btn btn-outline-success ml-5" data-target="#modal3" data-toggle="modal"><i class="fas fa-edit fa-lg"></i></button></td>
                             </tr>
@@ -172,7 +172,7 @@
                                 </td>
                                 <td>Indicador ambiental</td>
                                 <td class="overflow-hidden">Hola <a class="text-success">@nombre de usuario!</a>
-                                    Con su ayuda, hemos ayudado a evitar la emision de <a class="text-success">@histórico toneladas CO2e</a> desde el 2019. Lo que equivale a retirar <a class="text-success">@equivalencia</a> vehículos particulares en 1 año el Área Metropolitana del Valle de Áburra.
+                                    Con su ayuda, hemos ayudado a evitar la emision de <a class="text-success">@histórico toneladas CO2e</a> desde el 2019. Lo que equivale a retirar <a class="text-success">@equivalencia</a> vehículos particulares en 1 año el Área Metropolitana del Valle de Aburrá.
                                 </td>
                                 <td><button class="btn btn-outline-success ml-5" data-target="#modal4" data-toggle="modal"><i class="fas fa-edit fa-lg"></i></button></td>
                             </tr>
@@ -210,7 +210,7 @@
                 </h5>
                 <p class="lead text-center border border-solid p-2">
                     Hola <a class="text-success">@nombre de usuario!</a>
-                                    ! No olvides preparar el material reciclable para que sea entregado al reciclador(a) asignado, <a class="text-success">@nombre reciclador(a)</a> entre los días y las horas correctas. !Gracias por su colaboración!
+                                    ! No olvides preparar el material reciclable para que sea entregado al reciclador(a) asignado, <a class="text-success">@nombre reciclador(a)</a> entre los días y las horas correctas. ¡Gracias por su colaboración!
                 </p>
                 <h5 class="text-center font-weight-bold">
                     Condiciones de envío
@@ -515,7 +515,7 @@
                         </div>
                         <div class="d-flex justify-content-center w-100 mt-3">
                             <textarea name="Mensaje" id="" cols="25" rows="10" maxlength="150"
-                            placeholder="Hola @nombre de usuario! No olvides preparar el material reciclable para que sea entregado al reciclador(a) asignado, @nombre reciclador(a) entre los días y las horas correctas. !Gracias por su colaboración!
+                            placeholder="Hola @nombre de usuario! No olvides preparar el material reciclable para que sea entregado al reciclador(a) asignado, @nombre reciclador(a) entre los días y las horas correctas. ¡Gracias por su colaboración!
                         " style="width: 90%"></textarea>
                         </div>
                         
@@ -614,7 +614,7 @@
                         </div>
                         <div class="d-flex justify-content-center w-100 mt-3">
                             <textarea name="Mensaje" id="" cols="25" rows="10" maxlength="150"
-                            placeholder="Hola @nombre de usuario! Con su ayuda, hemos ayudado a evitar la emision de @histórico toneladas CO2e desde el 2019. Lo que equivale a retirar @equivalencia vehículos particulares en 1 año el Área Metropolitana del Valle de Áburra." style="width: 90%"></textarea>
+                            placeholder="Hola @nombre de usuario! Con su ayuda, hemos ayudado a evitar la emision de @histórico toneladas CO2e desde el 2019. Lo que equivale a retirar @equivalencia vehículos particulares en 1 año el Área Metropolitana del Valle de Aburrá." style="width: 90%"></textarea>
                         </div>
                         
                     </div>  
